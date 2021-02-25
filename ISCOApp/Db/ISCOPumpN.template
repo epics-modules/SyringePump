@@ -1,0 +1,59 @@
+# These records are for tweaking the pressure
+record(ao,"$(P)$(PUMP)PressureTweak") {
+    field(VAL, "1")
+    field(PREC,"0")
+}
+record(calcout,"$(P)$(PUMP)PressureTweakDown") {
+    field(INPA,"$(P)$(PUMP)PressureTweak.VAL NPP NMS")
+    field(INPB,"$(P)$(PUMP)PressureSP NPP NMS")
+    field(CALC,"B-A")
+    field(OUT, "$(P)$(PUMP)PressureSP PP NMS")
+}
+record(calcout,"$(P)$(PUMP)PressureTweakUp") {
+    field(INPA,"$(P)$(PUMP)PressureTweak.VAL NPP NMS")
+    field(INPB,"$(P)$(PUMP)PressureSP NPP NMS")
+    field(CALC,"B+A")
+    field(OUT, "$(P)$(PUMP)PressureSP PP NMS")
+}
+
+# These records are for tweaking the flow rate
+record(ao,"$(P)$(PUMP)FlowRateTweak") {
+    field(VAL, "1")
+    field(PREC,"0")
+}
+record(calcout,"$(P)$(PUMP)FlowRateTweakDown") {
+    field(INPA,"$(P)$(PUMP)FlowRateTweak.VAL NPP NMS")
+    field(INPB,"$(P)$(PUMP)FlowRateSP NPP NMS")
+    field(CALC,"B-A")
+    field(OUT, "$(P)$(PUMP)FlowRateSP PP NMS")
+}
+record(calcout,"$(P)$(PUMP)FlowRateTweakUp") {
+    field(INPA,"$(P)$(PUMP)FlowRateTweak.VAL NPP NMS")
+    field(INPB,"$(P)$(PUMP)FlowRateSP NPP NMS")
+    field(CALC,"B+A")
+    field(OUT, "$(P)$(PUMP)FlowRateSP PP NMS")
+}
+
+# These records set the mode to "constant pressure" or "constant flow"
+record(bo, "$(P)$(PUMP)Mode") {
+    field(ZNAM, "Constant Pressure")
+    field(ONAM, "Constant Flow Rate")
+}
+record(calcout,"$(P)$(PUMP)SetConstPress") {
+    field(INPA,"$(P)$(PUMP)Mode CP NMS")
+    field(CALC,"A=0")
+    field(OUT, "$(P)$(PUMP)ConstPress PP NMS")
+}
+record(calcout,"$(P)$(PUMP)SetConstFlow") {
+    field(INPA,"$(P)$(PUMP)Mode CP NMS")
+    field(CALC,"A=1")
+    field(OUT, "$(P)$(PUMP)ConstFlow PP NMS")
+}
+
+# This record copies the maximum volume to the VolumeRemaining.HOPR
+record(calcout,"$(P)$(PUMP)CopyMaxVolume") {
+    field(INPA,"$(P)$(PUMP)MaxVolume_RBV CP NMS")
+    field(CALC,"A")
+    field(OUT, "$(P)$(PUMP)VolumeRemaining_RBV.HOPR PP NMS")
+}
+

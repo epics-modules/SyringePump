@@ -1,0 +1,63 @@
+# These records set the pressure units
+record(mbbo, "$(P)PressUnits") {
+    field(ZRVL, "0")
+    field(ZRST, "Atmosphere")
+    field(ONVL, "1")
+    field(ONST, "Bar")
+    field(TWVL, "2")
+    field(TWST, "kPa")
+    field(THVL, "3")
+    field(THST, "PSI")
+}
+record(calcout,"$(P)SetAtm") {
+    field(INPA,"$(P)PressUnits CP NMS")
+    field(CALC,"A=0")
+    field(OUT, "$(P)Unit:ATM PP NMS")
+}
+record(calcout,"$(P)SetBar") {
+    field(INPA,"$(P)PressUnits CP NMS")
+    field(CALC,"A=1")
+    field(OUT, "$(P)Unit:BAR PP NMS")
+}
+record(calcout,"$(P)SetkPa") {
+    field(INPA,"$(P)PressUnits CP NMS")
+    field(CALC,"A=2")
+    field(OUT, "$(P)Unit:kPa PP NMS")
+}
+record(calcout,"$(P)SetPSI") {
+    field(INPA,"$(P)PressUnits CP NMS")
+    field(CALC,"A=3")
+    field(OUT, "$(P)Unit:PSI PP NMS")
+}
+
+# These records set the flow rate units
+record(mbbo, "$(P)FlowUnits") {
+    field(ZRVL, "0")
+    field(ZRST, "mlPerMin")
+    field(ONVL, "1")
+    field(ONST, "mlPerHr")
+    field(TWVL, "2")
+    field(TWST, "ulPerMin")
+    field(THVL, "3")
+    field(THST, "ulPerHour")
+}
+record(calcout,"$(P)SetmlPerMin") {
+    field(INPA,"$(P)FlowUnits CP NMS")
+    field(CALC,"A=0")
+    field(OUT, "$(P)Unit:mlPerMin PP NMS")
+}
+record(calcout,"$(P)SetmlPerHr") {
+    field(INPA,"$(P)FlowUnits CP NMS")
+    field(CALC,"A=1")
+    field(OUT, "$(P)Unit:mlPerHr PP NMS")
+}
+record(calcout,"$(P)SetulPerMin") {
+    field(INPA,"$(P)FlowUnits CP NMS")
+    field(CALC,"A=2")
+    field(OUT, "$(P)Unit:ulPerMin PP NMS")
+}
+record(calcout,"$(P)SetulPerHr") {
+    field(INPA,"$(P)FlowUnits CP NMS")
+    field(CALC,"A=3")
+    field(OUT, "$(P)Unit:ulPerHr PP NMS")
+}

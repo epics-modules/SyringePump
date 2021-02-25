@@ -1,0 +1,68 @@
+
+file "$(MODBUS)/db/aoFloat64.template" {
+pattern
+{ R,                      PORT,    OFFSET,      DATA_TYPE,  LOPR,  HOPR, PREC, EGU,  SCAN,       DESC}
+{A:PressureSP,        SP1_Reg_Out_1,    0,     FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{B:PressureSP,        SP1_Reg_Out_1,    2,     FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{C:PressureSP,        SP1_Reg_Out_1,    4,     FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{D:PressureSP,        SP1_Reg_Out_1,    6,     FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{AB:PressureSP,       SP1_Reg_Out_1,    8,     FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{CD:PressureSP,       SP1_Reg_Out_1,    10,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{A:FlowRateSP,        SP1_Reg_Out_1,    12,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{B:FlowRateSP,        SP1_Reg_Out_1,    14,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{C:FlowRateSP,        SP1_Reg_Out_1,    16,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{D:FlowRateSP,        SP1_Reg_Out_1,    18,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{AB:FlowRateSP,       SP1_Reg_Out_1,    20,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{CD:FlowRateSP,       SP1_Reg_Out_1,    22,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{A:RefillRateSP,      SP1_Reg_Out_1,    24,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{B:RefillRateSP,      SP1_Reg_Out_1,    26,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{C:RefillRateSP,      SP1_Reg_Out_1,    28,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{D:RefillRateSP,      SP1_Reg_Out_1,    30,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{A:MaxPressureSP,     SP1_Reg_Out_1,    32,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{B:MaxPressureSP,     SP1_Reg_Out_1,    34,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{C:MaxPressureSP,     SP1_Reg_Out_1,    36,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{D:MaxPressureSP,     SP1_Reg_Out_1,    38,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{A:MinPressureSP,     SP1_Reg_Out_1,    40,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{B:MinPressureSP,     SP1_Reg_Out_1,    42,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{C:MinPressureSP,     SP1_Reg_Out_1,    44,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{D:MinPressureSP,     SP1_Reg_Out_1,    46,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{A:MaxFlowRateSP,     SP1_Reg_Out_1,    48,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{B:MaxFlowRateSP,     SP1_Reg_Out_1,    50,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{C:MaxFlowRateSP,     SP1_Reg_Out_1,    52,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{D:MaxFlowRateSP,     SP1_Reg_Out_1,    54,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{A:MinFlowRateSP,     SP1_Reg_Out_1,    56,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{B:MinFlowRateSP,     SP1_Reg_Out_1,    58,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{C:MinFlowRateSP,     SP1_Reg_Out_1,    60,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{D:MinFlowRateSP,     SP1_Reg_Out_1,    62,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{A:MaxFlowLimit,      SP1_Reg_Out_1,    64,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{B:MaxFlowLimit,      SP1_Reg_Out_1,    66,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{C:MaxFlowLimit,      SP1_Reg_Out_1,    68,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{D:MaxFlowLimit,      SP1_Reg_Out_1,    70,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+# Registers 72-114 are readonly
+{A:RefillAtVolume,    SP1_Reg_Out_2,    16,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{B:RefillAtVolume,    SP1_Reg_Out_2,    18,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{C:RefillAtVolume,    SP1_Reg_Out_2,    20,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{D:RefillAtVolume,    SP1_Reg_Out_2,    22,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{A:RefillToVolume,    SP1_Reg_Out_2,    24,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{B:RefillToVolume,    SP1_Reg_Out_2,    26,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{C:RefillToVolume,    SP1_Reg_Out_2,    28,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{D:RefillToVolume,    SP1_Reg_Out_2,    30,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{AB:RefillToPercent,  SP1_Reg_Out_2,    32,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{AB:DeliverToPercent, SP1_Reg_Out_2,    34,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{CD:RefillToPercent,  SP1_Reg_Out_2,    36,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{CD:DeliverToPercent, SP1_Reg_Out_2,    38,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{A:PoorFillMark,      SP1_Reg_Out_2,    40,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{B:PoorFillMark,      SP1_Reg_Out_2,    42,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{C:PoorFillMark,      SP1_Reg_Out_2,    44,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{D:PoorFillMark,      SP1_Reg_Out_2,    46,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{A:VolumeDispensed,   SP1_Reg_Out_2,    48,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{B:VolumeDispensed,   SP1_Reg_Out_2,    50,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{C:VolumeDispensed,   SP1_Reg_Out_2,    52,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{D:VolumeDispensed,   SP1_Reg_Out_2,    54,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{reg:156,             SP1_Reg_Out_2,    56,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{reg:158,             SP1_Reg_Out_2,    58,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{reg:160,             SP1_Reg_Out_2,    60,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+
+}
+
+

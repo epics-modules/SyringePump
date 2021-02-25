@@ -1,0 +1,110 @@
+
+file "$(MODBUS)/db/bo_bit.template" { 
+pattern
+{  R,          PORT,      OFFSET,  ZNAM,    ONAM}
+{A:Run,             SP1_Bit_Out,     0,    Stop,    Run}
+{B:Run,             SP1_Bit_Out,     1,    Stop,    Run}
+{C:Run,             SP1_Bit_Out,     2,    Stop,    Run}
+{D:Run,             SP1_Bit_Out,     3,    Stop,    Run}
+{Link-AB-CD,        SP1_Bit_Out,     4, Disable, Enable}
+{A:Refill,          SP1_Bit_Out,     5,    Stop,    Run}
+{B:Refill,          SP1_Bit_Out,     6,    Stop,    Run}
+{C:Refill,          SP1_Bit_Out,     7,    Stop,    Run}
+{D:Refill,          SP1_Bit_Out,     8,    Stop,    Run}
+{A:ConstPress,      SP1_Bit_Out,     9,     Off,     On}
+{B:ConstPress,      SP1_Bit_Out,    10,     Off,     On}
+{C:ConstPress,      SP1_Bit_Out,    11,     Off,     On}
+{D:ConstPress,      SP1_Bit_Out,    12,     Off,     On}
+{A:ConstFlow,       SP1_Bit_Out,    13,     Off,     On}
+{B:ConstFlow,       SP1_Bit_Out,    14,     Off,     On}
+{C:ConstFlow,       SP1_Bit_Out,    15,     Off,     On}
+{D:ConstFlow,       SP1_Bit_Out,    16,     Off,     On}
+{coil:17,           SP1_Bit_Out,    17,     Low,    High}
+{coil:18,           SP1_Bit_Out,    18,     Low,    High}
+{coil:19,           SP1_Bit_Out,    19,     Low,    High}
+{coil:20,           SP1_Bit_Out,    20,     Low,    High}
+{coil:21,           SP1_Bit_Out,    21,     Low,    High}
+{coil:22,           SP1_Bit_Out,    22,     Low,    High}
+{coil:23,           SP1_Bit_Out,    23,     Low,    High}
+{coil:24,           SP1_Bit_Out,    24,     Low,    High}
+{coil:25,           SP1_Bit_Out,    25,     Low,    High}
+{coil:26,           SP1_Bit_Out,    26,     Low,    High}
+{coil:27,           SP1_Bit_Out,    27,     Low,    High}
+{coil:28,           SP1_Bit_Out,    28,     Low,    High}
+{coil:29,           SP1_Bit_Out,    29,     Low,    High}
+{coil:30,           SP1_Bit_Out,    30,     Low,    High}
+{coil:31,           SP1_Bit_Out,    31,     Low,    High}
+{coil:32,           SP1_Bit_Out,    32,     Low,    High}
+{coil:33,           SP1_Bit_Out,    33,     Low,    High}
+{coil:34,           SP1_Bit_Out,    34,     Low,    High}
+
+## Coils 35-45 are readonly
+
+{coil:46,           SP1_Bit_Out,     46,     Low,    High}
+{coil:47,           SP1_Bit_Out,     47,     Low,    High}
+{coil:48,           SP1_Bit_Out,     48,     Low,    High}
+{coil:49,           SP1_Bit_Out,     49,     Low,    High}
+{coil:50,           SP1_Bit_Out,     50,     Low,    High}
+{coil:51,           SP1_Bit_Out,     51,     Low,    High}
+{coil:52,           SP1_Bit_Out,     52,     Low,    High}
+{coil:53,           SP1_Bit_Out,     53,     Low,    High}
+{A:PressIntegrator, SP1_Bit_Out,     54,     Off,      On}
+{B:PressIntegrator, SP1_Bit_Out,     55,     Off,      On}
+{C:PressIntegrator, SP1_Bit_Out,     56,     Off,      On}
+{D:PressIntegrator, SP1_Bit_Out,     57,     Off,      On}
+{A:PressDeadband8,  SP1_Bit_Out,     58,     Off,      On}
+{B:PressDeadband,   SP1_Bit_Out,     59,     Off,      On}
+{C:PressDeadband,   SP1_Bit_Out,     60,     Off,      On}
+{D:PressDeadband,   SP1_Bit_Out,     61,     Off,      On}
+{A:AutoRefill,      SP1_Bit_Out,     62,     Off,      On}
+{B:AutoRefill,      SP1_Bit_Out,     63,     Off,      On}
+{C:AutoRefill,      SP1_Bit_Out,     64,     Off,      On}
+{D:AutoRefill,      SP1_Bit_Out,     65,     Off,      On}
+{A:AutoFill,        SP1_Bit_Out,     66,     Off,      On}
+{B:AutoFill,        SP1_Bit_Out,     67,     Off,      On}
+{C:AutoFill,        SP1_Bit_Out,     68,     Off,      On}
+{D:AutoFill,        SP1_Bit_Out,     69,     Off,      On}
+{coil:70,           SP1_Bit_Out,     70,     Low,    High}
+{coil:71,           SP1_Bit_Out,     71,     Low,    High}
+{coil:72,           SP1_Bit_Out,     72,     Low,    High}
+{coil:73,           SP1_Bit_Out,     73,     Low,    High}
+{coil:74,           SP1_Bit_Out,     74,     Low,    High}
+{coil:75,           SP1_Bit_Out,     75,     Low,    High}
+{coil:76,           SP1_Bit_Out,     76,     Low,    High}
+{coil:77,           SP1_Bit_Out,     77,     Low,    High}
+{A:DispenseModeCF,  SP1_Bit_Out,     78, Disable,  Enable}
+{B:DispenseModeCF,  SP1_Bit_Out,     79, Disable,  Enable}
+{C:DispenseModeCF,  SP1_Bit_Out,     80, Disable,  Enable}
+{D:DispenseModeCF,  SP1_Bit_Out,     81, Disable,  Enable}
+{coil:82,           SP1_Bit_Out,     82,     Low,    High}
+{coil:83,           SP1_Bit_Out,     83,     Low,    High}
+{Unit:ATM,          SP1_Bit_Out,     84,     Off,      On}
+{Unit:BAR,          SP1_Bit_Out,     85,     Off,      On}
+{Unit:kPa,          SP1_Bit_Out,     86,     Off,      On}
+{Unit:PSI,          SP1_Bit_Out,     87,     Off,      On}
+{Unit:mlPerMin,     SP1_Bit_Out,     88,     Off,      On}
+{Unit:mlPerHr,      SP1_Bit_Out,     89,     Off,      On}
+{Unit:ulPerMin,     SP1_Bit_Out,     90,     Off,      On}
+{Unit:ulPerHr,      SP1_Bit_Out,     91,     Off,      On}
+{coil:92,           SP1_Bit_Out,     92,     Low,    High}
+{coil:93,           SP1_Bit_Out,     93,     Low,    High}
+{coil:94,           SP1_Bit_Out,     94,     Low,    High}
+{coil:95,           SP1_Bit_Out,     95,     Low,    High}
+{coil:96,           SP1_Bit_Out,     96,     Low,    High}
+{coil:97,           SP1_Bit_Out,     97,     Low,    High}
+{coil:98,           SP1_Bit_Out,     98,     Low,    High}
+{coil:99,           SP1_Bit_Out,     99,     Low,    High}
+{coil:100,          SP1_Bit_Out,     100,    Low,    High}
+{coil:101,          SP1_Bit_Out,     101,    Low,    High}
+{coil:102,          SP1_Bit_Out,     102,    Low,    High}
+{coil:103,          SP1_Bit_Out,     103,    Low,    High}
+{coil:104,          SP1_Bit_Out,     104,    Low,    High}
+{coil:105,          SP1_Bit_Out,     105,    Low,    High}
+{coil:106,          SP1_Bit_Out,     106,    Low,    High}
+{coil:107,          SP1_Bit_Out,     107,    Low,    High}
+{coil:108,          SP1_Bit_Out,     108,    Low,    High}
+
+## Coils 109-141 are readonly
+}
+
+
