@@ -31,7 +31,7 @@ drvAsynIPPortConfigure("$(PORT)","gse-isco1:502",0,0,0)
 #                      int timeoutMsec,
 #                      int writeDelayMsec)
 
-modbusInterposeConfig("$(PORT)",0,5000,10)
+modbusInterposeConfig("$(PORT)",0,10000,10)
 
 ### The syringe pump supports the following modbus function codes:
 #    01 - read discrete output coils
@@ -52,25 +52,25 @@ modbusInterposeConfig("$(PORT)",0,5000,10)
 #   char *plcType)
 
 # Access 142 bits (0-141) as inputs. Function code=1.
-drvModbusAsynConfigure("$(PORT)_Bit_In",  "$(PORT)", 1, 1,  0, 142, 0, 1000, "Teledyne")
+drvModbusAsynConfigure("$(PORT)_Bit_In",  "$(PORT)", 1, 1,  0, 142, 0, 100, "Teledyne")
 
 # Access 109 bits (0-108) as outputs. Function code=5.
-drvModbusAsynConfigure("$(PORT)_Bit_Out", "$(PORT)", 1, 5,  0, 109, 0, 1000, "Teledyne")
+drvModbusAsynConfigure("$(PORT)_Bit_Out", "$(PORT)", 1, 5,  0, 109, 0, 1, "Teledyne")
 
 # Access first set of 100 16-bit holding registers starting at 0 as inputs. Function code=3. Data type=FLOAT32_BE
-drvModbusAsynConfigure("$(PORT)_Reg_In_1",  "$(PORT)", 1,  3, 0, 100, FLOAT32_BE, 1000, "Teledyne")
+drvModbusAsynConfigure("$(PORT)_Reg_In_1",  "$(PORT)", 1,  3, 0, 100, FLOAT32_BE, 100, "Teledyne")
 
 # Access second set of 62 16-bit holding registers starting at 100 as inputs. Function code=3. Data type=FLOAT32_BE
-drvModbusAsynConfigure("$(PORT)_Reg_In_2",  "$(PORT)", 1,  3, 100, 62, FLOAT32_BE, 1000, "Teledyne")
+drvModbusAsynConfigure("$(PORT)_Reg_In_2",  "$(PORT)", 1,  3, 100, 62, FLOAT32_BE, 100, "Teledyne")
 
 # Access third set of 46 16-bit holding registers starting at 200 as inputs. Function code=3. Data type=FLOAT32_BE
-drvModbusAsynConfigure("$(PORT)_Reg_In_3",  "$(PORT)", 1,  3, 200, 46, FLOAT32_BE, 1000, "Teledyne")
+drvModbusAsynConfigure("$(PORT)_Reg_In_3",  "$(PORT)", 1,  3, 200, 46, FLOAT32_BE, 100, "Teledyne")
 
 # Access first set of 100 16-bit holding registers starting at 0 as outputs. Function code=16. Data type=FLOAT32_BE
-drvModbusAsynConfigure("$(PORT)_Reg_Out_1",  "$(PORT)", 1,  16, 0, 100, FLOAT32_BE, 1000, "Teledyne")
+drvModbusAsynConfigure("$(PORT)_Reg_Out_1",  "$(PORT)", 1,  16, 0, 100, FLOAT32_BE, 1, "Teledyne")
 
-# Access second set of 62 16-bit holding registers starting at 100 as inputs. Function code=16. Data type=FLOAT32_BE
-drvModbusAsynConfigure("$(PORT)_Reg_Out_2",  "$(PORT)", 1,  16, 100, 62, FLOAT32_BE, 1000, "Teledyne")
+# Access second set of 62 16-bit holding registers starting at 100 as outputs. Function code=16. Data type=FLOAT32_BE
+drvModbusAsynConfigure("$(PORT)_Reg_Out_2",  "$(PORT)", 1,  16, 100, 62, FLOAT32_BE, 1, "Teledyne")
 
 # Load the substitutions files for the records that use Modbus
 dbLoadTemplate("$(TOP)/db/ISCOBinaryIn.substitutions", P=$(PREFIX))
