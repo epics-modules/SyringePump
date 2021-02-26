@@ -7,8 +7,8 @@ display {
 	object {
 		x=631
 		y=230
-		width=480
-		height=600
+		width=1335
+		height=400
 	}
 	clr=14
 	bclr=3
@@ -89,7 +89,7 @@ display {
 }
 text {
 	object {
-		x=84
+		x=494
 		y=6
 		width=312
 		height=25
@@ -102,9 +102,9 @@ text {
 }
 text {
 	object {
-		x=78
+		x=400
 		y=36
-		width=325
+		width=500
 		height=25
 	}
 	"basic attribute" {
@@ -113,758 +113,1365 @@ text {
 	textix="$(P)$(PUMP)"
 	align="horiz. centered"
 }
-"text update" {
+composite {
 	object {
-		x=370
-		y=96
-		width=100
-		height=20
+		x=949
+		y=70
+		width=380
+		height=195
 	}
-	monitor {
-		chan="$(P)$(PUMP)MaxPressureSP_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
+	"composite name"=""
+	children {
+		"text update" {
+			object {
+				x=1229
+				y=70
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit1_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=1229
+				y=95
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit2_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=1229
+				y=120
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit3_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=1229
+				y=145
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit4_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			limits {
+			}
+		}
+		"choice button" {
+			object {
+				x=1124
+				y=70
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit1"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=1124
+				y=95
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit2"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=1124
+				y=120
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit3"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=1124
+				y=145
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit4"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		text {
+			object {
+				x=949
+				y=70
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 1"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=949
+				y=95
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 2"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=949
+				y=120
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 3"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=949
+				y=145
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 4"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1229
+				y=170
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit5_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			limits {
+			}
+		}
+		"choice button" {
+			object {
+				x=1124
+				y=170
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit5"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		text {
+			object {
+				x=949
+				y=170
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 5"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1229
+				y=195
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit6_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			limits {
+			}
+		}
+		"choice button" {
+			object {
+				x=1124
+				y=195
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit6"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		text {
+			object {
+				x=949
+				y=195
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 6"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1229
+				y=220
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit7_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			limits {
+			}
+		}
+		"choice button" {
+			object {
+				x=1124
+				y=220
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit7"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		text {
+			object {
+				x=949
+				y=220
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 7"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1229
+				y=245
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit8_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			limits {
+			}
+		}
+		"choice button" {
+			object {
+				x=1124
+				y=245
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit8"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		text {
+			object {
+				x=949
+				y=245
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 8"
+			align="horiz. right"
+		}
 	}
 }
-"text update" {
+composite {
 	object {
-		x=370
-		y=171
-		width=100
-		height=20
+		x=9
+		y=70
+		width=460
+		height=295
 	}
-	monitor {
-		chan="$(P)$(PUMP)reg:64_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
+	"composite name"=""
+	children {
+		"text update" {
+			object {
+				x=369
+				y=270
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(PUMP)MaxPressureSP_RBV"
+				clr=53
+				bclr=3
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=369
+				y=345
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(PUMP)MaxFlowLimit_RBV"
+				clr=53
+				bclr=3
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=369
+				y=320
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(PUMP)MaxFlowRateSP_RBV"
+				clr=53
+				bclr=3
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=369
+				y=295
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(PUMP)MinPressureSP_RBV"
+				clr=53
+				bclr=3
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=264
+				y=270
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)$(PUMP)MaxPressureSP"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=264
+				y=345
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)$(PUMP)MaxFlowLimit"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=264
+				y=320
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)$(PUMP)MaxFlowRateSP"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=264
+				y=295
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)$(PUMP)MinPressureSP"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=49
+				y=270
+				width=210
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Max pressure setpoint"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=9
+				y=345
+				width=250
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Max flow limit in CP mode"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=39
+				y=320
+				width=220
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Max flow rate setpoint"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=49
+				y=295
+				width=210
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Min pressure setpoint"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=265
+				y=170
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(PUMP)Empty_RBV"
+				clr=53
+				bclr=14
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=265
+				y=195
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(PUMP)Full_RBV"
+				clr=53
+				bclr=14
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=265
+				y=220
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(PUMP)Overpressure_RBV"
+				clr=53
+				bclr=14
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=265
+				y=245
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(PUMP)Underpressure_RBV"
+				clr=53
+				bclr=14
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=265
+				y=70
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)SoftwareMajor_RBV"
+				clr=53
+				bclr=3
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=265
+				y=95
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)SoftwareMinor_RBV"
+				clr=53
+				bclr=3
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=265
+				y=120
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)SoftwareMicro_RBV"
+				clr=53
+				bclr=3
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=265
+				y=145
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(PUMP)MaxVolume_RBV"
+				clr=53
+				bclr=3
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=40
+				y=170
+				width=220
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="At upper limit (Empty)"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=50
+				y=195
+				width=210
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="At lower limit (Full)"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=140
+				y=220
+				width=120
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Overpressure"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=130
+				y=245
+				width=130
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Underpressure"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=80
+				y=70
+				width=180
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Software major rev"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=80
+				y=95
+				width=180
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Software minor rev"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=80
+				y=120
+				width=180
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Software micro rev"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=160
+				y=145
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Max volume"
+			align="horiz. right"
+		}
 	}
 }
-"text update" {
+composite {
 	object {
-		x=370
-		y=146
-		width=100
-		height=20
+		x=474
+		y=70
+		width=470
+		height=320
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=484
+				y=120
+				width=210
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Overpressure shutdown"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=494
+				y=95
+				width=200
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Overpressure display"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=514
+				y=70
+				width=180
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Overpressure alarm"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=474
+				y=195
+				width=220
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Underpressure shutdown"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=484
+				y=170
+				width=210
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Underpressure display"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=504
+				y=145
+				width=190
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Underpressure alarm"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=524
+				y=270
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Overflow shutdown"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=534
+				y=245
+				width=160
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Overflow display"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=554
+				y=220
+				width=140
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Overflow alarm"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=514
+				y=345
+				width=180
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Underflow shutdown"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=524
+				y=320
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Underflow display"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=544
+				y=295
+				width=150
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Underflow alarm"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=544
+				y=370
+				width=150
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Poor fill alarm"
+			align="horiz. right"
+		}
+		composite {
+			object {
+				x=699
+				y=70
+				width=140
+				height=320
+			}
+			"composite name"=""
+			children {
+				"choice button" {
+					object {
+						x=699
+						y=70
+						width=140
+						height=20
+					}
+					control {
+						chan="$(P)OverpressAlarm"
+						clr=14
+						bclr=51
+					}
+					stacking="column"
+				}
+				"choice button" {
+					object {
+						x=699
+						y=95
+						width=140
+						height=20
+					}
+					control {
+						chan="$(P)OverpressDisplay"
+						clr=14
+						bclr=51
+					}
+					stacking="column"
+				}
+				"choice button" {
+					object {
+						x=699
+						y=120
+						width=140
+						height=20
+					}
+					control {
+						chan="$(P)OverpressShutdown"
+						clr=14
+						bclr=51
+					}
+					stacking="column"
+				}
+				"choice button" {
+					object {
+						x=699
+						y=145
+						width=140
+						height=20
+					}
+					control {
+						chan="$(P)UnderpressAlarm"
+						clr=14
+						bclr=51
+					}
+					stacking="column"
+				}
+				"choice button" {
+					object {
+						x=699
+						y=170
+						width=140
+						height=20
+					}
+					control {
+						chan="$(P)UnderpressDisplay"
+						clr=14
+						bclr=51
+					}
+					stacking="column"
+				}
+				"choice button" {
+					object {
+						x=699
+						y=195
+						width=140
+						height=20
+					}
+					control {
+						chan="$(P)UnderpressShutdown"
+						clr=14
+						bclr=51
+					}
+					stacking="column"
+				}
+				"choice button" {
+					object {
+						x=699
+						y=220
+						width=140
+						height=20
+					}
+					control {
+						chan="$(P)OverflowAlarm"
+						clr=14
+						bclr=51
+					}
+					stacking="column"
+				}
+				"choice button" {
+					object {
+						x=699
+						y=245
+						width=140
+						height=20
+					}
+					control {
+						chan="$(P)OverflowDisplay"
+						clr=14
+						bclr=51
+					}
+					stacking="column"
+				}
+				"choice button" {
+					object {
+						x=699
+						y=270
+						width=140
+						height=20
+					}
+					control {
+						chan="$(P)OverflowShutdown"
+						clr=14
+						bclr=51
+					}
+					stacking="column"
+				}
+				"choice button" {
+					object {
+						x=699
+						y=295
+						width=140
+						height=20
+					}
+					control {
+						chan="$(P)UnderflowAlarm"
+						clr=14
+						bclr=51
+					}
+					stacking="column"
+				}
+				"choice button" {
+					object {
+						x=699
+						y=320
+						width=140
+						height=20
+					}
+					control {
+						chan="$(P)UnderflowDisplay"
+						clr=14
+						bclr=51
+					}
+					stacking="column"
+				}
+				"choice button" {
+					object {
+						x=699
+						y=345
+						width=140
+						height=20
+					}
+					control {
+						chan="$(P)UnderflowShutdown"
+						clr=14
+						bclr=51
+					}
+					stacking="column"
+				}
+				"choice button" {
+					object {
+						x=699
+						y=370
+						width=140
+						height=20
+					}
+					control {
+						chan="$(P)$(PUMP)PoorFillAlarm"
+						clr=14
+						bclr=51
+					}
+					stacking="column"
+				}
+			}
+		}
+		composite {
+			object {
+				x=844
+				y=70
+				width=100
+				height=320
+			}
+			"composite name"=""
+			children {
+				"text update" {
+					object {
+						x=844
+						y=120
+						width=100
+						height=20
+					}
+					monitor {
+						chan="$(P)OverpressShutdown_RBV"
+						clr=53
+						bclr=13
+					}
+					clrmod="alarm"
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=844
+						y=95
+						width=100
+						height=20
+					}
+					monitor {
+						chan="$(P)OverpressDisplay_RBV"
+						clr=53
+						bclr=13
+					}
+					clrmod="alarm"
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=844
+						y=70
+						width=100
+						height=20
+					}
+					monitor {
+						chan="$(P)OverpressAlarm_RBV"
+						clr=53
+						bclr=13
+					}
+					clrmod="alarm"
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=844
+						y=195
+						width=100
+						height=20
+					}
+					monitor {
+						chan="$(P)UnderpressShutdown_RBV"
+						clr=53
+						bclr=13
+					}
+					clrmod="alarm"
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=844
+						y=170
+						width=100
+						height=20
+					}
+					monitor {
+						chan="$(P)UnderpressDisplay_RBV"
+						clr=53
+						bclr=13
+					}
+					clrmod="alarm"
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=844
+						y=145
+						width=100
+						height=20
+					}
+					monitor {
+						chan="$(P)UnderpressAlarm_RBV"
+						clr=53
+						bclr=13
+					}
+					clrmod="alarm"
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=844
+						y=270
+						width=100
+						height=20
+					}
+					monitor {
+						chan="$(P)OverflowShutdown_RBV"
+						clr=53
+						bclr=13
+					}
+					clrmod="alarm"
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=844
+						y=245
+						width=100
+						height=20
+					}
+					monitor {
+						chan="$(P)OverflowDisplay_RBV"
+						clr=53
+						bclr=13
+					}
+					clrmod="alarm"
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=844
+						y=220
+						width=100
+						height=20
+					}
+					monitor {
+						chan="$(P)OverflowAlarm_RBV"
+						clr=53
+						bclr=13
+					}
+					clrmod="alarm"
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=844
+						y=345
+						width=100
+						height=20
+					}
+					monitor {
+						chan="$(P)UnderflowShutdown_RBV"
+						clr=53
+						bclr=13
+					}
+					clrmod="alarm"
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=844
+						y=320
+						width=100
+						height=20
+					}
+					monitor {
+						chan="$(P)UnderflowDisplay_RBV"
+						clr=53
+						bclr=13
+					}
+					clrmod="alarm"
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=844
+						y=295
+						width=100
+						height=20
+					}
+					monitor {
+						chan="$(P)UnderflowAlarm_RBV"
+						clr=53
+						bclr=13
+					}
+					clrmod="alarm"
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=844
+						y=370
+						width=100
+						height=20
+					}
+					monitor {
+						chan="$(P)$(PUMP)PoorFillAlarm_RBV"
+						clr=53
+						bclr=13
+					}
+					clrmod="alarm"
+					limits {
+					}
+				}
+			}
+		}
 	}
-	monitor {
-		chan="$(P)$(PUMP)reg:48_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=370
-		y=121
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)reg:40_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=370
-		y=471
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)coil:70_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=370
-		y=496
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)coil:71_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=370
-		y=521
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)coil:72_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=370
-		y=546
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)coil:73_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=370
-		y=446
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)coil:94_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=370
-		y=421
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)coil:93_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=370
-		y=396
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)coil:92_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=370
-		y=571
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)coil:74_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=265
-		y=296
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)coil:110_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=265
-		y=321
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)coil:111_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=265
-		y=346
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)coil:112_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=265
-		y=371
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)coil:113_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=265
-		y=196
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)reg:240_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=265
-		y=221
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)reg:242_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	format="compact"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=265
-		y=246
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)reg:244_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	format="compact"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=265
-		y=271
-		width=100
-		height=20
-	}
-	monitor {
-		chan="$(P)$(PUMP)reg:206_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	format="compact"
-	limits {
-	}
-}
-"choice button" {
-	object {
-		x=265
-		y=471
-		width=100
-		height=20
-	}
-	control {
-		chan="$(P)$(PUMP)coil:70"
-		clr=14
-		bclr=51
-	}
-	stacking="column"
-}
-"choice button" {
-	object {
-		x=265
-		y=496
-		width=100
-		height=20
-	}
-	control {
-		chan="$(P)$(PUMP)coil:71"
-		clr=14
-		bclr=51
-	}
-	stacking="column"
-}
-"choice button" {
-	object {
-		x=265
-		y=521
-		width=100
-		height=20
-	}
-	control {
-		chan="$(P)$(PUMP)coil:72"
-		clr=14
-		bclr=51
-	}
-	stacking="column"
-}
-"choice button" {
-	object {
-		x=265
-		y=546
-		width=100
-		height=20
-	}
-	control {
-		chan="$(P)$(PUMP)coil:73"
-		clr=14
-		bclr=51
-	}
-	stacking="column"
-}
-"choice button" {
-	object {
-		x=265
-		y=396
-		width=100
-		height=20
-	}
-	control {
-		chan="$(P)$(PUMP)coil:92"
-		clr=14
-		bclr=51
-	}
-	stacking="column"
-}
-"choice button" {
-	object {
-		x=265
-		y=421
-		width=100
-		height=20
-	}
-	control {
-		chan="$(P)$(PUMP)coil:93"
-		clr=14
-		bclr=51
-	}
-	stacking="column"
-}
-"choice button" {
-	object {
-		x=265
-		y=446
-		width=100
-		height=20
-	}
-	control {
-		chan="$(P)$(PUMP)coil:94"
-		clr=14
-		bclr=51
-	}
-	stacking="column"
-}
-"choice button" {
-	object {
-		x=265
-		y=571
-		width=100
-		height=20
-	}
-	control {
-		chan="$(P)$(PUMP)coil:74"
-		clr=14
-		bclr=51
-	}
-	stacking="column"
-}
-"text entry" {
-	object {
-		x=265
-		y=96
-		width=100
-		height=20
-	}
-	control {
-		chan="$(P)$(PUMP)MaxPressureSP"
-		clr=14
-		bclr=51
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=265
-		y=171
-		width=100
-		height=20
-	}
-	control {
-		chan="$(P)$(PUMP)reg:64"
-		clr=14
-		bclr=51
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=265
-		y=146
-		width=100
-		height=20
-	}
-	control {
-		chan="$(P)$(PUMP)reg:48"
-		clr=14
-		bclr=51
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=265
-		y=121
-		width=100
-		height=20
-	}
-	control {
-		chan="$(P)$(PUMP)reg:40"
-		clr=14
-		bclr=51
-	}
-	limits {
-	}
-}
-text {
-	object {
-		x=50
-		y=96
-		width=210
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Max pressure setpoint"
-	align="horiz. right"
-}
-text {
-	object {
-		x=10
-		y=171
-		width=250
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Max flow limit in CP mode"
-	align="horiz. right"
-}
-text {
-	object {
-		x=40
-		y=146
-		width=220
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Max flow rate setpoint"
-	align="horiz. right"
-}
-text {
-	object {
-		x=50
-		y=121
-		width=210
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Min pressure setpoint"
-	align="horiz. right"
-}
-text {
-	object {
-		x=90
-		y=471
-		width=170
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Digital out bit 1"
-	align="horiz. right"
-}
-text {
-	object {
-		x=90
-		y=496
-		width=170
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Digital out bit 2"
-	align="horiz. right"
-}
-text {
-	object {
-		x=90
-		y=521
-		width=170
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Digital out bit 3"
-	align="horiz. right"
-}
-text {
-	object {
-		x=90
-		y=546
-		width=170
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Digital out bit 4"
-	align="horiz. right"
-}
-text {
-	object {
-		x=50
-		y=446
-		width=210
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Overpressure shutdown"
-	align="horiz. right"
-}
-text {
-	object {
-		x=60
-		y=421
-		width=200
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Overpressure display"
-	align="horiz. right"
-}
-text {
-	object {
-		x=80
-		y=396
-		width=180
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Overpressure alarm"
-	align="horiz. right"
-}
-text {
-	object {
-		x=90
-		y=571
-		width=170
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Digital out bit 5"
-	align="horiz. right"
-}
-text {
-	object {
-		x=40
-		y=296
-		width=220
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="At upper limit (Empty)"
-	align="horiz. right"
-}
-text {
-	object {
-		x=50
-		y=321
-		width=210
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="At lower limit (Full)"
-	align="horiz. right"
-}
-text {
-	object {
-		x=140
-		y=346
-		width=120
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Overpressure"
-	align="horiz. right"
-}
-text {
-	object {
-		x=130
-		y=371
-		width=130
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Underpressure"
-	align="horiz. right"
-}
-text {
-	object {
-		x=80
-		y=196
-		width=180
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Software major rev"
-	align="horiz. right"
-}
-text {
-	object {
-		x=80
-		y=221
-		width=180
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Software minor rev"
-	align="horiz. right"
-}
-text {
-	object {
-		x=80
-		y=246
-		width=180
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Software micro rev"
-	align="horiz. right"
-}
-text {
-	object {
-		x=160
-		y=271
-		width=100
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Max volume"
-	align="horiz. right"
 }
