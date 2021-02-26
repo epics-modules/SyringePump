@@ -8,8 +8,8 @@ errlogInit(20000)
 ################################################################################
 # Tell EPICS all about the record types, device-support modules, drivers,
 # etc. in the software we just loaded (16bmSP.munch)
-dbLoadDatabase("../../dbd/ISCOApp.dbd")
-ISCOApp_registerRecordDeviceDriver(pdbbase)
+dbLoadDatabase("../../dbd/SPApp.dbd")
+SPApp_registerRecordDeviceDriver(pdbbase)
 
 # prefix used for all PVs in this IOC
 epicsEnvSet("PREFIX", "ISCO1:")
