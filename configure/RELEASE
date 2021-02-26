@@ -27,6 +27,7 @@
 
 # Define the path to the synApps support directory and uncomment.
 SUPPORT=/corvette/home/epics/devel
+AUTOSAVE=$(SUPPORT)/autosave
 ASYN= $(SUPPORT)/asyn
 MODBUS=$(SUPPORT)/modbus
 EPICS_BASE = /corvette/usr/local/epics-devel/base-7.0.4
