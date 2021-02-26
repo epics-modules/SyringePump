@@ -3,7 +3,7 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------
 #  ADD MACRO DEFINITIONS AFTER THIS LINE
 
-PROD_NAME = ISCOApp
+PROD_NAME = SPApp
 PROD_IOC = $(PROD_NAME)
 
 # <name>.dbd will be created from <name>Include.dbd
