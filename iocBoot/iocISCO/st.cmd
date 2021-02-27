@@ -93,6 +93,9 @@ dbLoadRecords("$(TOP)/db/ISCOPumpN.template", "P=$(PREFIX), PUMP=B:")
 dbLoadRecords("$(TOP)/db/ISCOPumpN.template", "P=$(PREFIX), PUMP=AB:")
 #dbLoadRecords("$(TOP)/db/ISCOPumpN.template", "P=$(PREFIX), PUMP=CD:")
 
+# Load an asyn record for debugging
+dbLoadRecords("$(ASYN)/db/asynRecord.db", "P=$(PREFIX), R=asyn1, PORT=$(PORT), ADDR=0, IMAX=256, OMAX=256")
+
 # Enable ASYN_TRACEIO_HEX on octet server
 asynSetTraceIOMask("$(PORT)", 0, HEX)
 

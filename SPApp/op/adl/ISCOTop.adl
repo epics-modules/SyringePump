@@ -1,6 +1,6 @@
 
 file {
-	name="ISCOTop.adl"
+	name="/home/epics/devel/SyringePump/SPApp/op/adl/ISCOTop.adl"
 	version=030109
 }
 display {
@@ -108,25 +108,51 @@ text {
 	}
 	display[0] {
 		label="Pump A"
-		name="ISCO_1_Pump.adl"
+		name="ISCO_SinglePump.adl"
 		args="P=ISCO1:,PUMP=A:"
 	}
 	display[1] {
 		label="Pump B"
-		name="ISCO_1_Pump.adl"
+		name="ISCO_SinglePump.adl"
 		args="P=ISCO1:,PUMP=B:"
 	}
 	display[2] {
 		label="Pump C"
-		name="ISCO_1_Pump.adl"
+		name="ISCO_SinglePump.adl"
 		args="P=ISCO1:,PUMP=C:"
 	}
 	display[3] {
 		label="Pump D"
-		name="ISCO_1_Pump.adl"
+		name="ISCO_SinglePump.adl"
 		args="P=ISCO1:,PUMP=D:"
+	}
+	display[4] {
+		label="Dual AB"
+		name="ISCO_DualPump.adl"
+		args="P=ISCO1:,P1=A:,P2=B:,DP=AB:"
+	}
+	display[5] {
+		label="Dual CD"
+		name="ISCO_DualPump.adl"
+		args="P=ISCO1:,P1=C:,P2=D:,DP=CD:"
 	}
 	clr=14
 	bclr=51
 	label="Pumps"
+}
+"related display" {
+	object {
+		x=75
+		y=65
+		width=100
+		height=20
+	}
+	display[0] {
+		label="Pump A"
+		name="asynRecord.adl"
+		args="P=ISCO1:,R=asyn1"
+	}
+	clr=14
+	bclr=51
+	label="asyn record"
 }
