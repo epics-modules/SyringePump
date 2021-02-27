@@ -1,6 +1,6 @@
 
 file {
-	name="/home/epics/devel/ISCO_Pump/ISCOApp/op/adl/ISCO_1_Pump.adl"
+	name="/home/epics/devel/SyringePump/SPApp/op/adl/ISCO_1_Pump.adl"
 	version=030109
 }
 display {
@@ -736,7 +736,12 @@ composite {
 		height=20
 	}
 	display[0] {
-		label="More"
+		label="Controller"
+		name="ISCO_Controller.adl"
+		args="P=$(P)"
+	}
+	display[1] {
+		label="Pump more"
 		name="ISCO_1_PumpMore.adl"
 		args="P=$(P),PUMP=$(PUMP)"
 	}

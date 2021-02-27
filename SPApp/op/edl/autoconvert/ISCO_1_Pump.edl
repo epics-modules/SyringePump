@@ -1176,19 +1176,23 @@ botShadowColor rgb 17920 17920 17920
 font "helvetica-medium-r-12.0"
 icon
 buttonLabel "More"
-numPvs 2
-numDsps 1
+numPvs 4
+numDsps 2
 displayFileName {
-  0 "ISCO_1_PumpMore.edl"
+  0 "ISCO_Controller.edl"
+  1 "ISCO_1_PumpMore.edl"
 }
 menuLabel {
-  0 "More"
+  0 "Controller"
+  1 "Pump more"
 }
 symbols {
-  0 "P=$(P),PUMP=$(PUMP)"
+  0 "P=$(P)"
+  1 "P=$(P),PUMP=$(PUMP)"
 }
 replaceSymbols {
   0 1
+  1 1
 }
 endObjectProperties
 

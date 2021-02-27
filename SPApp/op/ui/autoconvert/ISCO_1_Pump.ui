@@ -1831,16 +1831,16 @@ border-radius: 2px;
                 <enum>Menu</enum>
             </property>
             <property name="labels">
-                <string>More</string>
+                <string>Controller;Pump more</string>
             </property>
             <property name="files">
-                <string>ISCO_1_PumpMore.adl</string>
+                <string>ISCO_Controller.adl;ISCO_1_PumpMore.adl</string>
             </property>
             <property name="args">
-                <string>P=$(P),PUMP=$(PUMP)</string>
+                <string>P=$(P);P=$(P),PUMP=$(PUMP)</string>
             </property>
             <property name="removeParent">
-                <string>false</string>
+                <string>false;false</string>
             </property>
         </widget>
         <zorder>caLabel_0</zorder>

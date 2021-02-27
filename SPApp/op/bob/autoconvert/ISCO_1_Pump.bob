@@ -726,9 +726,14 @@
     <name>related display #161</name>
     <actions>
       <action type="open_display">
+        <file>ISCO_Controller.opi</file>
+        <target>tab</target>
+        <description>Controller</description>
+      </action>
+      <action type="open_display">
         <file>ISCO_1_PumpMore.opi</file>
         <target>tab</target>
-        <description>More</description>
+        <description>Pump more</description>
       </action>
     </actions>
     <text>More</text>
