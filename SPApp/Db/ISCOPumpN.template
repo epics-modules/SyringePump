@@ -19,7 +19,7 @@ record(calcout,"$(P)$(PUMP)PressureTweakUp") {
 # These records are for tweaking the flow rate
 record(ao,"$(P)$(PUMP)FlowRateTweak") {
     field(VAL, "1")
-    field(PREC,"0")
+    field(PREC,"3")
 }
 record(calcout,"$(P)$(PUMP)FlowRateTweakDown") {
     field(INPA,"$(P)$(PUMP)FlowRateTweak.VAL NPP NMS")
