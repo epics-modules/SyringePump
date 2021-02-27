@@ -172,20 +172,63 @@ border-radius: 2px;
                 <enum>Menu</enum>
             </property>
             <property name="labels">
-                <string>Pump A;Pump B;Pump C;Pump D</string>
+                <string>Pump A;Pump B;Pump C;Pump D;Dual AB;Dual CD</string>
             </property>
             <property name="files">
-                <string>ISCO_1_Pump.adl;ISCO_1_Pump.adl;ISCO_1_Pump.adl;ISCO_1_Pump.adl</string>
+                <string>ISCO_SinglePump.adl;ISCO_SinglePump.adl;ISCO_SinglePump.adl;ISCO_SinglePump.adl;ISCO_DualPump.adl;ISCO_DualPump.adl</string>
             </property>
             <property name="args">
-                <string>P=ISCO1:,PUMP=A:;P=ISCO1:,PUMP=B:;P=ISCO1:,PUMP=C:;P=ISCO1:,PUMP=D:</string>
+                <string>P=ISCO1:,PUMP=A:;P=ISCO1:,PUMP=B:;P=ISCO1:,PUMP=C:;P=ISCO1:,PUMP=D:;P=ISCO1:,P1=A:,P2=B:,DP=AB:;P=ISCO1:,P1=C:,P2=D:,DP=CD:</string>
             </property>
             <property name="removeParent">
-                <string>false;false;false;false</string>
+                <string>false;false;false;false;false;false</string>
+            </property>
+        </widget>
+        <widget class="caRelatedDisplay" name="caRelatedDisplay_1">
+            <property name="geometry">
+                <rect>
+                    <x>75</x>
+                    <y>65</y>
+                    <width>100</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="foreground">
+                <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="background">
+                <color alpha="255">
+                    <red>115</red>
+                    <green>223</green>
+                    <blue>255</blue>
+                </color>
+            </property>
+            <property name="label">
+                <string>asyn record</string>
+            </property>
+            <property name="stackingMode">
+                <enum>Menu</enum>
+            </property>
+            <property name="labels">
+                <string>Pump A</string>
+            </property>
+            <property name="files">
+                <string>asynRecord.adl</string>
+            </property>
+            <property name="args">
+                <string>P=ISCO1:,R=asyn1</string>
+            </property>
+            <property name="removeParent">
+                <string>false</string>
             </property>
         </widget>
         <zorder>caLabel_0</zorder>
         <zorder>caRelatedDisplay_0</zorder>
+        <zorder>caRelatedDisplay_1</zorder>
     </widget>
 </widget>
 </ui>

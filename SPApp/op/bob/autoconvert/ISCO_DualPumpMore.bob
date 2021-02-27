@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>ISCO_DualPumpMore</name>
+  <x>453</x>
+  <y>310</y>
+  <width>515</width>
+  <height>315</height>
+  <background_color>
+    <color red="200" green="200" blue="200">
+    </color>
+  </background_color>
+  <grid_visible>false</grid_visible>
+  <grid_step_x>5</grid_step_x>
+  <widget type="label" version="2.0.0">
+    <name>text #6</name>
+    <text>Teledyne ISCO Syringe Pump</text>
+    <x>101</x>
+    <y>6</y>
+    <width>312</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #9</name>
+    <text>$(P)$(PUMP)</text>
+    <x>7</x>
+    <y>36</y>
+    <width>500</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #12</name>
+    <x>10</x>
+    <y>66</y>
+    <width>500</width>
+    <height>245</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #15</name>
+      <pv_name>$(P)$(PUMP)Empty_RBV</pv_name>
+      <x>255</x>
+      <y>25</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </background_color>
+      <format>6</format>
+      <show_units>false</show_units>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #19</name>
+      <pv_name>$(P)$(PUMP)Full_RBV</pv_name>
+      <x>255</x>
+      <y>50</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </background_color>
+      <format>6</format>
+      <show_units>false</show_units>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #23</name>
+      <pv_name>$(P)$(PUMP)Overpressure_RBV</pv_name>
+      <x>255</x>
+      <y>75</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </background_color>
+      <format>6</format>
+      <show_units>false</show_units>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #27</name>
+      <pv_name>$(P)$(PUMP)Underpressure_RBV</pv_name>
+      <x>255</x>
+      <y>100</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </background_color>
+      <format>6</format>
+      <show_units>false</show_units>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #31</name>
+      <pv_name>$(P)$(PUMP)MaxVolume_RBV</pv_name>
+      <x>255</x>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #35</name>
+      <text>At upper limit (Empty)</text>
+      <x>30</x>
+      <y>25</y>
+      <width>220</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #38</name>
+      <text>At lower limit (Full)</text>
+      <x>40</x>
+      <y>50</y>
+      <width>210</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #41</name>
+      <text>Overpressure</text>
+      <x>130</x>
+      <y>75</y>
+      <width>120</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #44</name>
+      <text>Underpressure</text>
+      <x>120</x>
+      <y>100</y>
+      <width>130</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #47</name>
+      <text>Max volume</text>
+      <x>150</x>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>composite #50</name>
+      <y>150</y>
+      <width>460</width>
+      <height>95</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>text update #53</name>
+        <pv_name>$(P)$(PUMP)MaxPressureSP_RBV</pv_name>
+        <x>360</x>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <foreground_color>
+          <color red="42" green="99" blue="228">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color red="200" green="200" blue="200">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>text update #57</name>
+        <pv_name>$(P)$(PUMP)MaxFlowLimit_RBV</pv_name>
+        <x>360</x>
+        <y>75</y>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <foreground_color>
+          <color red="42" green="99" blue="228">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color red="200" green="200" blue="200">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>text update #61</name>
+        <pv_name>$(P)$(PUMP)MaxFlowRateSP_RBV</pv_name>
+        <x>360</x>
+        <y>50</y>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <foreground_color>
+          <color red="42" green="99" blue="228">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color red="200" green="200" blue="200">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>text update #65</name>
+        <pv_name>$(P)$(PUMP)MinPressureSP_RBV</pv_name>
+        <x>360</x>
+        <y>25</y>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <foreground_color>
+          <color red="42" green="99" blue="228">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color red="200" green="200" blue="200">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>text entry #69</name>
+        <pv_name>$(P)$(PUMP)MaxPressureSP</pv_name>
+        <x>255</x>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <background_color>
+          <color red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>text entry #73</name>
+        <pv_name>$(P)$(PUMP)MaxFlowLimit</pv_name>
+        <x>255</x>
+        <y>75</y>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <background_color>
+          <color red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>text entry #77</name>
+        <pv_name>$(P)$(PUMP)MaxFlowRateSP</pv_name>
+        <x>255</x>
+        <y>50</y>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <background_color>
+          <color red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>text entry #81</name>
+        <pv_name>$(P)$(PUMP)MinPressureSP</pv_name>
+        <x>255</x>
+        <y>25</y>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <background_color>
+          <color red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>text #85</name>
+        <text>Max pressure setpoint</text>
+        <x>40</x>
+        <width>210</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>text #88</name>
+        <text>Max flow limit in CP mode</text>
+        <y>75</y>
+        <width>250</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>text #91</name>
+        <text>Max flow rate setpoint</text>
+        <x>30</x>
+        <y>50</y>
+        <width>220</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>text #94</name>
+        <text>Min pressure setpoint</text>
+        <x>40</x>
+        <y>25</y>
+        <width>210</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>composite #97</name>
+      <x>100</x>
+      <y>125</y>
+      <width>400</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="choice" version="2.0.0">
+        <name>choice button #100</name>
+        <pv_name>$(P)$(PUMP)PoorFillAlarm</pv_name>
+        <x>155</x>
+        <width>140</width>
+        <height>20</height>
+        <background_color>
+          <color red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <items>
+          <item>Item 1</item>
+          <item>Item 2</item>
+        </items>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>text #103</name>
+        <text>Poor fill alarm</text>
+        <width>150</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>text update #106</name>
+        <pv_name>$(P)$(PUMP)PoorFillAlarm_RBV</pv_name>
+        <x>300</x>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <foreground_color>
+          <color red="42" green="99" blue="228">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color red="45" green="45" blue="45">
+          </color>
+        </background_color>
+        <format>6</format>
+        <show_units>false</show_units>
+      </widget>
+    </widget>
+  </widget>
+</display>

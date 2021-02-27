@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
-  <name>ISCO_1_Pump</name>
+  <name>ISCO_SinglePump</name>
   <x>219</x>
   <y>256</y>
   <width>325</width>
@@ -548,162 +548,79 @@
     </background_color>
     <transparent>true</transparent>
   </widget>
-  <widget type="group" version="2.0.0">
-    <name>composite #118</name>
-    <x>27</x>
+  <widget type="label" version="2.0.0">
+    <name>text #118</name>
+    <text>Control</text>
+    <x>127</x>
     <y>345</y>
+    <width>70</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #121</name>
+    <text>Mode</text>
+    <x>65</x>
+    <y>370</y>
+    <width>40</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>menu #124</name>
+    <pv_name>$(P)$(PUMP)Mode</pv_name>
+    <x>110</x>
+    <y>370</y>
+    <width>150</width>
+    <height>20</height>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #127</name>
+    <x>27</x>
+    <y>395</y>
     <width>270</width>
-    <height>95</height>
+    <height>20</height>
     <style>3</style>
     <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>text #121</name>
-      <text>Control</text>
-      <x>100</x>
-      <width>70</width>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #130</name>
+      <pv_name>$(P)$(PUMP)Run_RBV</pv_name>
+      <x>170</x>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="16.0">
         </font>
       </font>
-      <horizontal_alignment>2</horizontal_alignment>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="218" green="218" blue="218">
+        </color>
+      </background_color>
+      <format>6</format>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="group" version="2.0.0">
-      <name>composite #124</name>
-      <x>38</x>
-      <y>25</y>
-      <width>195</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="group" version="2.0.0">
-        <name>composite #127</name>
-        <width>195</width>
-        <height>20</height>
-        <style>3</style>
-        <transparent>true</transparent>
-        <widget type="label" version="2.0.0">
-          <name>text #130</name>
-          <text>Mode</text>
-          <width>40</width>
-          <font>
-            <font family="Liberation Sans" style="REGULAR" size="16.0">
-            </font>
-          </font>
-          <horizontal_alignment>2</horizontal_alignment>
-        </widget>
-        <widget type="combo" version="2.0.0">
-          <name>menu #133</name>
-          <pv_name>$(P)$(PUMP)Mode</pv_name>
-          <x>45</x>
-          <width>150</width>
-          <height>20</height>
-          <background_color>
-            <color red="187" green="187" blue="187">
-            </color>
-          </background_color>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>composite #136</name>
-      <y>50</y>
-      <width>270</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>text update #139</name>
-        <pv_name>$(P)$(PUMP)Run_RBV</pv_name>
-        <x>170</x>
-        <font>
-          <font family="Liberation Sans" style="REGULAR" size="16.0">
-          </font>
-        </font>
-        <foreground_color>
-          <color red="42" green="99" blue="228">
-          </color>
-        </foreground_color>
-        <background_color>
-          <color red="218" green="218" blue="218">
-          </color>
-        </background_color>
-        <format>6</format>
-        <show_units>false</show_units>
-        <horizontal_alignment>1</horizontal_alignment>
-      </widget>
-      <widget type="group" version="2.0.0">
-        <name>composite #143</name>
-        <width>165</width>
-        <height>20</height>
-        <style>3</style>
-        <transparent>true</transparent>
-        <widget type="action_button" version="3.0.0">
-          <name>message button #146</name>
-          <actions>
-            <action type="write_pv">
-              <pv_name>$(P)$(PUMP)Run</pv_name>
-              <value>0</value>
-              <description>Write</description>
-            </action>
-          </actions>
-          <pv_name>$(P)$(PUMP)Run</pv_name>
-          <text>Stop</text>
-          <width>80</width>
-          <height>20</height>
-          <background_color>
-            <color red="253" green="0" blue="0">
-            </color>
-          </background_color>
-        </widget>
-        <widget type="action_button" version="3.0.0">
-          <name>message button #149</name>
-          <actions>
-            <action type="write_pv">
-              <pv_name>$(P)$(PUMP)Run</pv_name>
-              <value>1</value>
-              <description>Write</description>
-            </action>
-          </actions>
-          <pv_name>$(P)$(PUMP)Run</pv_name>
-          <text>Start</text>
-          <x>85</x>
-          <width>80</width>
-          <height>20</height>
-          <background_color>
-            <color red="0" green="216" blue="0">
-            </color>
-          </background_color>
-        </widget>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>composite #152</name>
-      <x>33</x>
-      <y>75</y>
-      <width>205</width>
+      <name>composite #134</name>
+      <width>165</width>
       <height>20</height>
       <style>3</style>
       <transparent>true</transparent>
       <widget type="action_button" version="3.0.0">
-        <name>message button #155</name>
-        <actions>
-          <action type="write_pv">
-            <pv_name>$(P)$(PUMP)Refill</pv_name>
-            <value>1</value>
-            <description>Write</description>
-          </action>
-        </actions>
-        <pv_name>$(P)$(PUMP)Refill</pv_name>
-        <text>Run Refill</text>
-        <height>20</height>
-        <background_color>
-          <color red="115" green="223" blue="255">
-          </color>
-        </background_color>
-      </widget>
-      <widget type="action_button" version="3.0.0">
-        <name>message button #158</name>
+        <name>message button #137</name>
         <actions>
           <action type="write_pv">
             <pv_name>$(P)$(PUMP)Run</pv_name>
@@ -712,18 +629,81 @@
           </action>
         </actions>
         <pv_name>$(P)$(PUMP)Run</pv_name>
-        <text>Stop Refill</text>
-        <x>105</x>
+        <text>Stop</text>
+        <width>80</width>
         <height>20</height>
         <background_color>
-          <color red="115" green="223" blue="255">
+          <color red="253" green="0" blue="0">
+          </color>
+        </background_color>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>message button #140</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(P)$(PUMP)Run</pv_name>
+            <value>1</value>
+            <description>Write</description>
+          </action>
+        </actions>
+        <pv_name>$(P)$(PUMP)Run</pv_name>
+        <text>Start</text>
+        <x>85</x>
+        <width>80</width>
+        <height>20</height>
+        <background_color>
+          <color red="0" green="216" blue="0">
           </color>
         </background_color>
       </widget>
     </widget>
   </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #143</name>
+    <x>60</x>
+    <y>420</y>
+    <width>205</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="action_button" version="3.0.0">
+      <name>message button #146</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)$(PUMP)Refill</pv_name>
+          <value>1</value>
+          <description>Write</description>
+        </action>
+      </actions>
+      <pv_name>$(P)$(PUMP)Refill</pv_name>
+      <text>Run Refill</text>
+      <height>20</height>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>message button #149</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)$(PUMP)Run</pv_name>
+          <value>0</value>
+          <description>Write</description>
+        </action>
+      </actions>
+      <pv_name>$(P)$(PUMP)Run</pv_name>
+      <text>Stop Refill</text>
+      <x>105</x>
+      <height>20</height>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+    </widget>
+  </widget>
   <widget type="action_button" version="3.0.0">
-    <name>related display #161</name>
+    <name>related display #152</name>
     <actions>
       <action type="open_display">
         <file>ISCO_Controller.opi</file>
@@ -731,7 +711,7 @@
         <description>Controller</description>
       </action>
       <action type="open_display">
-        <file>ISCO_1_PumpMore.opi</file>
+        <file>ISCO_SinglePumpMore.opi</file>
         <target>tab</target>
         <description>Pump more</description>
       </action>

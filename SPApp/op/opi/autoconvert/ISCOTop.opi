@@ -73,7 +73,7 @@
   <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
     <actions hook="false" hook_all="false">
       <action type="OPEN_DISPLAY">
-        <path>ISCO_1_Pump.opi</path>
+        <path>ISCO_SinglePump.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
           <P>ISCO1:</P>
@@ -83,7 +83,7 @@
         <description>Pump A</description>
       </action>
       <action type="OPEN_DISPLAY">
-        <path>ISCO_1_Pump.opi</path>
+        <path>ISCO_SinglePump.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
           <P>ISCO1:</P>
@@ -93,7 +93,7 @@
         <description>Pump B</description>
       </action>
       <action type="OPEN_DISPLAY">
-        <path>ISCO_1_Pump.opi</path>
+        <path>ISCO_SinglePump.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
           <P>ISCO1:</P>
@@ -103,7 +103,7 @@
         <description>Pump C</description>
       </action>
       <action type="OPEN_DISPLAY">
-        <path>ISCO_1_Pump.opi</path>
+        <path>ISCO_SinglePump.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
           <P>ISCO1:</P>
@@ -111,6 +111,30 @@
         </macros>
         <mode>1</mode>
         <description>Pump D</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>ISCO_DualPump.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <P>ISCO1:</P>
+          <P1>A:</P1>
+          <P2>B:</P2>
+          <DP>AB:</DP>
+        </macros>
+        <mode>1</mode>
+        <description>Dual AB</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>ISCO_DualPump.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <P>ISCO1:</P>
+          <P1>C:</P1>
+          <P2>D:</P2>
+          <DP>CD:</DP>
+        </macros>
+        <mode>1</mode>
+        <description>Dual CD</description>
       </action>
     </actions>
     <actions_from_pv>false</actions_from_pv>
@@ -154,5 +178,61 @@ $(pv_value)</tooltip>
     <width>100</width>
     <x>75</x>
     <y>40</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>asynRecord.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <P>ISCO1:</P>
+          <R>asyn1</R>
+        </macros>
+        <mode>1</mode>
+        <description>Pump A</description>
+      </action>
+    </actions>
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>20</height>
+    <image></image>
+    <name>Action Button</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>0</style>
+    <text>asyn record</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>100</width>
+    <x>75</x>
+    <y>65</y>
   </widget>
 </display>

@@ -590,19 +590,6 @@ fillColor rgb 0 0 0
 lineWidth 0
 endObjectProperties
 
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 27
-y 345
-w 270
-h 95
-
-beginGroup
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
@@ -623,32 +610,6 @@ value {
 }
 endObjectProperties
 
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 65
-y 370
-w 195
-h 20
-
-beginGroup
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 65
-y 370
-w 195
-h 20
-
-beginGroup
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
@@ -668,16 +629,6 @@ value {
   "Mode"
 }
 endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-
-endGroup
-
-endObjectProperties
-
 
 # (Group)
 object activeGroupClass
@@ -752,11 +703,6 @@ w 205
 h 20
 
 beginGroup
-
-endGroup
-
-endObjectProperties
-
 
 endGroup
 
@@ -936,42 +882,6 @@ endGroup
 
 endObjectProperties
 
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 27
-y 345
-w 270
-h 95
-
-beginGroup
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 65
-y 370
-w 195
-h 20
-
-beginGroup
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 65
-y 370
-w 195
-h 20
-
-beginGroup
 
 # (Menu Button)
 object activeMenuButtonClass
@@ -992,16 +902,6 @@ controlPv "$(P)$(PUMP)Mode"
 indicatorPv "$(P)$(PUMP)Mode"
 font "helvetica-medium-r-12.0"
 endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-
-endGroup
-
-endObjectProperties
-
 # (Group)
 object activeGroupClass
 beginObjectProperties
@@ -1154,11 +1054,6 @@ endGroup
 endObjectProperties
 
 
-endGroup
-
-endObjectProperties
-
-
 # (Related Display)
 object relatedDisplayClass
 beginObjectProperties
@@ -1180,7 +1075,7 @@ numPvs 4
 numDsps 2
 displayFileName {
   0 "ISCO_Controller.edl"
-  1 "ISCO_1_PumpMore.edl"
+  1 "ISCO_SinglePumpMore.edl"
 }
 menuLabel {
   0 "Controller"
