@@ -1,7 +1,7 @@
 # These records are for tweaking the pressure
 record(ao,"$(P)$(PUMP)PressureTweak") {
     field(VAL, "1")
-    field(PREC,"0")
+    field(PREC,"3")
 }
 record(calcout,"$(P)$(PUMP)PressureTweakDown") {
     field(INPA,"$(P)$(PUMP)PressureTweak.VAL NPP NMS")
