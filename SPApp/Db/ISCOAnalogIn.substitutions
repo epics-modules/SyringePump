@@ -50,8 +50,8 @@ pattern
 {D:Pressure_RBV,          SP1_Reg_In_1,    90,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
 {D:FlowRate_RBV,          SP1_Reg_In_1,    92,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
 {D:VolumeRemaining_RBV,   SP1_Reg_In_1,    94,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
-{AB:Pressure_RBV,         SP1_Reg_In_1,    96,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
-{AB:FlowRate_RBV,         SP1_Reg_In_1,    98,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{AB:FlowRate_RBV,         SP1_Reg_In_1,    96,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{AB:Pressure_RBV,         SP1_Reg_In_1,    98,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
 {AB:VolumeRemaining_RBV,  SP1_Reg_In_2,     0,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
 {CD:Pressure_RBV,         SP1_Reg_In_2,     2,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
 {CD:FlowRate_RBV,         SP1_Reg_In_2,     4,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}

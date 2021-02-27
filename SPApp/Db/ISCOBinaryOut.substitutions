@@ -1,7 +1,6 @@
-
 file "$(MODBUS)/db/bo_bit.template" { 
 pattern
-{  R,          PORT,      OFFSET,  ZNAM,    ONAM}
+{  R,                 PORT,      OFFSET,  ZNAM,    ONAM}
 {A:Run,             SP1_Bit_Out,     0,    Stop,    Run}
 {B:Run,             SP1_Bit_Out,     1,    Stop,    Run}
 {C:Run,             SP1_Bit_Out,     2,    Stop,    Run}
@@ -19,35 +18,35 @@ pattern
 {B:ConstFlow,       SP1_Bit_Out,    14,     Off,     On}
 {C:ConstFlow,       SP1_Bit_Out,    15,     Off,     On}
 {D:ConstFlow,       SP1_Bit_Out,    16,     Off,     On}
-{coil:17,           SP1_Bit_Out,    17,     Low,    High}
-{coil:18,           SP1_Bit_Out,    18,     Low,    High}
-{coil:19,           SP1_Bit_Out,    19,     Low,    High}
-{coil:20,           SP1_Bit_Out,    20,     Low,    High}
-{coil:21,           SP1_Bit_Out,    21,     Low,    High}
-{coil:22,           SP1_Bit_Out,    22,     Low,    High}
-{coil:23,           SP1_Bit_Out,    23,     Low,    High}
-{coil:24,           SP1_Bit_Out,    24,     Low,    High}
-{coil:25,           SP1_Bit_Out,    25,     Low,    High}
-{coil:26,           SP1_Bit_Out,    26,     Low,    High}
-{coil:27,           SP1_Bit_Out,    27,     Low,    High}
-{coil:28,           SP1_Bit_Out,    28,     Low,    High}
-{coil:29,           SP1_Bit_Out,    29,     Low,    High}
-{coil:30,           SP1_Bit_Out,    30,     Low,    High}
-{coil:31,           SP1_Bit_Out,    31,     Low,    High}
-{coil:32,           SP1_Bit_Out,    32,     Low,    High}
-{coil:33,           SP1_Bit_Out,    33,     Low,    High}
-{coil:34,           SP1_Bit_Out,    34,     Low,    High}
+{AB:Independent,    SP1_Bit_Out,    17,   False,   True}
+{AB:ConstFlow,      SP1_Bit_Out,    18,     Off,     On}
+{AB:ConstPress,     SP1_Bit_Out,    19,     Off,     On}
+{AB:ModAdd,         SP1_Bit_Out,    20,     Off,     On}
+{AB:ContModAdd,     SP1_Bit_Out,    21,     Off,     On}
+{CD:Independent,    SP1_Bit_Out,    22,   False,   True}
+{CD:ConstFlow,      SP1_Bit_Out,    23,     Off,     On}
+{CD:ConstPress,     SP1_Bit_Out,    24,     Off,     On}
+{AB:DeliverMode,    SP1_Bit_Out,    25, Deliver, Receive}
+{AB:PressureMode,   SP1_Bit_Out,    26,     Low,  Normal}
+{AB:PressureMatch,  SP1_Bit_Out,    27,    Fast,  Normal}
+{CD:DeliverMode,    SP1_Bit_Out,    28, Deliver, Receive}
+{CD:PressureMode,   SP1_Bit_Out,    29,     Low,  Normal}
+{CD:PressureMatch,  SP1_Bit_Out,    30,    Fast,  Normal}
+{A:RapidPress,      SP1_Bit_Out,    31, Disable,  Enable}
+{B:RapidPress,      SP1_Bit_Out,    32, Disable,  Enable}
+{C:RapidPress,      SP1_Bit_Out,    33, Disable,  Enable}
+{D:RapidPress,      SP1_Bit_Out,    34, Disable,  Enable}
 
 ## Coils 35-45 are readonly
 
-{coil:46,           SP1_Bit_Out,     46,     Low,    High}
-{coil:47,           SP1_Bit_Out,     47,     Low,    High}
-{coil:48,           SP1_Bit_Out,     48,     Low,    High}
-{coil:49,           SP1_Bit_Out,     49,     Low,    High}
-{coil:50,           SP1_Bit_Out,     50,     Low,    High}
-{coil:51,           SP1_Bit_Out,     51,     Low,    High}
-{coil:52,           SP1_Bit_Out,     52,     Low,    High}
-{coil:53,           SP1_Bit_Out,     53,     Low,    High}
+{LocalOperation,    SP1_Bit_Out,     46, Disable,  Enable}
+{RemoteOperation,   SP1_Bit_Out,     47, Disable,  Enable}
+{ExternalOperation, SP1_Bit_Out,     48, Disable,  Enable}
+{ExternalRefill,    SP1_Bit_Out,     49, Disable,  Enable}
+{A:ZeroPressure,    SP1_Bit_Out,     50, Disable,  Enable}
+{B:ZeroPressure,    SP1_Bit_Out,     51, Disable,  Enable}
+{C:ZeroPressure,    SP1_Bit_Out,     52, Disable,  Enable}
+{D:ZeroPressure,    SP1_Bit_Out,     53, Disable,  Enable}
 {A:PressIntegrator, SP1_Bit_Out,     54,     Off,      On}
 {B:PressIntegrator, SP1_Bit_Out,     55,     Off,      On}
 {C:PressIntegrator, SP1_Bit_Out,     56,     Off,      On}
@@ -76,8 +75,8 @@ pattern
 {B:DispenseModeCF,  SP1_Bit_Out,     79, Disable,  Enable}
 {C:DispenseModeCF,  SP1_Bit_Out,     80, Disable,  Enable}
 {D:DispenseModeCF,  SP1_Bit_Out,     81, Disable,  Enable}
-{coil:82,           SP1_Bit_Out,     82,     Low,    High}
-{coil:83,           SP1_Bit_Out,     83,     Low,    High}
+{AB:ResetVolDel,    SP1_Bit_Out,     82, Disable,  Enable}
+{CD:ResetVolDel,    SP1_Bit_Out,     83, Disable,  Enable}
 {Unit:ATM,          SP1_Bit_Out,     84,     Off,      On}
 {Unit:BAR,          SP1_Bit_Out,     85,     Off,      On}
 {Unit:kPa,          SP1_Bit_Out,     86,     Off,      On}

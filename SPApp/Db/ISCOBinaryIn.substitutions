@@ -5,7 +5,7 @@ pattern
 {B:Run_RBV,             SP1_Bit_In,     1, Stopped, Running,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {C:Run_RBV,             SP1_Bit_In,     2, Stopped, Running,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {D:Run_RBV,             SP1_Bit_In,     3, Stopped, Running,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{Link-AB-CD_RBV,        SP1_Bit_In,     4, Disable,  Enable,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{Link-AB-CD_RBV,        SP1_Bit_In,     4,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {A:Refill_RBV,          SP1_Bit_In,     5,    Stop,     Run,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {B:Refill_RBV,          SP1_Bit_In,     6,    Stop,     Run,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {C:Refill_RBV,          SP1_Bit_In,     7,    Stop,     Run,  NO_ALARM,  MAJOR,  "I/O Intr"}
@@ -18,24 +18,24 @@ pattern
 {B:ConstFlow_RBV,       SP1_Bit_In,    14,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {C:ConstFlow_RBV,       SP1_Bit_In,    15,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {D:ConstFlow_RBV,       SP1_Bit_In,    16,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:17_RBV,           SP1_Bit_In,    17,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:18_RBV,           SP1_Bit_In,    18,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:19_RBV,           SP1_Bit_In,    19,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:20_RBV,           SP1_Bit_In,    20,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:21_RBV,           SP1_Bit_In,    21,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:22_RBV,           SP1_Bit_In,    22,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:23_RBV,           SP1_Bit_In,    23,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:24_RBV,           SP1_Bit_In,    24,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:25_RBV,           SP1_Bit_In,    25,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:26_RBV,           SP1_Bit_In,    26,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:27_RBV,           SP1_Bit_In,    27,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:28_RBV,           SP1_Bit_In,    28,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:29_RBV,           SP1_Bit_In,    29,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:30_RBV,           SP1_Bit_In,    30,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:31_RBV,           SP1_Bit_In,    31,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:32_RBV,           SP1_Bit_In,    32,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:33_RBV,           SP1_Bit_In,    33,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:34_RBV,           SP1_Bit_In,    34,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{AB:Independent_RBV,    SP1_Bit_In,    17,   False,    True,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{AB:ConstFlow_RBV,      SP1_Bit_In,    18,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{AB:ConstPress_RBV,     SP1_Bit_In,    19,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{AB:ModAdd_RBV,         SP1_Bit_In,    20,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{AB:ContModAdd_RBV,     SP1_Bit_In,    21,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{CD:Independent_RBV,    SP1_Bit_In,    22,   False,    True,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{CD:ConstFlow_RBV,      SP1_Bit_In,    23,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{CD:ConstPress_RBV,     SP1_Bit_In,    24,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{AB:DeliverMode_RBV,    SP1_Bit_In,    25, Deliver, Receive,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{AB:PressureMode_RBV,   SP1_Bit_In,    26,     Low,  Normal,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{AB:PressureMatch_RBV,  SP1_Bit_In,    27,    Fast,  Normal,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{CD:DeliverMode_RBV,    SP1_Bit_In,    28, Deliver, Receive,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{CD:PressureMode_RBV,   SP1_Bit_In,    29,     Low,  Normal,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{CD:PressureMatch_RBV,  SP1_Bit_In,    30,    Fast,  Normal,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{A:RapidPress_RBV,      SP1_Bit_In,    31,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{B:RapidPress_RBV,      SP1_Bit_In,    32,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{C:RapidPress_RBV,      SP1_Bit_In,    33,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{D:RapidPress_RBV,      SP1_Bit_In,    34,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {A:Equilibrating_RBV,   SP1_Bit_In,    35,   False,    True,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {B:Equilibrating_RBV,   SP1_Bit_In,    36,   False,    True,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {C:Equilibrating_RBV,   SP1_Bit_In,    37,   False,    True,  NO_ALARM,  MAJOR,  "I/O Intr"}
@@ -44,17 +44,17 @@ pattern
 {B:InHold_RBV,          SP1_Bit_In,    40,   False,    True,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {C:InHold_RBV,          SP1_Bit_In,    41,   False,    True,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {D:InHold_RBV,          SP1_Bit_In,    42,   False,    True,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:43_RBV,           SP1_Bit_In,    43,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:44_RBV,           SP1_Bit_In,    44,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:45_RBV,           SP1_Bit_In,    45,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:46_RBV,           SP1_Bit_In,    46,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:47_RBV,           SP1_Bit_In,    47,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:48_RBV,           SP1_Bit_In,    48,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:49_RBV,           SP1_Bit_In,    49,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:50_RBV,           SP1_Bit_In,    50,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:51_RBV,           SP1_Bit_In,    51,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:52_RBV,           SP1_Bit_In,    52,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:53_RBV,           SP1_Bit_In,    53,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{AB:ConcGradient_RBV,   SP1_Bit_In,    43,   False,    True,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{A:PressGradient_RBV,   SP1_Bit_In,    44,   False,    True,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{A:FlowGradient_RBV,    SP1_Bit_In,    45,   False,    True,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{LocalOperation_RBV,    SP1_Bit_In,    46,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{RemoteOperation_RBV,   SP1_Bit_In,    47,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{ExternalOperation_RBV, SP1_Bit_In,    48,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{ExternalRefill_RBV,    SP1_Bit_In,    49,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{A:ZeroPressure_RBV,    SP1_Bit_In,    50,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{B:ZeroPressure_RBV,    SP1_Bit_In,    51,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{C:ZeroPressure_RBV,    SP1_Bit_In,    52,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{D:ZeroPressure_RBV,    SP1_Bit_In,    53,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {A:PressIntegrator_RBV, SP1_Bit_In,    54,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {B:PressIntegrator_RBV, SP1_Bit_In,    55,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {C:PressIntegrator_RBV, SP1_Bit_In,    56,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
@@ -79,12 +79,12 @@ pattern
 {OutputBit6_RBV,        SP1_Bit_In,    75,     Low,    High,  NO_ALARM,  MINOR,  "I/O Intr"}
 {OutputBit7_RBV,        SP1_Bit_In,    76,     Low,    High,  NO_ALARM,  MINOR,  "I/O Intr"}
 {OutputBit8_RBV,        SP1_Bit_In,    77,     Low,    High,  NO_ALARM,  MINOR,  "I/O Intr"}
-{A:DispenseModeCF_RBV,  SP1_Bit_In,    78, Disable,  Enable,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{B:DispenseModeCF_RBV,  SP1_Bit_In,    79, Disable,  Enable,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{C:DispenseModeCF_RBV,  SP1_Bit_In,    80, Disable,  Enable,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{D:DispenseModeCF_RBV,  SP1_Bit_In,    81, Disable,  Enable,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:82_RBV,           SP1_Bit_In,    82,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-{coil:83_RBV,           SP1_Bit_In,    83,     Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{A:DispenseModeCF_RBV,  SP1_Bit_In,    78,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{B:DispenseModeCF_RBV,  SP1_Bit_In,    79,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{C:DispenseModeCF_RBV,  SP1_Bit_In,    80,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{D:DispenseModeCF_RBV,  SP1_Bit_In,    81,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{AB:ResetVolDel_RBV,    SP1_Bit_In,    82,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{AB:ResetVolDel_RBV,    SP1_Bit_In,    83,Disabled, Enabled,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {Unit:ATM_RBV,          SP1_Bit_In,    84,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {Unit:BAR_RBV,          SP1_Bit_In,    85,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {Unit:kPa_RBV,          SP1_Bit_In,    86,     Off,      On,  NO_ALARM,  MAJOR,  "I/O Intr"}
