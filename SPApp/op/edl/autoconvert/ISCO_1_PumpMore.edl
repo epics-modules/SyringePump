@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 631
-y 230
+x 453
+y 310
 w 1335
 h 470
 font "helvetica-medium-r-18.0"
@@ -1005,19 +1005,6 @@ newPos
 objType "controls"
 endObjectProperties
 
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 950
-y 70
-w 380
-h 395
-
-beginGroup
-
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
@@ -1592,9 +1579,8 @@ controlPv "$(P)VoltageIn1_RBV"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
-fgColor rgb 0 65535 0
-fgAlarm
-bgColor rgb 11520 11520 11520
+fgColor rgb 10752 25344 58368
+bgColor rgb 51200 51200 51200
 limitsFromDb
 nullColor rgb 60928 46592 11008
 smartRefresh
@@ -1637,9 +1623,8 @@ controlPv "$(P)VoltageIn2_RBV"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
-fgColor rgb 0 65535 0
-fgAlarm
-bgColor rgb 11520 11520 11520
+fgColor rgb 10752 25344 58368
+bgColor rgb 51200 51200 51200
 limitsFromDb
 nullColor rgb 60928 46592 11008
 smartRefresh
@@ -1682,9 +1667,8 @@ controlPv "$(P)VoltageIn3_RBV"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
-fgColor rgb 0 65535 0
-fgAlarm
-bgColor rgb 11520 11520 11520
+fgColor rgb 10752 25344 58368
+bgColor rgb 51200 51200 51200
 limitsFromDb
 nullColor rgb 60928 46592 11008
 smartRefresh
@@ -1727,9 +1711,8 @@ controlPv "$(P)VoltageIn4_RBV"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
-fgColor rgb 0 65535 0
-fgAlarm
-bgColor rgb 11520 11520 11520
+fgColor rgb 10752 25344 58368
+bgColor rgb 51200 51200 51200
 limitsFromDb
 nullColor rgb 60928 46592 11008
 smartRefresh
@@ -1737,11 +1720,6 @@ fastUpdate
 newPos
 objType "controls"
 endObjectProperties
-
-endGroup
-
-endObjectProperties
-
 
 # (Group)
 object activeGroupClass
@@ -2358,18 +2336,6 @@ controlPv "$(P)$(PUMP)PoorFillAlarm"
 font "helvetica-medium-r-10.0"
 orientation "horizontal"
 endObjectProperties
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 950
-y 70
-w 380
-h 395
-
-beginGroup
 
 # (Choice Button)
 object activeChoiceButtonClass
@@ -2538,11 +2504,6 @@ controlPv "$(P)OutputBit8"
 font "helvetica-medium-r-10.0"
 orientation "horizontal"
 endObjectProperties
-
-endGroup
-
-endObjectProperties
-
 # (Group)
 object activeGroupClass
 beginObjectProperties

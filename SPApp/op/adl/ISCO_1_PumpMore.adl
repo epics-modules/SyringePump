@@ -5,8 +5,8 @@ file {
 }
 display {
 	object {
-		x=631
-		y=230
+		x=453
+		y=310
 		width=1335
 		height=470
 	}
@@ -915,603 +915,588 @@ text {
 	limits {
 	}
 }
-composite {
+"text update" {
+	object {
+		x=1230
+		y=70
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)OutputBit1_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="string"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1230
+		y=95
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)OutputBit2_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="string"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1230
+		y=120
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)OutputBit3_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="string"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1230
+		y=145
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)OutputBit4_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="string"
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=1125
+		y=70
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)OutputBit1"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=1125
+		y=95
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)OutputBit2"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=1125
+		y=120
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)OutputBit3"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=1125
+		y=145
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)OutputBit4"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+text {
 	object {
 		x=950
 		y=70
-		width=380
-		height=395
+		width=170
+		height=20
 	}
-	"composite name"=""
-	children {
-		"text update" {
-			object {
-				x=1230
-				y=70
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)OutputBit1_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			format="string"
-			limits {
-			}
-		}
-		"text update" {
-			object {
-				x=1230
-				y=95
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)OutputBit2_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			format="string"
-			limits {
-			}
-		}
-		"text update" {
-			object {
-				x=1230
-				y=120
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)OutputBit3_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			format="string"
-			limits {
-			}
-		}
-		"text update" {
-			object {
-				x=1230
-				y=145
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)OutputBit4_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			format="string"
-			limits {
-			}
-		}
-		"choice button" {
-			object {
-				x=1125
-				y=70
-				width=100
-				height=20
-			}
-			control {
-				chan="$(P)OutputBit1"
-				clr=14
-				bclr=51
-			}
-			stacking="column"
-		}
-		"choice button" {
-			object {
-				x=1125
-				y=95
-				width=100
-				height=20
-			}
-			control {
-				chan="$(P)OutputBit2"
-				clr=14
-				bclr=51
-			}
-			stacking="column"
-		}
-		"choice button" {
-			object {
-				x=1125
-				y=120
-				width=100
-				height=20
-			}
-			control {
-				chan="$(P)OutputBit3"
-				clr=14
-				bclr=51
-			}
-			stacking="column"
-		}
-		"choice button" {
-			object {
-				x=1125
-				y=145
-				width=100
-				height=20
-			}
-			control {
-				chan="$(P)OutputBit4"
-				clr=14
-				bclr=51
-			}
-			stacking="column"
-		}
-		text {
-			object {
-				x=950
-				y=70
-				width=170
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Digital out bit 1"
-			align="horiz. right"
-		}
-		text {
-			object {
-				x=950
-				y=95
-				width=170
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Digital out bit 2"
-			align="horiz. right"
-		}
-		text {
-			object {
-				x=950
-				y=120
-				width=170
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Digital out bit 3"
-			align="horiz. right"
-		}
-		text {
-			object {
-				x=950
-				y=145
-				width=170
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Digital out bit 4"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=1230
-				y=170
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)OutputBit5_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			format="string"
-			limits {
-			}
-		}
-		"choice button" {
-			object {
-				x=1125
-				y=170
-				width=100
-				height=20
-			}
-			control {
-				chan="$(P)OutputBit5"
-				clr=14
-				bclr=51
-			}
-			stacking="column"
-		}
-		text {
-			object {
-				x=950
-				y=170
-				width=170
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Digital out bit 5"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=1230
-				y=195
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)OutputBit6_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			format="string"
-			limits {
-			}
-		}
-		"choice button" {
-			object {
-				x=1125
-				y=195
-				width=100
-				height=20
-			}
-			control {
-				chan="$(P)OutputBit6"
-				clr=14
-				bclr=51
-			}
-			stacking="column"
-		}
-		text {
-			object {
-				x=950
-				y=195
-				width=170
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Digital out bit 6"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=1230
-				y=220
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)OutputBit7_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			format="string"
-			limits {
-			}
-		}
-		"choice button" {
-			object {
-				x=1125
-				y=220
-				width=100
-				height=20
-			}
-			control {
-				chan="$(P)OutputBit7"
-				clr=14
-				bclr=51
-			}
-			stacking="column"
-		}
-		text {
-			object {
-				x=950
-				y=220
-				width=170
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Digital out bit 7"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=1230
-				y=245
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)OutputBit8_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			format="string"
-			limits {
-			}
-		}
-		"choice button" {
-			object {
-				x=1125
-				y=245
-				width=100
-				height=20
-			}
-			control {
-				chan="$(P)OutputBit8"
-				clr=14
-				bclr=51
-			}
-			stacking="column"
-		}
-		text {
-			object {
-				x=950
-				y=245
-				width=170
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Digital out bit 8"
-			align="horiz. right"
-		}
-		text {
-			object {
-				x=961
-				y=270
-				width=160
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Digital in bit 1"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=1125
-				y=270
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)InputBit1_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			format="string"
-			limits {
-			}
-		}
-		text {
-			object {
-				x=961
-				y=295
-				width=160
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Digital in bit 2"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=1125
-				y=295
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)InputBit2_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			format="string"
-			limits {
-			}
-		}
-		text {
-			object {
-				x=961
-				y=320
-				width=160
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Digital in bit 3"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=1125
-				y=320
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)InputBit3_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			format="string"
-			limits {
-			}
-		}
-		text {
-			object {
-				x=961
-				y=345
-				width=160
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Digital in bit 4"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=1125
-				y=345
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)InputBit4_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			format="string"
-			limits {
-			}
-		}
-		text {
-			object {
-				x=1001
-				y=370
-				width=120
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Voltage in 1"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=1125
-				y=370
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)VoltageIn1_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			limits {
-			}
-		}
-		text {
-			object {
-				x=1001
-				y=395
-				width=120
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Voltage in 2"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=1125
-				y=395
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)VoltageIn2_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			limits {
-			}
-		}
-		text {
-			object {
-				x=1001
-				y=420
-				width=120
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Voltage in 3"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=1125
-				y=420
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)VoltageIn3_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			limits {
-			}
-		}
-		text {
-			object {
-				x=1001
-				y=445
-				width=120
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Voltage in 4"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=1125
-				y=445
-				width=100
-				height=20
-			}
-			monitor {
-				chan="$(P)VoltageIn4_RBV"
-				clr=53
-				bclr=13
-			}
-			clrmod="alarm"
-			limits {
-			}
-		}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital out bit 1"
+	align="horiz. right"
+}
+text {
+	object {
+		x=950
+		y=95
+		width=170
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital out bit 2"
+	align="horiz. right"
+}
+text {
+	object {
+		x=950
+		y=120
+		width=170
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital out bit 3"
+	align="horiz. right"
+}
+text {
+	object {
+		x=950
+		y=145
+		width=170
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital out bit 4"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1230
+		y=170
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)OutputBit5_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="string"
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=1125
+		y=170
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)OutputBit5"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+text {
+	object {
+		x=950
+		y=170
+		width=170
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital out bit 5"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1230
+		y=195
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)OutputBit6_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="string"
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=1125
+		y=195
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)OutputBit6"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+text {
+	object {
+		x=950
+		y=195
+		width=170
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital out bit 6"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1230
+		y=220
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)OutputBit7_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="string"
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=1125
+		y=220
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)OutputBit7"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+text {
+	object {
+		x=950
+		y=220
+		width=170
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital out bit 7"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1230
+		y=245
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)OutputBit8_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="string"
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=1125
+		y=245
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)OutputBit8"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+text {
+	object {
+		x=950
+		y=245
+		width=170
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital out bit 8"
+	align="horiz. right"
+}
+text {
+	object {
+		x=961
+		y=270
+		width=160
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital in bit 1"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1125
+		y=270
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)InputBit1_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="string"
+	limits {
+	}
+}
+text {
+	object {
+		x=961
+		y=295
+		width=160
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital in bit 2"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1125
+		y=295
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)InputBit2_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="string"
+	limits {
+	}
+}
+text {
+	object {
+		x=961
+		y=320
+		width=160
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital in bit 3"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1125
+		y=320
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)InputBit3_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="string"
+	limits {
+	}
+}
+text {
+	object {
+		x=961
+		y=345
+		width=160
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital in bit 4"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1125
+		y=345
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)InputBit4_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="string"
+	limits {
+	}
+}
+text {
+	object {
+		x=1001
+		y=370
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Voltage in 1"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1125
+		y=370
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)VoltageIn1_RBV"
+		clr=53
+		bclr=3
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=1001
+		y=395
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Voltage in 2"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1125
+		y=395
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)VoltageIn2_RBV"
+		clr=53
+		bclr=3
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=1001
+		y=420
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Voltage in 3"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1125
+		y=420
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)VoltageIn3_RBV"
+		clr=53
+		bclr=3
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=1001
+		y=445
+		width=120
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Voltage in 4"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1125
+		y=445
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)VoltageIn4_RBV"
+		clr=53
+		bclr=3
+	}
+	limits {
 	}
 }
 composite {
