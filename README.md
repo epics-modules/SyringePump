@@ -11,10 +11,14 @@ This package contains:
 Currently this module only supports Teledyne ISCO pumps with Modbus communication.  
 Support for Vindum Engineering pumps will be added, again using Modbus.
 
-These are the medm screens for an ISCO 65D syringe pump.
+These are the medm screens for a single ISCO 65D syringe pump.
 
-![ISCO_1_Pump.adl](ISCO_1_Pump.png)
+![ISCO_SinglePump.adl](ISCO_SinglePump.png)
 
-![ISCO_1_PumpMore.adl](ISCO_1_PumpMore.png)
+![ISCO_SinglePumpMore.adl](ISCO_SinglePumpMore.png)
 
 ![ISCO_Controller.adl](ISCO_Controller.png)
+
+These are the medm screens for a dual ISCO 65D syringe pump.
+
+![ISCO_DualPump.adl](ISCO_DualPump.png)
