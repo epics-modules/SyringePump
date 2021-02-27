@@ -16,3 +16,5 @@ These medm screens for an ISCO 65D syringe pump.
 ![ISCO_1_Pump.adl](ISCO_1_Pump.png)
 
 ![ISCO_1_PumpMore.adl](ISCO_1_PumpMore.png)
+
+![ISCO_Controller.adl](ISCO_Controller.png)
