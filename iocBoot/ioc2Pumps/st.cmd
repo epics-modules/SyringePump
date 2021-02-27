@@ -88,6 +88,10 @@ dbLoadRecords("$(TOP)/db/ISCOController.template", "P=$(PREFIX)")
 # Load a database with other records for each pump
 dbLoadRecords("$(TOP)/db/ISCOPumpN.template", "P=$(PREFIX), PUMP=A:")
 dbLoadRecords("$(TOP)/db/ISCOPumpN.template", "P=$(PREFIX), PUMP=B:")
+#dbLoadRecords("$(TOP)/db/ISCOPumpN.template", "P=$(PREFIX), PUMP=C:")
+#dbLoadRecords("$(TOP)/db/ISCOPumpN.template", "P=$(PREFIX), PUMP=D:")
+dbLoadRecords("$(TOP)/db/ISCOPumpN.template", "P=$(PREFIX), PUMP=AB:")
+#dbLoadRecords("$(TOP)/db/ISCOPumpN.template", "P=$(PREFIX), PUMP=CD:")
 
 # Enable ASYN_TRACEIO_HEX on octet server
 asynSetTraceIOMask("$(PORT)", 0, HEX)
