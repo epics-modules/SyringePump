@@ -1,0 +1,1394 @@
+
+file {
+	name="/home/epics/devel/SyringePump/SPApp/op/adl/ISCO_Controller.adl"
+	version=030109
+}
+display {
+	object {
+		x=453
+		y=310
+		width=1160
+		height=370
+	}
+	clr=14
+	bclr=3
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=358
+		y=6
+		width=444
+		height=25
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Teledyne ISCO Syringe Pump Controller"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=330
+		y=36
+		width=500
+		height=25
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="$(P)"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=195
+		y=70
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)SoftwareMajor_RBV"
+		clr=53
+		bclr=3
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=195
+		y=95
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)SoftwareMinor_RBV"
+		clr=53
+		bclr=3
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=195
+		y=120
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)SoftwareMicro_RBV"
+		clr=53
+		bclr=3
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=10
+		y=70
+		width=180
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Software major rev"
+	align="horiz. right"
+}
+text {
+	object {
+		x=10
+		y=95
+		width=180
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Software minor rev"
+	align="horiz. right"
+}
+text {
+	object {
+		x=10
+		y=120
+		width=180
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Software micro rev"
+	align="horiz. right"
+}
+composite {
+	object {
+		x=300
+		y=70
+		width=470
+		height=295
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=310
+				y=120
+				width=210
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Overpressure shutdown"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=320
+				y=95
+				width=200
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Overpressure display"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=340
+				y=70
+				width=180
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Overpressure alarm"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=300
+				y=195
+				width=220
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Underpressure shutdown"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=310
+				y=170
+				width=210
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Underpressure display"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=330
+				y=145
+				width=190
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Underpressure alarm"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=350
+				y=270
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Overflow shutdown"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=360
+				y=245
+				width=160
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Overflow display"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=380
+				y=220
+				width=140
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Overflow alarm"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=340
+				y=345
+				width=180
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Underflow shutdown"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=350
+				y=320
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Underflow display"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=370
+				y=295
+				width=150
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Underflow alarm"
+			align="horiz. right"
+		}
+		"choice button" {
+			object {
+				x=525
+				y=70
+				width=140
+				height=20
+			}
+			control {
+				chan="$(P)OverpressAlarm"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=525
+				y=95
+				width=140
+				height=20
+			}
+			control {
+				chan="$(P)OverpressDisplay"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=525
+				y=120
+				width=140
+				height=20
+			}
+			control {
+				chan="$(P)OverpressShutdown"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=525
+				y=145
+				width=140
+				height=20
+			}
+			control {
+				chan="$(P)UnderpressAlarm"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=525
+				y=170
+				width=140
+				height=20
+			}
+			control {
+				chan="$(P)UnderpressDisplay"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=525
+				y=195
+				width=140
+				height=20
+			}
+			control {
+				chan="$(P)UnderpressShutdown"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=525
+				y=220
+				width=140
+				height=20
+			}
+			control {
+				chan="$(P)OverflowAlarm"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=525
+				y=245
+				width=140
+				height=20
+			}
+			control {
+				chan="$(P)OverflowDisplay"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=525
+				y=270
+				width=140
+				height=20
+			}
+			control {
+				chan="$(P)OverflowShutdown"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=525
+				y=295
+				width=140
+				height=20
+			}
+			control {
+				chan="$(P)UnderflowAlarm"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=525
+				y=320
+				width=140
+				height=20
+			}
+			control {
+				chan="$(P)UnderflowDisplay"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=525
+				y=345
+				width=140
+				height=20
+			}
+			control {
+				chan="$(P)UnderflowShutdown"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"text update" {
+			object {
+				x=670
+				y=120
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OverpressShutdown_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=670
+				y=95
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OverpressDisplay_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=670
+				y=70
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OverpressAlarm_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=670
+				y=195
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)UnderpressShutdown_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=670
+				y=170
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)UnderpressDisplay_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=670
+				y=145
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)UnderpressAlarm_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=670
+				y=270
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OverflowShutdown_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=670
+				y=245
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OverflowDisplay_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=670
+				y=220
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OverflowAlarm_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=670
+				y=345
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)UnderflowShutdown_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=670
+				y=320
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)UnderflowDisplay_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=670
+				y=295
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)UnderflowAlarm_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+	}
+}
+composite {
+	object {
+		x=775
+		y=70
+		width=380
+		height=295
+	}
+	"composite name"=""
+	children {
+		"text update" {
+			object {
+				x=1055
+				y=70
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit1_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=1055
+				y=95
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit2_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=1055
+				y=120
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit3_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=1055
+				y=145
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit4_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"choice button" {
+			object {
+				x=950
+				y=70
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit1"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=950
+				y=95
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit2"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=950
+				y=120
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit3"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		"choice button" {
+			object {
+				x=950
+				y=145
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit4"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		text {
+			object {
+				x=775
+				y=70
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 1"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=775
+				y=95
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 2"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=775
+				y=120
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 3"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=775
+				y=145
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 4"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1055
+				y=170
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit5_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"choice button" {
+			object {
+				x=950
+				y=170
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit5"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		text {
+			object {
+				x=775
+				y=170
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 5"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1055
+				y=195
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit6_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"choice button" {
+			object {
+				x=950
+				y=195
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit6"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		text {
+			object {
+				x=775
+				y=195
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 6"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1055
+				y=220
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit7_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"choice button" {
+			object {
+				x=950
+				y=220
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit7"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		text {
+			object {
+				x=775
+				y=220
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 7"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1055
+				y=245
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)OutputBit8_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		"choice button" {
+			object {
+				x=950
+				y=245
+				width=100
+				height=20
+			}
+			control {
+				chan="$(P)OutputBit8"
+				clr=14
+				bclr=51
+			}
+			stacking="column"
+		}
+		text {
+			object {
+				x=775
+				y=245
+				width=170
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital out bit 8"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=786
+				y=270
+				width=160
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital in bit 1"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=950
+				y=270
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)InputBit1_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		text {
+			object {
+				x=786
+				y=295
+				width=160
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital in bit 2"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=950
+				y=295
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)InputBit2_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		text {
+			object {
+				x=786
+				y=320
+				width=160
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital in bit 3"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=950
+				y=320
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)InputBit3_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+		text {
+			object {
+				x=786
+				y=345
+				width=160
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Digital in bit 4"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=950
+				y=345
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)InputBit4_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			format="string"
+			limits {
+			}
+		}
+	}
+}
+composite {
+	object {
+		x=70
+		y=170
+		width=224
+		height=95
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=70
+				y=170
+				width=120
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Voltage in 1"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=194
+				y=170
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)VoltageIn1_RBV"
+				clr=53
+				bclr=3
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=70
+				y=195
+				width=120
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Voltage in 2"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=194
+				y=195
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)VoltageIn2_RBV"
+				clr=53
+				bclr=3
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=70
+				y=220
+				width=120
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Voltage in 3"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=194
+				y=220
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)VoltageIn3_RBV"
+				clr=53
+				bclr=3
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=70
+				y=245
+				width=120
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Voltage in 4"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=194
+				y=245
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)VoltageIn4_RBV"
+				clr=53
+				bclr=3
+			}
+			limits {
+			}
+		}
+	}
+}
+composite {
+	object {
+		x=80
+		y=145
+		width=214
+		height=20
+	}
+	"composite name"=""
+	children {
+		composite {
+			object {
+				x=80
+				y=145
+				width=214
+				height=20
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=80
+						y=145
+						width=110
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="Valve error"
+					align="horiz. right"
+				}
+				"text update" {
+					object {
+						x=194
+						y=145
+						width=100
+						height=20
+					}
+					monitor {
+						chan="$(P)ValveError_RBV"
+						clr=53
+						bclr=13
+					}
+					clrmod="alarm"
+					format="string"
+					limits {
+					}
+				}
+			}
+		}
+	}
+}
