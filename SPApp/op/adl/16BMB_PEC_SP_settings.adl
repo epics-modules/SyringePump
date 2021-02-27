@@ -1,0 +1,3449 @@
+
+file {
+	name="/home/epics/devel/ISCO_Pump/ISCOApp/op/adl/16BMB_PEC_SP_settings.adl"
+	version=030109
+}
+display {
+	object {
+		x=0
+		y=0
+		width=1450
+		height=900
+	}
+	clr=14
+	bclr=3
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=317
+		y=119
+		width=60
+		height=20
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:88_RBV"
+	}
+	textix="ml/min"
+}
+text {
+	object {
+		x=317
+		y=119
+		width=60
+		height=20
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:89_RBV"
+	}
+	textix="ml/hr"
+}
+text {
+	object {
+		x=317
+		y=119
+		width=60
+		height=20
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:90_RBV"
+	}
+	textix="ul/min"
+}
+text {
+	object {
+		x=390
+		y=119
+		width=60
+		height=20
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		vis="if not zero"
+		chan="16bmSP:coil:91_RBV"
+	}
+	textix="ul/hr"
+}
+"message button" {
+	object {
+		x=124
+		y=119
+		width=46
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:88"
+		clr=14
+		bclr=51
+	}
+	label="ml/min"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=171
+		y=119
+		width=46
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:89"
+		clr=14
+		bclr=51
+	}
+	label="ml/hr"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=218
+		y=119
+		width=46
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:90"
+		clr=14
+		bclr=51
+	}
+	label="ul/hr"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=266
+		y=119
+		width=46
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:91"
+		clr=14
+		bclr=51
+	}
+	label="ul/hr"
+	press_msg="1"
+}
+text {
+	object {
+		x=45
+		y=119
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Units"
+	align="horiz. right"
+}
+text {
+	object {
+		x=61
+		y=84
+		width=80
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Flow rate"
+	align="horiz. right"
+}
+text {
+	object {
+		x=273
+		y=48
+		width=39
+		height=20
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:84_RBV"
+	}
+	textix="ATM"
+}
+text {
+	object {
+		x=273
+		y=48
+		width=39
+		height=20
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:85_RBV"
+	}
+	textix="BAR"
+}
+text {
+	object {
+		x=273
+		y=48
+		width=39
+		height=20
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:86_RBV"
+	}
+	textix="kPA"
+}
+text {
+	object {
+		x=273
+		y=48
+		width=39
+		height=20
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:87_RBV"
+	}
+	textix="PSI"
+}
+"message button" {
+	object {
+		x=129
+		y=49
+		width=34
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:84"
+		clr=14
+		bclr=51
+	}
+	label="ATM"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=164
+		y=49
+		width=34
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:85"
+		clr=14
+		bclr=51
+	}
+	label="BAR"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=199
+		y=49
+		width=34
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:86"
+		clr=14
+		bclr=51
+	}
+	label="kPA"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=234
+		y=49
+		width=34
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:87"
+		clr=14
+		bclr=51
+	}
+	label="PSI"
+	press_msg="1"
+}
+text {
+	object {
+		x=50
+		y=49
+		width=70
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Units"
+	align="horiz. right"
+}
+text {
+	object {
+		x=48
+		y=12
+		width=80
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Pressure"
+	align="horiz. right"
+}
+text {
+	object {
+		x=16
+		y=163
+		width=70
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Control"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=291
+		y=165
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:0_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+"message button" {
+	object {
+		x=98
+		y=158
+		width=90
+		height=22
+	}
+	control {
+		chan="16bmSP:coil:0"
+		clr=14
+		bclr=51
+	}
+	label="Run A"
+	press_msg="1"
+}
+"text update" {
+	object {
+		x=291
+		y=190
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:1_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+"message button" {
+	object {
+		x=98
+		y=183
+		width=90
+		height=22
+	}
+	control {
+		chan="16bmSP:coil:1"
+		clr=14
+		bclr=51
+	}
+	label="Run B"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=195
+		y=158
+		width=90
+		height=22
+	}
+	control {
+		chan="16bmSP:coil:0"
+		clr=14
+		bclr=51
+	}
+	label="Stop A"
+	press_msg="0"
+}
+"message button" {
+	object {
+		x=195
+		y=183
+		width=90
+		height=22
+	}
+	control {
+		chan="16bmSP:coil:1"
+		clr=14
+		bclr=51
+	}
+	label="Stop B"
+	press_msg="0"
+}
+"message button" {
+	object {
+		x=31
+		y=222
+		width=90
+		height=22
+	}
+	control {
+		chan="16bmSP:coil:46"
+		clr=14
+		bclr=51
+	}
+	label="Local"
+	press_msg="1"
+}
+text {
+	object {
+		x=135
+		y=229
+		width=59
+		height=15
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:46_RBV"
+	}
+	textix="Local"
+}
+"message button" {
+	object {
+		x=31
+		y=246
+		width=90
+		height=22
+	}
+	control {
+		chan="16bmSP:coil:47"
+		clr=14
+		bclr=51
+	}
+	label="Remote"
+	press_msg="1"
+}
+text {
+	object {
+		x=134
+		y=253
+		width=59
+		height=15
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:47_RBV"
+	}
+	textix="Remote"
+}
+"message button" {
+	object {
+		x=31
+		y=270
+		width=90
+		height=22
+	}
+	control {
+		chan="16bmSP:coil:48"
+		clr=14
+		bclr=51
+	}
+	label="External"
+	press_msg="1"
+}
+text {
+	object {
+		x=135
+		y=277
+		width=59
+		height=15
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:48_RBV"
+	}
+	textix="External"
+}
+composite {
+	object {
+		x=228
+		y=251
+		width=167
+		height=22
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=334
+				y=258
+				width=61
+				height=15
+			}
+			"basic attribute" {
+				clr=53
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="16bmSP:coil:47_RBV"
+			}
+			textix="Remote"
+		}
+		composite {
+			object {
+				x=228
+				y=251
+				width=92
+				height=22
+			}
+			"composite name"=""
+			children {
+				"message button" {
+					object {
+						x=228
+						y=251
+						width=92
+						height=22
+					}
+					control {
+						chan="16bmSP:coil:47"
+						clr=14
+						bclr=4
+					}
+					label="Remote"
+					press_msg="1"
+				}
+			}
+			"dynamic attribute" {
+				vis="if zero"
+				chan="16bmSP:coil:47_RBV"
+			}
+		}
+	}
+}
+composite {
+	object {
+		x=228
+		y=251
+		width=167
+		height=22
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=334
+				y=258
+				width=61
+				height=15
+			}
+			"basic attribute" {
+				clr=53
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="16bmSP:coil:46_RBV"
+			}
+			textix="Local"
+		}
+		composite {
+			object {
+				x=228
+				y=251
+				width=92
+				height=22
+			}
+			"composite name"=""
+			children {
+				"message button" {
+					object {
+						x=228
+						y=251
+						width=92
+						height=22
+					}
+					control {
+						chan="16bmSP:coil:46"
+						clr=14
+						bclr=4
+					}
+					label="Local"
+					press_msg="1"
+				}
+			}
+			"dynamic attribute" {
+				vis="if zero"
+				chan="16bmSP:coil:46_RBV"
+			}
+		}
+	}
+}
+"text update" {
+	object {
+		x=872
+		y=19
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:8_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=19
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Pressure setpoint in CP mode AB [008]"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=767
+		y=16
+		width=93
+		height=20
+	}
+	control {
+		chan="16bmSP:reg:8"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=872
+		y=97
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:32_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=97
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Max pressure setpoint A [032]"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=767
+		y=94
+		width=93
+		height=20
+	}
+	control {
+		chan="16bmSP:reg:32"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=872
+		y=122
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:34_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=122
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Max pressure setpoint B [034]"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=767
+		y=119
+		width=93
+		height=20
+	}
+	control {
+		chan="16bmSP:reg:34"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=872
+		y=255
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:64_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=255
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Max flow limit in CP mode A [064]"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=767
+		y=252
+		width=93
+		height=20
+	}
+	control {
+		chan="16bmSP:reg:64"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=872
+		y=280
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:66_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=280
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Max flow limit in CP mode B [066]"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=767
+		y=277
+		width=93
+		height=20
+	}
+	control {
+		chan="16bmSP:reg:66"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=872
+		y=202
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:48_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=202
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Max flow rate setpoint A [048]"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=767
+		y=199
+		width=93
+		height=20
+	}
+	control {
+		chan="16bmSP:reg:48"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=872
+		y=227
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:50_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=227
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Max flow rate setpoint B [050]"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=767
+		y=224
+		width=93
+		height=20
+	}
+	control {
+		chan="16bmSP:reg:50"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=869
+		y=393
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:18_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=393
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="AB in constant flow mode [018]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=869
+		y=417
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:19_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=417
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="AB in constant pressure mode [019]"
+	align="horiz. right"
+}
+text {
+	object {
+		x=459
+		y=493
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Fast pressure match AB [027]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=869
+		y=493
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:27_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=469
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Low pressure operation AB [026]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=869
+		y=469
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:26_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=271
+		y=375
+		width=93
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:20_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=72
+		y=375
+		width=97
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Setpoint"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=174
+		y=375
+		width=93
+		height=20
+	}
+	control {
+		chan="16bmSP:reg:20"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=144
+		y=347
+		width=93
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:96_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=54
+		y=347
+		width=82
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Flow rate"
+	align="horiz. right"
+}
+text {
+	object {
+		x=306
+		y=347
+		width=61
+		height=15
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:88_RBV"
+	}
+	textix="ml/min"
+}
+text {
+	object {
+		x=306
+		y=347
+		width=61
+		height=15
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:89_RBV"
+	}
+	textix="ml/hr"
+}
+text {
+	object {
+		x=306
+		y=347
+		width=61
+		height=15
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:90_RBV"
+	}
+	textix="ul/min"
+}
+text {
+	object {
+		x=306
+		y=347
+		width=61
+		height=15
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:91_RBV"
+	}
+	textix="ul/hr"
+}
+text {
+	object {
+		x=222
+		y=347
+		width=73
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Units"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=869
+		y=368
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:17_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=368
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="A & B independent mode [017]"
+	align="horiz. right"
+}
+polyline {
+	object {
+		x=138
+		y=498
+		width=0
+		height=27
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(138,525)
+		(138,498)
+	}
+}
+polyline {
+	object {
+		x=160
+		y=511
+		width=25
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(185,511)
+		(160,511)
+	}
+}
+oval {
+	object {
+		x=186
+		y=506
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+}
+polyline {
+	object {
+		x=196
+		y=511
+		width=25
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(221,511)
+		(196,511)
+	}
+}
+polyline {
+	object {
+		x=223
+		y=511
+		width=25
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(248,511)
+		(223,511)
+	}
+}
+oval {
+	object {
+		x=248
+		y=506
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+}
+polyline {
+	object {
+		x=259
+		y=511
+		width=25
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(284,511)
+		(259,511)
+	}
+}
+polyline {
+	object {
+		x=160
+		y=479
+		width=25
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(185,479)
+		(160,479)
+	}
+}
+polyline {
+	object {
+		x=196
+		y=479
+		width=25
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(221,479)
+		(196,479)
+	}
+}
+polyline {
+	object {
+		x=223
+		y=479
+		width=25
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(248,479)
+		(223,479)
+	}
+}
+polyline {
+	object {
+		x=259
+		y=479
+		width=25
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(284,479)
+		(259,479)
+	}
+}
+polyline {
+	object {
+		x=160
+		y=479
+		width=0
+		height=32
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(160,479)
+		(160,511)
+	}
+}
+polyline {
+	object {
+		x=138
+		y=497
+		width=22
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(138,497)
+		(160,497)
+	}
+}
+polyline {
+	object {
+		x=285
+		y=479
+		width=0
+		height=32
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(285,479)
+		(285,511)
+	}
+}
+polyline {
+	object {
+		x=286
+		y=495
+		width=22
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(286,495)
+		(308,495)
+	}
+}
+polyline {
+	object {
+		x=308
+		y=495
+		width=0
+		height=27
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(308,522)
+		(308,495)
+	}
+}
+polyline {
+	object {
+		x=222
+		y=511
+		width=0
+		height=55
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(222,511)
+		(222,566)
+	}
+}
+polyline {
+	object {
+		x=222
+		y=449
+		width=0
+		height=30
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	points {
+		(222,449)
+		(222,479)
+	}
+}
+text {
+	object {
+		x=208
+		y=568
+		width=23
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="IN"
+	align="horiz. right"
+}
+text {
+	object {
+		x=212
+		y=432
+		width=23
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="OUT"
+	align="horiz. right"
+}
+text {
+	object {
+		x=95
+		y=548
+		width=23
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Pump A"
+	align="horiz. right"
+}
+text {
+	object {
+		x=325
+		y=548
+		width=23
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Pump B"
+}
+oval {
+	object {
+		x=248
+		y=474
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=62
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="16bmSP:coil:73_RBV"
+	}
+}
+text {
+	object {
+		x=171
+		y=436
+		width=23
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="2"
+	align="horiz. right"
+}
+text {
+	object {
+		x=171
+		y=542
+		width=23
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="1"
+	align="horiz. right"
+}
+text {
+	object {
+		x=250
+		y=436
+		width=23
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="4"
+}
+text {
+	object {
+		x=250
+		y=541
+		width=23
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="3"
+}
+oval {
+	object {
+		x=248
+		y=474
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=21
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:73_RBV"
+	}
+}
+oval {
+	object {
+		x=186
+		y=474
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=62
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="16bmSP:coil:71_RBV"
+	}
+}
+oval {
+	object {
+		x=186
+		y=474
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=21
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:71_RBV"
+	}
+}
+oval {
+	object {
+		x=186
+		y=506
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=62
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="16bmSP:coil:70_RBV"
+	}
+}
+oval {
+	object {
+		x=248
+		y=506
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=62
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="16bmSP:coil:72_RBV"
+	}
+}
+oval {
+	object {
+		x=186
+		y=474
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+}
+oval {
+	object {
+		x=248
+		y=474
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+}
+oval {
+	object {
+		x=186
+		y=506
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=21
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:70_RBV"
+	}
+}
+oval {
+	object {
+		x=248
+		y=506
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=21
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:72_RBV"
+	}
+}
+"message button" {
+	object {
+		x=192
+		y=522
+		width=18
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:70"
+		clr=14
+		bclr=51
+	}
+	label="C"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=174
+		y=522
+		width=18
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:70"
+		clr=14
+		bclr=51
+	}
+	label="O"
+	press_msg="0"
+}
+"message button" {
+	object {
+		x=254
+		y=521
+		width=18
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:72"
+		clr=14
+		bclr=51
+	}
+	label="C"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=236
+		y=521
+		width=18
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:72"
+		clr=14
+		bclr=51
+	}
+	label="O"
+	press_msg="0"
+}
+"message button" {
+	object {
+		x=254
+		y=453
+		width=18
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:73"
+		clr=14
+		bclr=51
+	}
+	label="C"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=236
+		y=453
+		width=18
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:73"
+		clr=14
+		bclr=51
+	}
+	label="O"
+	press_msg="0"
+}
+"message button" {
+	object {
+		x=192
+		y=452
+		width=18
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:71"
+		clr=14
+		bclr=51
+	}
+	label="C"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=174
+		y=452
+		width=18
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:71"
+		clr=14
+		bclr=51
+	}
+	label="O"
+	press_msg="0"
+}
+"message button" {
+	object {
+		x=99
+		y=637
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:5"
+		clr=14
+		bclr=51
+	}
+	label="Refill"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=278
+		y=635
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:6"
+		clr=14
+		bclr=51
+	}
+	label="Refill"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=99
+		y=595
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:0"
+		clr=14
+		bclr=51
+	}
+	label="Run"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=99
+		y=616
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:0"
+		clr=14
+		bclr=51
+	}
+	label="Stop"
+	press_msg="0"
+}
+"message button" {
+	object {
+		x=278
+		y=593
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:1"
+		clr=14
+		bclr=51
+	}
+	label="Run"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=278
+		y=614
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:1"
+		clr=14
+		bclr=51
+	}
+	label="Stop"
+	press_msg="0"
+}
+oval {
+	object {
+		x=80
+		y=474
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=21
+	}
+}
+oval {
+	object {
+		x=80
+		y=455
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=62
+	}
+}
+text {
+	object {
+		x=92
+		y=472
+		width=23
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="-Closed"
+}
+text {
+	object {
+		x=92
+		y=453
+		width=23
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="-Open"
+}
+oval {
+	object {
+		x=80
+		y=474
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+}
+oval {
+	object {
+		x=80
+		y=455
+		width=10
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+}
+text {
+	object {
+		x=78
+		y=433
+		width=23
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Valves"
+}
+"text update" {
+	object {
+		x=17
+		y=568
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:76_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=325
+		y=568
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:82_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=443
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="AB delivery/recieve mode [025]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=869
+		y=443
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:25_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=869
+		y=593
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:70_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=593
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital out bit 1 [070]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=869
+		y=618
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:71_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=618
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital out bit 2 [071]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=869
+		y=642
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:72_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=642
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital out bit 3 [072]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=869
+		y=666
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:73_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=666
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital out bit 4 [073]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1326
+		y=32
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:240_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1012
+		y=32
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Software major rev [240]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1326
+		y=56
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:242_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="compact"
+	limits {
+	}
+}
+text {
+	object {
+		x=1012
+		y=56
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Software minor rev [242]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1326
+		y=80
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:244_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="compact"
+	limits {
+	}
+}
+text {
+	object {
+		x=1012
+		y=80
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Software micro rev [244]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1327
+		y=429
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:110_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1013
+		y=429
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="A at upper limit (Empty) [110]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1327
+		y=452
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:111_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1013
+		y=452
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="A at lower limit (Full) [111]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1327
+		y=527
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:116_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1013
+		y=527
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="B at upper limit (Empty) [116]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1327
+		y=550
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:117_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1013
+		y=550
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="B at lower limit (Full) [117]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1327
+		y=476
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:112_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1013
+		y=476
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="A is overpressure [112]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1327
+		y=499
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:113_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1013
+		y=499
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="A is underpressure [113]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1327
+		y=573
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:118_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1013
+		y=573
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="B is overpressure [118]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1327
+		y=596
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:119_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1013
+		y=596
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="B is underpressure [119]"
+	align="horiz. right"
+}
+"choice button" {
+	object {
+		x=776
+		y=366
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:17"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=776
+		y=391
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:18"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=776
+		y=415
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:19"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=776
+		y=441
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:25"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=776
+		y=467
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:26"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=776
+		y=491
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:27"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=776
+		y=591
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:70"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=776
+		y=616
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:71"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=776
+		y=640
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:72"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=776
+		y=664
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:73"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"text update" {
+	object {
+		x=1326
+		y=110
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:206_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="compact"
+	limits {
+	}
+}
+text {
+	object {
+		x=1012
+		y=110
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Max volume A [206]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1326
+		y=131
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:214_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	format="compact"
+	limits {
+	}
+}
+text {
+	object {
+		x=1012
+		y=131
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Max volume B [214]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1327
+		y=293
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:82_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1014
+		y=293
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Volume remaining in B [082]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1327
+		y=221
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:76_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1014
+		y=221
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Volume remaining in A [076]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1327
+		y=245
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:78_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1014
+		y=245
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Actual pressure B [078]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1327
+		y=171
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:72_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1014
+		y=171
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Actual pressure A [072]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1327
+		y=196
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:74_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1014
+		y=196
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Actual flow rate A [074]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=1327
+		y=270
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:80_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=1014
+		y=270
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Actual flow rate B [080]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=872
+		y=149
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:40_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=149
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Min pressure setpoint A [040]"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=767
+		y=146
+		width=93
+		height=20
+	}
+	control {
+		chan="16bmSP:reg:40"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=872
+		y=174
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:42_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=174
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Min pressure setpoint B [042]"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=767
+		y=171
+		width=93
+		height=20
+	}
+	control {
+		chan="16bmSP:reg:42"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=567
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Overpressure shutdown [094]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=869
+		y=567
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:94_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=543
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Overpressure display [093]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=869
+		y=543
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:93_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=518
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Overpressure alarm [092]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=869
+		y=518
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:92_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+"choice button" {
+	object {
+		x=776
+		y=516
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:92"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=776
+		y=541
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:93"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"choice button" {
+	object {
+		x=776
+		y=565
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:94"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"text update" {
+	object {
+		x=872
+		y=310
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:132_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=310
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="% of volume to refill to AB [132]"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=767
+		y=307
+		width=93
+		height=20
+	}
+	control {
+		chan="16bmSP:reg:132"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=872
+		y=335
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:134_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=335
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="% of volume to deliver to AB [134]"
+	align="horiz. right"
+}
+"text entry" {
+	object {
+		x=767
+		y=332
+		width=93
+		height=20
+	}
+	control {
+		chan="16bmSP:reg:134"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+"message button" {
+	object {
+		x=842
+		y=36
+		width=17
+		height=18
+	}
+	control {
+		chan="16bmb:userTran7.A"
+		clr=14
+		bclr=51
+	}
+	label=">"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=768
+		y=35
+		width=17
+		height=18
+	}
+	control {
+		chan="16bmb:userTran7.A"
+		clr=14
+		bclr=51
+	}
+	label="<"
+	press_msg="-1"
+}
+"text entry" {
+	object {
+		x=785
+		y=34
+		width=58
+		height=20
+	}
+	control {
+		chan="16bmb:userTran8.A"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+bar {
+	object {
+		x=299
+		y=522
+		width=20
+		height=66
+	}
+	monitor {
+		chan="16bmSP:reg:82_RBV"
+		clr=53
+		bclr=3
+	}
+	direction="down"
+	limits {
+	}
+}
+bar {
+	object {
+		x=128
+		y=524
+		width=20
+		height=66
+	}
+	monitor {
+		chan="16bmSP:reg:76_RBV"
+		clr=53
+		bclr=3
+	}
+	direction="down"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=869
+		y=690
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:coil:74_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=690
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Digital out bit 5 [074]"
+	align="horiz. right"
+}
+"choice button" {
+	object {
+		x=776
+		y=688
+		width=76
+		height=18
+	}
+	control {
+		chan="16bmSP:coil:74"
+		clr=14
+		bclr=51
+	}
+	stacking="column"
+}
+"text update" {
+	object {
+		x=772
+		y=64
+		width=102
+		height=15
+	}
+	monitor {
+		chan="16bmSP:reg:98_RBV"
+		clr=53
+		bclr=13
+	}
+	clrmod="alarm"
+	limits {
+	}
+}
+text {
+	object {
+		x=459
+		y=64
+		width=300
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Actual Pressure AB [098]"
+	align="horiz. right"
+}
