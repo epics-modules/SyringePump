@@ -2368,6 +2368,6 @@ $(pv_value)</tooltip>
     <widget_type>Menu Button</widget_type>
     <width>100</width>
     <x>112</x>
-    <y>477</y>
+    <y>475</y>
   </widget>
 </display>

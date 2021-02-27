@@ -1805,7 +1805,7 @@ border-radius: 2px;
             <property name="geometry">
                 <rect>
                     <x>112</x>
-                    <y>477</y>
+                    <y>475</y>
                     <width>100</width>
                     <height>20</height>
                 </rect>
