@@ -4,7 +4,7 @@
   <x>219</x>
   <y>256</y>
   <width>325</width>
-  <height>500</height>
+  <height>550</height>
   <background_color>
     <color red="187" green="187" blue="187">
     </color>
@@ -230,7 +230,7 @@
     <x>6</x>
     <y>175</y>
     <width>315</width>
-    <height>100</height>
+    <height>150</height>
     <line_width>1</line_width>
     <line_color>
       <color red="0" green="0" blue="0">
@@ -290,15 +290,303 @@
   </widget>
   <widget type="group" version="2.0.0">
     <name>composite #63</name>
-    <x>12</x>
+    <x>5</x>
+    <y>330</y>
+    <width>316</width>
+    <height>215</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>rectangle #66</name>
+      <width>315</width>
+      <height>55</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+      <background_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>rectangle #69</name>
+      <x>1</x>
+      <y>60</y>
+      <width>315</width>
+      <height>130</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+      <background_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #72</name>
+      <text>Volume</text>
+      <x>127</x>
+      <y>5</y>
+      <width>60</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="progressbar" version="2.0.0">
+      <name>bar #75</name>
+      <pv_name>$(P)$(PUMP)VolumeRemaining_RBV</pv_name>
+      <x>161</x>
+      <y>30</y>
+      <width>90</width>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #79</name>
+      <pv_name>$(P)$(PUMP)VolumeRemaining_RBV</pv_name>
+      <x>63</x>
+      <y>30</y>
+      <width>93</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>composite #83</name>
+      <x>33</x>
+      <y>165</y>
+      <width>248</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>text #86</name>
+        <text>Equilibrating</text>
+        <width>140</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <foreground_color>
+          <color red="42" green="99" blue="228">
+          </color>
+        </foreground_color>
+        <auto_size>true</auto_size>
+        <rules>
+          <rule name="vis_if_not_zero" prop_id="visible" out_exp="false">
+            <exp bool_exp="!(pv0!=0)">
+              <value>false</value>
+            </exp>
+            <pv_name>$(P)$(PUMP)Equilibrating_RBV</pv_name>
+          </rule>
+        </rules>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>text #90</name>
+        <text>Refilling</text>
+        <x>158</x>
+        <width>90</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <foreground_color>
+          <color red="42" green="99" blue="228">
+          </color>
+        </foreground_color>
+        <auto_size>true</auto_size>
+        <rules>
+          <rule name="vis_if_not_zero" prop_id="visible" out_exp="false">
+            <exp bool_exp="!(pv0!=0)">
+              <value>false</value>
+            </exp>
+            <pv_name>$(P)$(PUMP)Refill_RBV</pv_name>
+          </rule>
+        </rules>
+      </widget>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #94</name>
+      <text>Control</text>
+      <x>122</x>
+      <y>65</y>
+      <width>70</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #97</name>
+      <pv_name>$(P)$(PUMP)Run_RBV</pv_name>
+      <x>107</x>
+      <y>115</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="218" green="218" blue="218">
+        </color>
+      </background_color>
+      <format>6</format>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>related display #101</name>
+      <actions>
+        <action type="open_display">
+          <file>ISCO_Controller.opi</file>
+          <target>tab</target>
+          <description>Controller</description>
+        </action>
+        <action type="open_display">
+          <file>ISCO_SinglePumpMore.opi</file>
+          <target>tab</target>
+          <description>Pump more</description>
+        </action>
+      </actions>
+      <text>More</text>
+      <x>107</x>
+      <y>195</y>
+      <height>20</height>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>message button #105</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)$(PUMP)Run</pv_name>
+          <value>0</value>
+          <description>Write</description>
+        </action>
+      </actions>
+      <pv_name>$(P)$(PUMP)Run</pv_name>
+      <text>Stop</text>
+      <x>63</x>
+      <y>140</y>
+      <width>60</width>
+      <height>20</height>
+      <background_color>
+        <color red="253" green="0" blue="0">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>message button #108</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)$(PUMP)Run</pv_name>
+          <value>1</value>
+          <description>Write</description>
+        </action>
+      </actions>
+      <pv_name>$(P)$(PUMP)Run</pv_name>
+      <text>Pump</text>
+      <x>128</x>
+      <y>140</y>
+      <width>60</width>
+      <height>20</height>
+      <background_color>
+        <color red="0" green="216" blue="0">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>message button #111</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)$(PUMP)Refill</pv_name>
+          <value>1</value>
+          <description>Write</description>
+        </action>
+      </actions>
+      <pv_name>$(P)$(PUMP)Refill</pv_name>
+      <text>Refill</text>
+      <x>191</x>
+      <y>140</y>
+      <width>60</width>
+      <height>20</height>
+      <background_color>
+        <color red="251" green="243" blue="74">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>composite #114</name>
+      <x>60</x>
+      <y>90</y>
+      <width>195</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="combo" version="2.0.0">
+        <name>menu #117</name>
+        <pv_name>$(P)$(PUMP)Mode</pv_name>
+        <x>45</x>
+        <width>150</width>
+        <height>20</height>
+        <background_color>
+          <color red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>text #120</name>
+        <text>Mode</text>
+        <width>40</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #123</name>
+    <x>22</x>
     <y>230</y>
-    <height>40</height>
+    <width>280</width>
+    <height>85</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="textupdate" version="2.0.0">
-      <name>text update #66</name>
+      <name>text update #126</name>
       <pv_name>$(P)$(PUMP)FlowRateSP_RBV</pv_name>
-      <x>115</x>
+      <x>95</x>
       <width>90</width>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="16.0">
@@ -317,10 +605,11 @@
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
-      <name>text #70</name>
-      <text>Setpoint</text>
+      <name>text #130</name>
+      <text>Flow</text>
+      <x>20</x>
       <y>20</y>
-      <width>80</width>
+      <width>40</width>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="16.0">
         </font>
@@ -328,9 +617,9 @@
       <horizontal_alignment>2</horizontal_alignment>
     </widget>
     <widget type="textentry" version="3.0.0">
-      <name>text entry #73</name>
+      <name>text entry #133</name>
       <pv_name>$(P)$(PUMP)FlowRateSP</pv_name>
-      <x>115</x>
+      <x>95</x>
       <y>20</y>
       <width>90</width>
       <font>
@@ -346,7 +635,7 @@
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="action_button" version="3.0.0">
-      <name>message button #77</name>
+      <name>message button #137</name>
       <actions>
         <action type="write_pv">
           <pv_name>$(P)$(PUMP)FlowRateTweakUp.PROC</pv_name>
@@ -356,7 +645,7 @@
       </actions>
       <pv_name>$(P)$(PUMP)FlowRateTweakUp.PROC</pv_name>
       <text>&gt;</text>
-      <x>210</x>
+      <x>190</x>
       <y>20</y>
       <width>25</width>
       <height>20</height>
@@ -366,7 +655,7 @@
       </background_color>
     </widget>
     <widget type="action_button" version="3.0.0">
-      <name>message button #80</name>
+      <name>message button #140</name>
       <actions>
         <action type="write_pv">
           <pv_name>$(P)$(PUMP)FlowRateTweakDown.PROC</pv_name>
@@ -376,7 +665,7 @@
       </actions>
       <pv_name>$(P)$(PUMP)FlowRateTweakDown.PROC</pv_name>
       <text>&lt;</text>
-      <x>85</x>
+      <x>65</x>
       <y>20</y>
       <width>25</width>
       <height>20</height>
@@ -386,9 +675,9 @@
       </background_color>
     </widget>
     <widget type="textentry" version="3.0.0">
-      <name>text entry #83</name>
+      <name>text entry #143</name>
       <pv_name>$(P)$(PUMP)FlowRateTweak</pv_name>
-      <x>240</x>
+      <x>220</x>
       <y>20</y>
       <width>60</width>
       <font>
@@ -404,9 +693,9 @@
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
-      <name>text #87</name>
+      <name>text #147</name>
       <text>Tweak</text>
-      <x>246</x>
+      <x>226</x>
       <width>50</width>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="16.0">
@@ -414,103 +703,11 @@
       </font>
       <auto_size>true</auto_size>
     </widget>
-  </widget>
-  <widget type="rectangle" version="2.0.0">
-    <name>rectangle #90</name>
-    <x>5</x>
-    <y>280</y>
-    <width>315</width>
-    <height>55</height>
-    <line_width>1</line_width>
-    <line_color>
-      <color red="0" green="0" blue="0">
-      </color>
-    </line_color>
-    <background_color>
-      <color red="0" green="0" blue="0">
-      </color>
-    </background_color>
-    <transparent>true</transparent>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>text #93</name>
-    <text>Volume</text>
-    <x>132</x>
-    <y>285</y>
-    <width>60</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <horizontal_alignment>2</horizontal_alignment>
-  </widget>
-  <widget type="progressbar" version="2.0.0">
-    <name>bar #96</name>
-    <pv_name>$(P)$(PUMP)VolumeRemaining_RBV</pv_name>
-    <x>166</x>
-    <y>310</y>
-    <width>90</width>
-    <background_color>
-      <color red="200" green="200" blue="200">
-      </color>
-    </background_color>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>text update #100</name>
-    <pv_name>$(P)$(PUMP)VolumeRemaining_RBV</pv_name>
-    <x>68</x>
-    <y>310</y>
-    <width>93</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <foreground_color>
-      <color red="42" green="99" blue="228">
-      </color>
-    </foreground_color>
-    <background_color>
-      <color red="187" green="187" blue="187">
-      </color>
-    </background_color>
-    <format>1</format>
-    <show_units>false</show_units>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>composite #104</name>
-    <x>38</x>
-    <y>445</y>
-    <width>248</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>text #107</name>
-      <text>Equilibrating</text>
-      <width>140</width>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <foreground_color>
-        <color red="42" green="99" blue="228">
-        </color>
-      </foreground_color>
-      <auto_size>true</auto_size>
-      <rules>
-        <rule name="vis_if_not_zero" prop_id="visible" out_exp="false">
-          <exp bool_exp="!(pv0!=0)">
-            <value>false</value>
-          </exp>
-          <pv_name>$(P)$(PUMP)Equilibrating_RBV</pv_name>
-        </rule>
-      </rules>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #111</name>
-      <text>Refilling</text>
-      <x>158</x>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #150</name>
+      <pv_name>$(P)$(PUMP)RefillRateSP_RBV</pv_name>
+      <x>95</x>
+      <y>45</y>
       <width>90</width>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="16.0">
@@ -520,163 +717,57 @@
         <color red="42" green="99" blue="228">
         </color>
       </foreground_color>
-      <auto_size>true</auto_size>
-      <rules>
-        <rule name="vis_if_not_zero" prop_id="visible" out_exp="false">
-          <exp bool_exp="!(pv0!=0)">
-            <value>false</value>
-          </exp>
-          <pv_name>$(P)$(PUMP)Refill_RBV</pv_name>
-        </rule>
-      </rules>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
-  </widget>
-  <widget type="rectangle" version="2.0.0">
-    <name>rectangle #115</name>
-    <x>6</x>
-    <y>340</y>
-    <width>315</width>
-    <height>130</height>
-    <line_width>1</line_width>
-    <line_color>
-      <color red="0" green="0" blue="0">
-      </color>
-    </line_color>
-    <background_color>
-      <color red="0" green="0" blue="0">
-      </color>
-    </background_color>
-    <transparent>true</transparent>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>text #118</name>
-    <text>Control</text>
-    <x>127</x>
-    <y>345</y>
-    <width>70</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <horizontal_alignment>2</horizontal_alignment>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>text #121</name>
-    <text>Mode</text>
-    <x>65</x>
-    <y>370</y>
-    <width>40</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <horizontal_alignment>2</horizontal_alignment>
-  </widget>
-  <widget type="combo" version="2.0.0">
-    <name>menu #124</name>
-    <pv_name>$(P)$(PUMP)Mode</pv_name>
-    <x>110</x>
-    <y>370</y>
-    <width>150</width>
-    <height>20</height>
-    <background_color>
-      <color red="187" green="187" blue="187">
-      </color>
-    </background_color>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>composite #127</name>
-    <x>27</x>
-    <y>395</y>
-    <width>270</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #130</name>
-      <pv_name>$(P)$(PUMP)Run_RBV</pv_name>
-      <x>170</x>
+    <widget type="label" version="2.0.0">
+      <name>text #154</name>
+      <text>Refill</text>
+      <y>65</y>
+      <width>60</width>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="16.0">
         </font>
       </font>
-      <foreground_color>
-        <color red="42" green="99" blue="228">
-        </color>
-      </foreground_color>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #157</name>
+      <pv_name>$(P)$(PUMP)RefillRateSP</pv_name>
+      <x>95</x>
+      <y>65</y>
+      <width>90</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
       <background_color>
-        <color red="218" green="218" blue="218">
+        <color red="115" green="223" blue="255">
         </color>
       </background_color>
-      <format>6</format>
+      <format>1</format>
       <show_units>false</show_units>
-      <horizontal_alignment>1</horizontal_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
-    <widget type="group" version="2.0.0">
-      <name>composite #134</name>
-      <width>165</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="action_button" version="3.0.0">
-        <name>message button #137</name>
-        <actions>
-          <action type="write_pv">
-            <pv_name>$(P)$(PUMP)Run</pv_name>
-            <value>0</value>
-            <description>Write</description>
-          </action>
-        </actions>
-        <pv_name>$(P)$(PUMP)Run</pv_name>
-        <text>Stop</text>
-        <width>80</width>
-        <height>20</height>
-        <background_color>
-          <color red="253" green="0" blue="0">
-          </color>
-        </background_color>
-      </widget>
-      <widget type="action_button" version="3.0.0">
-        <name>message button #140</name>
-        <actions>
-          <action type="write_pv">
-            <pv_name>$(P)$(PUMP)Run</pv_name>
-            <value>1</value>
-            <description>Write</description>
-          </action>
-        </actions>
-        <pv_name>$(P)$(PUMP)Run</pv_name>
-        <text>Start</text>
-        <x>85</x>
-        <width>80</width>
-        <height>20</height>
-        <background_color>
-          <color red="0" green="216" blue="0">
-          </color>
-        </background_color>
-      </widget>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>composite #143</name>
-    <x>60</x>
-    <y>420</y>
-    <width>205</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
     <widget type="action_button" version="3.0.0">
-      <name>message button #146</name>
+      <name>message button #161</name>
       <actions>
         <action type="write_pv">
-          <pv_name>$(P)$(PUMP)Refill</pv_name>
+          <pv_name>$(P)$(PUMP)RefillRateTweakUp.PROC</pv_name>
           <value>1</value>
           <description>Write</description>
         </action>
       </actions>
-      <pv_name>$(P)$(PUMP)Refill</pv_name>
-      <text>Run Refill</text>
+      <pv_name>$(P)$(PUMP)RefillRateTweakUp.PROC</pv_name>
+      <text>&gt;</text>
+      <x>190</x>
+      <y>65</y>
+      <width>25</width>
       <height>20</height>
       <background_color>
         <color red="115" green="223" blue="255">
@@ -684,45 +775,54 @@
       </background_color>
     </widget>
     <widget type="action_button" version="3.0.0">
-      <name>message button #149</name>
+      <name>message button #164</name>
       <actions>
         <action type="write_pv">
-          <pv_name>$(P)$(PUMP)Run</pv_name>
-          <value>0</value>
+          <pv_name>$(P)$(PUMP)RefillRateTweakDown.PROC</pv_name>
+          <value>1</value>
           <description>Write</description>
         </action>
       </actions>
-      <pv_name>$(P)$(PUMP)Run</pv_name>
-      <text>Stop Refill</text>
-      <x>105</x>
+      <pv_name>$(P)$(PUMP)RefillRateTweakDown.PROC</pv_name>
+      <text>&lt;</text>
+      <x>65</x>
+      <y>65</y>
+      <width>25</width>
       <height>20</height>
       <background_color>
         <color red="115" green="223" blue="255">
         </color>
       </background_color>
     </widget>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>related display #152</name>
-    <actions>
-      <action type="open_display">
-        <file>ISCO_Controller.opi</file>
-        <target>tab</target>
-        <description>Controller</description>
-      </action>
-      <action type="open_display">
-        <file>ISCO_SinglePumpMore.opi</file>
-        <target>tab</target>
-        <description>Pump more</description>
-      </action>
-    </actions>
-    <text>More</text>
-    <x>112</x>
-    <y>475</y>
-    <height>20</height>
-    <background_color>
-      <color red="115" green="223" blue="255">
-      </color>
-    </background_color>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #167</name>
+      <pv_name>$(P)$(PUMP)RefillRateTweak</pv_name>
+      <x>220</x>
+      <y>65</y>
+      <width>60</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #171</name>
+      <text>Tweak</text>
+      <x>226</x>
+      <y>45</y>
+      <width>50</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
   </widget>
 </display>
