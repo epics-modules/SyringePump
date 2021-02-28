@@ -34,6 +34,24 @@ record(calcout,"$(P)$(PUMP)FlowRateTweakUp") {
     field(OUT, "$(P)$(PUMP)FlowRateSP PP NMS")
 }
 
+# These records are for tweaking the refill rate
+record(ao,"$(P)$(PUMP)RefillRateTweak") {
+    field(VAL, "1")
+    field(PREC,"3")
+}
+record(calcout,"$(P)$(PUMP)RefillRateTweakDown") {
+    field(INPA,"$(P)$(PUMP)RefillRateTweak.VAL NPP NMS")
+    field(INPB,"$(P)$(PUMP)RefillRateSP NPP NMS")
+    field(CALC,"B-A")
+    field(OUT, "$(P)$(PUMP)RefillRateSP PP NMS")
+}
+record(calcout,"$(P)$(PUMP)RefillRateTweakUp") {
+    field(INPA,"$(P)$(PUMP)RefillRateTweak.VAL NPP NMS")
+    field(INPB,"$(P)$(PUMP)RefillRateSP NPP NMS")
+    field(CALC,"B+A")
+    field(OUT, "$(P)$(PUMP)RefillRateSP PP NMS")
+}
+
 # These records set the mode to "constant pressure" or "constant flow"
 record(bo, "$(P)$(PUMP)Mode") {
     field(ZNAM, "Constant Pressure")
