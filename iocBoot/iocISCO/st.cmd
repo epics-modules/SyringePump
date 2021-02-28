@@ -28,6 +28,18 @@ epicsEnvSet("TIMEOUT_MS", "10000")
 # Change IP address for your device
 drvAsynIPPortConfigure("$(PORT)", "gse-isco1:502", 0, 0, 0)
 
+# Enable ASYN_TRACEIO_HEX on octet server
+asynSetTraceIOMask("$(PORT)", 0, HEX)
+
+# Enable ASYN_TRACE_ERROR and ASYN_TRACEIO_DRIVER on octet server
+#asynSetTraceMask("$(PORT)", 0, ERROR|DRIVER)
+
+# Set maximum number of bytes to save
+asynSetTraceIOTruncateSize("$(PORT)", 0, 256)
+
+# Send output to a text file
+#asynSetTraceFile("$(PORT)", 0, "ISCO_Modbus_comms.txt")
+
 #asynSetOption($(PORT), 0, "disconnectOnReadTimeout", "Y")
 
 #modbusInterposeConfig(const char *portName, 
@@ -95,12 +107,6 @@ dbLoadRecords("$(TOP)/db/ISCOPumpN.template", "P=$(PREFIX), PUMP=AB:")
 
 # Load an asyn record for debugging
 dbLoadRecords("$(ASYN)/db/asynRecord.db", "P=$(PREFIX), R=asyn1, PORT=$(PORT), ADDR=0, IMAX=256, OMAX=256")
-
-# Enable ASYN_TRACEIO_HEX on octet server
-asynSetTraceIOMask("$(PORT)", 0, HEX)
-
-# Enable ASYN_TRACE_ERROR and ASYN_TRACEIO_DRIVER on octet server
-#asynSetTraceMask("$(PORT)", 0, ERROR|DRIVER)
 
 <../save_restore_IOCSH.cmd
 
