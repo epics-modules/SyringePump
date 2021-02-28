@@ -22,3 +22,5 @@ These are the medm screens for a single ISCO 65D syringe pump.
 These are the medm screens for a dual ISCO 65D syringe pump.
 
 ![ISCO_DualPump.adl](ISCO_DualPump.png)
+
+![ISCO_DualPump.adl](ISCO_DualPumpMore.png)
