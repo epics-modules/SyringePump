@@ -1283,13 +1283,13 @@ border-radius: 2px;
                 <enum>Menu</enum>
             </property>
             <property name="labels">
-                <string>Controller;Pump more;Pump $(P1) more;Pump $(P2) more</string>
+                <string>Controller;Dual pump more;Pump $(P1);Pump $(P2)</string>
             </property>
             <property name="files">
-                <string>ISCO_Controller.adl;ISCO_DualPumpMore.adl;ISCO_SinglePumpMore.adl;ISCO_SinglePumpMore.adl</string>
+                <string>ISCO_Controller.adl;ISCO_DualPumpMore.adl;ISCO_SinglePump.adl;ISCO_SinglePump.adl</string>
             </property>
             <property name="args">
-                <string>P=$(P);P=$(P),PUMP=$(DP);P=$(P),PUMP=$(P1);P=$(P),PUMP=$(P2)</string>
+                <string>P=$(P);P=$(P),DP=$(DP),P1=$(P1),P2=$(P2);P=$(P),PUMP=$(P1);P=$(P),PUMP=$(P2)</string>
             </property>
             <property name="removeParent">
                 <string>false;false;false;false</string>
@@ -2323,7 +2323,7 @@ border-radius: 2px;
                 </rect>
             </property>
             <property name="channel">
-                <string>$(P)$(P1)Mode</string>
+                <string>$(P)$(DP)Mode</string>
             </property>
             <property name="foreground">
                 <color alpha="255">

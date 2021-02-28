@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 453
-y 310
+x 827
+y 269
 w 1160
 h 370
 font "helvetica-medium-r-18.0"
@@ -754,19 +754,6 @@ endGroup
 endObjectProperties
 
 
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 775
-y 70
-w 380
-h 295
-
-beginGroup
-
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
@@ -1306,11 +1293,6 @@ fastUpdate
 newPos
 objType "controls"
 endObjectProperties
-
-endGroup
-
-endObjectProperties
-
 
 # (Group)
 object activeGroupClass
@@ -1855,18 +1837,6 @@ endGroup
 
 endObjectProperties
 
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 775
-y 70
-w 380
-h 295
-
-beginGroup
 
 # (Choice Button)
 object activeChoiceButtonClass
@@ -2035,11 +2005,6 @@ controlPv "$(P)OutputBit8"
 font "helvetica-medium-r-10.0"
 orientation "horizontal"
 endObjectProperties
-
-endGroup
-
-endObjectProperties
-
 # (Group)
 object activeGroupClass
 beginObjectProperties

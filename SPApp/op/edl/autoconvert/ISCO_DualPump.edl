@@ -1090,18 +1090,18 @@ numDsps 4
 displayFileName {
   0 "ISCO_Controller.edl"
   1 "ISCO_DualPumpMore.edl"
-  2 "ISCO_SinglePumpMore.edl"
-  3 "ISCO_SinglePumpMore.edl"
+  2 "ISCO_SinglePump.edl"
+  3 "ISCO_SinglePump.edl"
 }
 menuLabel {
   0 "Controller"
-  1 "Pump more"
-  2 "Pump $(P1) more"
-  3 "Pump $(P2) more"
+  1 "Dual pump more"
+  2 "Pump $(P1)"
+  3 "Pump $(P2)"
 }
 symbols {
   0 "P=$(P)"
-  1 "P=$(P),PUMP=$(DP)"
+  1 "P=$(P),DP=$(DP),P1=$(P1),P2=$(P2)"
   2 "P=$(P),PUMP=$(P1)"
   3 "P=$(P),PUMP=$(P2)"
 }
@@ -1346,8 +1346,8 @@ bgColor rgb 47872 47872 47872
 inconsistentColor rgb 17920 17920 17920
 topShadowColor rgb 55808 55808 55808
 botShadowColor rgb 17920 17920 17920
-controlPv "$(P)$(P1)Mode"
-indicatorPv "$(P)$(P1)Mode"
+controlPv "$(P)$(DP)Mode"
+indicatorPv "$(P)$(DP)Mode"
 font "helvetica-medium-r-12.0"
 endObjectProperties
 

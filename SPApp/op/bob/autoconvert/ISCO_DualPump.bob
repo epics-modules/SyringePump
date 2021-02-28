@@ -478,27 +478,24 @@
       </action>
       <action type="open_display">
         <file>ISCO_DualPumpMore.opi</file>
-        <macros>
-          <PUMP>$(DP)</PUMP>
-        </macros>
         <target>tab</target>
-        <description>Pump more</description>
+        <description>Dual pump more</description>
       </action>
       <action type="open_display">
-        <file>ISCO_SinglePumpMore.opi</file>
+        <file>ISCO_SinglePump.opi</file>
         <macros>
           <PUMP>$(P1)</PUMP>
         </macros>
         <target>tab</target>
-        <description>Pump $(P1) more</description>
+        <description>Pump $(P1)</description>
       </action>
       <action type="open_display">
-        <file>ISCO_SinglePumpMore.opi</file>
+        <file>ISCO_SinglePump.opi</file>
         <macros>
           <PUMP>$(P2)</PUMP>
         </macros>
         <target>tab</target>
-        <description>Pump $(P2) more</description>
+        <description>Pump $(P2)</description>
       </action>
     </actions>
     <text>More</text>
@@ -941,7 +938,7 @@
   </widget>
   <widget type="combo" version="2.0.0">
     <name>menu #196</name>
-    <pv_name>$(P)$(P1)Mode</pv_name>
+    <pv_name>$(P)$(DP)Mode</pv_name>
     <x>110</x>
     <y>420</y>
     <width>150</width>

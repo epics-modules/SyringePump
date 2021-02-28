@@ -487,18 +487,18 @@ text {
 		args="P=$(P)"
 	}
 	display[1] {
-		label="Pump more"
+		label="Dual pump more"
 		name="ISCO_DualPumpMore.adl"
-		args="P=$(P),PUMP=$(DP)"
+		args="P=$(P),DP=$(DP),P1=$(P1),P2=$(P2)"
 	}
 	display[2] {
-		label="Pump $(P1) more"
-		name="ISCO_SinglePumpMore.adl"
+		label="Pump $(P1)"
+		name="ISCO_SinglePump.adl"
 		args="P=$(P),PUMP=$(P1)"
 	}
 	display[3] {
-		label="Pump $(P2) more"
-		name="ISCO_SinglePumpMore.adl"
+		label="Pump $(P2)"
+		name="ISCO_SinglePump.adl"
 		args="P=$(P),PUMP=$(P2)"
 	}
 	clr=14
@@ -898,7 +898,7 @@ menu {
 		height=20
 	}
 	control {
-		chan="$(P)$(P1)Mode"
+		chan="$(P)$(DP)Mode"
 		clr=14
 		bclr=4
 	}

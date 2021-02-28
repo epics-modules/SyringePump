@@ -2180,28 +2180,27 @@ $(pv_value)</tooltip>
         <path>ISCO_DualPumpMore.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
-          <PUMP>$(DP)</PUMP>
         </macros>
         <mode>1</mode>
-        <description>Pump more</description>
+        <description>Dual pump more</description>
       </action>
       <action type="OPEN_DISPLAY">
-        <path>ISCO_SinglePumpMore.opi</path>
+        <path>ISCO_SinglePump.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
           <PUMP>$(P1)</PUMP>
         </macros>
         <mode>1</mode>
-        <description>Pump $(P1) more</description>
+        <description>Pump $(P1)</description>
       </action>
       <action type="OPEN_DISPLAY">
-        <path>ISCO_SinglePumpMore.opi</path>
+        <path>ISCO_SinglePump.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
           <PUMP>$(P2)</PUMP>
         </macros>
         <mode>1</mode>
-        <description>Pump $(P2) more</description>
+        <description>Pump $(P2)</description>
       </action>
     </actions>
     <actions_from_pv>false</actions_from_pv>
@@ -2839,7 +2838,7 @@ $(pv_value)</tooltip>
     <height>20</height>
     <label></label>
     <name>Menu Button</name>
-    <pv_name>$(P)$(P1)Mode</pv_name>
+    <pv_name>$(P)$(DP)Mode</pv_name>
     <pv_value />
     <rules />
     <scale_options>

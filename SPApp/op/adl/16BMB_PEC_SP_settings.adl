@@ -1,12 +1,12 @@
 
 file {
-	name="/home/epics/devel/ISCO_Pump/ISCOApp/op/adl/16BMB_PEC_SP_settings.adl"
+	name="/home/epics/devel/SyringePump/SPApp/op/adl/16BMB_PEC_SP_settings.adl"
 	version=030109
 }
 display {
 	object {
-		x=0
-		y=0
+		x=1521
+		y=114
 		width=1450
 		height=900
 	}
@@ -586,118 +586,96 @@ text {
 	}
 	textix="External"
 }
-composite {
+text {
 	object {
-		x=228
-		y=251
-		width=167
-		height=22
+		x=361
+		y=252
+		width=61
+		height=15
 	}
-	"composite name"=""
-	children {
-		text {
-			object {
-				x=334
-				y=258
-				width=61
-				height=15
-			}
-			"basic attribute" {
-				clr=53
-			}
-			"dynamic attribute" {
-				vis="if not zero"
-				chan="16bmSP:coil:47_RBV"
-			}
-			textix="Remote"
-		}
-		composite {
-			object {
-				x=228
-				y=251
-				width=92
-				height=22
-			}
-			"composite name"=""
-			children {
-				"message button" {
-					object {
-						x=228
-						y=251
-						width=92
-						height=22
-					}
-					control {
-						chan="16bmSP:coil:47"
-						clr=14
-						bclr=4
-					}
-					label="Remote"
-					press_msg="1"
-				}
-			}
-			"dynamic attribute" {
-				vis="if zero"
-				chan="16bmSP:coil:47_RBV"
-			}
-		}
+	"basic attribute" {
+		clr=53
 	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:47_RBV"
+	}
+	textix="Remote"
 }
 composite {
 	object {
-		x=228
-		y=251
-		width=167
+		x=251
+		y=222
+		width=92
 		height=22
 	}
 	"composite name"=""
 	children {
-		text {
+		"message button" {
 			object {
-				x=334
-				y=258
-				width=61
-				height=15
-			}
-			"basic attribute" {
-				clr=53
-			}
-			"dynamic attribute" {
-				vis="if not zero"
-				chan="16bmSP:coil:46_RBV"
-			}
-			textix="Local"
-		}
-		composite {
-			object {
-				x=228
-				y=251
+				x=251
+				y=222
 				width=92
 				height=22
 			}
-			"composite name"=""
-			children {
-				"message button" {
-					object {
-						x=228
-						y=251
-						width=92
-						height=22
-					}
-					control {
-						chan="16bmSP:coil:46"
-						clr=14
-						bclr=4
-					}
-					label="Local"
-					press_msg="1"
-				}
+			control {
+				chan="16bmSP:coil:47"
+				clr=14
+				bclr=4
 			}
-			"dynamic attribute" {
-				vis="if zero"
-				chan="16bmSP:coil:46_RBV"
-			}
+			label="Remote"
+			press_msg="1"
 		}
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="16bmSP:coil:47_RBV"
+	}
+}
+text {
+	object {
+		x=342
+		y=290
+		width=61
+		height=15
+	}
+	"basic attribute" {
+		clr=53
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="16bmSP:coil:46_RBV"
+	}
+	textix="Local"
+}
+composite {
+	object {
+		x=221
+		y=277
+		width=92
+		height=22
+	}
+	"composite name"=""
+	children {
+		"message button" {
+			object {
+				x=221
+				y=277
+				width=92
+				height=22
+			}
+			control {
+				chan="16bmSP:coil:46"
+				clr=14
+				bclr=4
+			}
+			label="Local"
+			press_msg="1"
+		}
+	}
+	"dynamic attribute" {
+		vis="if zero"
+		chan="16bmSP:coil:46_RBV"
 	}
 }
 "text update" {
@@ -1302,856 +1280,6 @@ text {
 	}
 	textix="A & B independent mode [017]"
 	align="horiz. right"
-}
-polyline {
-	object {
-		x=138
-		y=498
-		width=0
-		height=27
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(138,525)
-		(138,498)
-	}
-}
-polyline {
-	object {
-		x=160
-		y=511
-		width=25
-		height=0
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(185,511)
-		(160,511)
-	}
-}
-oval {
-	object {
-		x=186
-		y=506
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-}
-polyline {
-	object {
-		x=196
-		y=511
-		width=25
-		height=0
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(221,511)
-		(196,511)
-	}
-}
-polyline {
-	object {
-		x=223
-		y=511
-		width=25
-		height=0
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(248,511)
-		(223,511)
-	}
-}
-oval {
-	object {
-		x=248
-		y=506
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-}
-polyline {
-	object {
-		x=259
-		y=511
-		width=25
-		height=0
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(284,511)
-		(259,511)
-	}
-}
-polyline {
-	object {
-		x=160
-		y=479
-		width=25
-		height=0
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(185,479)
-		(160,479)
-	}
-}
-polyline {
-	object {
-		x=196
-		y=479
-		width=25
-		height=0
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(221,479)
-		(196,479)
-	}
-}
-polyline {
-	object {
-		x=223
-		y=479
-		width=25
-		height=0
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(248,479)
-		(223,479)
-	}
-}
-polyline {
-	object {
-		x=259
-		y=479
-		width=25
-		height=0
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(284,479)
-		(259,479)
-	}
-}
-polyline {
-	object {
-		x=160
-		y=479
-		width=0
-		height=32
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(160,479)
-		(160,511)
-	}
-}
-polyline {
-	object {
-		x=138
-		y=497
-		width=22
-		height=0
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(138,497)
-		(160,497)
-	}
-}
-polyline {
-	object {
-		x=285
-		y=479
-		width=0
-		height=32
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(285,479)
-		(285,511)
-	}
-}
-polyline {
-	object {
-		x=286
-		y=495
-		width=22
-		height=0
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(286,495)
-		(308,495)
-	}
-}
-polyline {
-	object {
-		x=308
-		y=495
-		width=0
-		height=27
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(308,522)
-		(308,495)
-	}
-}
-polyline {
-	object {
-		x=222
-		y=511
-		width=0
-		height=55
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(222,511)
-		(222,566)
-	}
-}
-polyline {
-	object {
-		x=222
-		y=449
-		width=0
-		height=30
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	points {
-		(222,449)
-		(222,479)
-	}
-}
-text {
-	object {
-		x=208
-		y=568
-		width=23
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="IN"
-	align="horiz. right"
-}
-text {
-	object {
-		x=212
-		y=432
-		width=23
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="OUT"
-	align="horiz. right"
-}
-text {
-	object {
-		x=95
-		y=548
-		width=23
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Pump A"
-	align="horiz. right"
-}
-text {
-	object {
-		x=325
-		y=548
-		width=23
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Pump B"
-}
-oval {
-	object {
-		x=248
-		y=474
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=62
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="16bmSP:coil:73_RBV"
-	}
-}
-text {
-	object {
-		x=171
-		y=436
-		width=23
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="2"
-	align="horiz. right"
-}
-text {
-	object {
-		x=171
-		y=542
-		width=23
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="1"
-	align="horiz. right"
-}
-text {
-	object {
-		x=250
-		y=436
-		width=23
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="4"
-}
-text {
-	object {
-		x=250
-		y=541
-		width=23
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="3"
-}
-oval {
-	object {
-		x=248
-		y=474
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=21
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="16bmSP:coil:73_RBV"
-	}
-}
-oval {
-	object {
-		x=186
-		y=474
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=62
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="16bmSP:coil:71_RBV"
-	}
-}
-oval {
-	object {
-		x=186
-		y=474
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=21
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="16bmSP:coil:71_RBV"
-	}
-}
-oval {
-	object {
-		x=186
-		y=506
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=62
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="16bmSP:coil:70_RBV"
-	}
-}
-oval {
-	object {
-		x=248
-		y=506
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=62
-	}
-	"dynamic attribute" {
-		vis="if zero"
-		chan="16bmSP:coil:72_RBV"
-	}
-}
-oval {
-	object {
-		x=186
-		y=474
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-}
-oval {
-	object {
-		x=248
-		y=474
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-}
-oval {
-	object {
-		x=186
-		y=506
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=21
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="16bmSP:coil:70_RBV"
-	}
-}
-oval {
-	object {
-		x=248
-		y=506
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=21
-	}
-	"dynamic attribute" {
-		vis="if not zero"
-		chan="16bmSP:coil:72_RBV"
-	}
-}
-"message button" {
-	object {
-		x=192
-		y=522
-		width=18
-		height=18
-	}
-	control {
-		chan="16bmSP:coil:70"
-		clr=14
-		bclr=51
-	}
-	label="C"
-	press_msg="1"
-}
-"message button" {
-	object {
-		x=174
-		y=522
-		width=18
-		height=18
-	}
-	control {
-		chan="16bmSP:coil:70"
-		clr=14
-		bclr=51
-	}
-	label="O"
-	press_msg="0"
-}
-"message button" {
-	object {
-		x=254
-		y=521
-		width=18
-		height=18
-	}
-	control {
-		chan="16bmSP:coil:72"
-		clr=14
-		bclr=51
-	}
-	label="C"
-	press_msg="1"
-}
-"message button" {
-	object {
-		x=236
-		y=521
-		width=18
-		height=18
-	}
-	control {
-		chan="16bmSP:coil:72"
-		clr=14
-		bclr=51
-	}
-	label="O"
-	press_msg="0"
-}
-"message button" {
-	object {
-		x=254
-		y=453
-		width=18
-		height=18
-	}
-	control {
-		chan="16bmSP:coil:73"
-		clr=14
-		bclr=51
-	}
-	label="C"
-	press_msg="1"
-}
-"message button" {
-	object {
-		x=236
-		y=453
-		width=18
-		height=18
-	}
-	control {
-		chan="16bmSP:coil:73"
-		clr=14
-		bclr=51
-	}
-	label="O"
-	press_msg="0"
-}
-"message button" {
-	object {
-		x=192
-		y=452
-		width=18
-		height=18
-	}
-	control {
-		chan="16bmSP:coil:71"
-		clr=14
-		bclr=51
-	}
-	label="C"
-	press_msg="1"
-}
-"message button" {
-	object {
-		x=174
-		y=452
-		width=18
-		height=18
-	}
-	control {
-		chan="16bmSP:coil:71"
-		clr=14
-		bclr=51
-	}
-	label="O"
-	press_msg="0"
-}
-"message button" {
-	object {
-		x=99
-		y=637
-		width=76
-		height=18
-	}
-	control {
-		chan="16bmSP:coil:5"
-		clr=14
-		bclr=51
-	}
-	label="Refill"
-	press_msg="1"
-}
-"message button" {
-	object {
-		x=278
-		y=635
-		width=76
-		height=18
-	}
-	control {
-		chan="16bmSP:coil:6"
-		clr=14
-		bclr=51
-	}
-	label="Refill"
-	press_msg="1"
-}
-"message button" {
-	object {
-		x=99
-		y=595
-		width=76
-		height=18
-	}
-	control {
-		chan="16bmSP:coil:0"
-		clr=14
-		bclr=51
-	}
-	label="Run"
-	press_msg="1"
-}
-"message button" {
-	object {
-		x=99
-		y=616
-		width=76
-		height=18
-	}
-	control {
-		chan="16bmSP:coil:0"
-		clr=14
-		bclr=51
-	}
-	label="Stop"
-	press_msg="0"
-}
-"message button" {
-	object {
-		x=278
-		y=593
-		width=76
-		height=18
-	}
-	control {
-		chan="16bmSP:coil:1"
-		clr=14
-		bclr=51
-	}
-	label="Run"
-	press_msg="1"
-}
-"message button" {
-	object {
-		x=278
-		y=614
-		width=76
-		height=18
-	}
-	control {
-		chan="16bmSP:coil:1"
-		clr=14
-		bclr=51
-	}
-	label="Stop"
-	press_msg="0"
-}
-oval {
-	object {
-		x=80
-		y=474
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=21
-	}
-}
-oval {
-	object {
-		x=80
-		y=455
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=62
-	}
-}
-text {
-	object {
-		x=92
-		y=472
-		width=23
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="-Closed"
-}
-text {
-	object {
-		x=92
-		y=453
-		width=23
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="-Open"
-}
-oval {
-	object {
-		x=80
-		y=474
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-}
-oval {
-	object {
-		x=80
-		y=455
-		width=10
-		height=10
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-}
-text {
-	object {
-		x=78
-		y=433
-		width=23
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Valves"
-}
-"text update" {
-	object {
-		x=17
-		y=568
-		width=102
-		height=15
-	}
-	monitor {
-		chan="16bmSP:reg:76_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	align="horiz. right"
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=325
-		y=568
-		width=102
-		height=15
-	}
-	monitor {
-		chan="16bmSP:reg:82_RBV"
-		clr=53
-		bclr=13
-	}
-	clrmod="alarm"
-	limits {
-	}
 }
 text {
 	object {
@@ -3343,38 +2471,6 @@ text {
 	limits {
 	}
 }
-bar {
-	object {
-		x=299
-		y=522
-		width=20
-		height=66
-	}
-	monitor {
-		chan="16bmSP:reg:82_RBV"
-		clr=53
-		bclr=3
-	}
-	direction="down"
-	limits {
-	}
-}
-bar {
-	object {
-		x=128
-		y=524
-		width=20
-		height=66
-	}
-	monitor {
-		chan="16bmSP:reg:76_RBV"
-		clr=53
-		bclr=3
-	}
-	direction="down"
-	limits {
-	}
-}
 "text update" {
 	object {
 		x=869
@@ -3446,4 +2542,897 @@ text {
 	}
 	textix="Actual Pressure AB [098]"
 	align="horiz. right"
+}
+composite {
+	object {
+		x=17
+		y=432
+		width=410
+		height=223
+	}
+	"composite name"=""
+	children {
+		polyline {
+			object {
+				x=138
+				y=498
+				width=0
+				height=27
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(138,525)
+				(138,498)
+			}
+		}
+		polyline {
+			object {
+				x=160
+				y=511
+				width=25
+				height=0
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(185,511)
+				(160,511)
+			}
+		}
+		oval {
+			object {
+				x=186
+				y=506
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+		}
+		polyline {
+			object {
+				x=196
+				y=511
+				width=25
+				height=0
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(221,511)
+				(196,511)
+			}
+		}
+		polyline {
+			object {
+				x=223
+				y=511
+				width=25
+				height=0
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(248,511)
+				(223,511)
+			}
+		}
+		oval {
+			object {
+				x=248
+				y=506
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+		}
+		polyline {
+			object {
+				x=259
+				y=511
+				width=25
+				height=0
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(284,511)
+				(259,511)
+			}
+		}
+		polyline {
+			object {
+				x=160
+				y=479
+				width=25
+				height=0
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(185,479)
+				(160,479)
+			}
+		}
+		polyline {
+			object {
+				x=196
+				y=479
+				width=25
+				height=0
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(221,479)
+				(196,479)
+			}
+		}
+		polyline {
+			object {
+				x=223
+				y=479
+				width=25
+				height=0
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(248,479)
+				(223,479)
+			}
+		}
+		polyline {
+			object {
+				x=259
+				y=479
+				width=25
+				height=0
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(284,479)
+				(259,479)
+			}
+		}
+		polyline {
+			object {
+				x=160
+				y=479
+				width=0
+				height=32
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(160,479)
+				(160,511)
+			}
+		}
+		polyline {
+			object {
+				x=138
+				y=497
+				width=22
+				height=0
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(138,497)
+				(160,497)
+			}
+		}
+		polyline {
+			object {
+				x=285
+				y=479
+				width=0
+				height=32
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(285,479)
+				(285,511)
+			}
+		}
+		polyline {
+			object {
+				x=286
+				y=495
+				width=22
+				height=0
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(286,495)
+				(308,495)
+			}
+		}
+		polyline {
+			object {
+				x=308
+				y=495
+				width=0
+				height=27
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(308,522)
+				(308,495)
+			}
+		}
+		polyline {
+			object {
+				x=222
+				y=511
+				width=0
+				height=55
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(222,511)
+				(222,566)
+			}
+		}
+		polyline {
+			object {
+				x=222
+				y=449
+				width=0
+				height=30
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			points {
+				(222,449)
+				(222,479)
+			}
+		}
+		text {
+			object {
+				x=208
+				y=568
+				width=23
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="IN"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=212
+				y=432
+				width=23
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="OUT"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=95
+				y=548
+				width=23
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Pump A"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=325
+				y=548
+				width=23
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Pump B"
+		}
+		oval {
+			object {
+				x=248
+				y=474
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=62
+			}
+			"dynamic attribute" {
+				vis="if zero"
+				chan="16bmSP:coil:73_RBV"
+			}
+		}
+		text {
+			object {
+				x=171
+				y=436
+				width=23
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="2"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=171
+				y=542
+				width=23
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="1"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=250
+				y=436
+				width=23
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="4"
+		}
+		text {
+			object {
+				x=250
+				y=541
+				width=23
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="3"
+		}
+		oval {
+			object {
+				x=248
+				y=474
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=21
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="16bmSP:coil:73_RBV"
+			}
+		}
+		oval {
+			object {
+				x=186
+				y=474
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=62
+			}
+			"dynamic attribute" {
+				vis="if zero"
+				chan="16bmSP:coil:71_RBV"
+			}
+		}
+		oval {
+			object {
+				x=186
+				y=474
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=21
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="16bmSP:coil:71_RBV"
+			}
+		}
+		oval {
+			object {
+				x=186
+				y=506
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=62
+			}
+			"dynamic attribute" {
+				vis="if zero"
+				chan="16bmSP:coil:70_RBV"
+			}
+		}
+		oval {
+			object {
+				x=248
+				y=506
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=62
+			}
+			"dynamic attribute" {
+				vis="if zero"
+				chan="16bmSP:coil:72_RBV"
+			}
+		}
+		oval {
+			object {
+				x=186
+				y=474
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+		}
+		oval {
+			object {
+				x=248
+				y=474
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+		}
+		oval {
+			object {
+				x=186
+				y=506
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=21
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="16bmSP:coil:70_RBV"
+			}
+		}
+		oval {
+			object {
+				x=248
+				y=506
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=21
+			}
+			"dynamic attribute" {
+				vis="if not zero"
+				chan="16bmSP:coil:72_RBV"
+			}
+		}
+		"message button" {
+			object {
+				x=192
+				y=522
+				width=18
+				height=18
+			}
+			control {
+				chan="16bmSP:coil:70"
+				clr=14
+				bclr=51
+			}
+			label="C"
+			press_msg="1"
+		}
+		"message button" {
+			object {
+				x=174
+				y=522
+				width=18
+				height=18
+			}
+			control {
+				chan="16bmSP:coil:70"
+				clr=14
+				bclr=51
+			}
+			label="O"
+			press_msg="0"
+		}
+		"message button" {
+			object {
+				x=254
+				y=521
+				width=18
+				height=18
+			}
+			control {
+				chan="16bmSP:coil:72"
+				clr=14
+				bclr=51
+			}
+			label="C"
+			press_msg="1"
+		}
+		"message button" {
+			object {
+				x=236
+				y=521
+				width=18
+				height=18
+			}
+			control {
+				chan="16bmSP:coil:72"
+				clr=14
+				bclr=51
+			}
+			label="O"
+			press_msg="0"
+		}
+		"message button" {
+			object {
+				x=254
+				y=453
+				width=18
+				height=18
+			}
+			control {
+				chan="16bmSP:coil:73"
+				clr=14
+				bclr=51
+			}
+			label="C"
+			press_msg="1"
+		}
+		"message button" {
+			object {
+				x=236
+				y=453
+				width=18
+				height=18
+			}
+			control {
+				chan="16bmSP:coil:73"
+				clr=14
+				bclr=51
+			}
+			label="O"
+			press_msg="0"
+		}
+		"message button" {
+			object {
+				x=192
+				y=452
+				width=18
+				height=18
+			}
+			control {
+				chan="16bmSP:coil:71"
+				clr=14
+				bclr=51
+			}
+			label="C"
+			press_msg="1"
+		}
+		"message button" {
+			object {
+				x=174
+				y=452
+				width=18
+				height=18
+			}
+			control {
+				chan="16bmSP:coil:71"
+				clr=14
+				bclr=51
+			}
+			label="O"
+			press_msg="0"
+		}
+		"message button" {
+			object {
+				x=99
+				y=637
+				width=76
+				height=18
+			}
+			control {
+				chan="16bmSP:coil:5"
+				clr=14
+				bclr=51
+			}
+			label="Refill"
+			press_msg="1"
+		}
+		"message button" {
+			object {
+				x=278
+				y=635
+				width=76
+				height=18
+			}
+			control {
+				chan="16bmSP:coil:6"
+				clr=14
+				bclr=51
+			}
+			label="Refill"
+			press_msg="1"
+		}
+		"message button" {
+			object {
+				x=99
+				y=595
+				width=76
+				height=18
+			}
+			control {
+				chan="16bmSP:coil:0"
+				clr=14
+				bclr=51
+			}
+			label="Run"
+			press_msg="1"
+		}
+		"message button" {
+			object {
+				x=99
+				y=616
+				width=76
+				height=18
+			}
+			control {
+				chan="16bmSP:coil:0"
+				clr=14
+				bclr=51
+			}
+			label="Stop"
+			press_msg="0"
+		}
+		"message button" {
+			object {
+				x=278
+				y=593
+				width=76
+				height=18
+			}
+			control {
+				chan="16bmSP:coil:1"
+				clr=14
+				bclr=51
+			}
+			label="Run"
+			press_msg="1"
+		}
+		"message button" {
+			object {
+				x=278
+				y=614
+				width=76
+				height=18
+			}
+			control {
+				chan="16bmSP:coil:1"
+				clr=14
+				bclr=51
+			}
+			label="Stop"
+			press_msg="0"
+		}
+		oval {
+			object {
+				x=80
+				y=474
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=21
+			}
+		}
+		oval {
+			object {
+				x=80
+				y=455
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=62
+			}
+		}
+		text {
+			object {
+				x=92
+				y=472
+				width=23
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="-Closed"
+		}
+		text {
+			object {
+				x=92
+				y=453
+				width=23
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="-Open"
+		}
+		oval {
+			object {
+				x=80
+				y=474
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+		}
+		oval {
+			object {
+				x=80
+				y=455
+				width=10
+				height=10
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+		}
+		text {
+			object {
+				x=78
+				y=433
+				width=23
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Valves"
+		}
+		"text update" {
+			object {
+				x=17
+				y=568
+				width=102
+				height=15
+			}
+			monitor {
+				chan="16bmSP:reg:76_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			align="horiz. right"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=325
+				y=568
+				width=102
+				height=15
+			}
+			monitor {
+				chan="16bmSP:reg:82_RBV"
+				clr=53
+				bclr=13
+			}
+			clrmod="alarm"
+			limits {
+			}
+		}
+		bar {
+			object {
+				x=299
+				y=522
+				width=20
+				height=66
+			}
+			monitor {
+				chan="16bmSP:reg:82_RBV"
+				clr=53
+				bclr=3
+			}
+			direction="down"
+			limits {
+			}
+		}
+		bar {
+			object {
+				x=128
+				y=524
+				width=20
+				height=66
+			}
+			monitor {
+				chan="16bmSP:reg:76_RBV"
+				clr=53
+				bclr=3
+			}
+			direction="down"
+			limits {
+			}
+		}
+	}
 }

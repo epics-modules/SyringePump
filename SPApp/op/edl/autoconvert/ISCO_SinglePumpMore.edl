@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 453
-y 310
+x 1009
+y 318
 w 515
 h 315
 font "helvetica-medium-r-18.0"
@@ -63,19 +63,6 @@ value {
   "$(P)$(PUMP)"
 }
 endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 66
-w 500
-h 245
-
-beginGroup
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
@@ -300,19 +287,6 @@ value {
   "Max volume"
 }
 endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 216
-w 460
-h 95
-
-beginGroup
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
@@ -594,11 +568,6 @@ value {
 }
 endObjectProperties
 
-endGroup
-
-endObjectProperties
-
-
 # (Group)
 object activeGroupClass
 beginObjectProperties
@@ -661,40 +630,6 @@ endGroup
 
 endObjectProperties
 
-
-endGroup
-
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 66
-w 500
-h 245
-
-beginGroup
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 216
-w 460
-h 95
-
-beginGroup
-
-endGroup
-
-endObjectProperties
-
 # (Group)
 object activeGroupClass
 beginObjectProperties
@@ -728,11 +663,6 @@ controlPv "$(P)$(PUMP)PoorFillAlarm"
 font "helvetica-medium-r-10.0"
 orientation "horizontal"
 endObjectProperties
-
-endGroup
-
-endObjectProperties
-
 
 endGroup
 
