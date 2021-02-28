@@ -1,10 +1,10 @@
 file "$(MODBUS)/db/bi_bit.template" { 
 pattern
 {    R,                   PORT,     OFFSET,  ZNAM,   ONAM,    ZSV,      OSV,      SCAN}
-{A:Run_RBV,             SP1_Bit_In,     0, Stopped, Running,  NO_ALARM,  MINOR,  "I/O Intr"}
-{B:Run_RBV,             SP1_Bit_In,     1, Stopped, Running,  NO_ALARM,  MINOR,  "I/O Intr"}
-{C:Run_RBV,             SP1_Bit_In,     2, Stopped, Running,  NO_ALARM,  MINOR,  "I/O Intr"}
-{D:Run_RBV,             SP1_Bit_In,     3, Stopped, Running,  NO_ALARM,  MINOR,  "I/O Intr"}
+{A:Run_RBV,             SP1_Bit_In,     0, Stopped, Running,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{B:Run_RBV,             SP1_Bit_In,     1, Stopped, Running,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{C:Run_RBV,             SP1_Bit_In,     2, Stopped, Running,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{D:Run_RBV,             SP1_Bit_In,     3, Stopped, Running,  NO_ALARM,  MAJOR,  "I/O Intr"}
 {Link-AB-CD_RBV,        SP1_Bit_In,     4,Disabled, Enabled,  NO_ALARM,  MINOR,  "I/O Intr"}
 {A:Refill_RBV,          SP1_Bit_In,     5,    Stop,     Run,  NO_ALARM,  MINOR,  "I/O Intr"}
 {B:Refill_RBV,          SP1_Bit_In,     6,    Stop,     Run,  NO_ALARM,  MINOR,  "I/O Intr"}
