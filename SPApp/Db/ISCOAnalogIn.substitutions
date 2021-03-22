@@ -52,10 +52,10 @@ pattern
 {D:VolumeRemaining_RBV,   SP1_Reg_In_1,    94,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
 {AB:FlowRate_RBV,         SP1_Reg_In_1,    96,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
 {AB:Pressure_RBV,         SP1_Reg_In_1,    98,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
-{AB:VolumeRemaining_RBV,  SP1_Reg_In_2,     0,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{AB:VolumeDelivered_RBV,  SP1_Reg_In_2,     0,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
 {CD:Pressure_RBV,         SP1_Reg_In_2,     2,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
 {CD:FlowRate_RBV,         SP1_Reg_In_2,     4,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
-{CD:VolumeRemaining_RBV,  SP1_Reg_In_2,     6,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
+{CD:VolumeDelivered_RBV,  SP1_Reg_In_2,     6,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
 {VoltageIn1_RBV,          SP1_Reg_In_2,     8,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
 {VoltageIn2_RBV,          SP1_Reg_In_2,    10,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
 {VoltageIn3_RBV,          SP1_Reg_In_2,    12,    FLOAT32_BE,   0,    10,    4,  egu, "I/O Intr", "Register"}
