@@ -16,7 +16,7 @@ epicsEnvSet("PREFIX", "ISCO1:")
 
 epicsEnvSet("PORT", "SP1")
 epicsEnvSet("POLL_MS", "1000")
-epicsEnvSet("TIMEOUT_MS", "10000")
+epicsEnvSet("TIMEOUT_MS", "2000")
 
 # Use the following commands for TCP/IP
 #drvAsynIPPortConfigure(const char *portName, 
