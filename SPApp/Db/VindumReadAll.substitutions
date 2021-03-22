@@ -1,0 +1,27 @@
+
+file "$(MODBUS)/db/longinInt32.template" {
+pattern
+{     R,           OFFSET,  DATA_TYPE,        SCAN}
+{ComResponse,        0x01,  UINT32_BE,  "I/O Intr"}
+{DataLength,         0x03,     UINT16,  "I/O Intr"}
+{CommVersion,        0x04,     UINT16,  "I/O Intr"}
+{A:PressureRaw,      0x05,  UINT32_BE,  "I/O Intr"}
+{B:PressureRaw,      0x07,  UINT32_BE,  "I/O Intr"}
+{PressureOutRaw,     0x09,  UINT32_BE,  "I/O Intr"}
+{A:RateRaw,          0x0B,  UINT32_BE,  "I/O Intr"}
+{B:RateRaw,          0x0D,  UINT32_BE,  "I/O Intr"}
+{RateOutRaw,         0x0F,  UINT32_BE,  "I/O Intr"}
+{A:VolumeRaw,        0x11,  UINT32_BE,  "I/O Intr"}
+{B:VolumeRaw,        0x13,  UINT32_BE,  "I/O Intr"}
+{TotalVolumeRaw,     0x15,  UINT32_BE,  "I/O Intr"}
+{A:Condition,        0x17,     UINT16,  "I/O Intr"}
+{B:Condition,        0x18,     UINT16,  "I/O Intr"}
+{A:Error,            0x19,     UINT16,  "I/O Intr"}
+{B:Error,            0x1A,     UINT16,  "I/O Intr"}
+{AB:Error,           0x1B,  UINT32_BE,  "I/O Intr"}
+{AB:PumpMode,        0x1D,     UINT16,  "I/O Intr"}
+{A:LatchedError,     0x1E,     UINT16,  "I/O Intr"}
+{B:LatchedError,     0x1F,     UINT16,  "I/O Intr"}
+{AB:LatchedError,    0x20,  UINT32_BE,  "I/O Intr"}
+{EndSymbol,          0x22,     UINT16,  "I/O Intr"}
+}
