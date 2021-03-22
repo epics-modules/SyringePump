@@ -1,6 +1,6 @@
 
 file {
-	name="/home/epics/devel/SyringePump/SPApp/op/adl/ISCOTop.adl"
+	name="/home/epics/devel/SyringePump/SPApp/op/adl/SyringePumpTop.adl"
 	version=030109
 }
 display {
@@ -135,6 +135,11 @@ text {
 		label="Dual CD"
 		name="ISCO_DualPump.adl"
 		args="P=ISCO1:,P1=C:,P2=D:,DP=CD:"
+	}
+	display[6] {
+		label="Vindum Read All"
+		name="VindumReadAll.adl"
+		args="P=VINDUM1:,PUMP=P1:"
 	}
 	clr=14
 	bclr=51

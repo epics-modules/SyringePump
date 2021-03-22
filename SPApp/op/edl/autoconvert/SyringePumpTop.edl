@@ -1,0 +1,135 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 300
+y 120
+w 250
+h 100
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-bold-r-10.0"
+btnFont "helvetica-medium-r-18.0"
+fgColor rgb 0 0 0
+bgColor rgb 47872 47872 47872
+textColor rgb 0 0 0
+ctlFgColor1 rgb 64256 62208 18944
+ctlFgColor2 rgb 60928 46592 11008
+ctlBgColor1 rgb 52480 24832 0
+ctlBgColor2 rgb 65280 45056 65280
+topShadowColor rgb 44544 19968 48128
+botShadowColor rgb 13312 13056 34304
+showGrid
+snapToGrid
+gridSize 4
+endScreenProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 11
+y 5
+w 228
+h 25
+font "helvetica-medium-r-18.0"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Teledyne ISCO Pumps"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 75
+y 40
+w 100
+h 20
+fgColor rgb 0 0 0
+bgColor rgb 29440 57088 65280
+topShadowColor rgb 55808 55808 55808
+botShadowColor rgb 17920 17920 17920
+font "helvetica-medium-r-12.0"
+icon
+buttonLabel "Pumps"
+numPvs 14
+numDsps 7
+displayFileName {
+  0 "ISCO_SinglePump.edl"
+  1 "ISCO_SinglePump.edl"
+  2 "ISCO_SinglePump.edl"
+  3 "ISCO_SinglePump.edl"
+  4 "ISCO_DualPump.edl"
+  5 "ISCO_DualPump.edl"
+  6 "VindumReadAll.edl"
+}
+menuLabel {
+  0 "Pump A"
+  1 "Pump B"
+  2 "Pump C"
+  3 "Pump D"
+  4 "Dual AB"
+  5 "Dual CD"
+  6 "Vindum Read All"
+}
+symbols {
+  0 "P=ISCO1:,PUMP=A:"
+  1 "P=ISCO1:,PUMP=B:"
+  2 "P=ISCO1:,PUMP=C:"
+  3 "P=ISCO1:,PUMP=D:"
+  4 "P=ISCO1:,P1=A:,P2=B:,DP=AB:"
+  5 "P=ISCO1:,P1=C:,P2=D:,DP=CD:"
+  6 "P=VINDUM1:,PUMP=P1:"
+}
+replaceSymbols {
+  0 1
+  1 1
+  2 1
+  3 1
+  4 1
+  5 1
+  6 1
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 75
+y 65
+w 100
+h 20
+fgColor rgb 0 0 0
+bgColor rgb 29440 57088 65280
+topShadowColor rgb 55808 55808 55808
+botShadowColor rgb 17920 17920 17920
+font "helvetica-medium-r-12.0"
+icon
+buttonLabel "asyn record"
+numPvs 2
+numDsps 1
+displayFileName {
+  0 "asynRecord.edl"
+}
+menuLabel {
+  0 "Pump A"
+}
+symbols {
+  0 "P=ISCO1:,R=asyn1"
+}
+replaceSymbols {
+  0 1
+}
+endObjectProperties
+
