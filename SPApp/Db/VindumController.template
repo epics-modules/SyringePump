@@ -1,0 +1,95 @@
+###########################
+# Status readback records #
+###########################
+
+# These records convert raw pressure to engineering units
+record(mbbo, "$(P)PressUnits") {
+    field(ZRVL, "0")
+    field(ZRST, "Atmosphere")
+    field(ONVL, "1")
+    field(ONST, "Bar")
+    field(TWVL, "2")
+    field(TWST, "kPa")
+    field(THVL, "3")
+    field(THST, "PSI")
+}
+
+record(calc, "$(P)A:PumpModeCalc") {
+    field(INPA, "$(P)AB:PumpModeRaw CP")
+    field(CALC, "(A>>8)&0xFF")
+    field(FLNK, "$(P)A:PumpMode_RBV")
+}
+
+record(calc, "$(P)B:PumpModeCalc") {
+    field(INPA, "$(P)AB:PumpModeRaw CP")
+    field(CALC, "A&0xFF")
+    field(FLNK, "$(P)B:PumpMode_RBV")
+}
+
+record(calc, "$(P)TotalVolume") {
+    field(INPA, "$(P)TotalVolumeRaw CP")
+    field(INPB, "$(P)PressUnits CP")
+    field(CALC, "A/1000000")
+    field(PREC, "1")
+}
+
+record(mbbo, "$(P)PumpMode") {
+    field(DTYP, "Raw Soft Channel")
+    field(ZRVL, "0")
+    field(ZRST, "Independent")
+    field(ONVL, "0x10")
+    field(ONST, "Geared Rate Deliver")
+    field(TWVL, "0x11")
+    field(TWST, "Paired Rate Deliver")
+    field(THVL, "0x12")
+    field(THST, "Paired Press Deliver")
+    field(FRVL, "0x13")
+    field(FRST, "Paired Rate Receive")
+    field(FVVL, "0x14")
+    field(FVST, "Paired Press Receive")
+    field(SXVL, "0x15")
+    field(SXST, "Paired Press Bi-Dir")
+    field(SVVL, "0x16")
+    field(SVST, "Paired Delta Press Dlvr")
+    field(FLNK, "$(P)PumpModeSeq")
+}
+
+record(seq,"$(P)PumpModeSeq") {
+    field(DLY1,"0")
+    field(DOL1,"1")
+    field(LNK1,"$(P)PumpModeCalcA.PROC")
+    field(DLY2,"2")
+    field(DOL2,"1")
+    field(LNK2,"$(P)PumpModeCalcB.PROC")
+}
+
+record(calcout, "$(P)PumpModeCalcA") {
+    field(INPA, "$(P)PumpMode.RVAL NPP")
+    field(INPB, "$(P)A:PumpMode.RVAL NPP")
+    field(CALC, "A?A:B")
+    field(OUT,  "$(P)AB:PumpModeSPRaw CA")
+}
+
+record(calcout, "$(P)PumpModeCalcB") {
+    field(INPA, "$(P)PumpMode.RVAL NPP")
+    field(INPB, "$(P)B:PumpMode.RVAL NPP")
+    field(CALC, "A?A:B|0x08")
+    field(OUT, "$(P)AB:PumpModeSPRaw PP")
+}
+
+record(calcout, "$(P)SetValves") {
+    field(INPA, "$(P)A:FillValve NPP")
+    field(INPB, "$(P)A:DeliverValve NPP")
+    field(INPC, "$(P)B:FillValve NPP")
+    field(INPD, "$(P)B:DeliverValve NPP")
+    field(CALC, "D<<3|C<<2|B<<1|A")
+    field(OUT, "$(P)ValveCommandRaw PP")
+}
+
+record(mbbo, "$(P)ClearLatchedErrors") {
+    field(DTYP, "Raw Soft Channel")
+    field(ZRVL, "7")
+    field(ZRST, "Clear")
+    field(VAL, "0")
+    field(OUT, "$(P)ClearLatchedErrorsRaw PP")
+}

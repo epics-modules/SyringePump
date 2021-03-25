@@ -1,0 +1,21 @@
+file "$(MODBUS)/db/longinInt32.template" {
+pattern
+{     R,              OFFSET,  DATA_TYPE         SCAN}
+{A:RunRaw,              0x01,     UINT16,  "I/O Intr"}
+{A:StopRaw,             0x02,     UINT16,  "I/O Intr"}
+{B:RunRaw,              0x03,     UINT16,  "I/O Intr"}
+{B:StopRaw,             0x04,     UINT16,  "I/O Intr"}
+{A:PressureSPRaw,       0x05,  UINT32_BE,  "I/O Intr"}
+{B:PressureSPRaw,       0x07,  UINT32_BE,  "I/O Intr"}
+{A:RateSPRaw,            0x09,  UINT32_BE,  "I/O Intr"}
+{B:RateSPRaw,           0x0B,  UINT32_BE,  "I/O Intr"}
+{A:SafetyPressureSPRaw, 0x0D,  UINT32_BE,  "I/O Intr"}
+{B:SafetyPressureSPRaw, 0x0F,  UINT32_BE,  "I/O Intr"}
+{AB:PumpModeSPRaw,      0x11,     UINT16,  "I/O Intr"}
+{A:DirectionRaw,        0x12,     UINT16,  "I/O Intr"}
+{B:DirectionRaw,        0x13,     UINT16,  "I/O Intr"}
+{ResetVolumesRaw,       0x14,     UINT16,  "I/O Intr"}
+{AB:VolumeStartRaw,     0x15,  UINT32_BE,  "I/O Intr"}
+{ValveCommandRaw,       0x17,     UINT16,  "I/O Intr"}
+{ClearLatchedErrorsRaw, 0x18,     UINT16,  "I/O Intr"}
+}
