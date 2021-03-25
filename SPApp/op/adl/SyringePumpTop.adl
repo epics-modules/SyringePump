@@ -137,9 +137,9 @@ text {
 		args="P=ISCO1:,P1=C:,P2=D:,DP=CD:"
 	}
 	display[6] {
-		label="Vindum Read All"
-		name="VindumReadAll.adl"
-		args="P=VINDUM1:,PUMP=P1:"
+		label="Vindum Pump"
+		name="VindumPump.adl"
+		args="P=VINDUM1:P1:"
 	}
 	clr=14
 	bclr=51

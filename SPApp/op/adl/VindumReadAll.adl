@@ -1,6 +1,6 @@
 
 file {
-	name="/home/epics/devel/SyringePump/SPApp/op/adl/VindumDualPumpMore.adl"
+	name="/home/epics/devel/SyringePump/SPApp/op/adl/VindumReadAll.adl"
 	version=030109
 }
 display {
@@ -110,7 +110,7 @@ text {
 	"basic attribute" {
 		clr=54
 	}
-	textix="$(P)$(PUMP)"
+	textix="$(P)"
 	align="horiz. centered"
 }
 "text update" {
@@ -121,7 +121,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)DataLength"
+		chan="$(P)DataLength"
 		clr=53
 		bclr=3
 	}
@@ -136,7 +136,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)CommVersion"
+		chan="$(P)CommVersion"
 		clr=53
 		bclr=3
 	}
@@ -151,7 +151,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)A:PressureRaw"
+		chan="$(P)A:PressureRaw"
 		clr=53
 		bclr=3
 	}
@@ -166,7 +166,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)ComResponse"
+		chan="$(P)ComResponse"
 		clr=53
 		bclr=3
 	}
@@ -234,7 +234,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)B:PressureRaw"
+		chan="$(P)B:PressureRaw"
 		clr=53
 		bclr=3
 	}
@@ -262,7 +262,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)PressureOutRaw"
+		chan="$(P)PressureOutRaw"
 		clr=53
 		bclr=3
 	}
@@ -290,7 +290,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)A:RateRaw"
+		chan="$(P)A:RateRaw"
 		clr=53
 		bclr=3
 	}
@@ -318,7 +318,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)B:RateRaw"
+		chan="$(P)B:RateRaw"
 		clr=53
 		bclr=3
 	}
@@ -346,7 +346,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)RateOutRaw"
+		chan="$(P)RateOutRaw"
 		clr=53
 		bclr=3
 	}
@@ -374,7 +374,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)A:VolumeRaw"
+		chan="$(P)A:VolumeRaw"
 		clr=53
 		bclr=3
 	}
@@ -402,7 +402,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)B:VolumeRaw"
+		chan="$(P)B:VolumeRaw"
 		clr=53
 		bclr=3
 	}
@@ -430,7 +430,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)TotalVolumeRaw"
+		chan="$(P)TotalVolumeRaw"
 		clr=53
 		bclr=3
 	}
@@ -458,7 +458,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)A:Condition"
+		chan="$(P)A:Condition"
 		clr=53
 		bclr=3
 	}
@@ -487,7 +487,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)B:Condition"
+		chan="$(P)B:Condition"
 		clr=53
 		bclr=3
 	}
@@ -516,7 +516,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)A:Error"
+		chan="$(P)A:Error"
 		clr=53
 		bclr=3
 	}
@@ -545,7 +545,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)B:Error"
+		chan="$(P)B:Error"
 		clr=53
 		bclr=3
 	}
@@ -574,7 +574,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)AB:Error"
+		chan="$(P)AB:Error"
 		clr=53
 		bclr=3
 	}
@@ -603,7 +603,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)AB:PumpMode"
+		chan="$(P)AB:PumpModeRaw"
 		clr=53
 		bclr=3
 	}
@@ -632,7 +632,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)A:LatchedError"
+		chan="$(P)A:LatchedError"
 		clr=53
 		bclr=3
 	}
@@ -661,7 +661,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)B:LatchedError"
+		chan="$(P)B:LatchedError"
 		clr=53
 		bclr=3
 	}
@@ -690,7 +690,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)AB:LatchedError"
+		chan="$(P)AB:LatchedError"
 		clr=53
 		bclr=3
 	}
@@ -719,7 +719,7 @@ text {
 		height=20
 	}
 	monitor {
-		chan="$(P)$(PUMP)EndSymbol"
+		chan="$(P)EndSymbol"
 		clr=53
 		bclr=3
 	}
