@@ -1,27 +1,45 @@
-
 file "$(MODBUS)/db/longinInt32.template" {
 pattern
-{     R,           OFFSET,  DATA_TYPE,        SCAN}
-{ComResponse,        0x01,  UINT32_BE,  "I/O Intr"}
-{DataLength,         0x03,     UINT16,  "I/O Intr"}
-{CommVersion,        0x04,     UINT16,  "I/O Intr"}
-{A:PressureRaw,      0x05,  UINT32_BE,  "I/O Intr"}
-{B:PressureRaw,      0x07,  UINT32_BE,  "I/O Intr"}
-{PressureOutRaw,     0x09,  UINT32_BE,  "I/O Intr"}
-{A:RateRaw,          0x0B,  UINT32_BE,  "I/O Intr"}
-{B:RateRaw,          0x0D,  UINT32_BE,  "I/O Intr"}
-{RateOutRaw,         0x0F,  UINT32_BE,  "I/O Intr"}
-{A:VolumeRaw,        0x11,  UINT32_BE,  "I/O Intr"}
-{B:VolumeRaw,        0x13,  UINT32_BE,  "I/O Intr"}
-{TotalVolumeRaw,     0x15,  UINT32_BE,  "I/O Intr"}
-{A:Condition,        0x17,     UINT16,  "I/O Intr"}
-{B:Condition,        0x18,     UINT16,  "I/O Intr"}
-{A:Error,            0x19,     UINT16,  "I/O Intr"}
-{B:Error,            0x1A,     UINT16,  "I/O Intr"}
-{AB:Error,           0x1B,  UINT32_BE,  "I/O Intr"}
-{AB:PumpMode,        0x1D,     UINT16,  "I/O Intr"}
-{A:LatchedError,     0x1E,     UINT16,  "I/O Intr"}
-{B:LatchedError,     0x1F,     UINT16,  "I/O Intr"}
-{AB:LatchedError,    0x20,  UINT32_BE,  "I/O Intr"}
-{EndSymbol,          0x22,     UINT16,  "I/O Intr"}
+{     R,                      OFFSET,  DATA_TYPE,        SCAN}
+# These are the values from ReadAll starting at Anybus address x02
+{ComResponse,                   0x01,  UINT32_BE,  "I/O Intr"}
+{DataLength,                    0x03,     UINT16,  "I/O Intr"}
+{CommVersion,                   0x04,     UINT16,  "I/O Intr"}
+{A:PressureRaw,                 0x05,  UINT32_BE,  "I/O Intr"}
+{B:PressureRaw,                 0x07,  UINT32_BE,  "I/O Intr"}
+{PressureOutRaw,                0x09,  UINT32_BE,  "I/O Intr"}
+{A:RateRaw,                     0x0B,  UINT32_BE,  "I/O Intr"}
+{B:RateRaw,                     0x0D,  UINT32_BE,  "I/O Intr"}
+{RateOutRaw,                    0x0F,  UINT32_BE,  "I/O Intr"}
+{A:VolumeRaw,                   0x11,  UINT32_BE,  "I/O Intr"}
+{B:VolumeRaw,                   0x13,  UINT32_BE,  "I/O Intr"}
+{TotalVolumeRaw,                0x15,  UINT32_BE,  "I/O Intr"}
+{A:Condition,                   0x17,     UINT16,  "I/O Intr"}
+{B:Condition,                   0x18,     UINT16,  "I/O Intr"}
+{A:Error,                       0x19,     UINT16,  "I/O Intr"}
+{B:Error,                       0x1A,     UINT16,  "I/O Intr"}
+{AB:Error,                      0x1B,  UINT32_BE,  "I/O Intr"}
+{AB:PumpModeRaw,                0x1D,     UINT16,  "I/O Intr"}
+{A:LatchedError,                0x1E,     UINT16,  "I/O Intr"}
+{B:LatchedError,                0x1F,     UINT16,  "I/O Intr"}
+{AB:LatchedError,               0x20,  UINT32_BE,  "I/O Intr"}
+{EndSymbol,                     0x22,     UINT16,  "I/O Intr"}
+# These are the status responses to the pump commands starting at AnyBus address 0x70
+{A:RunRawResponse,              0x38,  UINT32_BE,  "I/O Intr"}
+{A:StopRawResponse,             0x3C,  UINT32_BE,  "I/O Intr"}
+{B:RunRawResponse,              0x40,  UINT32_BE,  "I/O Intr"}
+{B:StopRawResponse,             0x44,  UINT32_BE,  "I/O Intr"}
+{A:PressureSPRawResponse,       0x48,  UINT32_BE,  "I/O Intr"}
+{B:PressureSPRawResponse,       0x4C,  UINT32_BE,  "I/O Intr"}
+{A:RateSPRawResponse,           0x50,  UINT32_BE,  "I/O Intr"}
+{B:RateSPRawResponse,           0x54,  UINT32_BE,  "I/O Intr"}
+{A:SafetyPressureSPRawResponse, 0x58,  UINT32_BE,  "I/O Intr"}
+{B:SafetyPressureSPRawResponse, 0x5C,  UINT32_BE,  "I/O Intr"}
+{AB:PumpModeSPRawResponse,      0x60,  UINT32_BE,  "I/O Intr"}
+{A:DirectionRawResponse,        0x64,  UINT32_BE,  "I/O Intr"}
+{B:DirectionRawResponse,        0x68,  UINT32_BE,  "I/O Intr"}
+{ResetVolumesRawResponse,       0x6C,  UINT32_BE,  "I/O Intr"}
+{AB:VolumeStartRawResponse,     0x70,  UINT32_BE,  "I/O Intr"}
+{ValveCommandRawResponse,       0x74,  UINT32_BE,  "I/O Intr"}
+{ClearLatchedErrorsRawResponse, 0x78,  UINT32_BE,  "I/O Intr"}
 }
