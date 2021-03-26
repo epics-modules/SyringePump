@@ -15,7 +15,7 @@ pattern
 {A:DirectionRaw,        0x12,     UINT16,    NO}
 {B:DirectionRaw,        0x13,     UINT16,    NO}
 {ResetVolumesRaw,       0x14,     UINT16,    NO}
-{AB:VolumeStartRaw,     0x15,  UINT32_BE,    NO}
+{VolumeStartRaw,        0x15,  UINT32_BE,    NO}
 {ValveCommandRaw,       0x17,     UINT16,    NO}
 {ClearLatchedErrorsRaw, 0x18,     UINT16,    NO}
 }
