@@ -4,22 +4,32 @@
 
 record(calc, "$(P)$(PUMP)Pressure") {
     field(INPA, "$(P)$(PUMP)PressureRaw CP")
-    field(INPB, "$(P)PressUnits CP")
+    field(CALC, "(A-1000)/10")
+    field(PREC, "1")
+}
+
+record(calc, "$(P)$(PUMP)PressureSP_RBV") {
+    field(INPA, "$(P)$(PUMP)PressureSPRaw_RBV CP")
     field(CALC, "(A-1000)/10")
     field(PREC, "1")
 }
 
 record(calc, "$(P)$(PUMP)FlowRate") {
     field(INPA, "$(P)$(PUMP)RateRaw CP")
-    field(INPB, "$(P)PressUnits CP")
     field(CALC, "A/1000000")
-    field(PREC, "1")
+    field(PREC, "3")
+}
+
+record(calc, "$(P)$(PUMP)FlowRateSP_RBV") {
+    field(INPA, "$(P)$(PUMP)RateSPRaw_RBV CP")
+    field(CALC, "A/1000000")
+    field(PREC, "3")
 }
 
 record(calc, "$(P)$(PUMP)Volume") {
     field(INPA, "$(P)$(PUMP)VolumeRaw CP")
     field(CALC, "A/1000000")
-    field(PREC, "1")
+    field(PREC, "3")
 }
 
 record(calcout, "$(P)$(PUMP)RunningCalc") {
@@ -87,21 +97,8 @@ record(bo, "$(P)$(PUMP)Autofill_RBV") {
     field(OSV,  "MINOR")
 }
 
-record(mbbo, "$(P)$(PUMP)PumpMode") {
-    field(ZRVL, "0x01")
-    field(ZRST, "Manual Rate")
-    field(ONVL, "0x02")
-    field(ONST, "Man. Press Deliver")
-    field(TWVL, "0x03")
-    field(TWST, "Cycled Rate Deliver")
-    field(THVL, "0x04")
-    field(THST, "Cycled Press Deliver")
-    field(FRVL, "0x05")
-    field(FRST, "Cycled Rate Receive")
-    field(FLNK, "$(P)PumpMode")
-}
-
 record(mbbi, "$(P)$(PUMP)PumpMode_RBV") {
+    field(DTYP, "Raw Soft Channel")
     field(ZRVL, "0x01")
     field(ZRST, "Manual Rate")
     field(ONVL, "0x02")
@@ -112,6 +109,8 @@ record(mbbi, "$(P)$(PUMP)PumpMode_RBV") {
     field(THST, "Cycled Press Deliver")
     field(FRVL, "0x05")
     field(FRST, "Cycled Rate Receive")
+    field(FVVL, "0x00")
+    field(FVST, "(Paired)")
 }
 
 ########################
@@ -132,7 +131,7 @@ record(calcout, "$(P)$(PUMP)Stop") {
 # These records are for tweaking the pressure
 record(ao,"$(P)$(PUMP)PressureTweak") {
     field(VAL, "1")
-    field(PREC,"3")
+    field(PREC,"1")
 }
 
 record(calcout,"$(P)$(PUMP)PressureTweakDown") {
@@ -188,13 +187,27 @@ record(calcout,"$(P)$(PUMP)FlowRateTweakUp") {
 }
 
 record(ao, "$(P)$(PUMP)FlowRateSP") {
-    field(PREC, "1")
+    field(PREC, "3")
     field(OUT, "$(P)$(PUMP)FlowRateSPCalc.A PP")
 }
 
 record(calcout, "$(P)$(PUMP)FlowRateSPCalc") {
     field(CALC, "A*1000000")
     field(OUT, "$(P)$(PUMP)RateSPRaw PP")
+}
+
+record(mbbo, "$(P)$(PUMP)PumpMode") {
+    field(ZRVL, "0x01")
+    field(ZRST, "Manual Rate")
+    field(ONVL, "0x02")
+    field(ONST, "Man. Press Deliver")
+    field(TWVL, "0x03")
+    field(TWST, "Cycled Rate Deliver")
+    field(THVL, "0x04")
+    field(THST, "Cycled Press Deliver")
+    field(FRVL, "0x05")
+    field(FRST, "Cycled Rate Receive")
+    field(FLNK, "$(P)PumpMode")
 }
 
 record(bo, "$(P)$(PUMP)Direction") {
