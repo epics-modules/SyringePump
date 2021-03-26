@@ -68,19 +68,24 @@ modbusInterposeConfig("$(PORT)", 0, $(TIMEOUT_MS), 0)
 #   char *plcType)
 
 # Access 124 16-bit input registers starting at 0 as inputs. Function code=3. Default data type=UINT16
-drvModbusAsynConfigure("$(PORT)_Reg_In_1", "$(PORT)", 1, 4, 0, 124, UINT16, $(POLL_MS), "Anybus")
-#asynSetTraceIOMask("$(PORT)_Reg_In_1", 0, HEX)
-#asynSetTraceMask("$(PORT)_Reg_In_1", 0, 255)
+drvModbusAsynConfigure("$(PORT)_ReadInputRegs", "$(PORT)", 1, 4, 0, 124, UINT16, $(POLL_MS), "Anybus")
 
-# Access 25 16-bit output registers starting at 0 as outputs. Function code=16. Default data type=UINT16
+# Load the substitutions files for the Modbus read holding registers records
+dbLoadTemplate("$(TOP)/db/VindumReadInputRegisters.substitutions", "P=$(PREFIX), PORT=$(PORT)_ReadInputRegs")
+
+# Access 25 16-bit holding registers starting at 0 as outputs. Function code=16. Default data type=UINT16
 # Note that with this function code these map to Asynbus addresss starting at 0x200.
-drvModbusAsynConfigure("$(PORT)_Reg_Out_1",  "$(PORT)", 1, 16, 0, 25, UINT16, 1, "Anybus")
+drvModbusAsynConfigure("$(PORT)_WriteHoldingRegs", "$(PORT)", 1, 16, 0, 25, UINT16, 1, "Anybus")
 
-# Load the substitutions files for the ReadAll Modbus records
-dbLoadTemplate("$(TOP)/db/VindumReadAll.substitutions", "P=$(PREFIX), PORT=$(PORT)_Reg_In_1")
+# Load the substitutions files for the Modbus write holding registers records
+dbLoadTemplate("$(TOP)/db/VindumWriteHoldingRegisters.substitutions", "P=$(PREFIX), PORT=$(PORT)_WriteHoldingRegs")
 
-# Load the substitutions files for the PumpCommands Modbus records
-dbLoadTemplate("$(TOP)/db/VindumPumpCommands.substitutions", "P=$(PREFIX), PORT=$(PORT)_Reg_Out_1")
+# Access 25 16-bit holding registers starting at 0 as inputs. Function code=3. Default data type=UINT16
+# Note that with this function code these map to Asynbus addresss starting at 0x200.
+drvModbusAsynConfigure("$(PORT)_ReadHoldingRegs", "$(PORT)", 1, 3, 0, 25, UINT16, 1, "Anybus")
+
+# Load the substitutions files for the Modbus read holding registers records
+dbLoadTemplate("$(TOP)/db/VindumReadHoldingRegisters.substitutions", "P=$(PREFIX), PORT=$(PORT)_ReadHoldingRegs")
 
 # Load the database files for the other records
 dbLoadRecords("$(TOP)/db/VindumController.template", "P=$(PREFIX)")
