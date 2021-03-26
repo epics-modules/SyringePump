@@ -1,6 +1,7 @@
 file "$(MODBUS)/db/longinInt32.template" {
 pattern
 {     R,                      OFFSET,  DATA_TYPE,        SCAN}
+#
 # These are the values from ReadAll starting at Anybus address x02
 {ComResponse,                   0x01,  UINT32_BE,  "I/O Intr"}
 {DataLength,                    0x03,     UINT16,  "I/O Intr"}
@@ -24,6 +25,7 @@ pattern
 {B:LatchedError,                0x1F,     UINT16,  "I/O Intr"}
 {AB:LatchedError,               0x20,  UINT32_BE,  "I/O Intr"}
 {EndSymbol,                     0x22,     UINT16,  "I/O Intr"}
+#
 # These are the status responses to the pump commands starting at AnyBus address 0x70
 {A:RunRawResponse,              0x38,  UINT32_BE,  "I/O Intr"}
 {A:StopRawResponse,             0x3C,  UINT32_BE,  "I/O Intr"}
@@ -39,7 +41,7 @@ pattern
 {A:DirectionRawResponse,        0x64,  UINT32_BE,  "I/O Intr"}
 {B:DirectionRawResponse,        0x68,  UINT32_BE,  "I/O Intr"}
 {ResetVolumesRawResponse,       0x6C,  UINT32_BE,  "I/O Intr"}
-{AB:VolumeStartRawResponse,     0x70,  UINT32_BE,  "I/O Intr"}
+{VolumeStartRawResponse,        0x70,  UINT32_BE,  "I/O Intr"}
 {ValveCommandRawResponse,       0x74,  UINT32_BE,  "I/O Intr"}
 {ClearLatchedErrorsRawResponse, 0x78,  UINT32_BE,  "I/O Intr"}
 }
