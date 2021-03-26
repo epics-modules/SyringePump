@@ -2,35 +2,139 @@
 # Status readback records #
 ###########################
 
-# These records convert raw pressure to engineering units
-record(mbbo, "$(P)PressUnits") {
+record(calcout, "$(P)A:PumpModeRBVCalc") {
+    field(INPA, "$(P)AB:PumpModeRaw CP")
+    field(CALC, "(A>>8)&0x10?0:(A>>8)&0xFF")
+    field(OUT, "$(P)A:PumpMode_RBV.RVAL PP")
+}
+
+record(calcout, "$(P)B:PumpModeRBVCalc") {
+    field(INPA, "$(P)AB:PumpModeRaw CP")
+    field(CALC, "A&0x10?0:A&0xFF")
+    field(OUT, "$(P)B:PumpMode_RBV.RVAL PP")
+}
+
+record(calcout, "$(P)PumpModeRBVCalc") {
+    field(INPA, "$(P)AB:PumpModeRaw CP")
+    field(CALC, "A&0x10?A&0xFF:0")
+    field(OUT, "$(P)PumpMode_RBV.RVAL PP")
+}
+
+record(mbbi, "$(P)PumpMode_RBV") {
+    field(DTYP, "Raw Soft Channel")
     field(ZRVL, "0")
-    field(ZRST, "Atmosphere")
-    field(ONVL, "1")
-    field(ONST, "Bar")
-    field(TWVL, "2")
-    field(TWST, "kPa")
-    field(THVL, "3")
-    field(THST, "PSI")
-}
-
-record(calc, "$(P)A:PumpModeCalc") {
-    field(INPA, "$(P)AB:PumpModeRaw CP")
-    field(CALC, "(A>>8)&0xFF")
-    field(FLNK, "$(P)A:PumpMode_RBV")
-}
-
-record(calc, "$(P)B:PumpModeCalc") {
-    field(INPA, "$(P)AB:PumpModeRaw CP")
-    field(CALC, "A&0xFF")
-    field(FLNK, "$(P)B:PumpMode_RBV")
+    field(ZRST, "Independent")
+    field(ONVL, "0x10")
+    field(ONST, "Geared Rate Deliver")
+    field(TWVL, "0x11")
+    field(TWST, "Paired Rate Deliver")
+    field(THVL, "0x12")
+    field(THST, "Paired Press Deliver")
+    field(FRVL, "0x13")
+    field(FRST, "Paired Rate Receive")
+    field(FVVL, "0x14")
+    field(FVST, "Paired Press Receive")
+    field(SXVL, "0x15")
+    field(SXST, "Paired Press Bi-Dir")
+    field(SVVL, "0x16")
+    field(SVST, "Paired Delta Press Dlvr")
 }
 
 record(calc, "$(P)TotalVolume") {
     field(INPA, "$(P)TotalVolumeRaw CP")
-    field(INPB, "$(P)PressUnits CP")
     field(CALC, "A/1000000")
-    field(PREC, "1")
+    field(PREC, "3")
+}
+
+record(calc, "$(P)TotalVolumeSP_RBV") {
+    field(INPA, "$(P)TotalVolumeSP CP")
+    field(CALC, "A/1000000")
+    field(PREC, "3")
+}
+
+record(calcout, "$(P)A:FillValveRBVCalc") {
+    field(INPA, "$(P)ValveCommandRaw_RBV CP")
+    field(CALC, "A&1")
+    field(OUT, "$(P)A:FillValve_RBV PP")
+}
+
+record(bi, "$(P)A:FillValve_RBV") {
+    field(ZNAM, "Closed")
+    field(ZSV,  "NO_ALARM")
+    field(ONAM, "Opened")
+    field(OSV,  "MINOR")
+}
+
+record(calcout, "$(P)A:DeliverValveRBVCalc") {
+    field(INPA, "$(P)ValveCommandRaw_RBV CP")
+    field(CALC, "(A>>1)&1")
+    field(OUT, "$(P)A:DeliverValve_RBV PP")
+}
+
+record(bi, "$(P)A:DeliverValve_RBV") {
+    field(ZNAM, "Closed")
+    field(ZSV,  "NO_ALARM")
+    field(ONAM, "Opened")
+    field(OSV,  "MINOR")
+}
+
+record(calcout, "$(P)B:FillValveRBVCalc") {
+    field(INPA, "$(P)ValveCommandRaw_RBV CP")
+    field(CALC, "(A>>2)&1")
+    field(OUT, "$(P)B:FillValve_RBV PP")
+}
+
+record(bi, "$(P)B:FillValve_RBV") {
+    field(ZNAM, "Closed")
+    field(ZSV,  "NO_ALARM")
+    field(ONAM, "Opened")
+    field(OSV,  "MINOR")
+}
+
+record(calcout, "$(P)B:DeliverValveRBVCalc") {
+    field(INPA, "$(P)ValveCommandRaw_RBV CP")
+    field(CALC, "(A>>3)&1")
+    field(OUT, "$(P)B:DeliverValve_RBV PP")
+}
+
+record(bi, "$(P)B:DeliverValve_RBV") {
+    field(ZNAM, "Closed")
+    field(ZSV,  "NO_ALARM")
+    field(ONAM, "Opened")
+    field(OSV,  "MINOR")
+}
+
+
+###############################
+# Pump control output records #
+###############################
+
+record(ao, "$(P)TotalVolumeSP") {
+    field(PREC, "3")
+    field(OUT, "$(P)TotalVolumeSPCalc.A PP")
+}
+
+record(calcout, "$(P)TotalVolumeSPCalc") {
+    field(CALC, "A*1000")
+    field(OUT, "$(P)VolumeStartRaw PP")
+}
+
+record(mbbo, "$(P)A:ResetVolume") {
+    field(ZRVL, "0x01")
+    field(ZRST, "Reset")
+    field(OUT,  "$(P)ResetVolumesRaw PP")
+}
+
+record(mbbo, "$(P)B:ResetVolume") {
+    field(ZRVL, "0x2")
+    field(ZRST, "Reset")
+    field(OUT,  "$(P)ResetVolumesRaw PP")
+}
+
+record(mbbo, "$(P)ResetTotalVolume") {
+    field(ZRVL, "0x04")
+    field(ZRST, "Reset")
+    field(OUT,  "$(P)ResetVolumesRaw PP")
 }
 
 record(mbbo, "$(P)PumpMode") {
