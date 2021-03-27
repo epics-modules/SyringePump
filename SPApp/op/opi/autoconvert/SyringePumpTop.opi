@@ -137,14 +137,13 @@
         <description>Dual CD</description>
       </action>
       <action type="OPEN_DISPLAY">
-        <path>VindumReadAll.opi</path>
+        <path>Vindum_DualPump.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
-          <P>VINDUM1:</P>
-          <PUMP>P1:</PUMP>
+          <P>VINDUM1:P1:</P>
         </macros>
         <mode>1</mode>
-        <description>Vindum Read All</description>
+        <description>Vindum Dual Pump</description>
       </action>
     </actions>
     <actions_from_pv>false</actions_from_pv>

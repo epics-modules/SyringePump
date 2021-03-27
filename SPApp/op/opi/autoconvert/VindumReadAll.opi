@@ -59,15 +59,15 @@
     </scale_options>
     <scripts />
     <show_scrollbar>false</show_scrollbar>
-    <text>Vindum Syringe Pump</text>
+    <text>Vindum Syringe Pump Read All</text>
     <tooltip></tooltip>
     <transparent>true</transparent>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>228</width>
+    <width>336</width>
     <wrap_words>false</wrap_words>
-    <x>143</x>
+    <x>89</x>
     <y>6</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
@@ -99,7 +99,7 @@
     </scale_options>
     <scripts />
     <show_scrollbar>false</show_scrollbar>
-    <text>$(P)$(PUMP)</text>
+    <text>$(P)</text>
     <tooltip></tooltip>
     <transparent>true</transparent>
     <vertical_alignment>1</vertical_alignment>
@@ -138,7 +138,7 @@
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)DataLength</pv_name>
+    <pv_name>$(P)DataLength</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -189,7 +189,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)CommVersion</pv_name>
+    <pv_name>$(P)CommVersion</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -240,7 +240,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)A:PressureRaw</pv_name>
+    <pv_name>$(P)A:PressureRaw</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -291,7 +291,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)ComResponse</pv_name>
+    <pv_name>$(P)ComResponse</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -502,7 +502,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)B:PressureRaw</pv_name>
+    <pv_name>$(P)B:PressureRaw</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -593,7 +593,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)PressureOutRaw</pv_name>
+    <pv_name>$(P)PressureOutRaw</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -684,7 +684,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)A:RateRaw</pv_name>
+    <pv_name>$(P)A:RateRaw</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -775,7 +775,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)B:RateRaw</pv_name>
+    <pv_name>$(P)B:RateRaw</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -866,7 +866,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)RateOutRaw</pv_name>
+    <pv_name>$(P)RateOutRaw</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -957,7 +957,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)A:VolumeRaw</pv_name>
+    <pv_name>$(P)A:VolumeRaw</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -1048,7 +1048,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)B:VolumeRaw</pv_name>
+    <pv_name>$(P)B:VolumeRaw</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -1139,7 +1139,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)TotalVolumeRaw</pv_name>
+    <pv_name>$(P)TotalVolumeRaw</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -1230,7 +1230,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)A:Condition</pv_name>
+    <pv_name>$(P)A:Condition</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -1321,7 +1321,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)B:Condition</pv_name>
+    <pv_name>$(P)B:Condition</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -1412,7 +1412,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)A:Error</pv_name>
+    <pv_name>$(P)A:Error</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -1503,7 +1503,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)B:Error</pv_name>
+    <pv_name>$(P)B:Error</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -1594,7 +1594,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)AB:Error</pv_name>
+    <pv_name>$(P)AB:Error</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -1685,7 +1685,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)AB:PumpMode</pv_name>
+    <pv_name>$(P)AB:PumpModeRaw</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -1776,7 +1776,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)A:LatchedError</pv_name>
+    <pv_name>$(P)A:LatchedError</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -1867,7 +1867,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)B:LatchedError</pv_name>
+    <pv_name>$(P)B:LatchedError</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -1958,7 +1958,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)AB:LatchedError</pv_name>
+    <pv_name>$(P)AB:LatchedError</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
@@ -2049,7 +2049,7 @@ $(pv_value)</tooltip>
     <name>Text Update</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(PUMP)EndSymbol</pv_name>
+    <pv_name>$(P)EndSymbol</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />

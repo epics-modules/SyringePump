@@ -86,13 +86,12 @@
         <description>Dual CD</description>
       </action>
       <action type="open_display">
-        <file>VindumReadAll.opi</file>
+        <file>Vindum_DualPump.opi</file>
         <macros>
-          <P>VINDUM1:</P>
-          <PUMP>P1:</PUMP>
+          <P>VINDUM1:P1:</P>
         </macros>
         <target>tab</target>
-        <description>Vindum Read All</description>
+        <description>Vindum Dual Pump</description>
       </action>
     </actions>
     <text>Pumps</text>

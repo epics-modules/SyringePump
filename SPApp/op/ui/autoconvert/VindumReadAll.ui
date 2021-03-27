@@ -125,7 +125,7 @@ border-radius: 2px;
                 </color>
             </property>
             <property name="text">
-                <string>Vindum Syringe Pump</string>
+                <string>Vindum Syringe Pump Read All</string>
             </property>
             <property name="fontScaleMode">
                 <enum>ESimpleLabel::WidthAndHeight</enum>
@@ -135,9 +135,9 @@ border-radius: 2px;
             </property>
             <property name="geometry">
                 <rect>
-                    <x>143</x>
+                    <x>89</x>
                     <y>6</y>
-                    <width>228</width>
+                    <width>336</width>
                     <height>25</height>
                 </rect>
             </property>
@@ -161,7 +161,7 @@ border-radius: 2px;
                 </color>
             </property>
             <property name="text">
-                <string>$(P)$(PUMP)</string>
+                <string>$(P)</string>
             </property>
             <property name="fontScaleMode">
                 <enum>ESimpleLabel::WidthAndHeight</enum>
@@ -191,7 +191,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)DataLength</string>
+                <string>$(P)DataLength</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -245,7 +245,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)CommVersion</string>
+                <string>$(P)CommVersion</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -299,7 +299,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)A:PressureRaw</string>
+                <string>$(P)A:PressureRaw</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -353,7 +353,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)ComResponse</string>
+                <string>$(P)ComResponse</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -551,7 +551,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)B:PressureRaw</string>
+                <string>$(P)B:PressureRaw</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -641,7 +641,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)PressureOutRaw</string>
+                <string>$(P)PressureOutRaw</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -731,7 +731,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)A:RateRaw</string>
+                <string>$(P)A:RateRaw</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -821,7 +821,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)B:RateRaw</string>
+                <string>$(P)B:RateRaw</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -911,7 +911,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)RateOutRaw</string>
+                <string>$(P)RateOutRaw</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -1001,7 +1001,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)A:VolumeRaw</string>
+                <string>$(P)A:VolumeRaw</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -1091,7 +1091,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)B:VolumeRaw</string>
+                <string>$(P)B:VolumeRaw</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -1181,7 +1181,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)TotalVolumeRaw</string>
+                <string>$(P)TotalVolumeRaw</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -1271,7 +1271,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)A:Condition</string>
+                <string>$(P)A:Condition</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -1361,7 +1361,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)B:Condition</string>
+                <string>$(P)B:Condition</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -1451,7 +1451,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)A:Error</string>
+                <string>$(P)A:Error</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -1541,7 +1541,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)B:Error</string>
+                <string>$(P)B:Error</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -1631,7 +1631,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)AB:Error</string>
+                <string>$(P)AB:Error</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -1721,7 +1721,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)AB:PumpMode</string>
+                <string>$(P)AB:PumpModeRaw</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -1811,7 +1811,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)A:LatchedError</string>
+                <string>$(P)A:LatchedError</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -1901,7 +1901,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)B:LatchedError</string>
+                <string>$(P)B:LatchedError</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -1991,7 +1991,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)AB:LatchedError</string>
+                <string>$(P)AB:LatchedError</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -2081,7 +2081,7 @@ border-radius: 2px;
                 <enum>caLineEdit::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(P)$(PUMP)EndSymbol</string>
+                <string>$(P)EndSymbol</string>
             </property>
             <property name="foreground">
                 <color alpha="255">

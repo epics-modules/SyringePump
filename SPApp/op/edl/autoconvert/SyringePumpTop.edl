@@ -69,7 +69,7 @@ displayFileName {
   3 "ISCO_SinglePump.edl"
   4 "ISCO_DualPump.edl"
   5 "ISCO_DualPump.edl"
-  6 "VindumReadAll.edl"
+  6 "Vindum_DualPump.edl"
 }
 menuLabel {
   0 "Pump A"
@@ -78,7 +78,7 @@ menuLabel {
   3 "Pump D"
   4 "Dual AB"
   5 "Dual CD"
-  6 "Vindum Read All"
+  6 "Vindum Dual Pump"
 }
 symbols {
   0 "P=ISCO1:,PUMP=A:"
@@ -87,7 +87,7 @@ symbols {
   3 "P=ISCO1:,PUMP=D:"
   4 "P=ISCO1:,P1=A:,P2=B:,DP=AB:"
   5 "P=ISCO1:,P1=C:,P2=D:,DP=CD:"
-  6 "P=VINDUM1:,PUMP=P1:"
+  6 "P=VINDUM1:P1:"
 }
 replaceSymbols {
   0 1

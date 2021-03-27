@@ -30,9 +30,9 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 143
+x 89
 y 6
-w 228
+w 336
 h 25
 font "helvetica-medium-r-18.0"
 fontAlign "center"
@@ -40,7 +40,7 @@ fgColor rgb 0 0 0
 bgColor index 3
 useDisplayBg
 value {
-  "Vindum Syringe Pump"
+  "Vindum Syringe Pump Read All"
 }
 endObjectProperties
 
@@ -60,7 +60,7 @@ fgColor rgb 2560 0 47104
 bgColor index 3
 useDisplayBg
 value {
-  "$(P)$(PUMP)"
+  "$(P)"
 }
 endObjectProperties
 
@@ -74,7 +74,7 @@ x 265
 y 91
 w 100
 h 20
-controlPv "$(P)$(PUMP)DataLength"
+controlPv "$(P)DataLength"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -98,7 +98,7 @@ x 265
 y 116
 w 100
 h 20
-controlPv "$(P)$(PUMP)CommVersion"
+controlPv "$(P)CommVersion"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -122,7 +122,7 @@ x 265
 y 141
 w 100
 h 20
-controlPv "$(P)$(PUMP)A:PressureRaw"
+controlPv "$(P)A:PressureRaw"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -146,7 +146,7 @@ x 265
 y 66
 w 100
 h 20
-controlPv "$(P)$(PUMP)ComResponse"
+controlPv "$(P)ComResponse"
 format "hex"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -250,7 +250,7 @@ x 265
 y 166
 w 100
 h 20
-controlPv "$(P)$(PUMP)B:PressureRaw"
+controlPv "$(P)B:PressureRaw"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -294,7 +294,7 @@ x 265
 y 191
 w 100
 h 20
-controlPv "$(P)$(PUMP)PressureOutRaw"
+controlPv "$(P)PressureOutRaw"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -338,7 +338,7 @@ x 265
 y 216
 w 100
 h 20
-controlPv "$(P)$(PUMP)A:RateRaw"
+controlPv "$(P)A:RateRaw"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -382,7 +382,7 @@ x 265
 y 241
 w 100
 h 20
-controlPv "$(P)$(PUMP)B:RateRaw"
+controlPv "$(P)B:RateRaw"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -426,7 +426,7 @@ x 265
 y 266
 w 100
 h 20
-controlPv "$(P)$(PUMP)RateOutRaw"
+controlPv "$(P)RateOutRaw"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -470,7 +470,7 @@ x 265
 y 291
 w 100
 h 20
-controlPv "$(P)$(PUMP)A:VolumeRaw"
+controlPv "$(P)A:VolumeRaw"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -514,7 +514,7 @@ x 265
 y 316
 w 100
 h 20
-controlPv "$(P)$(PUMP)B:VolumeRaw"
+controlPv "$(P)B:VolumeRaw"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -558,7 +558,7 @@ x 265
 y 341
 w 100
 h 20
-controlPv "$(P)$(PUMP)TotalVolumeRaw"
+controlPv "$(P)TotalVolumeRaw"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -602,7 +602,7 @@ x 265
 y 366
 w 100
 h 20
-controlPv "$(P)$(PUMP)A:Condition"
+controlPv "$(P)A:Condition"
 format "hex"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -646,7 +646,7 @@ x 265
 y 391
 w 100
 h 20
-controlPv "$(P)$(PUMP)B:Condition"
+controlPv "$(P)B:Condition"
 format "hex"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -690,7 +690,7 @@ x 265
 y 416
 w 100
 h 20
-controlPv "$(P)$(PUMP)A:Error"
+controlPv "$(P)A:Error"
 format "hex"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -734,7 +734,7 @@ x 265
 y 441
 w 100
 h 20
-controlPv "$(P)$(PUMP)B:Error"
+controlPv "$(P)B:Error"
 format "hex"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -778,7 +778,7 @@ x 265
 y 466
 w 100
 h 20
-controlPv "$(P)$(PUMP)AB:Error"
+controlPv "$(P)AB:Error"
 format "hex"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -822,7 +822,7 @@ x 265
 y 491
 w 100
 h 20
-controlPv "$(P)$(PUMP)AB:PumpMode"
+controlPv "$(P)AB:PumpModeRaw"
 format "hex"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -866,7 +866,7 @@ x 265
 y 516
 w 100
 h 20
-controlPv "$(P)$(PUMP)A:LatchedError"
+controlPv "$(P)A:LatchedError"
 format "hex"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -910,7 +910,7 @@ x 265
 y 541
 w 100
 h 20
-controlPv "$(P)$(PUMP)B:LatchedError"
+controlPv "$(P)B:LatchedError"
 format "hex"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -954,7 +954,7 @@ x 265
 y 566
 w 100
 h 20
-controlPv "$(P)$(PUMP)AB:LatchedError"
+controlPv "$(P)AB:LatchedError"
 format "hex"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -998,7 +998,7 @@ x 265
 y 591
 w 100
 h 20
-controlPv "$(P)$(PUMP)EndSymbol"
+controlPv "$(P)EndSymbol"
 format "hex"
 font "helvetica-medium-r-14.0"
 fontAlign "left"

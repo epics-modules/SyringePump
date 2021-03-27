@@ -1,0 +1,1995 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Vindum_DualPump</name>
+  <x>617</x>
+  <y>175</y>
+  <width>645</width>
+  <height>680</height>
+  <background_color>
+    <color red="187" green="187" blue="187">
+    </color>
+  </background_color>
+  <grid_visible>false</grid_visible>
+  <grid_step_x>5</grid_step_x>
+  <widget type="label" version="2.0.0">
+    <name>text #6</name>
+    <text>Vindum Syringe Pump</text>
+    <y>5</y>
+    <width>645</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #9</name>
+    <text>$(P)</text>
+    <y>35</y>
+    <width>645</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>related display #12</name>
+    <actions>
+      <action type="open_display">
+        <file>VindumReadAll.opi</file>
+        <target>tab</target>
+        <description>Read All</description>
+      </action>
+      <action type="open_display">
+        <file>VindumPumpCommandsReadback.opi</file>
+        <target>tab</target>
+        <description>Pump commands readback</description>
+      </action>
+    </actions>
+    <text>More</text>
+    <x>451</x>
+    <y>150</y>
+    <height>20</height>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #16</name>
+    <x>370</x>
+    <y>125</y>
+    <width>265</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>text #19</name>
+      <text>Clear latched errors</text>
+      <width>200</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>message button #22</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)ClearLatchedErrors.PROC</pv_name>
+          <value>1</value>
+          <description>Write</description>
+        </action>
+      </actions>
+      <pv_name>$(P)ClearLatchedErrors.PROC</pv_name>
+      <text>Clear</text>
+      <x>205</x>
+      <width>60</width>
+      <height>20</height>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+    </widget>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #25</name>
+    <x>5</x>
+    <y>65</y>
+    <width>635</width>
+    <height>110</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #29</name>
+    <text>Controller</text>
+    <x>267</x>
+    <y>70</y>
+    <width>120</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #32</name>
+    <text>Pump mode</text>
+    <x>20</x>
+    <y>100</y>
+    <width>90</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>menu #35</name>
+    <pv_name>$(P)PumpMode</pv_name>
+    <x>115</x>
+    <y>100</y>
+    <width>170</width>
+    <height>20</height>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #38</name>
+    <pv_name>$(P)PumpMode_RBV</pv_name>
+    <x>290</x>
+    <y>100</y>
+    <width>200</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #42</name>
+    <text>Total delivered</text>
+    <x>20</x>
+    <y>150</y>
+    <width>150</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #45</name>
+    <pv_name>$(P)TotalVolume</pv_name>
+    <x>175</x>
+    <y>150</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #49</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)ResetTotalVolume</pv_name>
+        <value>1</value>
+        <description>Write</description>
+      </action>
+    </actions>
+    <pv_name>$(P)ResetTotalVolume</pv_name>
+    <text>Reset</text>
+    <x>260</x>
+    <y>150</y>
+    <width>60</width>
+    <height>20</height>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #52</name>
+    <text>Total requested</text>
+    <x>20</x>
+    <y>125</y>
+    <width>150</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #55</name>
+    <pv_name>$(P)TotalVolumeSP</pv_name>
+    <x>175</x>
+    <y>125</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #59</name>
+    <pv_name>$(P)TotalVolumeSP_RBV</pv_name>
+    <x>260</x>
+    <y>125</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #63</name>
+    <x>5</x>
+    <y>210</y>
+    <width>315</width>
+    <height>100</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #67</name>
+    <text>Pressure (PSI)</text>
+    <x>40</x>
+    <y>215</y>
+    <width>140</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #70</name>
+    <pv_name>$(P)A:Pressure</pv_name>
+    <x>185</x>
+    <y>215</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #74</name>
+    <pv_name>$(P)A:PressureSP_RBV</pv_name>
+    <x>125</x>
+    <y>240</y>
+    <width>90</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #78</name>
+    <pv_name>$(P)A:PressureSP</pv_name>
+    <x>125</x>
+    <y>260</y>
+    <width>90</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #82</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)A:PressureTweakUp.PROC</pv_name>
+        <value>1</value>
+        <description>Write</description>
+      </action>
+    </actions>
+    <pv_name>$(P)A:PressureTweakUp.PROC</pv_name>
+    <text>&gt;</text>
+    <x>220</x>
+    <y>260</y>
+    <width>25</width>
+    <height>20</height>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #85</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)A:PressureTweakDown.PROC</pv_name>
+        <value>-1</value>
+        <description>Write</description>
+      </action>
+    </actions>
+    <pv_name>$(P)A:PressureTweakDown.PROC</pv_name>
+    <text>&lt;</text>
+    <x>95</x>
+    <y>260</y>
+    <width>25</width>
+    <height>20</height>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #88</name>
+    <pv_name>$(P)A:PressureTweak</pv_name>
+    <x>250</x>
+    <y>260</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #92</name>
+    <text>Tweak</text>
+    <x>256</x>
+    <y>240</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #95</name>
+    <text>Setpoint</text>
+    <x>10</x>
+    <y>260</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #98</name>
+    <text>Safety limit</text>
+    <x>10</x>
+    <y>286</y>
+    <width>120</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #101</name>
+    <pv_name>$(P)A:SafetyPressureSP</pv_name>
+    <x>135</x>
+    <y>286</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #105</name>
+    <pv_name>$(P)A:SafetyPressureSP_RBV</pv_name>
+    <x>220</x>
+    <y>286</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #109</name>
+    <x>5</x>
+    <y>315</y>
+    <width>315</width>
+    <height>75</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #112</name>
+    <text>Flow rate (ml/min)</text>
+    <x>19</x>
+    <y>320</y>
+    <width>180</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #115</name>
+    <pv_name>$(P)A:FlowRate</pv_name>
+    <x>204</x>
+    <y>320</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #119</name>
+    <pv_name>$(P)A:FlowRateSP_RBV</pv_name>
+    <x>124</x>
+    <y>345</y>
+    <width>90</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #123</name>
+    <pv_name>$(P)A:FlowRateSP</pv_name>
+    <x>124</x>
+    <y>365</y>
+    <width>90</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #127</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)A:FlowRateTweakUp.PROC</pv_name>
+        <value>1</value>
+        <description>Write</description>
+      </action>
+    </actions>
+    <pv_name>$(P)A:FlowRateTweakUp.PROC</pv_name>
+    <text>&gt;</text>
+    <x>219</x>
+    <y>365</y>
+    <width>25</width>
+    <height>20</height>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #130</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)A:FlowRateTweakDown.PROC</pv_name>
+        <value>1</value>
+        <description>Write</description>
+      </action>
+    </actions>
+    <pv_name>$(P)A:FlowRateTweakDown.PROC</pv_name>
+    <text>&lt;</text>
+    <x>94</x>
+    <y>365</y>
+    <width>25</width>
+    <height>20</height>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #133</name>
+    <pv_name>$(P)A:FlowRateTweak</pv_name>
+    <x>249</x>
+    <y>365</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #137</name>
+    <text>Tweak</text>
+    <x>255</x>
+    <y>345</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #140</name>
+    <text>Setpoint</text>
+    <x>9</x>
+    <y>365</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #143</name>
+    <text>Pump A</text>
+    <x>120</x>
+    <y>185</y>
+    <width>72</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #146</name>
+    <x>325</x>
+    <y>210</y>
+    <width>315</width>
+    <height>100</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #150</name>
+    <x>360</x>
+    <y>215</y>
+    <width>245</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>text #153</name>
+      <text>Pressure (PSI)</text>
+      <width>140</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #156</name>
+      <pv_name>$(P)B:Pressure</pv_name>
+      <x>145</x>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #160</name>
+    <pv_name>$(P)B:PressureSP_RBV</pv_name>
+    <x>445</x>
+    <y>240</y>
+    <width>90</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #164</name>
+    <pv_name>$(P)B:PressureSP</pv_name>
+    <x>445</x>
+    <y>260</y>
+    <width>90</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #168</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)B:PressureTweakUp.PROC</pv_name>
+        <value>1</value>
+        <description>Write</description>
+      </action>
+    </actions>
+    <pv_name>$(P)B:PressureTweakUp.PROC</pv_name>
+    <text>&gt;</text>
+    <x>540</x>
+    <y>260</y>
+    <width>25</width>
+    <height>20</height>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #171</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)B:PressureTweakDown.PROC</pv_name>
+        <value>-1</value>
+        <description>Write</description>
+      </action>
+    </actions>
+    <pv_name>$(P)B:PressureTweakDown.PROC</pv_name>
+    <text>&lt;</text>
+    <x>415</x>
+    <y>260</y>
+    <width>25</width>
+    <height>20</height>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #174</name>
+    <pv_name>$(P)B:PressureTweak</pv_name>
+    <x>570</x>
+    <y>260</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #178</name>
+    <text>Tweak</text>
+    <x>576</x>
+    <y>240</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #181</name>
+    <text>Setpoint</text>
+    <x>330</x>
+    <y>260</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #184</name>
+    <x>330</x>
+    <y>286</y>
+    <width>290</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>text #187</name>
+      <text>Safety limit</text>
+      <width>120</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #190</name>
+      <pv_name>$(P)B:SafetyPressureSP</pv_name>
+      <x>125</x>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #194</name>
+      <pv_name>$(P)B:SafetyPressureSP_RBV</pv_name>
+      <x>210</x>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #198</name>
+    <x>325</x>
+    <y>315</y>
+    <width>315</width>
+    <height>75</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #201</name>
+    <text>Flow rate (ml/min)</text>
+    <x>339</x>
+    <y>320</y>
+    <width>180</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #204</name>
+    <pv_name>$(P)B:FlowRate</pv_name>
+    <x>524</x>
+    <y>320</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #208</name>
+    <pv_name>$(P)B:FlowRateSP_RBV</pv_name>
+    <x>444</x>
+    <y>345</y>
+    <width>90</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #212</name>
+    <pv_name>$(P)B:FlowRateSP</pv_name>
+    <x>444</x>
+    <y>365</y>
+    <width>90</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #216</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)B:FlowRateTweakUp.PROC</pv_name>
+        <value>1</value>
+        <description>Write</description>
+      </action>
+    </actions>
+    <pv_name>$(P)B:FlowRateTweakUp.PROC</pv_name>
+    <text>&gt;</text>
+    <x>539</x>
+    <y>365</y>
+    <width>25</width>
+    <height>20</height>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #219</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)B:FlowRateTweakDown.PROC</pv_name>
+        <value>1</value>
+        <description>Write</description>
+      </action>
+    </actions>
+    <pv_name>$(P)B:FlowRateTweakDown.PROC</pv_name>
+    <text>&lt;</text>
+    <x>414</x>
+    <y>365</y>
+    <width>25</width>
+    <height>20</height>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #222</name>
+    <pv_name>$(P)B:FlowRateTweak</pv_name>
+    <x>569</x>
+    <y>365</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #226</name>
+    <text>Tweak</text>
+    <x>575</x>
+    <y>345</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #229</name>
+    <text>Setpoint</text>
+    <x>329</x>
+    <y>365</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #232</name>
+    <text>Pump B</text>
+    <x>440</x>
+    <y>185</y>
+    <width>72</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #235</name>
+    <x>325</x>
+    <y>395</y>
+    <width>315</width>
+    <height>280</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #238</name>
+    <text>Control</text>
+    <x>447</x>
+    <y>400</y>
+    <width>70</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #241</name>
+    <x>393</x>
+    <y>625</y>
+    <width>195</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>text #244</name>
+      <text>Volume mode</text>
+      <width>110</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #247</name>
+      <pv_name>$(P)B:VolumeMode_RBV</pv_name>
+      <x>115</x>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="218" green="218" blue="218">
+        </color>
+      </background_color>
+      <format>6</format>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #251</name>
+    <x>423</x>
+    <y>600</y>
+    <width>165</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>text #254</name>
+      <text>Autofill</text>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #257</name>
+      <pv_name>$(P)B:Autofill_RBV</pv_name>
+      <x>85</x>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="218" green="218" blue="218">
+        </color>
+      </background_color>
+      <format>6</format>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #261</name>
+    <text>Direction</text>
+    <x>342</x>
+    <y>525</y>
+    <width>90</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>menu #264</name>
+    <pv_name>$(P)B:Direction</pv_name>
+    <x>437</x>
+    <y>525</y>
+    <height>20</height>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #267</name>
+    <pv_name>$(P)B:Direction_RBV</pv_name>
+    <x>542</x>
+    <y>525</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #271</name>
+    <x>420</x>
+    <y>500</y>
+    <width>125</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="action_button" version="3.0.0">
+      <name>message button #274</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)B:Stop.PROC</pv_name>
+          <value>1</value>
+          <description>Write</description>
+        </action>
+      </actions>
+      <pv_name>$(P)B:Stop.PROC</pv_name>
+      <text>Stop</text>
+      <width>60</width>
+      <height>20</height>
+      <background_color>
+        <color red="253" green="0" blue="0">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>message button #277</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)B:Run.PROC</pv_name>
+          <value>1</value>
+          <description>Write</description>
+        </action>
+      </actions>
+      <pv_name>$(P)B:Run.PROC</pv_name>
+      <text>Run</text>
+      <x>65</x>
+      <width>60</width>
+      <height>20</height>
+      <background_color>
+        <color red="0" green="216" blue="0">
+        </color>
+      </background_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #280</name>
+    <x>380</x>
+    <y>475</y>
+    <width>205</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #283</name>
+      <pv_name>$(P)B:Running_RBV</pv_name>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="218" green="218" blue="218">
+        </color>
+      </background_color>
+      <format>6</format>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #287</name>
+      <pv_name>$(P)B:Active_RBV</pv_name>
+      <x>105</x>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="218" green="218" blue="218">
+        </color>
+      </background_color>
+      <format>6</format>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>menu #291</name>
+    <pv_name>$(P)B:PumpMode</pv_name>
+    <x>455</x>
+    <y>450</y>
+    <width>170</width>
+    <height>20</height>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #294</name>
+    <text>Pump mode</text>
+    <x>360</x>
+    <y>450</y>
+    <width>90</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #297</name>
+    <pv_name>$(P)B:PumpMode_RBV</pv_name>
+    <x>435</x>
+    <y>425</y>
+    <width>200</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #301</name>
+    <text>Vol. pumped (ml)</text>
+    <x>330</x>
+    <y>650</y>
+    <width>160</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #304</name>
+    <pv_name>$(P)B:Volume</pv_name>
+    <x>495</x>
+    <y>650</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #308</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)B:ResetVolume</pv_name>
+        <value>1</value>
+        <description>Write</description>
+      </action>
+    </actions>
+    <pv_name>$(P)B:ResetVolume</pv_name>
+    <text>Reset</text>
+    <x>580</x>
+    <y>650</y>
+    <width>50</width>
+    <height>20</height>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #311</name>
+    <x>5</x>
+    <y>395</y>
+    <width>315</width>
+    <height>280</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #314</name>
+    <text>Control</text>
+    <x>127</x>
+    <y>400</y>
+    <width>70</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #317</name>
+    <text>Volume mode</text>
+    <x>73</x>
+    <y>625</y>
+    <width>110</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #320</name>
+    <pv_name>$(P)A:VolumeMode_RBV</pv_name>
+    <x>188</x>
+    <y>625</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #324</name>
+    <text>Autofill</text>
+    <x>103</x>
+    <y>600</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #327</name>
+    <pv_name>$(P)A:Autofill_RBV</pv_name>
+    <x>188</x>
+    <y>600</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #331</name>
+    <text>Direction</text>
+    <x>22</x>
+    <y>525</y>
+    <width>90</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>menu #334</name>
+    <pv_name>$(P)A:Direction</pv_name>
+    <x>117</x>
+    <y>525</y>
+    <height>20</height>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #337</name>
+    <pv_name>$(P)A:Direction_RBV</pv_name>
+    <x>222</x>
+    <y>525</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #341</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)A:Stop.PROC</pv_name>
+        <value>1</value>
+        <description>Write</description>
+      </action>
+    </actions>
+    <pv_name>$(P)A:Stop.PROC</pv_name>
+    <text>Stop</text>
+    <x>100</x>
+    <y>500</y>
+    <width>60</width>
+    <height>20</height>
+    <background_color>
+      <color red="253" green="0" blue="0">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #344</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)A:Run.PROC</pv_name>
+        <value>1</value>
+        <description>Write</description>
+      </action>
+    </actions>
+    <pv_name>$(P)A:Run.PROC</pv_name>
+    <text>Run</text>
+    <x>165</x>
+    <y>500</y>
+    <width>60</width>
+    <height>20</height>
+    <background_color>
+      <color red="0" green="216" blue="0">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #347</name>
+    <pv_name>$(P)A:Running_RBV</pv_name>
+    <x>60</x>
+    <y>475</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #351</name>
+    <pv_name>$(P)A:Active_RBV</pv_name>
+    <x>165</x>
+    <y>475</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>menu #355</name>
+    <pv_name>$(P)A:PumpMode</pv_name>
+    <x>135</x>
+    <y>450</y>
+    <width>170</width>
+    <height>20</height>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #358</name>
+    <text>Pump mode</text>
+    <x>40</x>
+    <y>450</y>
+    <width>90</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #361</name>
+    <pv_name>$(P)A:PumpMode_RBV</pv_name>
+    <x>115</x>
+    <y>425</y>
+    <width>200</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #365</name>
+    <x>10</x>
+    <y>650</y>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>text #368</name>
+      <text>Vol. pumped (ml)</text>
+      <width>160</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #371</name>
+      <pv_name>$(P)A:Volume</pv_name>
+      <x>165</x>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>message button #375</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)A:ResetVolume</pv_name>
+          <value>1</value>
+          <description>Write</description>
+        </action>
+      </actions>
+      <pv_name>$(P)A:ResetVolume</pv_name>
+      <text>Reset</text>
+      <x>250</x>
+      <width>50</width>
+      <height>20</height>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+    </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #378</name>
+    <text>Fill valve</text>
+    <x>40</x>
+    <y>575</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #381</name>
+    <text>Deliver valve</text>
+    <x>10</x>
+    <y>550</y>
+    <width>130</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #384</name>
+    <pv_name>$(P)A:DeliverValve_RBV</pv_name>
+    <x>250</x>
+    <y>550</y>
+    <width>65</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #388</name>
+    <pv_name>$(P)A:FillValve_RBV</pv_name>
+    <x>250</x>
+    <y>575</y>
+    <width>65</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>choice button #392</name>
+    <pv_name>$(P)A:DeliverValve</pv_name>
+    <x>145</x>
+    <y>550</y>
+    <height>20</height>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>choice button #395</name>
+    <pv_name>$(P)A:FillValve</pv_name>
+    <x>145</x>
+    <y>575</y>
+    <height>20</height>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #398</name>
+    <text>Fill valve</text>
+    <x>360</x>
+    <y>575</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #401</name>
+    <text>Deliver valve</text>
+    <x>330</x>
+    <y>550</y>
+    <width>130</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #404</name>
+    <pv_name>$(P)B:DeliverValve_RBV</pv_name>
+    <x>570</x>
+    <y>550</y>
+    <width>65</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #408</name>
+    <pv_name>$(P)B:FillValve_RBV</pv_name>
+    <x>570</x>
+    <y>575</y>
+    <width>65</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="42" green="99" blue="228">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>choice button #412</name>
+    <pv_name>$(P)B:DeliverValve</pv_name>
+    <x>465</x>
+    <y>550</y>
+    <height>20</height>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>choice button #415</name>
+    <pv_name>$(P)B:FillValve</pv_name>
+    <x>465</x>
+    <y>575</y>
+    <height>20</height>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+</display>

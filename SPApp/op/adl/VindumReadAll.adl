@@ -89,15 +89,15 @@ display {
 }
 text {
 	object {
-		x=143
+		x=89
 		y=6
-		width=228
+		width=336
 		height=25
 	}
 	"basic attribute" {
 		clr=14
 	}
-	textix="Vindum Syringe Pump"
+	textix="Vindum Syringe Pump Read All"
 	align="horiz. centered"
 }
 text {

@@ -13,10 +13,10 @@
   <grid_step_x>5</grid_step_x>
   <widget type="label" version="2.0.0">
     <name>text #6</name>
-    <text>Vindum Syringe Pump</text>
-    <x>143</x>
+    <text>Vindum Syringe Pump Read All</text>
+    <x>89</x>
     <y>6</y>
-    <width>228</width>
+    <width>336</width>
     <height>25</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
@@ -26,7 +26,7 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>text #9</name>
-    <text>$(P)$(PUMP)</text>
+    <text>$(P)</text>
     <x>7</x>
     <y>36</y>
     <width>500</width>
@@ -43,7 +43,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #12</name>
-    <pv_name>$(P)$(PUMP)DataLength</pv_name>
+    <pv_name>$(P)DataLength</pv_name>
     <x>265</x>
     <y>91</y>
     <font>
@@ -64,7 +64,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #16</name>
-    <pv_name>$(P)$(PUMP)CommVersion</pv_name>
+    <pv_name>$(P)CommVersion</pv_name>
     <x>265</x>
     <y>116</y>
     <font>
@@ -85,7 +85,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #20</name>
-    <pv_name>$(P)$(PUMP)A:PressureRaw</pv_name>
+    <pv_name>$(P)A:PressureRaw</pv_name>
     <x>265</x>
     <y>141</y>
     <font>
@@ -106,7 +106,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #24</name>
-    <pv_name>$(P)$(PUMP)ComResponse</pv_name>
+    <pv_name>$(P)ComResponse</pv_name>
     <x>265</x>
     <y>66</y>
     <font>
@@ -174,7 +174,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #40</name>
-    <pv_name>$(P)$(PUMP)B:PressureRaw</pv_name>
+    <pv_name>$(P)B:PressureRaw</pv_name>
     <x>265</x>
     <y>166</y>
     <font>
@@ -207,7 +207,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #47</name>
-    <pv_name>$(P)$(PUMP)PressureOutRaw</pv_name>
+    <pv_name>$(P)PressureOutRaw</pv_name>
     <x>265</x>
     <y>191</y>
     <font>
@@ -240,7 +240,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #54</name>
-    <pv_name>$(P)$(PUMP)A:RateRaw</pv_name>
+    <pv_name>$(P)A:RateRaw</pv_name>
     <x>265</x>
     <y>216</y>
     <font>
@@ -273,7 +273,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #61</name>
-    <pv_name>$(P)$(PUMP)B:RateRaw</pv_name>
+    <pv_name>$(P)B:RateRaw</pv_name>
     <x>265</x>
     <y>241</y>
     <font>
@@ -306,7 +306,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #68</name>
-    <pv_name>$(P)$(PUMP)RateOutRaw</pv_name>
+    <pv_name>$(P)RateOutRaw</pv_name>
     <x>265</x>
     <y>266</y>
     <font>
@@ -339,7 +339,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #75</name>
-    <pv_name>$(P)$(PUMP)A:VolumeRaw</pv_name>
+    <pv_name>$(P)A:VolumeRaw</pv_name>
     <x>265</x>
     <y>291</y>
     <font>
@@ -372,7 +372,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #82</name>
-    <pv_name>$(P)$(PUMP)B:VolumeRaw</pv_name>
+    <pv_name>$(P)B:VolumeRaw</pv_name>
     <x>265</x>
     <y>316</y>
     <font>
@@ -405,7 +405,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #89</name>
-    <pv_name>$(P)$(PUMP)TotalVolumeRaw</pv_name>
+    <pv_name>$(P)TotalVolumeRaw</pv_name>
     <x>265</x>
     <y>341</y>
     <font>
@@ -438,7 +438,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #96</name>
-    <pv_name>$(P)$(PUMP)A:Condition</pv_name>
+    <pv_name>$(P)A:Condition</pv_name>
     <x>265</x>
     <y>366</y>
     <font>
@@ -471,7 +471,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #103</name>
-    <pv_name>$(P)$(PUMP)B:Condition</pv_name>
+    <pv_name>$(P)B:Condition</pv_name>
     <x>265</x>
     <y>391</y>
     <font>
@@ -504,7 +504,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #110</name>
-    <pv_name>$(P)$(PUMP)A:Error</pv_name>
+    <pv_name>$(P)A:Error</pv_name>
     <x>265</x>
     <y>416</y>
     <font>
@@ -537,7 +537,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #117</name>
-    <pv_name>$(P)$(PUMP)B:Error</pv_name>
+    <pv_name>$(P)B:Error</pv_name>
     <x>265</x>
     <y>441</y>
     <font>
@@ -570,7 +570,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #124</name>
-    <pv_name>$(P)$(PUMP)AB:Error</pv_name>
+    <pv_name>$(P)AB:Error</pv_name>
     <x>265</x>
     <y>466</y>
     <font>
@@ -603,7 +603,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #131</name>
-    <pv_name>$(P)$(PUMP)AB:PumpMode</pv_name>
+    <pv_name>$(P)AB:PumpModeRaw</pv_name>
     <x>265</x>
     <y>491</y>
     <font>
@@ -636,7 +636,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #138</name>
-    <pv_name>$(P)$(PUMP)A:LatchedError</pv_name>
+    <pv_name>$(P)A:LatchedError</pv_name>
     <x>265</x>
     <y>516</y>
     <font>
@@ -669,7 +669,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #145</name>
-    <pv_name>$(P)$(PUMP)B:LatchedError</pv_name>
+    <pv_name>$(P)B:LatchedError</pv_name>
     <x>265</x>
     <y>541</y>
     <font>
@@ -702,7 +702,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #152</name>
-    <pv_name>$(P)$(PUMP)AB:LatchedError</pv_name>
+    <pv_name>$(P)AB:LatchedError</pv_name>
     <x>265</x>
     <y>566</y>
     <font>
@@ -735,7 +735,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>text update #159</name>
-    <pv_name>$(P)$(PUMP)EndSymbol</pv_name>
+    <pv_name>$(P)EndSymbol</pv_name>
     <x>265</x>
     <y>591</y>
     <font>
