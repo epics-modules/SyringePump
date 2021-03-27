@@ -82,7 +82,7 @@ dbLoadTemplate("$(TOP)/db/VindumWriteHoldingRegisters.substitutions", "P=$(PREFI
 
 # Access 25 16-bit holding registers starting at 0 as inputs. Function code=3. Default data type=UINT16
 # Note that with this function code these map to Asynbus addresss starting at 0x200.
-drvModbusAsynConfigure("$(PORT)_ReadHoldingRegs", "$(PORT)", 1, 3, 0, 25, UINT16, 1, "Anybus")
+drvModbusAsynConfigure("$(PORT)_ReadHoldingRegs", "$(PORT)", 1, 3, 0, 25, UINT16, $(POLL_MS), "Anybus")
 
 # Load the substitutions files for the Modbus read holding registers records
 dbLoadTemplate("$(TOP)/db/VindumReadHoldingRegisters.substitutions", "P=$(PREFIX), PORT=$(PORT)_ReadHoldingRegs")
