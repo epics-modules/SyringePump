@@ -61,8 +61,8 @@ record(calcout, "$(P)A:FillValveRBVCalc") {
 record(bi, "$(P)A:FillValve_RBV") {
     field(ZNAM, "Closed")
     field(ZSV,  "NO_ALARM")
-    field(ONAM, "Opened")
-    field(OSV,  "MINOR")
+    field(ONAM, "Open")
+    field(OSV,  "MAJOR")
 }
 
 record(calcout, "$(P)A:DeliverValveRBVCalc") {
@@ -74,8 +74,8 @@ record(calcout, "$(P)A:DeliverValveRBVCalc") {
 record(bi, "$(P)A:DeliverValve_RBV") {
     field(ZNAM, "Closed")
     field(ZSV,  "NO_ALARM")
-    field(ONAM, "Opened")
-    field(OSV,  "MINOR")
+    field(ONAM, "Open")
+    field(OSV,  "MAJOR")
 }
 
 record(calcout, "$(P)B:FillValveRBVCalc") {
@@ -87,8 +87,8 @@ record(calcout, "$(P)B:FillValveRBVCalc") {
 record(bi, "$(P)B:FillValve_RBV") {
     field(ZNAM, "Closed")
     field(ZSV,  "NO_ALARM")
-    field(ONAM, "Opened")
-    field(OSV,  "MINOR")
+    field(ONAM, "Open")
+    field(OSV,  "MAJOR")
 }
 
 record(calcout, "$(P)B:DeliverValveRBVCalc") {
@@ -100,8 +100,8 @@ record(calcout, "$(P)B:DeliverValveRBVCalc") {
 record(bi, "$(P)B:DeliverValve_RBV") {
     field(ZNAM, "Closed")
     field(ZSV,  "NO_ALARM")
-    field(ONAM, "Opened")
-    field(OSV,  "MINOR")
+    field(ONAM, "Open")
+    field(OSV,  "MAJOR")
 }
 
 
