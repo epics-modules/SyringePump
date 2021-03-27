@@ -10,7 +10,13 @@ record(calc, "$(P)$(PUMP)Pressure") {
 
 record(calc, "$(P)$(PUMP)PressureSP_RBV") {
     field(INPA, "$(P)$(PUMP)PressureSPRaw_RBV CP")
-    field(CALC, "(A-1000)/10")
+    field(CALC, "A/100")
+    field(PREC, "1")
+}
+
+record(calc, "$(P)$(PUMP)SafetyPressureSP_RBV") {
+    field(INPA, "$(P)$(PUMP)SafetyPressureSPRaw_RBV CP")
+    field(CALC, "A/100")
     field(PREC, "1")
 }
 
@@ -38,7 +44,7 @@ record(calcout, "$(P)$(PUMP)RunningCalc") {
     field(OUT,  "$(P)$(PUMP)Running_RBV PP")
 }
 
-record(bo, "$(P)$(PUMP)Running_RBV") {
+record(bi, "$(P)$(PUMP)Running_RBV") {
     field(ZNAM, "Stopped")
     field(ZSV,  "NO_ALARM")
     field(ONAM, "Running")
@@ -51,7 +57,7 @@ record(calcout, "$(P)$(PUMP)DirectionCalc") {
     field(OUT,  "$(P)$(PUMP)Direction_RBV PP")
 }
 
-record(bo, "$(P)$(PUMP)Direction_RBV") {
+record(bi, "$(P)$(PUMP)Direction_RBV") {
     field(ZNAM, "Fill")
     field(ZSV,  "NO_ALARM")
     field(ONAM, "Deliver")
@@ -64,7 +70,7 @@ record(calcout, "$(P)$(PUMP)ActiveCalc") {
     field(OUT,  "$(P)$(PUMP)Active_RBV PP")
 }
 
-record(bo, "$(P)$(PUMP)Active_RBV") {
+record(bi, "$(P)$(PUMP)Active_RBV") {
     field(ZNAM, "Done")
     field(ZSV,  "NO_ALARM")
     field(ONAM, "Active")
@@ -77,7 +83,7 @@ record(calcout, "$(P)$(PUMP)VolumeModeCalc") {
     field(OUT,  "$(P)$(PUMP)VolumeMode_RBV PP")
 }
 
-record(bo, "$(P)$(PUMP)VolumeMode_RBV") {
+record(bi, "$(P)$(PUMP)VolumeMode_RBV") {
     field(ZNAM, "No")
     field(ZSV,  "NO_ALARM")
     field(ONAM, "Yes")
@@ -90,7 +96,7 @@ record(calcout, "$(P)$(PUMP)AutofillCalc") {
     field(OUT,  "$(P)$(PUMP)Autofill_RBV PP")
 }
 
-record(bo, "$(P)$(PUMP)Autofill_RBV") {
+record(bi, "$(P)$(PUMP)Autofill_RBV") {
     field(ZNAM, "No")
     field(ZSV,  "NO_ALARM")
     field(ONAM, "Yes")
@@ -218,12 +224,16 @@ record(bo, "$(P)$(PUMP)Direction") {
 
 record(bo, "$(P)$(PUMP)DeliverValve") {
     field(ZNAM, "Close")
+    field(ZSV,  "NO_ALARM")
     field(ONAM, "Open")
-    field(FLNK,  "$(P)SetValves")
+    field(OSV,  "MAJOR")
+    field(FLNK, "$(P)SetValves")
 }
 
 record(bo, "$(P)$(PUMP)FillValve") {
     field(ZNAM, "Close")
+    field(ZSV,  "NO_ALARM")
     field(ONAM, "Open")
-    field(FLNK,  "$(P)SetValves")
+    field(OSV,  "MAJOR")
+    field(FLNK, "$(P)SetValves")
 }
