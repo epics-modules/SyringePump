@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 617
-y 175
+x 432
+y 137
 w 645
-h 680
+h 705
 font "helvetica-medium-r-18.0"
 ctlFont "helvetica-bold-r-10.0"
 btnFont "helvetica-medium-r-18.0"
@@ -70,8 +70,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 370
-y 125
+x 10
+y 175
 w 265
 h 20
 
@@ -83,8 +83,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 370
-y 125
+x 10
+y 175
 w 200
 h 20
 font "helvetica-medium-r-14.0"
@@ -111,7 +111,7 @@ release 0
 x 5
 y 65
 w 635
-h 110
+h 135
 lineColor rgb 0 0 0
 fillColor rgb 0 0 0
 lineWidth 0
@@ -137,601 +137,18 @@ value {
 }
 endObjectProperties
 
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 20
-y 100
-w 90
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "right"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Pump mode"
-}
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 290
-y 100
-w 200
-h 20
-controlPv "$(P)PumpMode_RBV"
-format "string"
-font "helvetica-medium-r-14.0"
-fontAlign "left"
-fgColor rgb 10752 25344 58368
-bgColor rgb 47872 47872 47872
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 20
-y 150
-w 150
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "right"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Total delivered"
-}
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 175
-y 150
-w 80
-h 20
-controlPv "$(P)TotalVolume"
-format "decimal"
-font "helvetica-medium-r-14.0"
-fontAlign "left"
-fgColor rgb 10752 25344 58368
-bgColor rgb 47872 47872 47872
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 20
-y 125
-w 150
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "right"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Total requested"
-}
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 175
-y 125
-w 80
-h 20
-controlPv "$(P)TotalVolumeSP"
-format "decimal"
-font "helvetica-medium-r-12.0"
-fontAlign "left"
-fgColor rgb 0 0 0
-bgColor rgb 29440 57088 65280
-editable
-motifWidget
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 260
-y 125
-w 80
-h 20
-controlPv "$(P)TotalVolumeSP_RBV"
-format "decimal"
-font "helvetica-medium-r-14.0"
-fontAlign "left"
-fgColor rgb 10752 25344 58368
-bgColor rgb 47872 47872 47872
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
+# (Group)
+object activeGroupClass
 beginObjectProperties
 major 4
 minor 0
 release 0
-x 5
+x 325
 y 210
 w 315
-h 100
-lineColor rgb 0 0 0
-fillColor rgb 0 0 0
-lineWidth 0
-endObjectProperties
+h 490
 
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 40
-y 215
-w 140
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "right"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Pressure (PSI)"
-}
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 185
-y 215
-w 100
-h 20
-controlPv "$(P)A:Pressure"
-format "decimal"
-font "helvetica-medium-r-14.0"
-fontAlign "left"
-fgColor rgb 10752 25344 58368
-bgColor rgb 47872 47872 47872
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 125
-y 240
-w 90
-h 20
-controlPv "$(P)A:PressureSP_RBV"
-format "decimal"
-font "helvetica-medium-r-14.0"
-fontAlign "center"
-fgColor rgb 10752 25344 58368
-bgColor rgb 47872 47872 47872
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 125
-y 260
-w 90
-h 20
-controlPv "$(P)A:PressureSP"
-format "decimal"
-font "helvetica-medium-r-12.0"
-fontAlign "left"
-fgColor rgb 0 0 0
-bgColor rgb 29440 57088 65280
-editable
-motifWidget
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 250
-y 260
-w 60
-h 20
-controlPv "$(P)A:PressureTweak"
-format "decimal"
-font "helvetica-medium-r-12.0"
-fontAlign "left"
-fgColor rgb 0 0 0
-bgColor rgb 29440 57088 65280
-editable
-motifWidget
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 256
-y 240
-w 56
-h 20
-font "helvetica-medium-r-14.0"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Tweak"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 10
-y 260
-w 80
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "right"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Setpoint"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 10
-y 286
-w 120
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "right"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Safety limit"
-}
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 135
-y 286
-w 80
-h 20
-controlPv "$(P)A:SafetyPressureSP"
-format "decimal"
-font "helvetica-medium-r-12.0"
-fontAlign "left"
-fgColor rgb 0 0 0
-bgColor rgb 29440 57088 65280
-editable
-motifWidget
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 220
-y 286
-w 80
-h 20
-controlPv "$(P)A:SafetyPressureSP_RBV"
-format "decimal"
-font "helvetica-medium-r-14.0"
-fontAlign "left"
-fgColor rgb 10752 25344 58368
-bgColor rgb 47872 47872 47872
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 5
-y 315
-w 315
-h 75
-lineColor rgb 0 0 0
-fillColor rgb 0 0 0
-lineWidth 0
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 19
-y 320
-w 180
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "right"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Flow rate (ml/min)"
-}
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 204
-y 320
-w 100
-h 20
-controlPv "$(P)A:FlowRate"
-format "decimal"
-font "helvetica-medium-r-14.0"
-fontAlign "left"
-fgColor rgb 10752 25344 58368
-bgColor rgb 47872 47872 47872
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 124
-y 345
-w 90
-h 20
-controlPv "$(P)A:FlowRateSP_RBV"
-format "decimal"
-font "helvetica-medium-r-14.0"
-fontAlign "center"
-fgColor rgb 10752 25344 58368
-bgColor rgb 47872 47872 47872
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 124
-y 365
-w 90
-h 20
-controlPv "$(P)A:FlowRateSP"
-format "decimal"
-font "helvetica-medium-r-12.0"
-fontAlign "left"
-fgColor rgb 0 0 0
-bgColor rgb 29440 57088 65280
-editable
-motifWidget
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 249
-y 365
-w 60
-h 20
-controlPv "$(P)A:FlowRateTweak"
-format "decimal"
-font "helvetica-medium-r-12.0"
-fontAlign "left"
-fgColor rgb 0 0 0
-bgColor rgb 29440 57088 65280
-editable
-motifWidget
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 255
-y 345
-w 56
-h 20
-font "helvetica-medium-r-14.0"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Tweak"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 9
-y 365
-w 80
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "right"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Setpoint"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 113
-y 185
-w 79
-h 25
-font "helvetica-medium-r-18.0"
-fontAlign "right"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Pump A"
-}
-endObjectProperties
+beginGroup
 
 # (Rectangle)
 object activeRectangleClass
@@ -740,7 +157,7 @@ major 4
 minor 0
 release 0
 x 325
-y 210
+y 235
 w 315
 h 100
 lineColor rgb 0 0 0
@@ -755,7 +172,7 @@ major 4
 minor 0
 release 0
 x 360
-y 215
+y 240
 w 245
 h 20
 
@@ -768,7 +185,7 @@ major 4
 minor 1
 release 1
 x 360
-y 215
+y 240
 w 140
 h 20
 font "helvetica-medium-r-14.0"
@@ -788,7 +205,7 @@ major 4
 minor 7
 release 0
 x 505
-y 215
+y 240
 w 100
 h 20
 controlPv "$(P)B:Pressure"
@@ -817,7 +234,7 @@ major 4
 minor 7
 release 0
 x 445
-y 240
+y 265
 w 90
 h 20
 controlPv "$(P)B:PressureSP_RBV"
@@ -841,7 +258,7 @@ major 4
 minor 7
 release 0
 x 445
-y 260
+y 285
 w 90
 h 20
 controlPv "$(P)B:PressureSP"
@@ -867,7 +284,7 @@ major 4
 minor 7
 release 0
 x 570
-y 260
+y 285
 w 60
 h 20
 controlPv "$(P)B:PressureTweak"
@@ -893,7 +310,7 @@ major 4
 minor 1
 release 1
 x 576
-y 240
+y 265
 w 56
 h 20
 font "helvetica-medium-r-14.0"
@@ -912,7 +329,7 @@ major 4
 minor 1
 release 1
 x 330
-y 260
+y 285
 w 80
 h 20
 font "helvetica-medium-r-14.0"
@@ -932,7 +349,7 @@ major 4
 minor 0
 release 0
 x 330
-y 286
+y 311
 w 290
 h 20
 
@@ -945,7 +362,7 @@ major 4
 minor 1
 release 1
 x 330
-y 286
+y 311
 w 120
 h 20
 font "helvetica-medium-r-14.0"
@@ -965,7 +382,7 @@ major 4
 minor 7
 release 0
 x 455
-y 286
+y 311
 w 80
 h 20
 controlPv "$(P)B:SafetyPressureSP"
@@ -991,7 +408,7 @@ major 4
 minor 7
 release 0
 x 540
-y 286
+y 311
 w 80
 h 20
 controlPv "$(P)B:SafetyPressureSP_RBV"
@@ -1020,7 +437,7 @@ major 4
 minor 0
 release 0
 x 325
-y 315
+y 340
 w 315
 h 75
 lineColor rgb 0 0 0
@@ -1035,7 +452,7 @@ major 4
 minor 1
 release 1
 x 339
-y 320
+y 345
 w 180
 h 20
 font "helvetica-medium-r-14.0"
@@ -1055,7 +472,7 @@ major 4
 minor 7
 release 0
 x 524
-y 320
+y 345
 w 100
 h 20
 controlPv "$(P)B:FlowRate"
@@ -1079,7 +496,7 @@ major 4
 minor 7
 release 0
 x 444
-y 345
+y 370
 w 90
 h 20
 controlPv "$(P)B:FlowRateSP_RBV"
@@ -1103,7 +520,7 @@ major 4
 minor 7
 release 0
 x 444
-y 365
+y 390
 w 90
 h 20
 controlPv "$(P)B:FlowRateSP"
@@ -1129,7 +546,7 @@ major 4
 minor 7
 release 0
 x 569
-y 365
+y 390
 w 60
 h 20
 controlPv "$(P)B:FlowRateTweak"
@@ -1155,7 +572,7 @@ major 4
 minor 1
 release 1
 x 575
-y 345
+y 370
 w 56
 h 20
 font "helvetica-medium-r-14.0"
@@ -1174,7 +591,7 @@ major 4
 minor 1
 release 1
 x 329
-y 365
+y 390
 w 80
 h 20
 font "helvetica-medium-r-14.0"
@@ -1194,7 +611,7 @@ major 4
 minor 1
 release 1
 x 432
-y 185
+y 210
 w 80
 h 25
 font "helvetica-medium-r-18.0"
@@ -1214,7 +631,7 @@ major 4
 minor 0
 release 0
 x 325
-y 395
+y 420
 w 315
 h 280
 lineColor rgb 0 0 0
@@ -1229,7 +646,7 @@ major 4
 minor 1
 release 1
 x 447
-y 400
+y 425
 w 70
 h 20
 font "helvetica-medium-r-14.0"
@@ -1249,7 +666,7 @@ major 4
 minor 0
 release 0
 x 393
-y 625
+y 650
 w 195
 h 20
 
@@ -1262,7 +679,7 @@ major 4
 minor 1
 release 1
 x 393
-y 625
+y 650
 w 110
 h 20
 font "helvetica-medium-r-14.0"
@@ -1282,7 +699,7 @@ major 4
 minor 7
 release 0
 x 508
-y 625
+y 650
 w 80
 h 20
 controlPv "$(P)B:VolumeMode_RBV"
@@ -1312,7 +729,7 @@ major 4
 minor 0
 release 0
 x 423
-y 600
+y 625
 w 165
 h 20
 
@@ -1325,7 +742,7 @@ major 4
 minor 1
 release 1
 x 423
-y 600
+y 625
 w 80
 h 20
 font "helvetica-medium-r-14.0"
@@ -1345,7 +762,7 @@ major 4
 minor 7
 release 0
 x 508
-y 600
+y 625
 w 80
 h 20
 controlPv "$(P)B:Autofill_RBV"
@@ -1375,7 +792,7 @@ major 4
 minor 1
 release 1
 x 342
-y 525
+y 550
 w 90
 h 20
 font "helvetica-medium-r-14.0"
@@ -1395,7 +812,7 @@ major 4
 minor 7
 release 0
 x 542
-y 525
+y 550
 w 80
 h 20
 controlPv "$(P)B:Direction_RBV"
@@ -1420,7 +837,7 @@ major 4
 minor 0
 release 0
 x 420
-y 500
+y 525
 w 125
 h 20
 
@@ -1438,7 +855,7 @@ major 4
 minor 0
 release 0
 x 380
-y 475
+y 500
 w 205
 h 20
 
@@ -1451,7 +868,7 @@ major 4
 minor 7
 release 0
 x 380
-y 475
+y 500
 w 100
 h 20
 controlPv "$(P)B:Running_RBV"
@@ -1476,7 +893,7 @@ major 4
 minor 7
 release 0
 x 485
-y 475
+y 500
 w 100
 h 20
 controlPv "$(P)B:Active_RBV"
@@ -1506,7 +923,7 @@ major 4
 minor 1
 release 1
 x 360
-y 450
+y 475
 w 90
 h 20
 font "helvetica-medium-r-14.0"
@@ -1526,7 +943,7 @@ major 4
 minor 7
 release 0
 x 435
-y 425
+y 450
 w 200
 h 20
 controlPv "$(P)B:PumpMode_RBV"
@@ -1550,7 +967,7 @@ major 4
 minor 1
 release 1
 x 330
-y 650
+y 675
 w 160
 h 20
 font "helvetica-medium-r-14.0"
@@ -1570,10 +987,362 @@ major 4
 minor 7
 release 0
 x 495
-y 650
+y 675
 w 80
 h 20
 controlPv "$(P)B:Volume"
+format "decimal"
+font "helvetica-medium-r-14.0"
+fontAlign "left"
+fgColor rgb 10752 25344 58368
+bgColor rgb 47872 47872 47872
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 360
+y 600
+w 100
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Fill valve"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 330
+y 575
+w 130
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Deliver valve"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 570
+y 575
+w 65
+h 20
+controlPv "$(P)B:DeliverValve_RBV"
+format "string"
+font "helvetica-medium-r-14.0"
+fontAlign "center"
+fgColor rgb 0 65535 0
+fgAlarm
+bgColor rgb 55808 55808 55808
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 570
+y 600
+w 65
+h 20
+controlPv "$(P)B:FillValve_RBV"
+format "string"
+font "helvetica-medium-r-14.0"
+fontAlign "center"
+fgColor rgb 0 65535 0
+fgAlarm
+bgColor rgb 55808 55808 55808
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 5
+y 210
+w 315
+h 490
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 5
+y 235
+w 315
+h 100
+lineColor rgb 0 0 0
+fillColor rgb 0 0 0
+lineWidth 0
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 40
+y 240
+w 140
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Pressure (PSI)"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 185
+y 240
+w 100
+h 20
+controlPv "$(P)A:Pressure"
+format "decimal"
+font "helvetica-medium-r-14.0"
+fontAlign "left"
+fgColor rgb 10752 25344 58368
+bgColor rgb 47872 47872 47872
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 125
+y 265
+w 90
+h 20
+controlPv "$(P)A:PressureSP_RBV"
+format "decimal"
+font "helvetica-medium-r-14.0"
+fontAlign "center"
+fgColor rgb 10752 25344 58368
+bgColor rgb 47872 47872 47872
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 125
+y 285
+w 90
+h 20
+controlPv "$(P)A:PressureSP"
+format "decimal"
+font "helvetica-medium-r-12.0"
+fontAlign "left"
+fgColor rgb 0 0 0
+bgColor rgb 29440 57088 65280
+editable
+motifWidget
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 250
+y 285
+w 60
+h 20
+controlPv "$(P)A:PressureTweak"
+format "decimal"
+font "helvetica-medium-r-12.0"
+fontAlign "left"
+fgColor rgb 0 0 0
+bgColor rgb 29440 57088 65280
+editable
+motifWidget
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 256
+y 265
+w 56
+h 20
+font "helvetica-medium-r-14.0"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Tweak"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 285
+w 80
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Setpoint"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 311
+w 120
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Safety limit"
+}
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 135
+y 311
+w 80
+h 20
+controlPv "$(P)A:SafetyPressureSP"
+format "decimal"
+font "helvetica-medium-r-12.0"
+fontAlign "left"
+fgColor rgb 0 0 0
+bgColor rgb 29440 57088 65280
+editable
+motifWidget
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 220
+y 311
+w 80
+h 20
+controlPv "$(P)A:SafetyPressureSP_RBV"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -1594,7 +1363,201 @@ major 4
 minor 0
 release 0
 x 5
-y 395
+y 340
+w 315
+h 75
+lineColor rgb 0 0 0
+fillColor rgb 0 0 0
+lineWidth 0
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 19
+y 345
+w 180
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Flow rate (ml/min)"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 204
+y 345
+w 100
+h 20
+controlPv "$(P)A:FlowRate"
+format "decimal"
+font "helvetica-medium-r-14.0"
+fontAlign "left"
+fgColor rgb 10752 25344 58368
+bgColor rgb 47872 47872 47872
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 124
+y 370
+w 90
+h 20
+controlPv "$(P)A:FlowRateSP_RBV"
+format "decimal"
+font "helvetica-medium-r-14.0"
+fontAlign "center"
+fgColor rgb 10752 25344 58368
+bgColor rgb 47872 47872 47872
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 124
+y 390
+w 90
+h 20
+controlPv "$(P)A:FlowRateSP"
+format "decimal"
+font "helvetica-medium-r-12.0"
+fontAlign "left"
+fgColor rgb 0 0 0
+bgColor rgb 29440 57088 65280
+editable
+motifWidget
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 249
+y 390
+w 60
+h 20
+controlPv "$(P)A:FlowRateTweak"
+format "decimal"
+font "helvetica-medium-r-12.0"
+fontAlign "left"
+fgColor rgb 0 0 0
+bgColor rgb 29440 57088 65280
+editable
+motifWidget
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 255
+y 370
+w 56
+h 20
+font "helvetica-medium-r-14.0"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Tweak"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 9
+y 390
+w 80
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Setpoint"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 113
+y 210
+w 79
+h 25
+font "helvetica-medium-r-18.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Pump A"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 5
+y 420
 w 315
 h 280
 lineColor rgb 0 0 0
@@ -1609,7 +1572,7 @@ major 4
 minor 1
 release 1
 x 127
-y 400
+y 425
 w 70
 h 20
 font "helvetica-medium-r-14.0"
@@ -1629,7 +1592,7 @@ major 4
 minor 1
 release 1
 x 73
-y 625
+y 650
 w 110
 h 20
 font "helvetica-medium-r-14.0"
@@ -1649,7 +1612,7 @@ major 4
 minor 7
 release 0
 x 188
-y 625
+y 650
 w 80
 h 20
 controlPv "$(P)A:VolumeMode_RBV"
@@ -1674,7 +1637,7 @@ major 4
 minor 1
 release 1
 x 103
-y 600
+y 625
 w 80
 h 20
 font "helvetica-medium-r-14.0"
@@ -1694,7 +1657,7 @@ major 4
 minor 7
 release 0
 x 188
-y 600
+y 625
 w 80
 h 20
 controlPv "$(P)A:Autofill_RBV"
@@ -1719,7 +1682,7 @@ major 4
 minor 1
 release 1
 x 22
-y 525
+y 550
 w 90
 h 20
 font "helvetica-medium-r-14.0"
@@ -1739,7 +1702,7 @@ major 4
 minor 7
 release 0
 x 222
-y 525
+y 550
 w 80
 h 20
 controlPv "$(P)A:Direction_RBV"
@@ -1764,7 +1727,7 @@ major 4
 minor 7
 release 0
 x 60
-y 475
+y 500
 w 100
 h 20
 controlPv "$(P)A:Running_RBV"
@@ -1789,7 +1752,7 @@ major 4
 minor 7
 release 0
 x 165
-y 475
+y 500
 w 100
 h 20
 controlPv "$(P)A:Active_RBV"
@@ -1814,7 +1777,7 @@ major 4
 minor 1
 release 1
 x 40
-y 450
+y 475
 w 90
 h 20
 font "helvetica-medium-r-14.0"
@@ -1834,7 +1797,7 @@ major 4
 minor 7
 release 0
 x 115
-y 425
+y 450
 w 200
 h 20
 controlPv "$(P)A:PumpMode_RBV"
@@ -1858,7 +1821,7 @@ major 4
 minor 0
 release 0
 x 10
-y 650
+y 675
 w 300
 h 20
 
@@ -1871,7 +1834,7 @@ major 4
 minor 1
 release 1
 x 10
-y 650
+y 675
 w 160
 h 20
 font "helvetica-medium-r-14.0"
@@ -1891,7 +1854,7 @@ major 4
 minor 7
 release 0
 x 175
-y 650
+y 675
 w 80
 h 20
 controlPv "$(P)A:Volume"
@@ -1920,7 +1883,7 @@ major 4
 minor 1
 release 1
 x 40
-y 575
+y 600
 w 100
 h 20
 font "helvetica-medium-r-14.0"
@@ -1940,7 +1903,7 @@ major 4
 minor 1
 release 1
 x 10
-y 550
+y 575
 w 130
 h 20
 font "helvetica-medium-r-14.0"
@@ -1960,7 +1923,7 @@ major 4
 minor 7
 release 0
 x 250
-y 550
+y 575
 w 65
 h 20
 controlPv "$(P)A:DeliverValve_RBV"
@@ -1985,7 +1948,7 @@ major 4
 minor 7
 release 0
 x 250
-y 575
+y 600
 w 65
 h 20
 controlPv "$(P)A:FillValve_RBV"
@@ -2003,25 +1966,36 @@ newPos
 objType "controls"
 endObjectProperties
 
-# (Static Text)
-object activeXTextClass
+endGroup
+
+endObjectProperties
+
+
+# (Group)
+object activeGroupClass
 beginObjectProperties
 major 4
-minor 1
-release 1
-x 360
-y 575
-w 100
+minor 0
+release 0
+x 335
+y 150
+w 300
 h 20
-font "helvetica-medium-r-14.0"
-fontAlign "right"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Fill valve"
-}
-endObjectProperties
+
+beginGroup
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 335
+y 150
+w 235
+h 20
+
+beginGroup
 
 # (Static Text)
 object activeXTextClass
@@ -2029,9 +2003,9 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 330
-y 550
-w 130
+x 335
+y 150
+w 150
 h 20
 font "helvetica-medium-r-14.0"
 fontAlign "right"
@@ -2039,7 +2013,7 @@ fgColor rgb 0 0 0
 bgColor index 3
 useDisplayBg
 value {
-  "Deliver valve"
+  "Total delivered"
 }
 endObjectProperties
 
@@ -2049,17 +2023,133 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 570
-y 550
-w 65
+x 490
+y 150
+w 80
 h 20
-controlPv "$(P)B:DeliverValve_RBV"
-format "string"
+controlPv "$(P)TotalVolume"
+format "decimal"
 font "helvetica-medium-r-14.0"
-fontAlign "center"
-fgColor rgb 0 65535 0
-fgAlarm
-bgColor rgb 55808 55808 55808
+fontAlign "left"
+fgColor rgb 10752 25344 58368
+bgColor rgb 47872 47872 47872
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+
+endGroup
+
+endObjectProperties
+
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 125
+w 235
+h 20
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 125
+w 150
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Paired Pressure"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 165
+y 125
+w 80
+h 20
+controlPv "$(P)PairedPressure"
+format "decimal"
+font "helvetica-medium-r-14.0"
+fontAlign "left"
+fgColor rgb 10752 25344 58368
+bgColor rgb 47872 47872 47872
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 150
+w 150
+h 20
+font "helvetica-medium-r-14.0"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Total requested"
+}
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 165
+y 150
+w 70
+h 20
+controlPv "$(P)TotalVolumeSP"
+format "decimal"
+font "helvetica-medium-r-12.0"
+fontAlign "left"
+fgColor rgb 0 0 0
+bgColor rgb 29440 57088 65280
+editable
+motifWidget
 limitsFromDb
 nullColor rgb 60928 46592 11008
 smartRefresh
@@ -2074,17 +2164,16 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 570
-y 575
-w 65
+x 240
+y 150
+w 80
 h 20
-controlPv "$(P)B:FillValve_RBV"
-format "string"
+controlPv "$(P)TotalVolumeSP_RBV"
+format "decimal"
 font "helvetica-medium-r-14.0"
-fontAlign "center"
-fgColor rgb 0 65535 0
-fgAlarm
-bgColor rgb 55808 55808 55808
+fontAlign "left"
+fgColor rgb 10752 25344 58368
+bgColor rgb 47872 47872 47872
 limitsFromDb
 nullColor rgb 60928 46592 11008
 smartRefresh
@@ -2092,6 +2181,130 @@ fastUpdate
 newPos
 objType "controls"
 endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 100
+w 470
+h 20
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 100
+w 90
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Pump mode"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 280
+y 100
+w 200
+h 20
+controlPv "$(P)PumpMode_RBV"
+format "string"
+font "helvetica-medium-r-14.0"
+fontAlign "left"
+fgColor rgb 10752 25344 58368
+bgColor rgb 47872 47872 47872
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 335
+y 125
+w 195
+h 20
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 335
+y 125
+w 110
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Paired Rate"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 450
+y 125
+w 80
+h 20
+controlPv "$(P)PairedRate"
+format "decimal"
+font "helvetica-medium-r-14.0"
+fontAlign "left"
+fgColor rgb 10752 25344 58368
+bgColor rgb 47872 47872 47872
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
 
 # (Related Display)
 object relatedDisplayClass
@@ -2099,8 +2312,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 451
-y 150
+x 380
+y 175
 w 100
 h 20
 fgColor rgb 0 0 0
@@ -2135,8 +2348,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 370
-y 125
+x 10
+y 175
 w 265
 h 20
 
@@ -2148,8 +2361,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 575
-y 125
+x 215
+y 175
 w 60
 h 20
 fgColor rgb 0 0 0
@@ -2171,151 +2384,18 @@ endGroup
 
 endObjectProperties
 
-
-# (Menu Button)
-object activeMenuButtonClass
+# (Group)
+object activeGroupClass
 beginObjectProperties
 major 4
 minor 0
 release 0
-x 115
-y 100
-w 170
-h 20
-fgColor rgb 0 0 0
-bgColor rgb 47872 47872 47872
-inconsistentColor rgb 17920 17920 17920
-topShadowColor rgb 55808 55808 55808
-botShadowColor rgb 17920 17920 17920
-controlPv "$(P)PumpMode"
-indicatorPv "$(P)PumpMode"
-font "helvetica-medium-r-12.0"
-endObjectProperties
+x 325
+y 210
+w 315
+h 490
 
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 260
-y 150
-w 60
-h 20
-fgColor rgb 0 0 0
-onColor rgb 29440 57088 65280
-offColor rgb 29440 57088 65280
-topShadowColor rgb 65280 65280 65280
-botShadowColor rgb 0 0 0
-controlPv "$(P)ResetTotalVolume"
-pressValue "1"
-releaseValue 
-onLabel "Reset"
-offLabel "Reset"
-3d
-useEnumNumeric
-font "helvetica-medium-r-12.0"
-endObjectProperties
-
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 220
-y 260
-w 25
-h 20
-fgColor rgb 0 0 0
-onColor rgb 29440 57088 65280
-offColor rgb 29440 57088 65280
-topShadowColor rgb 65280 65280 65280
-botShadowColor rgb 0 0 0
-controlPv "$(P)A:PressureTweakUp.PROC"
-pressValue "1"
-releaseValue 
-onLabel ">"
-offLabel ">"
-3d
-useEnumNumeric
-font "helvetica-medium-r-12.0"
-endObjectProperties
-
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 95
-y 260
-w 25
-h 20
-fgColor rgb 0 0 0
-onColor rgb 29440 57088 65280
-offColor rgb 29440 57088 65280
-topShadowColor rgb 65280 65280 65280
-botShadowColor rgb 0 0 0
-controlPv "$(P)A:PressureTweakDown.PROC"
-pressValue "-1"
-releaseValue 
-onLabel "<"
-offLabel "<"
-3d
-useEnumNumeric
-font "helvetica-medium-r-12.0"
-endObjectProperties
-
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 219
-y 365
-w 25
-h 20
-fgColor rgb 0 0 0
-onColor rgb 29440 57088 65280
-offColor rgb 29440 57088 65280
-topShadowColor rgb 65280 65280 65280
-botShadowColor rgb 0 0 0
-controlPv "$(P)A:FlowRateTweakUp.PROC"
-pressValue "1"
-releaseValue 
-onLabel ">"
-offLabel ">"
-3d
-useEnumNumeric
-font "helvetica-medium-r-12.0"
-endObjectProperties
-
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 94
-y 365
-w 25
-h 20
-fgColor rgb 0 0 0
-onColor rgb 29440 57088 65280
-offColor rgb 29440 57088 65280
-topShadowColor rgb 65280 65280 65280
-botShadowColor rgb 0 0 0
-controlPv "$(P)A:FlowRateTweakDown.PROC"
-pressValue "1"
-releaseValue 
-onLabel "<"
-offLabel "<"
-3d
-useEnumNumeric
-font "helvetica-medium-r-12.0"
-endObjectProperties
+beginGroup
 # (Group)
 object activeGroupClass
 beginObjectProperties
@@ -2323,7 +2403,7 @@ major 4
 minor 0
 release 0
 x 360
-y 215
+y 240
 w 245
 h 20
 
@@ -2341,7 +2421,7 @@ major 4
 minor 0
 release 0
 x 540
-y 260
+y 285
 w 25
 h 20
 fgColor rgb 0 0 0
@@ -2366,7 +2446,7 @@ major 4
 minor 0
 release 0
 x 415
-y 260
+y 285
 w 25
 h 20
 fgColor rgb 0 0 0
@@ -2390,7 +2470,7 @@ major 4
 minor 0
 release 0
 x 330
-y 286
+y 311
 w 290
 h 20
 
@@ -2408,7 +2488,7 @@ major 4
 minor 0
 release 0
 x 539
-y 365
+y 390
 w 25
 h 20
 fgColor rgb 0 0 0
@@ -2433,7 +2513,7 @@ major 4
 minor 0
 release 0
 x 414
-y 365
+y 390
 w 25
 h 20
 fgColor rgb 0 0 0
@@ -2457,7 +2537,7 @@ major 4
 minor 0
 release 0
 x 393
-y 625
+y 650
 w 195
 h 20
 
@@ -2474,7 +2554,7 @@ major 4
 minor 0
 release 0
 x 423
-y 600
+y 625
 w 165
 h 20
 
@@ -2492,7 +2572,7 @@ major 4
 minor 0
 release 0
 x 437
-y 525
+y 550
 w 100
 h 20
 fgColor rgb 0 0 0
@@ -2511,7 +2591,7 @@ major 4
 minor 0
 release 0
 x 420
-y 500
+y 525
 w 125
 h 20
 
@@ -2524,7 +2604,7 @@ major 4
 minor 0
 release 0
 x 420
-y 500
+y 525
 w 60
 h 20
 fgColor rgb 0 0 0
@@ -2549,7 +2629,7 @@ major 4
 minor 0
 release 0
 x 485
-y 500
+y 525
 w 60
 h 20
 fgColor rgb 0 0 0
@@ -2578,7 +2658,7 @@ major 4
 minor 0
 release 0
 x 380
-y 475
+y 500
 w 205
 h 20
 
@@ -2596,7 +2676,7 @@ major 4
 minor 0
 release 0
 x 455
-y 450
+y 475
 w 170
 h 20
 fgColor rgb 0 0 0
@@ -2616,7 +2696,7 @@ major 4
 minor 0
 release 0
 x 580
-y 650
+y 675
 w 50
 h 20
 fgColor rgb 0 0 0
@@ -2634,6 +2714,167 @@ useEnumNumeric
 font "helvetica-medium-r-12.0"
 endObjectProperties
 
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 465
+y 575
+w 100
+h 20
+fgColor rgb 0 65535 0
+bgColor rgb 55808 55808 55808
+selectColor rgb 55808 55808 55808
+inconsistentColor rgb 0 0 0
+topShadowColor rgb 65280 65280 65280
+botShadowColor rgb 0 0 0
+fgAlarm
+controlPv "$(P)B:DeliverValve"
+font "helvetica-medium-r-10.0"
+orientation "horizontal"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 465
+y 600
+w 100
+h 20
+fgColor rgb 0 65535 0
+bgColor rgb 55808 55808 55808
+selectColor rgb 55808 55808 55808
+inconsistentColor rgb 0 0 0
+topShadowColor rgb 65280 65280 65280
+botShadowColor rgb 0 0 0
+fgAlarm
+controlPv "$(P)B:FillValve"
+font "helvetica-medium-r-10.0"
+orientation "horizontal"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 5
+y 210
+w 315
+h 490
+
+beginGroup
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 220
+y 285
+w 25
+h 20
+fgColor rgb 0 0 0
+onColor rgb 29440 57088 65280
+offColor rgb 29440 57088 65280
+topShadowColor rgb 65280 65280 65280
+botShadowColor rgb 0 0 0
+controlPv "$(P)A:PressureTweakUp.PROC"
+pressValue "1"
+releaseValue 
+onLabel ">"
+offLabel ">"
+3d
+useEnumNumeric
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 95
+y 285
+w 25
+h 20
+fgColor rgb 0 0 0
+onColor rgb 29440 57088 65280
+offColor rgb 29440 57088 65280
+topShadowColor rgb 65280 65280 65280
+botShadowColor rgb 0 0 0
+controlPv "$(P)A:PressureTweakDown.PROC"
+pressValue "-1"
+releaseValue 
+onLabel "<"
+offLabel "<"
+3d
+useEnumNumeric
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 219
+y 390
+w 25
+h 20
+fgColor rgb 0 0 0
+onColor rgb 29440 57088 65280
+offColor rgb 29440 57088 65280
+topShadowColor rgb 65280 65280 65280
+botShadowColor rgb 0 0 0
+controlPv "$(P)A:FlowRateTweakUp.PROC"
+pressValue "1"
+releaseValue 
+onLabel ">"
+offLabel ">"
+3d
+useEnumNumeric
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 94
+y 390
+w 25
+h 20
+fgColor rgb 0 0 0
+onColor rgb 29440 57088 65280
+offColor rgb 29440 57088 65280
+topShadowColor rgb 65280 65280 65280
+botShadowColor rgb 0 0 0
+controlPv "$(P)A:FlowRateTweakDown.PROC"
+pressValue "1"
+releaseValue 
+onLabel "<"
+offLabel "<"
+3d
+useEnumNumeric
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
 # (Menu Button)
 object activeMenuButtonClass
 beginObjectProperties
@@ -2641,7 +2882,7 @@ major 4
 minor 0
 release 0
 x 117
-y 525
+y 550
 w 100
 h 20
 fgColor rgb 0 0 0
@@ -2661,7 +2902,7 @@ major 4
 minor 0
 release 0
 x 100
-y 500
+y 525
 w 60
 h 20
 fgColor rgb 0 0 0
@@ -2686,7 +2927,7 @@ major 4
 minor 0
 release 0
 x 165
-y 500
+y 525
 w 60
 h 20
 fgColor rgb 0 0 0
@@ -2711,7 +2952,7 @@ major 4
 minor 0
 release 0
 x 135
-y 450
+y 475
 w 170
 h 20
 fgColor rgb 0 0 0
@@ -2730,7 +2971,7 @@ major 4
 minor 0
 release 0
 x 10
-y 650
+y 675
 w 300
 h 20
 
@@ -2743,7 +2984,7 @@ major 4
 minor 0
 release 0
 x 260
-y 650
+y 675
 w 50
 h 20
 fgColor rgb 0 0 0
@@ -2773,7 +3014,7 @@ major 4
 minor 0
 release 0
 x 145
-y 550
+y 575
 w 100
 h 20
 fgColor rgb 0 65535 0
@@ -2795,7 +3036,7 @@ major 4
 minor 0
 release 0
 x 145
-y 575
+y 600
 w 100
 h 20
 fgColor rgb 0 65535 0
@@ -2810,47 +3051,138 @@ font "helvetica-medium-r-10.0"
 orientation "horizontal"
 endObjectProperties
 
-# (Choice Button)
-object activeChoiceButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 465
-y 550
-w 100
-h 20
-fgColor rgb 0 65535 0
-bgColor rgb 55808 55808 55808
-selectColor rgb 55808 55808 55808
-inconsistentColor rgb 0 0 0
-topShadowColor rgb 65280 65280 65280
-botShadowColor rgb 0 0 0
-fgAlarm
-controlPv "$(P)B:DeliverValve"
-font "helvetica-medium-r-10.0"
-orientation "horizontal"
+endGroup
+
 endObjectProperties
 
-# (Choice Button)
-object activeChoiceButtonClass
+# (Group)
+object activeGroupClass
 beginObjectProperties
 major 4
 minor 0
 release 0
-x 465
-y 575
-w 100
+x 335
+y 150
+w 300
 h 20
-fgColor rgb 0 65535 0
-bgColor rgb 55808 55808 55808
-selectColor rgb 55808 55808 55808
-inconsistentColor rgb 0 0 0
+
+beginGroup
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 335
+y 150
+w 235
+h 20
+
+beginGroup
+
+endGroup
+
+endObjectProperties
+
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 575
+y 150
+w 60
+h 20
+fgColor rgb 0 0 0
+onColor rgb 29440 57088 65280
+offColor rgb 29440 57088 65280
 topShadowColor rgb 65280 65280 65280
 botShadowColor rgb 0 0 0
-fgAlarm
-controlPv "$(P)B:FillValve"
-font "helvetica-medium-r-10.0"
-orientation "horizontal"
+controlPv "$(P)ResetTotalVolume"
+pressValue "1"
+releaseValue 
+onLabel "Reset"
+offLabel "Reset"
+3d
+useEnumNumeric
+font "helvetica-medium-r-12.0"
 endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 125
+w 235
+h 20
+
+beginGroup
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 100
+w 470
+h 20
+
+beginGroup
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 105
+y 100
+w 170
+h 20
+fgColor rgb 0 0 0
+bgColor rgb 47872 47872 47872
+inconsistentColor rgb 17920 17920 17920
+topShadowColor rgb 55808 55808 55808
+botShadowColor rgb 17920 17920 17920
+controlPv "$(P)PumpMode"
+indicatorPv "$(P)PumpMode"
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 335
+y 125
+w 195
+h 20
+
+beginGroup
+
+endGroup
+
+endObjectProperties
+
 
