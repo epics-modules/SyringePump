@@ -40,6 +40,18 @@ record(mbbi, "$(P)PumpMode_RBV") {
     field(SVST, "Paired Delta Press Dlvr")
 }
 
+record(calc, "$(P)PairedPressure") {
+    field(INPA, "$(P)PressureOutRaw CP")
+    field(CALC, "(A-1000)/10")
+    field(PREC, "1")
+}
+
+record(calc, "$(P)PairedRate") {
+    field(INPA, "$(P)RateOutRaw CP")
+    field(CALC, "A/1000000")
+    field(PREC, "3")
+}
+
 record(calc, "$(P)TotalVolume") {
     field(INPA, "$(P)TotalVolumeRaw CP")
     field(CALC, "A/1000000")
@@ -119,21 +131,33 @@ record(calcout, "$(P)TotalVolumeSPCalc") {
     field(OUT, "$(P)VolumeStartRaw PP")
 }
 
-record(mbbo, "$(P)A:ResetVolume") {
-    field(ZRVL, "0x01")
-    field(ZRST, "Reset")
+record(bo, "$(P)A:ResetVolume") {
+    field(FLNK, "$(P)A:ResetVolumeCalc")
+}
+
+record(calcout, "$(P)A:ResetVolumeCalc") {
+    field(INPA, "0x01")
+    field(CALC, "A")
     field(OUT,  "$(P)ResetVolumesRaw PP")
 }
 
-record(mbbo, "$(P)B:ResetVolume") {
-    field(ZRVL, "0x2")
-    field(ZRST, "Reset")
+record(bo, "$(P)B:ResetVolume") {
+    field(FLNK, "$(P)B:ResetVolumeCalc")
+}
+
+record(calcout, "$(P)B:ResetVolumeCalc") {
+    field(INPA, "0x02")
+    field(CALC, "A")
     field(OUT,  "$(P)ResetVolumesRaw PP")
 }
 
-record(mbbo, "$(P)ResetTotalVolume") {
-    field(ZRVL, "0x04")
-    field(ZRST, "Reset")
+record(bo, "$(P)ResetTotalVolume") {
+    field(FLNK, "$(P)ResetTotalVolumeCalc")
+}
+
+record(calcout, "$(P)ResetTotalVolumeCalc") {
+    field(INPA, "0x04")
+    field(CALC, "A")
     field(OUT,  "$(P)ResetVolumesRaw PP")
 }
 
