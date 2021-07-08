@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <name>SyringePumpTop</name>
-  <x>300</x>
-  <y>120</y>
+  <x>647</x>
+  <y>132</y>
   <width>250</width>
   <height>100</height>
   <background_color>

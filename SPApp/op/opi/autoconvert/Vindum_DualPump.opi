@@ -29,7 +29,7 @@
   <widget_type>Display</widget_type>
   <width>645</width>
   <x>432</x>
-  <y>137</y>
+  <y>208</y>
   <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
     <actions hook="false" hook_all="false" />
     <alarm_pulsing>false</alarm_pulsing>
