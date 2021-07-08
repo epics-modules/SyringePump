@@ -1,0 +1,35 @@
+
+Summary - attempting to enter settings while the device is switching modes will cause a ioc disconnect and reconnect, since no commands are accepted while the process is ongoing. Not idea if there are status bits that could be watched/validated to prevent the GUI from trying commands while the hardware is still 'busy'.
+
+From: Hrubiak, Ross <hrubiak@anl.gov>
+Sent: Saturday, October 10, 2020 8:18:55 PM
+To: Engbretson, Mark S. <engbretson@anl.gov>
+Subject: Re: help, 16bmSP trouble 
+ 
+After switching the mode over epics, the readback shows that the mode is switched, not showing any problems. But after around 30 seconds the hardware actually starts doing what it's supposed to. So there are some other indicators that the users could look at to seen when the mode switch has completed. When the mode switch to from deliver to receive mode finishes, one of the pumps starts to empty out (as it should), so the user could watch to see when the the remaining volume in one of the pumps starts decreasing, indicating that the mode switch succeed. Converse with the switch from receive to deliver, after ~30 seconds one of the pumps starts to automatically fill up, so same thing, the user could watch the volume and when it starts going up, that indicates that the mode switch succeeded.
+
+
+From: Hrubiak, Ross <hrubiak@anl.gov>
+Sent: Saturday, October 10, 2020 8:02:47 PM
+To: Engbretson, Mark S. <engbretson@anl.gov>
+Subject: Re: help, 16bmSP trouble 
+ 
+It gets worst, I spent this whole week troubleshooting why the device doesn't switch between some different modes (deliver and receive modes). Finally cracked it today by accident. You have to wait 30+ seconds after mode switch for things to work properly. If you try to do anything within 30 seconds of mode switch, it doesn't do what it's supposed to. 
+
+
+From: Hrubiak, Ross <hrubiak@anl.gov>
+Sent: Saturday, October 10, 2020 5:59:17 PM
+To: Engbretson, Mark S. <engbretson@anl.gov>
+Subject: Re: help, 16bmSP trouble 
+ 
+I've been keeping an eye on the communication and you are right, the device mostly only stops communicating when I send some input that it is not expecting because of the mode that it is in. Other cases that I've seen communication drop out, is when I try to set any PV to often. So I think if we are careful, we should be able to make it work. I have to design a more full-proof user interface where the user can't ever send an unexpected value (or at least make it difficult to do so). Maybe I'll make a python based gui that has some logic of its own for input checking.
+
+
+From: Hrubiak, Ross <hrubiak@anl.gov>
+Sent: Thursday, October 8, 2020 8:09:17 PM
+To: Engbretson, Mark S. <engbretson@anl.gov>
+Subject: Re: help, 16bmSP trouble 
+ 
+The controls still have some flakiness issues. No idea about the source, whether it's hardware or epics, or both. Once in a while, all PV's disconnect all at once when setting any of the PVs. There doesn't seem to be much pattern to it. Most of the time setting any PV is okay, but once in a while the act of setting of a PV (can be any PV) leads to a total disconnect. The connections re-establish to the PV's usually after about 30 seconds or so. This is not a new issue after today's fix, but has been ongoing from the start. I've been getting used to it so far, but wondering if there is anything that can be done to make the softIOC treat errors from the hardware with more grace, if it is due to hardware not communicating properly.
+
+
