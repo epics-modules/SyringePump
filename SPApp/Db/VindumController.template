@@ -136,8 +136,7 @@ record(bo, "$(P)A:ResetVolume") {
 }
 
 record(calcout, "$(P)A:ResetVolumeCalc") {
-    field(INPA, "0x01")
-    field(CALC, "A")
+    field(CALC, "0x01")
     field(OUT,  "$(P)ResetVolumesRaw PP")
 }
 
@@ -146,8 +145,7 @@ record(bo, "$(P)B:ResetVolume") {
 }
 
 record(calcout, "$(P)B:ResetVolumeCalc") {
-    field(INPA, "0x02")
-    field(CALC, "A")
+    field(CALC, "0x02")
     field(OUT,  "$(P)ResetVolumesRaw PP")
 }
 
@@ -156,8 +154,7 @@ record(bo, "$(P)ResetTotalVolume") {
 }
 
 record(calcout, "$(P)ResetTotalVolumeCalc") {
-    field(INPA, "0x04")
-    field(CALC, "A")
+    field(CALC, "0x04")
     field(OUT,  "$(P)ResetVolumesRaw PP")
 }
 
@@ -214,10 +211,11 @@ record(calcout, "$(P)SetValves") {
     field(OUT, "$(P)ValveCommandRaw PP")
 }
 
-record(mbbo, "$(P)ClearLatchedErrors") {
-    field(DTYP, "Raw Soft Channel")
-    field(ZRVL, "7")
-    field(ZRST, "Clear")
-    field(VAL, "0")
+record(bo, "$(P)ClearLatchedErrors") {
+    field(FLNK, "$(P)ClearLatchedErrorsCalc")
+}
+
+record(calcout, "$(P)ClearLatchedErrorsCalc") {
+    field(CALC, "VAL+1")
     field(OUT, "$(P)ClearLatchedErrorsRaw PP")
 }
