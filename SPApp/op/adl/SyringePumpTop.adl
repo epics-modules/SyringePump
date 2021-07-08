@@ -5,8 +5,8 @@ file {
 }
 display {
 	object {
-		x=300
-		y=120
+		x=647
+		y=132
 		width=250
 		height=100
 	}
