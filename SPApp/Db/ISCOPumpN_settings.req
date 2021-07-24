@@ -1,3 +1,11 @@
+#$(P)$(PUMP)PressureSP
+#$(P)$(PUMP)FlowRateSP
+$(P)$(PUMP)RefillRateSP
 $(P)$(PUMP)PressureTweak
 $(P)$(PUMP)FlowRateTweak
 $(P)$(PUMP)Mode
+$(P)$(PUMP)PoorFillAlarm
+$(P)$(PUMP)MaxPressureSP
+$(P)$(PUMP)MinPressureSP
+$(P)$(PUMP)MaxFlowRateSP
+$(P)$(PUMP)MaxFlowLimit
