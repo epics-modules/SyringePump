@@ -1,0 +1,153 @@
+record(bo, "$(s):$(ta):$(ss):Run") {
+    field(DTYP, "stream")
+    field(OUT, "@teled_d.proto setRun($(u=6),$(p=A)) $(PORT)")
+    info(autosaveFields, "VAL")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+record(bo, "$(s):$(ta):$(ss):Stop") {
+    field(DTYP, "stream")
+    field(OUT, "@teled_d.proto setStop($(u=6),$(p=A)) $(PORT)")
+    info(autosaveFields, "VAL")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+
+record(bo, "$(s):$(ta):$(ss):Remote") {
+    field(DTYP, "stream")
+    field(OUT, "@teled_d.proto setRem($(u=6)) $(PORT)")
+    info(autosaveFields, "VAL")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+record(bo, "$(s):$(ta):$(ss):Local") {
+    field(DTYP, "stream")
+    field(OUT, "@teled_d.proto setLoc($(u=6)) $(PORT)")
+    info(autosaveFields, "VAL")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+
+record(ao, "$(s):$(ta):$(ss):PressSet") {
+    field(EGU, "bar")
+    field(PREC, "3")
+    field(FLNK, "$(s):$(ta):$(ss):PressSeq")
+}
+
+record(sseq, "$(s):$(ta):$(ss):PressSeq") {
+    field(LNK1, "$(s):$(ta):$(ss):Remote.PROC CA")
+    field(WAIT1, "Wait")
+    field(LNK2, "$(s):$(ta):$(ss):Run.PROC CA")
+    field(WAIT2, "Wait")
+    field(DOL3, "$(s):$(ta):$(ss):PressSet")
+    field(LNK3, "$(s):$(ta):$(ss):PressSend PP")
+}
+
+record(ao, "$(s):$(ta):$(ss):PressSend") {
+    field(DTYP, "stream")
+    field(EGU, "bar")
+    field(OUT, "@teled_d.proto setPress($(u=6),$(p=A)) $(PORT)")
+    field(PREC, "3")
+}
+
+record(ao,"$(s):$(ta):$(ss):MaxFlow") {
+    field(EGU, "ml/min")
+    field(PREC, "3")
+    field(FLNK, "$(s):$(ta):$(ss):MaxFlowSeq")
+}
+record(sseq, "$(s):$(ta):$(ss):MaxFlowSeq") {
+    field(LNK1, "$(s):$(ta):$(ss):Remote.PROC CA")
+    field(WAIT1, "Wait")
+    field(LNK2, "$(s):$(ta):$(ss):Run.PROC CA")
+    field(WAIT2, "Wait")
+    field(DOL3, "$(s):$(ta):$(ss):MaxFlow")
+    field(LNK3, "$(s):$(ta):$(ss):MaxFlowSend PP")
+}
+record(ao,"$(s):$(ta):$(ss):MaxFlowSend") {
+    field(DTYP, "stream")
+    field(EGU, "ml/min")
+    field(OUT, "@teled_d.proto setMFlow($(u=6),$(p=A)) $(PORT)")
+    field(PREC, "3")
+}
+
+record(seq, "$(s):$(ta):$(ss):Scanner") {
+   field(SCAN, "1 second")
+   field(LNK1, "$(s):$(ta):$(ss):Vol.PROC PP")
+   field(DLY2, "0.1")
+   field(LNK2, "$(s):$(ta):$(ss):Pressure.PROC PP")
+   field(DLY3, "0.1")
+   field(LNK3, "$(s):$(ta):$(ss):PressSet_RBV.PROC PP")
+   field(DLY4, "0.1")
+   field(LNK4, "$(s):$(ta):$(ss):Flow.PROC PP")
+   field(DLY5, "0.1")
+   field(LNK5, "$(s):$(ta):$(ss):MaxFlow_RBV.PROC PP")
+   field(DLY6, "0.1")
+   field(LNK6, "$(s):$(ta):$(ss):Status.PROC PP")
+}
+
+record(ai, "$(s):$(ta):$(ss):Vol") {
+   field(DTYP, "stream")
+   field(INP, "@teled_d.proto getVol($(u=6),$(p=A)) $(PORT)")
+   field(PREC, "3")
+   info(archive, "Monitor, 00:00:01, VAL")
+}
+record(ai, "$(s):$(ta):$(ss):Pressure") {
+   field(DTYP, "stream")
+   field(INP,  "@teled_d.proto getPress($(u=6),$(p=A)) $(PORT)")
+   field(EGU, "bar")
+   info(archive, "Monitor, 00:00:01, VAL")
+}
+record(ai,"$(s):$(ta):$(ss):PressSet_RBV") {
+    field(DTYP, "stream")
+    field(INP,  "@teled_d.proto getSetPress($(u=6),$(p=A)) $(PORT)")
+    field(EGU, "bar")
+    info(archive, "Monitor, 00:00:01, VAL")
+    field(PREC, "3")
+}
+record(ai,"$(s):$(ta):$(ss):Flow") {
+    field(DTYP, "stream")
+    field(INP,  "@teled_d.proto getFlow($(u=6),$(p=A)) $(PORT)")
+    field(EGU, "ml/min")
+    field(PREC, "3")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+record(ai,"$(s):$(ta):$(ss):MaxFlow_RBV") {
+    field(DTYP, "stream")
+    field(INP,  "@teled_d.proto getMFlow($(u=6),$(p=A)) $(PORT)")
+    field(EGU, "ml/min")
+    field(PREC, "3")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+record(stringin, "$(s):$(ta):$(ss):Status") {
+    field(DTYP, "stream")
+    field(INP,  "@teled_d.proto getStatus($(u=6),$(p=A)) $(PORT)")
+}
+
+record(stringout, "$(s):$(ta):$(ss):Command") {
+   field(FLNK, "$(s):$(ta):$(ss):CmdProc")
+}
+
+record(aSub, "$(s):$(ta):$(ss):CmdProc") {
+   field(INPA, "$(s):$(ta):$(ss):Command")
+   field(FTA, "STRING")
+   field(SNAM, "formatCmd")
+   field(FTVA, "CHAR")
+   field(NOVA, "80")
+   field(OUTA, "$(s):$(ta):$(ss):CmdReply PP")
+}
+
+# Written to, sends the string. The reply replaces the string written to it. 
+record(waveform, "$(s):$(ta):$(ss):CmdReply") {
+   field(DTYP, "stream")
+   field(INP,  "@teled_d.proto sendCmd($(u=6)) $(PORT)")
+   field(FTVL, "CHAR")
+   field(NELM, "80")
+}
+
+record(calc, "$(s):$(ta):$(ss):AlarmI") {
+   field(DESC, "Immediate Alarm")
+   field(INPA, "$(s):$(ta):$(ss):BDetStatus")
+   field(INPB, "$(s):$(ta):$(ss):Vol.SEVR")
+   field(INPC, "$(s):$(ta):$(ss):Pressure.SEVR")
+   field(INPD, "$(s):$(ta):$(ss):Flow.SEVR")
+   field(CALC, "(A==3)||B||C||D")
+   field(HIHI, "0.5")
+   field(HHSV, "MAJOR")
+}
+

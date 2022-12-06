@@ -1,0 +1,548 @@
+record(bo, "$(s):$(ta):$(ss):Run") {
+    field(DTYP, "stream")
+    field(OUT, "@teled_h.proto setRun($(u=6),$(p=A)) $(PORT)")
+    info(autosaveFields, "VAL")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+
+record(bo, "$(s):$(ta):$(ss):PistonUp") {
+    field(DTYP, "stream")
+    field(OUT, "@teled_h.proto setPistonUp($(u=6),$(p=A)) $(PORT)")
+    info(autosaveFields, "VAL")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+
+
+
+record(bo, "$(s):$(ta):$(ss):Stop") {
+    field(DTYP, "stream")
+    field(OUT, "@teled_h.proto setStop($(u=6),$(p=A)) $(PORT)")
+    info(autosaveFields, "VAL")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+
+record(bo, "$(s):$(ta):$(ss):Remote") {
+    field(DTYP, "stream")
+    field(OUT, "@teled_h.proto setRem($(u=6)) $(PORT)")
+    info(autosaveFields, "VAL")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+record(bo, "$(s):$(ta):$(ss):Local") {
+    field(DTYP, "stream")
+    field(OUT, "@teled_h.proto setLoc($(u=6)) $(PORT)")
+    info(autosaveFields, "VAL")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+
+record(ao, "$(s):$(ta):$(ss):PressSet") {
+    field(EGU, "")
+    field(PREC, "3")
+    field(FLNK, "$(s):$(ta):$(ss):PressSeq")
+    info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+record(sseq, "$(s):$(ta):$(ss):PressSeq") {
+#    field(LNK1, "$(s):$(ta):$(ss):Remote.PROC CA")
+#    field(WAIT1, "Wait")
+#    field(LNK2, "$(s):$(ta):$(ss):Run.PROC CA")
+#    field(WAIT2, "Wait")
+    field(DOL3, "$(s):$(ta):$(ss):PressSet")
+    field(LNK3, "$(s):$(ta):$(ss):PressSend PP")
+}
+
+record(ao, "$(s):$(ta):$(ss):PressSend") {
+    field(DTYP, "stream")
+    field(EGU, "")
+    field(OUT, "@teled_h.proto setPress($(u=6),$(p=A)) $(PORT)")
+    field(PREC, "3")
+    info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+record(ao,"$(s):$(ta):$(ss):MaxFlow") {
+    field(EGU, "ml/min")
+    field(PREC, "3")
+    field(FLNK, "$(s):$(ta):$(ss):MaxFlowSeq")
+    info(archive, "Monitor, 00:00:01, VAL")
+
+}
+record(sseq, "$(s):$(ta):$(ss):MaxFlowSeq") {
+    field(LNK1, "$(s):$(ta):$(ss):Remote.PROC CA")
+    field(WAIT1, "Wait")
+    field(LNK2, "$(s):$(ta):$(ss):Run.PROC CA")
+    field(WAIT2, "Wait")
+    field(DOL3, "$(s):$(ta):$(ss):MaxFlow")
+    field(LNK3, "$(s):$(ta):$(ss):MaxFlowSend PP")
+}
+record(ao,"$(s):$(ta):$(ss):MaxFlowSend") {
+    field(DTYP, "stream")
+    field(EGU, "ml/min")
+    field(OUT, "@teled_h.proto setMFlow($(u=6),$(p=A)) $(PORT)")
+    field(PREC, "3")
+    info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+record(seq, "$(s):$(ta):$(ss):Scanner") {
+   field(SCAN, "1 second")
+   field(LNK1, "$(s):$(ta):$(ss):Vol.PROC PP")
+   field(DLY2, "0.1")
+   field(LNK2, "$(s):$(ta):$(ss):Pressure.PROC PP")
+   field(DLY3, "0.1")
+   field(LNK3, "$(s):$(ta):$(ss):PressSet_RBV.PROC PP")
+   field(DLY4, "0.1")
+   field(LNK4, "$(s):$(ta):$(ss):Flow.PROC PP")
+   field(DLY5, "0.1")
+   field(LNK5, "$(s):$(ta):$(ss):MaxFlow_RBV.PROC PP")
+   field(DLY6, "0.1")
+   field(LNK6, "$(s):$(ta):$(ss):Status.PROC PP")
+   info(archive, "Monitor, 00:00:01, VAL")
+
+}
+######################################################################
+#Subroutine call to format Volume readback
+######################################################################
+
+record(stringin, "$(s):$(ta):$(ss):Vol") {
+   field(DTYP, "stream")
+   field(INP, "@teled_h.proto getVol($(u=6),$(p=A)) $(PORT)")
+   field(FLNK, "$(s):$(ta):$(ss):VolPARSE")
+
+}
+record(aSub, "$(s):$(ta):$(ss):VolPARSE")
+{
+    field(SNAM, "shiftleftpressSet")
+    field(INPA, "$(s):$(ta):$(ss):Vol")
+    field(FTA, "STRING")
+    field(OUTA, "$(s):$(ta):$(ss):VolFormat PP")
+    field(FTVA, "DOUBLE")
+    field(PREC, "3")	    
+}   
+
+record(ai, "$(s):$(ta):$(ss):VolFormat")
+{
+    field(EGU, "")
+    field(PREC, "3")
+    info(archive, "Monitor, 00:00:01, VAL")
+    
+}
+
+
+######################################################################
+#Subroutine call to format Pressure readback
+######################################################################
+
+record(stringin, "$(s):$(ta):$(ss):Pressure") {
+   field(DTYP, "stream")
+   field(INP,  "@teled_h.proto getPress($(u=6),$(p=A)) $(PORT)")
+   field(FLNK, "$(s):$(ta):$(ss):PressurePARSE")
+}
+
+record(aSub, "$(s):$(ta):$(ss):PressurePARSE")
+{
+    field(SNAM, "shiftleftpressSet")
+    field(INPA, "$(s):$(ta):$(ss):Pressure")
+    field(FTA, "STRING")
+    field(OUTA, "$(s):$(ta):$(ss):PressureFormat PP")
+    field(FTVA, "DOUBLE")
+
+}
+
+record(ai, "$(s):$(ta):$(ss):PressureFormat")
+{
+    field(EGU, "")
+    field(PREC, "3")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+
+######################################################################
+#Subroutine call to format Pressure SP readback
+######################################################################
+record(stringin,"$(s):$(ta):$(ss):PressSet_RBV") {
+    field(DTYP, "stream")
+    field(INP,  "@teled_h.proto getSetPress($(u=6),$(p=A)) $(PORT)")
+    info(archive, "Monitor, 00:00:01, VAL")
+    field(FLNK, "$(s):$(ta):$(ss):PressSetPARSE")
+}
+
+record(aSub, "$(s):$(ta):$(ss):PressSetPARSE")
+{
+    field(SNAM, "shiftleftpressSet")
+    field(INPA, "$(s):$(ta):$(ss):PressSet_RBV")
+    field(FTA, "STRING")
+    field(OUTA, "$(s):$(ta):$(ss):PressSetFormat PP")
+    field(FTVA, "DOUBLE")
+
+}
+
+record(ai, "$(s):$(ta):$(ss):PressSetFormat")
+{
+    field(EGU, "")
+    field(PREC, "3")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+####################################################################
+#Subroutine call to format Flow SP readback
+####################################################################
+record(stringin,"$(s):$(ta):$(ss):Flow") {
+    field(DTYP, "stream")
+    field(INP,  "@teled_h.proto getFlow($(u=6),$(p=A)) $(PORT)")
+    info(archive, "Monitor, 00:00:01, VAL")
+    field(FLNK, "$(s):$(ta):$(ss):FlowPARSE")
+}
+
+record(aSub, "$(s):$(ta):$(ss):FlowPARSE")
+{
+    field(SNAM, "shiftleftpressSet")
+    field(INPA, "$(s):$(ta):$(ss):Flow")
+    field(FTA, "STRING")
+    field(OUTA, "$(s):$(ta):$(ss):FlowFormat PP")
+    field(FTVA, "DOUBLE")
+
+}
+
+record(ai, "$(s):$(ta):$(ss):FlowFormat")
+{
+    field(EGU, "")
+    field(PREC, "3")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+####################################################################
+#Subroutine call to format MaxFlow_RBV readback
+####################################################################
+record(stringin,"$(s):$(ta):$(ss):MaxFlow_RBV") {
+    field(DTYP, "stream")
+    field(INP,  "@teled_h.proto getMFlow($(u=6),$(p=A)) $(PORT)")
+    info(archive, "Monitor, 00:00:01, VAL")
+    field(FLNK, "$(s):$(ta):$(ss):MaxFlow_RBVPARSE")
+}
+
+record(aSub, "$(s):$(ta):$(ss):MaxFlow_RBVPARSE")
+{
+    field(SNAM, "shiftleftpressSet")
+    field(INPA, "$(s):$(ta):$(ss):MaxFlow_RBV")
+    field(FTA, "STRING")
+    field(OUTA, "$(s):$(ta):$(ss):MaxFlow_RBVFormat PP")
+    field(FTVA, "DOUBLE")
+
+}
+
+record(ai, "$(s):$(ta):$(ss):MaxFlow_RBVFormat")
+{
+    field(EGU, "ml/min")
+    field(PREC, "3")
+    info(archive, "Monitor, 00:00:01, VAL")
+}
+
+####################################################################
+
+####################################################################
+record(stringin, "$(s):$(ta):$(ss):Status") {
+    field(DTYP, "stream")
+    field(INP,  "@teled_h.proto getStatus($(u=6),$(p=A)) $(PORT)")
+}
+
+
+
+record(stringin, "$(s):$(ta):$(ss):Units") {
+    field(DTYP, "stream")
+    field(INP,  "@teled_h.proto getUnit($(u=6),$(p=A)) $(PORT)")
+    field(SCAN, "1 second")
+}
+
+record(stringin, "$(s):$(ta):$(ss):Mode") {
+    field(DTYP, "stream")
+    field(INP,  "@teled_h.proto getMode($(u=6),$(p=A)) $(PORT)")
+    field(SCAN, "1 second")
+}
+
+
+
+record(stringin, "$(s):$(ta):$(ss):ID") {
+    field(DTYP, "stream")
+    field(INP,  "@teled_h.proto getID($(u=6),$(p=A)) $(PORT)")
+    field(SCAN, "1 second")
+}
+
+
+
+record(stringout, "$(s):$(ta):$(ss):Command") {
+   field(FLNK, "$(s):$(ta):$(ss):CmdProc")
+
+}
+
+record(aSub, "$(s):$(ta):$(ss):CmdProc") {
+   field(INPA, "$(s):$(ta):$(ss):Command")
+   field(FTA, "STRING")
+   field(SNAM, "formatCmd")
+   field(FTVA, "CHAR")
+   field(NOVA, "80")
+   field(OUTA, "$(s):$(ta):$(ss):CmdReply PP")
+   info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+# Written to, sends the string. The reply replaces the string written to it. 
+record(waveform, "$(s):$(ta):$(ss):CmdReply") {
+   field(DTYP, "stream")
+   field(INP,  "@teled_h.proto sendCmd($(u=6)) $(PORT)")
+   field(FTVL, "CHAR")
+   field(NELM, "80")
+   info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+record(calc, "$(s):$(ta):$(ss):AlarmI") {
+   field(DESC, "Immediate Alarm")
+   field(INPA, "$(s):$(ta):$(ss):BDetStatus")
+   field(INPB, "$(s):$(ta):$(ss):Vol.SEVR")
+   field(INPC, "$(s):$(ta):$(ss):Pressure.SEVR")
+   field(INPD, "$(s):$(ta):$(ss):Flow.SEVR")
+   field(CALC, "(A==3)||B||C||D")
+   field(HIHI, "0.5")
+   field(HHSV, "MAJOR")
+   info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+
+
+
+###################New Additions#######################
+
+
+
+record(bo, "$(s):$(ta):$(ss):Refill") {
+    field(DESC, "Refill Pump")
+    field(DTYP, "stream")
+    field(OUT, "@teled_h.proto setRefill($(u=6),$(p=A)) $(PORT)")
+    info(autosaveFields, "VAL")
+    info(archive, "Monitor, 00:00:01, VAL")
+    field(HIGH, "1")
+}
+
+record(ai,"$(s):$(ta):$(ss):GetRefillLimit") {
+    field(DTYP, "stream")
+    field(EGU, "ml/min")
+    field(INP, "@teled_h.proto getRefillLimit($(u=6),$(p=A)) $(PORT)")
+    field(PREC, "3")
+    field(SCAN, "1 second")
+    info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+
+
+record(ao,"$(s):$(ta):$(ss):SetRefillRate") {
+#    field(DTYP, "stream")
+    field(EGU, "ml/min")
+#    field(OUT, "@teled_h.proto setRefillRate($(u=6),$(p=A)) $(PORT)")
+    field(PREC, "0")
+    info(archive, "Monitor, 00:00:01, VAL")
+
+}  
+
+
+record(calcout, "$(s):$(ta):$(ss):SetRefillRateCalc") {
+  field(INPA, "$(s):$(ta):$(ss):SetRefillRate CP")
+  field(CALC, "A*10")
+  field(DOPT, "Use CALC")
+  field(OUT, "@teled_h.proto setRefillRate($(u=6),$(p=A)) $(PORT)")
+  field(DTYP, "stream")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+
+#########################33
+
+record(mbbo, "$(s):$(ta):$(ss):SetDigitalOut") {
+    field(NOBT, "2")
+    info(autosaveFields, "VAL")
+    info(archive, "Monitor, 00:00:01, VAL")
+    field(ONVL, "0")
+    field(TWVL, "1")
+    field(THVL, "3")
+    field(ZRST, "Valves OFF")
+    field(ONST, "A")
+    field(TWST, "B")
+
+}   
+
+record(calcout, "$(s):$(ta):$(ss):SetDigitalCalc1") {
+   field(DESC, "Digital Calc 1")
+   field(INPA, "$(s):$(ta):$(ss):SetDigitalOut CP")
+   field(CALC, "A")
+   field(DTYP, "stream")
+   field(OUT, "@teled_h.proto setDigital($(u=6),$(p=A)) $(PORT)")
+   field(PINI, "NO")
+   info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+
+###############################
+#Sequences#####################
+###############################
+
+record(sseq, "$(s):$(ta):$(ss):AutoFillSeq1") {
+   field(DESC, "Sequence for auto refill")
+
+##Remote##
+   field(DOL1, "1")
+   field(DLY1, "10")
+   field(LNK1, "$(s):$(ta):$(ss):Remote.PROC")
+
+##All Valves Close##
+   field(DOL2, "0")
+   field(DLY2, "1")
+   field(LNK2, "$(s):$(ta):$(ss):SetDigitalOut.VAL")
+   field(DOL3, "1")
+   field(DLY3, "10")
+   field(LNK3, "$(s):$(ta):$(ss):SetDigitalOut.PROC")
+
+##Supply Valve Open##
+   field(DOL4, "1")
+   field(DLY4, "1")
+   field(LNK4, "$(s):$(ta):$(ss):SetDigitalOut.VAL")
+   field(DOL5, "1")
+   field(DLY5, "10")
+   field(LNK5, "$(s):$(ta):$(ss):SetDigitalOut.PROC")
+
+##Refill##
+   field(DOL6, "1")
+   field(DLY6, "10")
+   field(LNK6, "$(s):$(ta):$(ss):Refill.PROC")
+
+##Local Mode##
+   field(DOL7, "1")
+   field(DLY7, "10")
+   field(LNK7, "$(s):$(ta):$(ss):Local.PROC")
+
+##Remote Mode##
+   field(DOL8, "1")
+   field(DLY8, "10")
+   field(LNK8, "$(s):$(ta):$(ss):Remote.PROC")
+
+##Run##
+   field(DOL9, "1")
+   field(DLY9, "10")
+   field(LNK9, "$(s):$(ta):$(ss):Run.PROC")
+
+##All Valves Close##
+   field(DOLA, "0")
+   field(DLYA, "1")
+   field(LNKA, "$(s):$(ta):$(ss):SetDigitalOut.VAL")
+
+   field(FLNK, "$(s):$(ta):$(ss):AutoFillSeq2")
+ }
+   record(sseq, "$(s):$(ta):$(ss):AutoFillSeq2") {
+   field(DESC, "Sequence for auto refill2")
+
+
+   field(DOL1, "1")
+   field(DLY1, "10")
+   field(LNK1, "$(s):$(ta):$(ss):SetDigitalOut.PROC")
+
+##Sample Valve Open##
+   field(DOL2, "2")
+   field(DLY2, "1")
+   field(LNK2, "$(s):$(ta):$(ss):SetDigitalOut.VAL")
+  
+   field(DOL3, "1")
+   field(DLY3, "10")
+   field(LNK3, "$(s):$(ta):$(ss):SetDigitalOut.PROC")
+
+
+
+##I dont think the next steps are needed because valve 2 should already be open and the syringe should be running##
+   field(DOL3, "2")
+   field(DLY3, "1")
+   field(LNK3, "$(s):$(ta):$(ss):SetDigitalOut.VAL")
+   field(DOL4, "1")
+   field(DLY4, "1")
+   field(LNK4, "$(s):$(ta):$(ss):SetDigitalOut.PROC")
+
+}
+
+
+
+record(sseq, "$(s):$(ta):$(ss):ControlVentSeq") {
+   field(DESC, "Sequence for controlled vent")
+
+##Sample valve opens##
+   field(DOL1, "2")
+   field(DLY1, "1")
+   field(LNK1, "$(s):$(ta):$(ss):SetDigitalOut.VAL")
+   field(DOL2, "1")
+   field(DLY2, "1")
+   field(LNK2, "$(s):$(ta):$(ss):SetDigitalOut.PROC")
+
+##Syringe drops until setpoint is reached##
+   field(DOL3, "1")
+   field(DLY3, "1")
+   field(DOL3, "$(s):$(ta):$(ss):Refill.PROC")
+
+##If setpoint is reached##
+   field(DOL4, "1")
+   field(DLY4, "1")
+   field(LNK4, "$(s):$(ta):$(ss):Run.PROC")
+
+##If setpoint isnt reached, Vent valve 1 opens##
+   field(DOL5, "1")
+   field(DLY5, "1")
+   field(LNK5, "$(s):$(ta):$(ss):SetDigitalOut.VAL")
+   field(DOL6, "1")
+   field(DLY6, "1")
+   field(LNK6, "$(s):$(ta):$(ss):SetDigitalOut.PROC")
+
+##Vent valve 1 closes and Vent valve 2 opens##
+   field(DOL7, "0")
+   field(DLY7, "1")
+   field(LNK7, "$(s):$(ta):$(ss):SetDigitalOut.VAL")
+   field(DOL8, "1")
+   field(DLY8, "1")
+   field(LNK8, "$(s):$(ta):$(ss):SetDigitalOut.PROC")
+   field(DOL9, "1")
+   field(DLY9, "1")
+   field(LNK9, "$(s):$(ta):$(ss):SetDigitalOut.VAL")
+   field(DOLA, "1")
+   field(DLYA, "1")
+   field(LNKA, "$(s):$(ta):$(ss):SetDigitalOut.PROC")
+   field(FLNK, "$(s):$(ta):$(ss):ControlVentSeq2")
+}
+
+
+record(sseq, "$(s):$(ta):$(ss):ControlVentSeq2") {
+   field(DESC, "Sequence for controlled vent2")
+
+   field(DOL1, "0")
+   field(DLY1, "1")
+   field(LNK1, "$(s):$(ta):$(ss):SetDigitalOut.VAL")
+   field(DOL2, "1")
+   field(DLY2, "1")
+   field(LNK2, "$(s):$(ta):$(ss):SetDigitalOut.PROC")
+
+##If setpoint isnt reached, do previous two steps##
+
+##If at or  BELOW setpoint open sample valve and run##
+   field(DOL3, "2")
+   field(DLY3, "1")
+   field(LNK3, "$(s):$(ta):$(ss):SetDigitalOut.VAL")
+   field(DOL4, "1")
+   field(DLY4, "1")
+   field(LNK4, "$(s):$(ta):$(ss):SetDigitalOut.PROC") 
+   field(DOL5, "2")
+   field(DLY5, "1")
+   field(LNK5, "$(s):$(ta):$(ss):Run.PROC") 
+   field(DOL6, "2")
+   field(DLY6, "1")
+   field(LNK6, "$(s):$(ta):$(ss):SetDigitalOut.VAL")
+   field(DOL7, "1")
+   field(DLY7, "1")
+   field(LNK7, "$(s):$(ta):$(ss):SetDigitalOut.PROC")
+
+}
+
+
