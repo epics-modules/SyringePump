@@ -1,14 +1,64 @@
-record(bo, "$(s):$(ta):$(ss):Run") {
+# These records are for tweaking the pressure
+record(ao,"$(P)$(PUMP)PressureTweak") {
+    field(VAL, "1")
+    field(PREC,"3")
+}
+record(calcout,"$(P)$(PUMP)PressureTweakDown") {
+    field(INPA,"$(P)$(PUMP)PressureTweak.VAL NPP NMS")
+    field(INPB,"$(P)$(PUMP)PressureSP NPP NMS")
+    field(CALC,"B-A")
+    field(OUT, "$(P)$(PUMP)PressureSP PP NMS")
+}
+record(calcout,"$(P)$(PUMP)PressureTweakUp") {
+    field(INPA,"$(P)$(PUMP)PressureTweak.VAL NPP NMS")
+    field(INPB,"$(P)$(PUMP)PressureSP NPP NMS")
+    field(CALC,"B+A")
+    field(OUT, "$(P)$(PUMP)PressureSP PP NMS")
+}
+
+# These records are for tweaking the flow rate
+record(ao,"$(P)$(PUMP)FlowRateTweak") {
+    field(VAL, "1")
+    field(PREC,"3")
+}
+record(calcout,"$(P)$(PUMP)FlowRateTweakDown") {
+    field(INPA,"$(P)$(PUMP)FlowRateTweak.VAL NPP NMS")
+    field(INPB,"$(P)$(PUMP)FlowRateSP NPP NMS")
+    field(CALC,"B-A")
+    field(OUT, "$(P)$(PUMP)FlowRateSP PP NMS")
+}
+record(calcout,"$(P)$(PUMP)FlowRateTweakUp") {
+    field(INPA,"$(P)$(PUMP)FlowRateTweak.VAL NPP NMS")
+    field(INPB,"$(P)$(PUMP)FlowRateSP NPP NMS")
+    field(CALC,"B+A")
+    field(OUT, "$(P)$(PUMP)FlowRateSP PP NMS")
+}
+
+# These records are for tweaking the refill rate
+record(ao,"$(P)$(PUMP)RefillRateTweak") {
+    field(VAL, "1")
+    field(PREC,"3")
+}
+record(calcout,"$(P)$(PUMP)RefillRateTweakDown") {
+    field(INPA,"$(P)$(PUMP)RefillRateTweak.VAL NPP NMS")
+    field(INPB,"$(P)$(PUMP)RefillRateSP NPP NMS")
+    field(CALC,"B-A")
+    field(OUT, "$(P)$(PUMP)RefillRateSP PP NMS")
+}
+record(calcout,"$(P)$(PUMP)RefillRateTweakUp") {
+    field(INPA,"$(P)$(PUMP)RefillRateTweak.VAL NPP NMS")
+    field(INPB,"$(P)$(PUMP)RefillRateSP NPP NMS")
+    field(CALC,"B+A")
+    field(OUT, "$(P)$(PUMP)RefillRateSP PP NMS")
+}
+
+record(bo, "$(P)$(PUMP)Run") {
     field(DTYP, "stream")
-    field(OUT, "@teled_d.proto setRun($(u=6),$(p=A)) $(PORT)")
-    info(autosaveFields, "VAL")
-    info(archive, "Monitor, 00:00:01, VAL")
+    field(OUT, "@teled_d.proto setRun($(u=6),$(p=$(PUMP)) $(PORT)")
 }
 record(bo, "$(s):$(ta):$(ss):Stop") {
     field(DTYP, "stream")
     field(OUT, "@teled_d.proto setStop($(u=6),$(p=A)) $(PORT)")
-    info(autosaveFields, "VAL")
-    info(archive, "Monitor, 00:00:01, VAL")
 }
 
 record(bo, "$(s):$(ta):$(ss):Remote") {
@@ -20,13 +70,10 @@ record(bo, "$(s):$(ta):$(ss):Remote") {
 record(bo, "$(s):$(ta):$(ss):Local") {
     field(DTYP, "stream")
     field(OUT, "@teled_d.proto setLoc($(u=6)) $(PORT)")
-    info(autosaveFields, "VAL")
-    info(archive, "Monitor, 00:00:01, VAL")
 }
 
-record(ao, "$(s):$(ta):$(ss):PressSet") {
-    field(EGU, "bar")
-    field(PREC, "3")
+record(ao, "$(P)$(PUMP)PressureSP") {
+    field(PREC, "4")
     field(FLNK, "$(s):$(ta):$(ss):PressSeq")
 }
 
@@ -91,13 +138,11 @@ record(ai, "$(s):$(ta):$(ss):Pressure") {
    field(DTYP, "stream")
    field(INP,  "@teled_d.proto getPress($(u=6),$(p=A)) $(PORT)")
    field(EGU, "bar")
-   info(archive, "Monitor, 00:00:01, VAL")
 }
 record(ai,"$(s):$(ta):$(ss):PressSet_RBV") {
     field(DTYP, "stream")
     field(INP,  "@teled_d.proto getSetPress($(u=6),$(p=A)) $(PORT)")
     field(EGU, "bar")
-    info(archive, "Monitor, 00:00:01, VAL")
     field(PREC, "3")
 }
 record(ai,"$(s):$(ta):$(ss):Flow") {
@@ -105,14 +150,12 @@ record(ai,"$(s):$(ta):$(ss):Flow") {
     field(INP,  "@teled_d.proto getFlow($(u=6),$(p=A)) $(PORT)")
     field(EGU, "ml/min")
     field(PREC, "3")
-    info(archive, "Monitor, 00:00:01, VAL")
 }
 record(ai,"$(s):$(ta):$(ss):MaxFlow_RBV") {
     field(DTYP, "stream")
     field(INP,  "@teled_d.proto getMFlow($(u=6),$(p=A)) $(PORT)")
     field(EGU, "ml/min")
     field(PREC, "3")
-    info(archive, "Monitor, 00:00:01, VAL")
 }
 record(stringin, "$(s):$(ta):$(ss):Status") {
     field(DTYP, "stream")
