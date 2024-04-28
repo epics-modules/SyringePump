@@ -15,7 +15,7 @@ SPApp_registerRecordDeviceDriver(pdbbase)
 epicsEnvSet("PREFIX", "VINDUM1:P1:")
 
 epicsEnvSet("PORT", "SP1")
-epicsEnvSet("POLL_MS", "1000")
+epicsEnvSet("POLL_MS", "100")
 epicsEnvSet("TIMEOUT_MS", "2000")
 
 # Use the following commands for TCP/IP
@@ -26,7 +26,10 @@ epicsEnvSet("TIMEOUT_MS", "2000")
 #                       int noProcessEos);
 
 # Change IP address for your device
-drvAsynIPPortConfigure("$(PORT)", "10.54.160.222:502", 0, 0, 0)
+#drvAsynIPPortConfigure("$(PORT)", "10.54.160.222:502", 0, 0, 0)
+
+# This is for a COM port on Windows
+drvAsynSerialPortConfigure("$(PORT)", "COM2", 0, 0, 0)
 
 # Enable ASYN_TRACEIO_HEX on octet server
 asynSetTraceIOMask("$(PORT)", 0, HEX)
@@ -47,14 +50,18 @@ asynSetTraceFile("$(PORT)", 0, "Vindum_Modbus_comms.txt")
 #                      int timeoutMsec,
 #                      int writeDelayMsec)
 
-modbusInterposeConfig("$(PORT)", 0, $(TIMEOUT_MS), 0)
+# This is for Modbus TCP
+#modbusInterposeConfig("$(PORT)", 0, $(TIMEOUT_MS), 0)
 
-### The syringe pump supports the following modbus function codes:
-#    01 - read discrete output coils
-#    03 - read analog output holding registers
+# This is for Modbus RTU
+modbusInterposeConfig("$(PORT)", 1, $(TIMEOUT_MS), 0)
+
+### The VP pump supports the following modbus function codes
+#    01 - read discrete coils
+#    04 - read analog input registers
 #    05 - write single discrete output coil
-#    15 - write multiple discrete output coils
-#    16 - write multiple analog output holding registers
+#    06 - write single register
+#    16 - write multiple registers (limited to single parameter)
 
 # drvModbusAsynConfigure(
 #   char *portName,
@@ -67,30 +74,33 @@ modbusInterposeConfig("$(PORT)", 0, $(TIMEOUT_MS), 0)
 #   int pollMsec,
 #   char *plcType)
 
-# Access 124 16-bit input registers starting at 0 as inputs. Function code=3. Default data type=UINT16
-drvModbusAsynConfigure("$(PORT)_ReadInputRegs", "$(PORT)", 1, 4, 0, 124, UINT16, $(POLL_MS), "Anybus")
+# Read 31 bits starting at address 0. Function code=1. Default data type=UINT16
+drvModbusAsynConfigure("$(PORT)_ReadCoils", "$(PORT)", 1, 1, 0, 31, UINT16, $(POLL_MS), "Vindum")
+dbLoadTemplate("$(SYRINGEPUMP)/db/VindumReadCoils.substitutions", "P=$(PREFIX), PORT=$(PORT)_ReadCoils")
 
-# Load the substitutions files for the Modbus read holding registers records
-dbLoadTemplate("$(TOP)/db/VindumReadInputRegisters.substitutions", "P=$(PREFIX), PORT=$(PORT)_ReadInputRegs")
+# Write 31 bits starting at address 0. Function code=5. Default data type=UINT16
+drvModbusAsynConfigure("$(PORT)_WriteCoils", "$(PORT)", 1, 5, 0, 31, UINT16, $(POLL_MS), "Vindum")
+dbLoadTemplate("$(SYRINGEPUMP)/db/VindumWriteCoils.substitutions", "P=$(PREFIX), PORT=$(PORT)_WriteCoils")
 
-# Access 25 16-bit holding registers starting at 0 as outputs. Function code=16. Default data type=UINT16
-# Note that with this function code these map to Asynbus addresss starting at 0x200.
-drvModbusAsynConfigure("$(PORT)_WriteHoldingRegs", "$(PORT)", 1, 16, 0, 25, UINT16, 1, "Anybus")
+# Read 6 bits starting at address 0. Function code=2. Default data type=UINT16
+drvModbusAsynConfigure("$(PORT)_ReadContacts", "$(PORT)", 1, 2, 0, 6, UINT16, $(POLL_MS), "Vindum")
+dbLoadTemplate("$(SYRINGEPUMP)/db/VindumReadContacts.substitutions", "P=$(PREFIX), PORT=$(PORT)_ReadContacts")
 
-# Load the substitutions files for the Modbus write holding registers records
-dbLoadTemplate("$(TOP)/db/VindumWriteHoldingRegisters.substitutions", "P=$(PREFIX), PORT=$(PORT)_WriteHoldingRegs")
+# Read 42 16-bit analog input registers starting at 0. Function code=4. Default data type=UINT16
+drvModbusAsynConfigure("$(PORT)_ReadInputRegs", "$(PORT)", 1, 4, 0, 42, UINT16, $(POLL_MS), "Vindum")
+dbLoadTemplate("$(SYRINGEPUMP)/db/VindumReadInputRegisters.substitutions", "P=$(PREFIX), PORT=$(PORT)_ReadInputRegs")
 
-# Access 25 16-bit holding registers starting at 0 as inputs. Function code=3. Default data type=UINT16
-# Note that with this function code these map to Asynbus addresss starting at 0x200.
-drvModbusAsynConfigure("$(PORT)_ReadHoldingRegs", "$(PORT)", 1, 3, 0, 25, UINT16, $(POLL_MS), "Anybus")
+# Read 38 16-bit holding registers starting at 0. Function code=3. Default data type=UINT16
+drvModbusAsynConfigure("$(PORT)_ReadHoldingRegs", "$(PORT)", 1, 3, 0, 38, UINT16, $(POLL_MS), "Vindum")
+dbLoadTemplate("$(SYRINGEPUMP)/db/VindumReadHoldingRegisters.substitutions", "P=$(PREFIX), PORT=$(PORT)_ReadHoldingRegs")
 
-# Load the substitutions files for the Modbus read holding registers records
-dbLoadTemplate("$(TOP)/db/VindumReadHoldingRegisters.substitutions", "P=$(PREFIX), PORT=$(PORT)_ReadHoldingRegs")
+# Write 38 16-bit holding registers starting at 0. Function code=16. Default data type=UINT16
+drvModbusAsynConfigure("$(PORT)_WriteHoldingRegs", "$(PORT)", 1, 16, 0, 38, UINT16, $(POLL_MS), "Vindum")
+dbLoadTemplate("$(SYRINGEPUMP)/db/VindumWriteHoldingRegisters.substitutions", "P=$(PREFIX), PORT=$(PORT)_WriteHoldingRegs")
 
-# Load the database files for the other records
-dbLoadRecords("$(TOP)/db/VindumController.template", "P=$(PREFIX)")
-dbLoadRecords("$(TOP)/db/VindumPumpN.template", "P=$(PREFIX), PUMP=A:")
-dbLoadRecords("$(TOP)/db/VindumPumpN.template", "P=$(PREFIX), PUMP=B:")
+dbLoadRecords("$(SYRINGEPUMP)/db/VindumController.template", "P=$(PREFIX), PORT=$(PORT)")
+dbLoadRecords("$(SYRINGEPUMP)/db/VindumPumpN.template", "P=$(PREFIX), PORT=$(PORT), PUMP=A:")
+dbLoadRecords("$(SYRINGEPUMP)/db/VindumPumpN.template", "P=$(PREFIX), PORT=$(PORT), PUMP=B:")
 
 # Load an asyn record for debugging
 dbLoadRecords("$(ASYN)/db/asynRecord.db", "P=$(PREFIX), R=asyn1, PORT=$(PORT), ADDR=0, IMAX=256, OMAX=256")
