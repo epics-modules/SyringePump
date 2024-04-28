@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-04-28 18:28:38 by epics-->
 <display version="2.0.0">
   <name>SyringePumpTop</name>
-  <x>647</x>
-  <y>132</y>
+  <x>337</x>
+  <y>127</y>
   <width>250</width>
   <height>100</height>
   <background_color>
