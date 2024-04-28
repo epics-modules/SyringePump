@@ -1,21 +1,40 @@
+# These are the output holding registers starting at address 0, function code 16
 file "$(MODBUS)/db/longoutInt32.template" {
 pattern
 {     R,              OFFSET,  DATA_TYPE,  PINI}
-{A:RunRaw,              0x01,     UINT16,    NO}
-{A:StopRaw,             0x02,     UINT16,    NO}
-{B:RunRaw,              0x03,     UINT16,    NO}
-{B:StopRaw,             0x04,     UINT16,    NO}
-{A:PressureSPRaw,       0x05,  UINT32_BE,    NO}
-{B:PressureSPRaw,       0x07,  UINT32_BE,    NO}
-{A:RateSPRaw,           0x09,  UINT32_BE,    NO}
-{B:RateSPRaw,           0x0B,  UINT32_BE,    NO}
-{A:SafetyPressureSPRaw, 0x0D,  UINT32_BE,    NO}
-{B:SafetyPressureSPRaw, 0x0F,  UINT32_BE,    NO}
-{AB:PumpModeSPRaw,      0x11,     UINT16,    NO}
-{A:DirectionRaw,        0x12,     UINT16,    NO}
-{B:DirectionRaw,        0x13,     UINT16,    NO}
-{ResetVolumesRaw,       0x14,     UINT16,    NO}
-{VolumeStartRaw,        0x15,  UINT32_BE,    NO}
-{ValveCommandRaw,       0x17,     UINT16,    NO}
-{ClearLatchedErrorsRaw, 0x18,     UINT16,    NO}
+{A:PumpModeRaw,            2,     UINT16,    NO}
+{B:PumpModeRaw,            3,     UINT16,    NO}
+{ServerID,                31,     UINT16,    NO}
+{AutoRateReturnTime,      37,     UINT16,    NO}
+}
+
+file "$(MODBUS)/db/mbbo.template" {
+pattern
+{     R,              OFFSET,       ZRST,    ZRVL,   ONST,     ONVL, TWST, TWVL,  THST,  THVL,  PINI}
+#
+{A:Direction,              0,    "Extending",  1, "Retracting",  2,    "",   0,    "",     0,    NO}
+{B:Direction,              1,    "Extending",  1, "Retracting",  2,    "",   0,    "",     0,    NO}
+{PressureUnits,           29,    "PSI",        0, "bar",         1, "kPa",   2,  "MPa",    3,    NO}
+{RateUnits,               30,    "ml/min",     0, "ml/hour",     1,    "",   0,    "",     0,    NO}
+}
+
+# These are the float values for the output holding registers starting at address 0, function code 16
+file "$(MODBUS)/db/aoFloat64.template" {
+pattern
+{     R,              OFFSET,  DATA_TYPE,  PREC,  PINI}
+#
+{A:SetFlowRate,            5, FLOAT32_BE,   3,     NO}
+{B:SetFlowRate,            7, FLOAT32_BE,   3,     NO}
+{SetMaxRate,               9, FLOAT32_BE,   3,     NO}
+{A:SetPressure,           11, FLOAT32_BE,   2,     NO}
+{B:SetPressure,           13, FLOAT32_BE,   2,     NO}
+{SetMaxPressure,          15, FLOAT32_BE,   2,     NO}
+{A:PressureGain,          17, FLOAT32_BE,   2,     NO}
+{B:PressureGain,          19, FLOAT32_BE,   2,     NO}
+{A:SafetyPressure,        21, FLOAT32_BE,   2,     NO}
+{B:SafetyPressure,        23, FLOAT32_BE,   2,     NO}
+{A:SetVolume,             25, FLOAT32_BE,   2,     NO}
+{B:SetVolume,             27, FLOAT32_BE,   2,     NO}
+{FillOpenPressure,        33, FLOAT32_BE,   2,     NO}
+{ReturnRateMult,          35, FLOAT32_BE,   2,     NO}
 }

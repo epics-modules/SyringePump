@@ -1,9 +1,11 @@
-$(P)$(PUMP)PressureSP
+$(P)$(PUMP)SetPressure
 $(P)$(PUMP)PressureTweak
-$(P)$(PUMP)SafetyPressureSP
-$(P)$(PUMP)FlowRateSP
+$(P)$(PUMP)SetSafetyPressure
+$(P)$(PUMP)SetFlowRate
 $(P)$(PUMP)FlowRateTweak
 $(P)$(PUMP)PumpMode
+$(P)$(PUMP)AutofillMode
+$(P)$(PUMP)VolumeMode
 $(P)$(PUMP)Direction
 $(P)$(PUMP)DeliverValve
 $(P)$(PUMP)FillValve

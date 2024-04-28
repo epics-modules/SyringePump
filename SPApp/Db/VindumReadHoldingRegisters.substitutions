@@ -1,21 +1,40 @@
+# These are the values for the holding registers starting at address 0, function code 3.
 file "$(MODBUS)/db/longinInt32.template" {
-pattern 
-{     R,                  OFFSET,  DATA_TYPE,        SCAN}
-{A:RunRaw_RBV,              0x01,     UINT16,  "I/O Intr"}
-{A:StopRaw_RBV,             0x02,     UINT16,  "I/O Intr"}
-{B:RunRaw_RBV,              0x03,     UINT16,  "I/O Intr"}
-{B:StopRaw_RBV,             0x04,     UINT16,  "I/O Intr"}
-{A:PressureSPRaw_RBV,       0x05,  UINT32_BE,  "I/O Intr"}
-{B:PressureSPRaw_RBV,       0x07,  UINT32_BE,  "I/O Intr"}
-{A:RateSPRaw_RBV,           0x09,  UINT32_BE,  "I/O Intr"}
-{B:RateSPRaw_RBV,           0x0B,  UINT32_BE,  "I/O Intr"}
-{A:SafetyPressureSPRaw_RBV, 0x0D,  UINT32_BE,  "I/O Intr"}
-{B:SafetyPressureSPRaw_RBV, 0x0F,  UINT32_BE,  "I/O Intr"}
-{AB:PumpModeSPRaw_RBV,      0x11,     UINT16,  "I/O Intr"}
-{A:DirectionRaw_RBV,        0x12,     UINT16,  "I/O Intr"}
-{B:DirectionRaw_RBV,        0x13,     UINT16,  "I/O Intr"}
-{ResetVolumesRaw_RBV,       0x14,     UINT16,  "I/O Intr"}
-{VolumeStartRaw_RBV,        0x15,  UINT32_BE,  "I/O Intr"}
-{ValveCommandRaw_RBV,       0x17,     UINT16,  "I/O Intr"}
-{ClearLatchedErrorsRaw_RBV, 0x18,     UINT16,  "I/O Intr"}
+pattern
+{     R,                  OFFSET,  DATA_TYPE,      SCAN}
+#
+{A:PumpModeRaw_RBV,            2,     UINT16,   "I/O Intr"}
+{B:PumpModeRaw_RBV,            3,     UINT16,   "I/O Intr"}
+{ServerID_RBV,                31,     UINT16,   "I/O Intr"}
+{AutoRateReturnTime_RBV,      37,     UINT16,   "I/O Intr"}
+}
+
+file "$(MODBUS)/db/mbbi.template" {
+pattern
+{     R,                  OFFSET,       ZRST,    ZRVL,   ONST,     ONVL, TWST, TWVL,  THST,  THVL, SCAN}
+#
+{A:Direction_RBV,              0,    "Extending",  1, "Retracting",  2,    "",   0,    "",     0,  "I/O Intr"}
+{B:Direction_RBV,              1,    "Extending",  1, "Retracting",  2,    "",   0,    "",     0,  "I/O Intr"}
+{PressureUnits_RBV,           29,    "PSI",        0, "bar",         1, "kPa",   2,  "MPa",    3,  "I/O Intr"}
+{RateUnits_RBV,               30,    "ml/min",     0, "ml/hour",     1,    "",   0,    "",     0,  "I/O Intr"}
+}
+
+file "$(MODBUS)/db/aiFloat64.template" {
+pattern
+{     R,                  OFFSET,  DATA_TYPE,   PREC,    SCAN}
+#
+{A:SetFlowRate_RBV,            5, FLOAT32_BE,     3,  "I/O Intr"}
+{B:SetFlowRate_RBV,            7, FLOAT32_BE,     3,  "I/O Intr"}
+{SetMaxRate_RBV,               9, FLOAT32_BE,     3,  "I/O Intr"}
+{A:SetPressure_RBV,           11, FLOAT32_BE,     2,  "I/O Intr"}
+{B:SetPressure_RBV,           13, FLOAT32_BE,     2,  "I/O Intr"}
+{SetMaxPressure_RBV,          15, FLOAT32_BE,     2,  "I/O Intr"}
+{A:PressureGain_RBV,          17, FLOAT32_BE,     2,  "I/O Intr"}
+{B:PressureGain_RBV,          19, FLOAT32_BE,     2,  "I/O Intr"}
+{A:SafetyPressure_RBV,        21, FLOAT32_BE,     2,  "I/O Intr"}
+{B:SafetyPressure_RBV,        23, FLOAT32_BE,     2,  "I/O Intr"}
+{A:SetVolume_RBV,             25, FLOAT32_BE,     2,  "I/O Intr"}
+{B:SetVolume_RBV,             27, FLOAT32_BE,     2,  "I/O Intr"}
+{B:FillOpenPressure_RBV,      33, FLOAT32_BE,     2,  "I/O Intr"}
+{B:ReturnRateMult_RBV,        35, FLOAT32_BE,     2,  "I/O Intr"}
 }

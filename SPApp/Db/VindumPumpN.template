@@ -1,139 +1,3 @@
-###########################
-# Status readback records #
-###########################
-
-record(calc, "$(P)$(PUMP)Pressure") {
-    field(INPA, "$(P)$(PUMP)PressureRaw CP")
-    field(CALC, "(A-1000)/10")
-    field(PREC, "1")
-}
-
-record(calc, "$(P)$(PUMP)PressureSP_RBV") {
-    field(INPA, "$(P)$(PUMP)PressureSPRaw_RBV CP")
-    field(CALC, "A/100")
-    field(PREC, "1")
-}
-
-record(calc, "$(P)$(PUMP)SafetyPressureSP_RBV") {
-    field(INPA, "$(P)$(PUMP)SafetyPressureSPRaw_RBV CP")
-    field(CALC, "A/100")
-    field(PREC, "1")
-}
-
-record(calc, "$(P)$(PUMP)FlowRate") {
-    field(INPA, "$(P)$(PUMP)RateRaw CP")
-    field(CALC, "A/1000000")
-    field(PREC, "3")
-}
-
-record(calc, "$(P)$(PUMP)FlowRateSP_RBV") {
-    field(INPA, "$(P)$(PUMP)RateSPRaw_RBV CP")
-    field(CALC, "A/1000000")
-    field(PREC, "3")
-}
-
-record(calc, "$(P)$(PUMP)Volume") {
-    field(INPA, "$(P)$(PUMP)VolumeRaw CP")
-    field(CALC, "A/1000000")
-    field(PREC, "3")
-}
-
-record(calcout, "$(P)$(PUMP)RunningCalc") {
-    field(INPA, "$(P)$(PUMP)Condition CP")
-    field(CALC, "(A&1)#0")
-    field(OUT,  "$(P)$(PUMP)Running_RBV PP")
-}
-
-record(bi, "$(P)$(PUMP)Running_RBV") {
-    field(ZNAM, "Stopped")
-    field(ZSV,  "NO_ALARM")
-    field(ONAM, "Running")
-    field(OSV,  "MAJOR")
-}
-
-record(calcout, "$(P)$(PUMP)DirectionCalc") {
-    field(INPA, "$(P)$(PUMP)Condition CP")
-    field(CALC, "(A&2)#0")
-    field(OUT,  "$(P)$(PUMP)Direction_RBV PP")
-}
-
-record(bi, "$(P)$(PUMP)Direction_RBV") {
-    field(ZNAM, "Fill")
-    field(ZSV,  "NO_ALARM")
-    field(ONAM, "Deliver")
-    field(OSV,  "MINOR")
-}
-
-record(calcout, "$(P)$(PUMP)ActiveCalc") {
-    field(INPA, "$(P)$(PUMP)Condition CP")
-    field(CALC, "(A&4)#0")
-    field(OUT,  "$(P)$(PUMP)Active_RBV PP")
-}
-
-record(bi, "$(P)$(PUMP)Active_RBV") {
-    field(ZNAM, "Done")
-    field(ZSV,  "NO_ALARM")
-    field(ONAM, "Active")
-    field(OSV,  "MINOR")
-}
-
-record(calcout, "$(P)$(PUMP)VolumeModeCalc") {
-    field(INPA, "$(P)$(PUMP)Condition CP")
-    field(CALC, "(A&0x4000)#0")
-    field(OUT,  "$(P)$(PUMP)VolumeMode_RBV PP")
-}
-
-record(bi, "$(P)$(PUMP)VolumeMode_RBV") {
-    field(ZNAM, "No")
-    field(ZSV,  "NO_ALARM")
-    field(ONAM, "Yes")
-    field(OSV,  "MINOR")
-}
-
-record(calcout, "$(P)$(PUMP)AutofillCalc") {
-    field(INPA, "$(P)$(PUMP)Condition CP")
-    field(CALC, "(A&0x8000)#0")
-    field(OUT,  "$(P)$(PUMP)Autofill_RBV PP")
-}
-
-record(bi, "$(P)$(PUMP)Autofill_RBV") {
-    field(ZNAM, "No")
-    field(ZSV,  "NO_ALARM")
-    field(ONAM, "Yes")
-    field(OSV,  "MINOR")
-}
-
-record(mbbi, "$(P)$(PUMP)PumpMode_RBV") {
-    field(DTYP, "Raw Soft Channel")
-    field(ZRVL, "0x01")
-    field(ZRST, "Manual Rate")
-    field(ONVL, "0x02")
-    field(ONST, "Man. Press Deliver")
-    field(TWVL, "0x03")
-    field(TWST, "Cycled Rate Deliver")
-    field(THVL, "0x04")
-    field(THST, "Cycled Press Deliver")
-    field(FRVL, "0x05")
-    field(FRST, "Cycled Rate Receive")
-    field(FVVL, "0x00")
-    field(FVST, "(Paired)")
-}
-
-########################
-# Pump command records #
-########################
-
-# These pump parameters are triggered when the value is incremented
-record(calcout, "$(P)$(PUMP)Run") {
-    field(CALC, "VAL+1")
-    field(OUT, "$(P)$(PUMP)RunRaw PP")
-}
-
-record(calcout, "$(P)$(PUMP)Stop") {
-    field(CALC, "VAL+1")
-    field(OUT, "$(P)$(PUMP)StopRaw PP")
-}
-
 # These records are for tweaking the pressure
 record(ao,"$(P)$(PUMP)PressureTweak") {
     field(VAL, "1")
@@ -142,36 +6,16 @@ record(ao,"$(P)$(PUMP)PressureTweak") {
 
 record(calcout,"$(P)$(PUMP)PressureTweakDown") {
     field(INPA,"$(P)$(PUMP)PressureTweak.VAL NPP NMS")
-    field(INPB,"$(P)$(PUMP)PressureSP NPP NMS")
+    field(INPB,"$(P)$(PUMP)SetPressure NPP NMS")
     field(CALC,"B-A")
-    field(OUT, "$(P)$(PUMP)PressureSP PP NMS")
+    field(OUT, "$(P)$(PUMP)SetPressure PP NMS")
 }
 
 record(calcout,"$(P)$(PUMP)PressureTweakUp") {
     field(INPA,"$(P)$(PUMP)PressureTweak.VAL NPP NMS")
-    field(INPB,"$(P)$(PUMP)PressureSP NPP NMS")
+    field(INPB,"$(P)$(PUMP)SetPressure NPP NMS")
     field(CALC,"B+A")
-    field(OUT, "$(P)$(PUMP)PressureSP PP NMS")
-}
-
-record(ao, "$(P)$(PUMP)PressureSP") {
-    field(PREC, "1")
-    field(OUT, "$(P)$(PUMP)PressureSPCalc.A PP")
-}
-
-record(calcout, "$(P)$(PUMP)PressureSPCalc") {
-    field(CALC, "A*100")
-    field(OUT, "$(P)$(PUMP)PressureSPRaw PP")
-}
-
-record(ao, "$(P)$(PUMP)SafetyPressureSP") {
-    field(PREC, "1")
-    field(OUT, "$(P)$(PUMP)SafetyPressureSPCalc.A PP")
-}
-
-record(calcout, "$(P)$(PUMP)SafetyPressureSPCalc") {
-    field(CALC, "A*100")
-    field(OUT, "$(P)$(PUMP)SafetyPressureSPRaw PP")
+    field(OUT, "$(P)$(PUMP)SetPressure PP NMS")
 }
 
 # These records are for tweaking the flow rate
@@ -179,61 +23,98 @@ record(ao,"$(P)$(PUMP)FlowRateTweak") {
     field(VAL, "1")
     field(PREC,"3")
 }
+
 record(calcout,"$(P)$(PUMP)FlowRateTweakDown") {
     field(INPA,"$(P)$(PUMP)FlowRateTweak.VAL NPP NMS")
-    field(INPB,"$(P)$(PUMP)FlowRateSP NPP NMS")
+    field(INPB,"$(P)$(PUMP)SetFlowRate NPP NMS")
     field(CALC,"B-A")
-    field(OUT, "$(P)$(PUMP)FlowRateSP PP NMS")
+    field(OUT, "$(P)$(PUMP)SetFlowRate PP NMS")
 }
+
 record(calcout,"$(P)$(PUMP)FlowRateTweakUp") {
     field(INPA,"$(P)$(PUMP)FlowRateTweak.VAL NPP NMS")
-    field(INPB,"$(P)$(PUMP)FlowRateSP NPP NMS")
+    field(INPB,"$(P)$(PUMP)SetFlowRate NPP NMS")
     field(CALC,"B+A")
-    field(OUT, "$(P)$(PUMP)FlowRateSP PP NMS")
-}
-
-record(ao, "$(P)$(PUMP)FlowRateSP") {
-    field(PREC, "3")
-    field(OUT, "$(P)$(PUMP)FlowRateSPCalc.A PP")
-}
-
-record(calcout, "$(P)$(PUMP)FlowRateSPCalc") {
-    field(CALC, "A*1000000")
-    field(OUT, "$(P)$(PUMP)RateSPRaw PP")
+    field(OUT, "$(P)$(PUMP)SetFlowRate PP NMS")
 }
 
 record(mbbo, "$(P)$(PUMP)PumpMode") {
-    field(ZRVL, "0x01")
     field(ZRST, "Manual Rate")
-    field(ONVL, "0x02")
+    field(ZRVL, "1")
     field(ONST, "Man. Press Deliver")
-    field(TWVL, "0x03")
+    field(ONVL, "2")
     field(TWST, "Cycled Rate Deliver")
-    field(THVL, "0x04")
+    field(TWVL, "3")
     field(THST, "Cycled Press Deliver")
-    field(FRVL, "0x05")
+    field(THVL, "4")
     field(FRST, "Cycled Rate Receive")
+    field(FRVL, "5")
     field(FLNK, "$(P)PumpMode")
 }
 
-record(bo, "$(P)$(PUMP)Direction") {
-    field(ZNAM, "Fill")
-    field(ONAM, "Deliver")
-    field(OUT,  "$(P)$(PUMP)DirectionRaw PP")
+record(mbbi, "$(P)$(PUMP)PumpMode_RBV") {
+    field(DTYP, "Raw Soft Channel")
+    field(ZRST, "Manual Rate")
+    field(ZRVL, "1")
+    field(ONST, "Man. Press Deliver")
+    field(ONVL, "2")
+    field(TWST, "Cycled Rate Deliver")
+    field(TWVL, "3")
+    field(THST, "Cycled Press Deliver")
+    field(THVL, "4")
+    field(FRST, "Cycled Rate Receive")
+    field(FRVL, "5")
+    field(FVST, "(Paired)")
+    field(FVVL, "0")
 }
 
-record(bo, "$(P)$(PUMP)DeliverValve") {
-    field(ZNAM, "Close")
-    field(ZSV,  "NO_ALARM")
-    field(ONAM, "Open")
-    field(OSV,  "MAJOR")
-    field(FLNK, "$(P)SetValves")
+record(bo, "$(P)$(PUMP)AutofillMode") {
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
 }
 
-record(bo, "$(P)$(PUMP)FillValve") {
-    field(ZNAM, "Close")
-    field(ZSV,  "NO_ALARM")
-    field(ONAM, "Open")
-    field(OSV,  "MAJOR")
-    field(FLNK, "$(P)SetValves")
+record(bo, "$(P)$(PUMP)VolumeMode") {
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+
+record(bo, "$(P)$(PUMP)Run") {
+    field(ZNAM, "Done")
+    field(ONAM, "Run")
+    field(FLNK, "$(P)$(PUMP)StartNormalCalc")
+}
+
+record(calcout, "$(P)$(PUMP)StartNormalCalc") {
+    field(INPA, "$(P)$(PUMP)VolumeMode")
+    field(INPB, "$(P)$(PUMP)AutofillMode")
+    field(CALC, "!A & !B")
+    field(OOPT, "When Non-zero")
+    field(OUT,  "$(P)$(PUMP)Start.PROC PP")
+    field(FLNK, "$(P)$(PUMP)StartVolumeCalc")
+}
+
+record(calcout, "$(P)$(PUMP)StartVolumeCalc") {
+    field(INPA, "$(P)$(PUMP)VolumeMode")
+    field(INPB, "$(P)$(PUMP)AutofillMode")
+    field(CALC, "A & !B")
+    field(OOPT, "When Non-zero")
+    field(OUT,  "$(P)$(PUMP)StartVolume.PROC PP")
+    field(FLNK, "$(P)$(PUMP)StartAutofillCalc")
+}
+
+record(calcout, "$(P)$(PUMP)StartAutofillCalc") {
+    field(INPA, "$(P)$(PUMP)VolumeMode")
+    field(INPB, "$(P)$(PUMP)AutofillMode")
+    field(CALC, "!A & B")
+    field(OOPT, "When Non-zero")
+    field(OUT,  "$(P)$(PUMP)StartAuto.PROC PP")
+    field(FLNK, "$(P)$(PUMP)StartAutoVolumeCalc")
+}
+
+record(calcout, "$(P)$(PUMP)StartAutoVolumeCalc") {
+    field(INPA, "$(P)$(PUMP)VolumeMode")
+    field(INPB, "$(P)$(PUMP)AutofillMode")
+    field(CALC, "A & B")
+    field(OOPT, "When Non-zero")
+    field(OUT,  "$(P)$(PUMP)StartAutoVolume.PROC PP")
 }
