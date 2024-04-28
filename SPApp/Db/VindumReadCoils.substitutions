@@ -1,0 +1,11 @@
+# These are the bit values for the coil inputs starting at address 0 with function code 1.
+file "$(MODBUS)/db/bi_bit.template" {
+pattern
+{     R,            OFFSET,      ZNAM,       ZSV,     ONAM,       OSV,      SCAN}
+{A:FillValve_RBV,        0,    Closed,  NO_ALARM,     Open,     MINOR,  "I/O Intr"}
+{A:DeliverValve_RBV,     1,    Closed,  NO_ALARM,     Open,     MINOR,  "I/O Intr"}
+{B:FillValve_RBV,        2,    Closed,  NO_ALARM,     Open,     MINOR,  "I/O Intr"}
+{B:DeliverValve_RBV,     3,    Closed,  NO_ALARM,     Open,     MINOR,  "I/O Intr"}
+{SaveSafety_RBV,         4,        No,  NO_ALARM,      Yes,     MINOR,  "I/O Intr"}
+{BigEndian_RBV,         28,    Little,  NO_ALARM,      Big,  NO_ALARM,  "I/O Intr"}
+}

@@ -1,0 +1,32 @@
+# These are the bit values for the coil outputs starting at address 0 with function code 5.
+file "$(MODBUS)/db/bo_bit.template" {
+pattern
+{     R,            OFFSET,      ZNAM,    ONAM}
+{A:FillValve,            0,     Close,     Open}
+{A:DeliverValve,         1,     Close,     Open}
+{B:FillValve,            2,     Close,     Open}
+{B:DeliverValve,         3,     Close,     Open}
+{SaveSafety,             4,        No,      Yes}
+{A:StartVolume,          9,      Done,    Start}
+{A:StartAutoVolume,     10,      Done,    Start}
+{B:StartVolume,         11,      Done,    Start}
+{B:StartAutoVolume,     12,      Done,    Start}
+{A:ZeroPressure,        13,      Done,     Zero}
+{B:ZeroPressure,        14,      Done,     Zero}
+{A:Start,               15,      Done,    Start}
+{A:StartAuto,           16,      Done,    Start}
+{B:Start,               17,      Done,    Start}
+{B:StartAuto,           18,      Done,    Start}
+{A:Stop,                19,      Done,     Stop}
+{B:Stop,                20,      Done,     Stop}
+{BothStop,              21,      Done,     Stop}
+{A:ResetVolume,         22,      Done,    Reset}
+{B:ResetVolume,         23,      Done,    Reset}
+{ResetTotalVolume,      24,      Done,    Reset}
+{ResetAllVolume,        25,      Done,    Reset}
+{A:ResetCumulVol,       26,      Done,    Reset}
+{B:ResetCumulVol,       27,      Done,    Reset}
+{BigEndian,             28,    Little,      Big}
+{ExitModbusMode,        29,      Done,     Exit}
+{ClearLatchedErrors,    30,      Done,    Clear}
+}

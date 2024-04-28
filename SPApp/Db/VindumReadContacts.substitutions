@@ -1,0 +1,11 @@
+# These are the bits values for the input registers starting at 0 with function code 2
+file "$(MODBUS)/db/bi_bit.template" {
+pattern
+{     R,        OFFSET,      ZNAM,       ZSV,     ONAM,    OSV,    SCAN}
+{A:Running,          0,   Stopped,  NO_ALARM,  Running,  MINOR, "I/O Intr"}
+{B:Running,          1,   Stopped,  NO_ALARM,  Running,  MINOR, "I/O Intr"}
+{A:Active,           2,      Idle,  NO_ALARM,   Active,  MINOR, "I/O Intr"}
+{B:Active,           3,      Idle,  NO_ALARM,   Active,  MINOR, "I/O Intr"}
+{A:SafetyFlag,       4,        OK,  NO_ALARM,    Error,  MAJOR, "I/O Intr"}
+{B:SafetyFlag,       5,        OK,  NO_ALARM,    Error,  MAJOR, "I/O Intr"}
+}
