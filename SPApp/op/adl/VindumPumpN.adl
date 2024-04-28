@@ -1,6 +1,6 @@
 
 file {
-	name="VindumPumpN.adl"
+	name="/home/epics/support/SyringePump/SPApp/op/adl/VindumPumpN.adl"
 	version=030117
 }
 display {
@@ -8,7 +8,7 @@ display {
 		x=1462
 		y=180
 		width=316
-		height=655
+		height=660
 	}
 	clr=14
 	bclr=4
@@ -90,9 +90,9 @@ display {
 rectangle {
 	object {
 		x=0
-		y=25
+		y=0
 		width=315
-		height=100
+		height=130
 	}
 	"basic attribute" {
 		clr=14
@@ -105,7 +105,7 @@ rectangle {
 rectangle {
 	object {
 		x=0
-		y=130
+		y=135
 		width=315
 		height=75
 	}
@@ -117,7 +117,7 @@ rectangle {
 rectangle {
 	object {
 		x=0
-		y=210
+		y=215
 		width=315
 		height=280
 	}
@@ -129,12 +129,12 @@ rectangle {
 "text update" {
 	object {
 		x=180
-		y=30
+		y=35
 		width=100
 		height=20
 	}
 	monitor {
-		chan="$(P)A:Pressure"
+		chan="$(P)$(N)Pressure"
 		clr=53
 		bclr=4
 	}
@@ -144,12 +144,12 @@ rectangle {
 "text update" {
 	object {
 		x=120
-		y=55
+		y=60
 		width=90
 		height=20
 	}
 	monitor {
-		chan="$(P)A:SetPressure_RBV"
+		chan="$(P)$(N)SetPressure_RBV"
 		clr=53
 		bclr=4
 	}
@@ -160,12 +160,12 @@ rectangle {
 "text entry" {
 	object {
 		x=120
-		y=75
+		y=80
 		width=90
 		height=20
 	}
 	control {
-		chan="$(P)A:SetPressure"
+		chan="$(P)$(N)SetPressure"
 		clr=14
 		bclr=51
 	}
@@ -175,12 +175,12 @@ rectangle {
 "message button" {
 	object {
 		x=215
-		y=75
+		y=80
 		width=25
 		height=20
 	}
 	control {
-		chan="$(P)A:PressureTweakUp.PROC"
+		chan="$(P)$(N)PressureTweakUp.PROC"
 		clr=14
 		bclr=51
 	}
@@ -190,12 +190,12 @@ rectangle {
 "message button" {
 	object {
 		x=90
-		y=75
+		y=80
 		width=25
 		height=20
 	}
 	control {
-		chan="$(P)A:PressureTweakDown.PROC"
+		chan="$(P)$(N)PressureTweakDown.PROC"
 		clr=14
 		bclr=51
 	}
@@ -205,12 +205,12 @@ rectangle {
 "text entry" {
 	object {
 		x=245
-		y=75
+		y=80
 		width=60
 		height=20
 	}
 	control {
-		chan="$(P)A:PressureTweak"
+		chan="$(P)$(N)PressureTweak"
 		clr=14
 		bclr=51
 	}
@@ -220,7 +220,7 @@ rectangle {
 text {
 	object {
 		x=251
-		y=55
+		y=60
 		width=50
 		height=20
 	}
@@ -232,7 +232,7 @@ text {
 text {
 	object {
 		x=5
-		y=75
+		y=80
 		width=80
 		height=20
 	}
@@ -245,7 +245,7 @@ text {
 text {
 	object {
 		x=5
-		y=101
+		y=106
 		width=120
 		height=20
 	}
@@ -258,12 +258,12 @@ text {
 "text entry" {
 	object {
 		x=130
-		y=101
+		y=106
 		width=80
 		height=20
 	}
 	control {
-		chan="$(P)A:SafetyPressure"
+		chan="$(P)$(N)SafetyPressure"
 		clr=14
 		bclr=51
 	}
@@ -273,12 +273,12 @@ text {
 "text update" {
 	object {
 		x=215
-		y=101
+		y=106
 		width=80
 		height=20
 	}
 	monitor {
-		chan="$(P)A:SafetyPressure_RBV"
+		chan="$(P)$(N)SafetyPressure_RBV"
 		clr=53
 		bclr=4
 	}
@@ -288,12 +288,12 @@ text {
 "text update" {
 	object {
 		x=210
-		y=135
+		y=140
 		width=100
 		height=20
 	}
 	monitor {
-		chan="$(P)A:FlowRate"
+		chan="$(P)$(N)FlowRate"
 		clr=53
 		bclr=4
 	}
@@ -303,12 +303,12 @@ text {
 "text update" {
 	object {
 		x=119
-		y=160
+		y=165
 		width=90
 		height=20
 	}
 	monitor {
-		chan="$(P)A:SetFlowRate_RBV"
+		chan="$(P)$(N)SetFlowRate_RBV"
 		clr=53
 		bclr=4
 	}
@@ -319,12 +319,12 @@ text {
 "text entry" {
 	object {
 		x=119
-		y=180
+		y=185
 		width=90
 		height=20
 	}
 	control {
-		chan="$(P)A:SetFlowRate"
+		chan="$(P)$(N)SetFlowRate"
 		clr=14
 		bclr=51
 	}
@@ -334,12 +334,12 @@ text {
 "message button" {
 	object {
 		x=214
-		y=180
+		y=185
 		width=25
 		height=20
 	}
 	control {
-		chan="$(P)A:FlowRateTweakUp.PROC"
+		chan="$(P)$(N)FlowRateTweakUp.PROC"
 		clr=14
 		bclr=51
 	}
@@ -349,12 +349,12 @@ text {
 "message button" {
 	object {
 		x=89
-		y=180
+		y=185
 		width=25
 		height=20
 	}
 	control {
-		chan="$(P)A:FlowRateTweakDown.PROC"
+		chan="$(P)$(N)FlowRateTweakDown.PROC"
 		clr=14
 		bclr=51
 	}
@@ -364,12 +364,12 @@ text {
 "text entry" {
 	object {
 		x=244
-		y=180
+		y=185
 		width=60
 		height=20
 	}
 	control {
-		chan="$(P)A:FlowRateTweak"
+		chan="$(P)$(N)FlowRateTweak"
 		clr=14
 		bclr=51
 	}
@@ -379,7 +379,7 @@ text {
 text {
 	object {
 		x=250
-		y=160
+		y=165
 		width=50
 		height=20
 	}
@@ -391,7 +391,7 @@ text {
 text {
 	object {
 		x=4
-		y=180
+		y=185
 		width=80
 		height=20
 	}
@@ -404,7 +404,7 @@ text {
 text {
 	object {
 		x=0
-		y=0
+		y=5
 		width=315
 		height=25
 	}
@@ -417,7 +417,7 @@ text {
 text {
 	object {
 		x=122
-		y=215
+		y=220
 		width=70
 		height=20
 	}
@@ -430,7 +430,7 @@ text {
 text {
 	object {
 		x=60
-		y=440
+		y=445
 		width=110
 		height=20
 	}
@@ -443,7 +443,7 @@ text {
 text {
 	object {
 		x=90
-		y=415
+		y=420
 		width=80
 		height=20
 	}
@@ -456,7 +456,7 @@ text {
 text {
 	object {
 		x=17
-		y=340
+		y=345
 		width=90
 		height=20
 	}
@@ -469,12 +469,12 @@ text {
 menu {
 	object {
 		x=112
-		y=340
+		y=345
 		width=100
 		height=20
 	}
 	control {
-		chan="$(P)A:Direction"
+		chan="$(P)$(N)Direction"
 		clr=14
 		bclr=4
 	}
@@ -482,12 +482,12 @@ menu {
 "text update" {
 	object {
 		x=217
-		y=340
+		y=345
 		width=80
 		height=20
 	}
 	monitor {
-		chan="$(P)A:Direction_RBV"
+		chan="$(P)$(N)Direction_RBV"
 		clr=53
 		bclr=2
 	}
@@ -500,12 +500,12 @@ menu {
 "message button" {
 	object {
 		x=95
-		y=315
+		y=320
 		width=60
 		height=20
 	}
 	control {
-		chan="$(P)A:Stop.PROC"
+		chan="$(P)$(N)Stop.PROC"
 		clr=14
 		bclr=20
 	}
@@ -515,12 +515,12 @@ menu {
 "message button" {
 	object {
 		x=160
-		y=315
+		y=320
 		width=60
 		height=20
 	}
 	control {
-		chan="$(P)A:Run.PROC"
+		chan="$(P)$(N)Run.PROC"
 		clr=14
 		bclr=15
 	}
@@ -530,12 +530,12 @@ menu {
 "text update" {
 	object {
 		x=55
-		y=290
+		y=295
 		width=100
 		height=20
 	}
 	monitor {
-		chan="$(P)A:Running"
+		chan="$(P)$(N)Running"
 		clr=53
 		bclr=2
 	}
@@ -548,12 +548,12 @@ menu {
 "text update" {
 	object {
 		x=160
-		y=290
+		y=295
 		width=100
 		height=20
 	}
 	monitor {
-		chan="$(P)A:Active"
+		chan="$(P)$(N)Active"
 		clr=53
 		bclr=2
 	}
@@ -566,12 +566,12 @@ menu {
 menu {
 	object {
 		x=130
-		y=265
+		y=270
 		width=170
 		height=20
 	}
 	control {
-		chan="$(P)A:PumpMode"
+		chan="$(P)$(N)PumpMode"
 		clr=14
 		bclr=4
 	}
@@ -579,7 +579,7 @@ menu {
 text {
 	object {
 		x=35
-		y=265
+		y=270
 		width=90
 		height=20
 	}
@@ -592,12 +592,12 @@ text {
 "text update" {
 	object {
 		x=110
-		y=240
+		y=245
 		width=200
 		height=20
 	}
 	monitor {
-		chan="$(P)A:PumpMode_RBV"
+		chan="$(P)$(N)PumpMode_RBV"
 		clr=53
 		bclr=4
 	}
@@ -609,7 +609,7 @@ text {
 text {
 	object {
 		x=35
-		y=390
+		y=395
 		width=100
 		height=20
 	}
@@ -622,7 +622,7 @@ text {
 text {
 	object {
 		x=5
-		y=365
+		y=370
 		width=130
 		height=20
 	}
@@ -635,12 +635,12 @@ text {
 "text update" {
 	object {
 		x=245
-		y=365
+		y=370
 		width=65
 		height=20
 	}
 	monitor {
-		chan="$(P)A:DeliverValve_RBV"
+		chan="$(P)$(N)DeliverValve_RBV"
 		clr=53
 		bclr=2
 	}
@@ -653,12 +653,12 @@ text {
 "text update" {
 	object {
 		x=245
-		y=390
+		y=395
 		width=65
 		height=20
 	}
 	monitor {
-		chan="$(P)A:FillValve_RBV"
+		chan="$(P)$(N)FillValve_RBV"
 		clr=53
 		bclr=2
 	}
@@ -671,12 +671,12 @@ text {
 "choice button" {
 	object {
 		x=140
-		y=365
+		y=370
 		width=100
 		height=20
 	}
 	control {
-		chan="$(P)A:DeliverValve"
+		chan="$(P)$(N)DeliverValve"
 		clr=14
 		bclr=51
 	}
@@ -685,12 +685,12 @@ text {
 "choice button" {
 	object {
 		x=140
-		y=390
+		y=395
 		width=100
 		height=20
 	}
 	control {
-		chan="$(P)A:FillValve"
+		chan="$(P)$(N)FillValve"
 		clr=14
 		bclr=51
 	}
@@ -699,7 +699,7 @@ text {
 composite {
 	object {
 		x=15
-		y=135
+		y=140
 		width=190
 		height=20
 	}
@@ -708,7 +708,7 @@ composite {
 		text {
 			object {
 				x=15
-				y=135
+				y=140
 				width=110
 				height=20
 			}
@@ -721,7 +721,7 @@ composite {
 		"text update" {
 			object {
 				x=125
-				y=135
+				y=140
 				width=70
 				height=20
 			}
@@ -738,7 +738,7 @@ composite {
 		text {
 			object {
 				x=195
-				y=135
+				y=140
 				width=10
 				height=20
 			}
@@ -753,7 +753,7 @@ composite {
 composite {
 	object {
 		x=35
-		y=30
+		y=35
 		width=140
 		height=20
 	}
@@ -762,7 +762,7 @@ composite {
 		text {
 			object {
 				x=35
-				y=30
+				y=35
 				width=100
 				height=20
 			}
@@ -775,7 +775,7 @@ composite {
 		"text update" {
 			object {
 				x=135
-				y=30
+				y=35
 				width=30
 				height=20
 			}
@@ -792,7 +792,7 @@ composite {
 		text {
 			object {
 				x=165
-				y=30
+				y=35
 				width=10
 				height=20
 			}
@@ -807,7 +807,7 @@ composite {
 text {
 	object {
 		x=30
-		y=465
+		y=470
 		width=140
 		height=20
 	}
@@ -819,12 +819,12 @@ text {
 "text entry" {
 	object {
 		x=175
-		y=465
+		y=470
 		width=60
 		height=20
 	}
 	control {
-		chan="$(P)A:SetVolume"
+		chan="$(P)$(N)SetVolume"
 		clr=14
 		bclr=51
 	}
@@ -834,12 +834,12 @@ text {
 "text update" {
 	object {
 		x=240
-		y=465
+		y=470
 		width=60
 		height=20
 	}
 	monitor {
-		chan="$(P)A:SetVolume_RBV"
+		chan="$(P)$(N)SetVolume_RBV"
 		clr=53
 		bclr=4
 	}
@@ -849,12 +849,12 @@ text {
 menu {
 	object {
 		x=175
-		y=415
+		y=420
 		width=80
 		height=20
 	}
 	control {
-		chan="$(P)A:AutofillMode"
+		chan="$(P)$(N)AutofillMode"
 		clr=53
 		bclr=4
 	}
@@ -863,204 +863,193 @@ menu {
 menu {
 	object {
 		x=175
-		y=440
+		y=445
 		width=80
 		height=20
 	}
 	control {
-		chan="$(P)A:VolumeMode"
+		chan="$(P)$(N)VolumeMode"
 		clr=53
 		bclr=4
 	}
 	clrmod="alarm"
 }
-composite {
+text {
 	object {
 		x=10
-		y=525
-		width=300
-		height=120
+		y=530
+		width=160
+		height=20
 	}
-	"composite name"=""
-	children {
-		text {
-			object {
-				x=10
-				y=525
-				width=160
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Vol. pumped (ml)"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=175
-				y=525
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)A:Volume"
-				clr=53
-				bclr=4
-			}
-			limits {
-			}
-		}
-		"message button" {
-			object {
-				x=260
-				y=525
-				width=50
-				height=20
-			}
-			control {
-				chan="$(P)A:ResetVolume"
-				clr=14
-				bclr=51
-			}
-			label="Reset"
-			press_msg="1"
-		}
-		"text update" {
-			object {
-				x=175
-				y=575
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)A:Position"
-				clr=53
-				bclr=4
-			}
-			limits {
-			}
-		}
-		text {
-			object {
-				x=90
-				y=575
-				width=80
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Position"
-			align="horiz. right"
-		}
-		text {
-			object {
-				x=60
-				y=600
-				width=110
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Error state"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=175
-				y=600
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)A:ErrorState"
-				clr=53
-				bclr=4
-			}
-			format="hexadecimal"
-			limits {
-			}
-		}
-		text {
-			object {
-				x=40
-				y=625
-				width=130
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Latched state"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=175
-				y=625
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)A:LatchedErrorState"
-				clr=53
-				bclr=4
-			}
-			format="hexadecimal"
-			limits {
-			}
-		}
-		text {
-			object {
-				x=110
-				y=550
-				width=60
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Volume"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=175
-				y=550
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)A:TotalVolume"
-				clr=53
-				bclr=4
-			}
-			limits {
-			}
-		}
-		"message button" {
-			object {
-				x=260
-				y=550
-				width=50
-				height=20
-			}
-			control {
-				chan="$(P)A:ResetCumulVol"
-				clr=14
-				bclr=51
-			}
-			label="Reset"
-			press_msg="1"
-		}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Vol. pumped (ml)"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=175
+		y=530
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(N)Volume"
+		clr=53
+		bclr=4
+	}
+	limits {
+	}
+}
+"message button" {
+	object {
+		x=260
+		y=530
+		width=50
+		height=20
+	}
+	control {
+		chan="$(P)$(N)ResetVolume"
+		clr=14
+		bclr=51
+	}
+	label="Reset"
+	press_msg="1"
+}
+"text update" {
+	object {
+		x=175
+		y=580
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(N)Position"
+		clr=53
+		bclr=4
+	}
+	limits {
 	}
 }
 text {
 	object {
+		x=90
+		y=580
+		width=80
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Position"
+	align="horiz. right"
+}
+text {
+	object {
+		x=60
+		y=605
+		width=110
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Error state"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=175
+		y=605
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(N)ErrorState"
+		clr=53
+		bclr=4
+	}
+	format="hexadecimal"
+	limits {
+	}
+}
+text {
+	object {
+		x=40
+		y=630
+		width=130
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Latched state"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=175
+		y=630
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(N)LatchedErrorState"
+		clr=53
+		bclr=4
+	}
+	format="hexadecimal"
+	limits {
+	}
+}
+text {
+	object {
+		x=110
+		y=555
+		width=60
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Volume"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=175
+		y=555
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(N)TotalVolume"
+		clr=53
+		bclr=4
+	}
+	limits {
+	}
+}
+"message button" {
+	object {
+		x=260
+		y=555
+		width=50
+		height=20
+	}
+	control {
+		chan="$(P)$(N)ResetCumulVol"
+		clr=14
+		bclr=51
+	}
+	label="Reset"
+	press_msg="1"
+}
+text {
+	object {
 		x=128
-		y=500
+		y=505
 		width=60
 		height=20
 	}
@@ -1073,7 +1062,7 @@ text {
 rectangle {
 	object {
 		x=1
-		y=495
+		y=500
 		width=315
 		height=155
 	}
