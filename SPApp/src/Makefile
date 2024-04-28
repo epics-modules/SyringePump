@@ -9,7 +9,7 @@ PROD_IOC = $(PROD_NAME)
 # <name>.dbd will be created from <name>Include.dbd
 DBD += $(PROD_NAME).dbd
 $(PROD_NAME)_DBD += base.dbd
-$(PROD_NAME)_DBD += asyn.dbd drvAsynIPPort.dbd
+$(PROD_NAME)_DBD += asyn.dbd drvAsynIPPort.dbd drvAsynSerialPort.dbd
 $(PROD_NAME)_DBD += modbusSupport.dbd
 $(PROD_NAME)_DBD += asSupport.dbd
 
