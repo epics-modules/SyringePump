@@ -5,8 +5,8 @@ file {
 }
 display {
 	object {
-		x=1462
-		y=180
+		x=1573
+		y=184
 		width=316
 		height=660
 	}
@@ -884,23 +884,8 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="Vol. pumped (ml)"
+	textix="Incremental vol."
 	align="horiz. right"
-}
-"text update" {
-	object {
-		x=175
-		y=530
-		width=80
-		height=20
-	}
-	monitor {
-		chan="$(P)$(N)Volume"
-		clr=53
-		bclr=4
-	}
-	limits {
-	}
 }
 "message button" {
 	object {
@@ -917,32 +902,17 @@ text {
 	label="Reset"
 	press_msg="1"
 }
-"text update" {
-	object {
-		x=175
-		y=580
-		width=80
-		height=20
-	}
-	monitor {
-		chan="$(P)$(N)Position"
-		clr=53
-		bclr=4
-	}
-	limits {
-	}
-}
 text {
 	object {
-		x=90
+		x=70
 		y=580
-		width=80
+		width=100
 		height=20
 	}
 	"basic attribute" {
 		clr=14
 	}
-	textix="Position"
+	textix="Position %"
 	align="horiz. right"
 }
 text {
@@ -958,22 +928,6 @@ text {
 	textix="Error state"
 	align="horiz. right"
 }
-"text update" {
-	object {
-		x=175
-		y=605
-		width=80
-		height=20
-	}
-	monitor {
-		chan="$(P)$(N)ErrorState"
-		clr=53
-		bclr=4
-	}
-	format="hexadecimal"
-	limits {
-	}
-}
 text {
 	object {
 		x=40
@@ -987,49 +941,18 @@ text {
 	textix="Latched state"
 	align="horiz. right"
 }
-"text update" {
-	object {
-		x=175
-		y=630
-		width=80
-		height=20
-	}
-	monitor {
-		chan="$(P)$(N)LatchedErrorState"
-		clr=53
-		bclr=4
-	}
-	format="hexadecimal"
-	limits {
-	}
-}
 text {
 	object {
-		x=110
+		x=10
 		y=555
-		width=60
+		width=160
 		height=20
 	}
 	"basic attribute" {
 		clr=14
 	}
-	textix="Volume"
+	textix="Cummulative vol."
 	align="horiz. right"
-}
-"text update" {
-	object {
-		x=175
-		y=555
-		width=80
-		height=20
-	}
-	monitor {
-		chan="$(P)$(N)TotalVolume"
-		clr=53
-		bclr=4
-	}
-	limits {
-	}
 }
 "message button" {
 	object {
@@ -1069,5 +992,93 @@ rectangle {
 	"basic attribute" {
 		clr=14
 		fill="outline"
+	}
+}
+composite {
+	object {
+		x=180
+		y=530
+		width=70
+		height=120
+	}
+	"composite name"=""
+	children {
+		"text update" {
+			object {
+				x=180
+				y=530
+				width=70
+				height=20
+			}
+			monitor {
+				chan="$(P)$(N)Volume"
+				clr=53
+				bclr=4
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=180
+				y=580
+				width=70
+				height=20
+			}
+			monitor {
+				chan="$(P)$(N)Position"
+				clr=53
+				bclr=4
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=180
+				y=605
+				width=70
+				height=20
+			}
+			monitor {
+				chan="$(P)$(N)ErrorState"
+				clr=53
+				bclr=4
+			}
+			format="hexadecimal"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=180
+				y=630
+				width=70
+				height=20
+			}
+			monitor {
+				chan="$(P)$(N)LatchedErrorState"
+				clr=53
+				bclr=4
+			}
+			format="hexadecimal"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=180
+				y=555
+				width=70
+				height=20
+			}
+			monitor {
+				chan="$(P)$(N)TotalVolume"
+				clr=53
+				bclr=4
+			}
+			limits {
+			}
+		}
 	}
 }
