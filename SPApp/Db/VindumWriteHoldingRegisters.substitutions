@@ -23,18 +23,18 @@ file "$(MODBUS)/db/aoFloat64.template" {
 pattern
 {     R,              OFFSET,  DATA_TYPE,  PREC,  PINI}
 #
-{A:SetFlowRate,            5, FLOAT32_BE,   3,     NO}
-{B:SetFlowRate,            7, FLOAT32_BE,   3,     NO}
-{SetMaxRate,               9, FLOAT32_BE,   3,     NO}
-{A:SetPressure,           11, FLOAT32_BE,   2,     NO}
-{B:SetPressure,           13, FLOAT32_BE,   2,     NO}
-{SetMaxPressure,          15, FLOAT32_BE,   2,     NO}
+{A:SetFlowRate,            5, FLOAT32_BE,   3,     YES}
+{B:SetFlowRate,            7, FLOAT32_BE,   3,     YES}
+{SetMaxRate,               9, FLOAT32_BE,   3,     YES}
+{A:SetPressure,           11, FLOAT32_BE,   2,     YES}
+{B:SetPressure,           13, FLOAT32_BE,   2,     YES}
+{SetMaxPressure,          15, FLOAT32_BE,   2,     YES}
 {A:PressureGain,          17, FLOAT32_BE,   2,     NO}
 {B:PressureGain,          19, FLOAT32_BE,   2,     NO}
-{A:SafetyPressure,        21, FLOAT32_BE,   2,     NO}
-{B:SafetyPressure,        23, FLOAT32_BE,   2,     NO}
-{A:SetVolume,             25, FLOAT32_BE,   2,     NO}
-{B:SetVolume,             27, FLOAT32_BE,   2,     NO}
+{A:SafetyPressure,        21, FLOAT32_BE,   2,     YES}
+{B:SafetyPressure,        23, FLOAT32_BE,   2,     YES}
+{A:SetVolume,             25, FLOAT32_BE,   2,     YES}
+{B:SetVolume,             27, FLOAT32_BE,   2,     YES}
 {FillOpenPressure,        33, FLOAT32_BE,   2,     NO}
 {ReturnRateMult,          35, FLOAT32_BE,   2,     NO}
 }
