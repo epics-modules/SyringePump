@@ -4,8 +4,6 @@ pattern
 {     R,                      OFFSET,  DATA_TYPE,        SCAN}
 {ComResponse,                      0,     UINT16,  "I/O Intr"}
 {PumpType,                        19,     UINT16,  "I/O Intr"}
-{A:Position,                      20,     UINT16,  "I/O Intr"}
-{B:Position,                      21,     UINT16,  "I/O Intr"}
 {A:ErrorState,                    23,  UINT32_BE,  "I/O Intr"}
 {B:ErrorState,                    25,  UINT32_BE,  "I/O Intr"}
 {CommonErrorState,                27,  UINT32_BE,  "I/O Intr"}
@@ -14,6 +12,15 @@ pattern
 {LatchedCommonErrorState,         33,  UINT32_BE,  "I/O Intr"}
 {CommonErrorState2,               39,  UINT32_BE,  "I/O Intr"}
 {LatchedCommonErrorState2,        41,  UINT32_BE,  "I/O Intr"}
+}
+
+# Position range is 0 to 640 for VP pumps.  Convert to percent.
+# Say the ADC is unipolar 10 bits, so full scale is 1024, EGUF=1024/640 = 1.60 %
+file "$(MODBUS)/db/ai.template" {
+pattern
+{     R,                      OFFSET,  BITS,   EGUL,   EGUF,   PREC,       SCAN}
+{A:Position,                      20,    10,     0.,   160.,      1,    "I/O Intr"}
+{B:Position,                      21,    10,     0.,   160.,      1,    "I/O Intr"}
 }
 
 file "$(MODBUS)/db/aiFloat64.template" {
