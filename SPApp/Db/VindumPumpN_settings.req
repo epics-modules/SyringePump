@@ -1,7 +1,8 @@
 $(P)$(PUMP)SetPressure
 $(P)$(PUMP)PressureTweak
-$(P)$(PUMP)SetSafetyPressure
+$(P)$(PUMP)SafetyPressure
 $(P)$(PUMP)SetFlowRate
+$(P)$(PUMP)SetVolume
 $(P)$(PUMP)FlowRateTweak
 $(P)$(PUMP)PumpMode
 $(P)$(PUMP)AutofillMode
