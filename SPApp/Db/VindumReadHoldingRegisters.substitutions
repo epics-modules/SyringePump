@@ -7,6 +7,14 @@ pattern
 {B:PumpModeRaw_RBV,            3,     UINT16,   "I/O Intr"}
 {ServerID_RBV,                31,     UINT16,   "I/O Intr"}
 {AutoRateReturnTime_RBV,      37,     UINT16,   "I/O Intr"}
+{A:OpenDiffGain_RBV,          38,     UINT16,   "I/O Intr"}
+{A:CloseDiffGain_RBV,         39,     UINT16,   "I/O Intr"}
+{A:OpenPropGain_RBV,          40,     UINT16,   "I/O Intr"}
+{A:ClosePropGain_RBV,         41,     UINT16,   "I/O Intr"}
+{B:OpenDiffGain_RBV,          42,     UINT16,   "I/O Intr"}
+{B:CloseDiffGain_RBV,         43,     UINT16,   "I/O Intr"}
+{B:OpenPropGain_RBV,          44,     UINT16,   "I/O Intr"}
+{B:ClosePropGain_RBV,         45,     UINT16,   "I/O Intr"}
 }
 
 file "$(MODBUS)/db/mbbi.template" {

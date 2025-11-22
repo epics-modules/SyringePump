@@ -6,6 +6,14 @@ pattern
 {B:PumpModeRaw,            3,     UINT16,    NO}
 {ServerID,                31,     UINT16,    NO}
 {AutoRateReturnTime,      37,     UINT16,    NO}
+{A:OpenDiffGain,          38,     UINT16,    NO}
+{A:CloseDiffGain,         39,     UINT16,    NO}
+{A:OpenPropGain,          40,     UINT16,    NO}
+{A:ClosePropGain,         41,     UINT16,    NO}
+{B:OpenDiffGain,          42,     UINT16,    NO}
+{B:CloseDiffGain,         43,     UINT16,    NO}
+{B:OpenPropGain,          44,     UINT16,    NO}
+{B:ClosePropGain,         45,     UINT16,    NO}
 }
 
 file "$(MODBUS)/db/mbbo.template" {
