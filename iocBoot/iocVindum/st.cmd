@@ -18,6 +18,8 @@ epicsEnvSet("PORT", "SP1")
 epicsEnvSet("POLL_MS", "100")
 epicsEnvSet("TIMEOUT_MS", "2000")
 
+# The serial port on the pump is configured for 38400, 8, 1, N
+
 # Use the following commands for TCP/IP
 #drvAsynIPPortConfigure(const char *portName, 
 #                       const char *hostInfo,
@@ -25,11 +27,13 @@ epicsEnvSet("TIMEOUT_MS", "2000")
 #                       int noAutoConnect,
 #                       int noProcessEos);
 
-# Change IP address for your device
-#drvAsynIPPortConfigure("$(PORT)", "10.54.160.222:502", 0, 0, 0)
+# Change IP address for your device.  This is for a Digi One SP in TCP sockets mode.
+#drvAsynIPPortConfigure("$(PORT)", "gsets12:2001", 0, 0, 0)
+# Change IP address for your device.  This is for a Digi One SP in TCP sockets mode.
+drvAsynIPPortConfigure("$(PORT)", "gsets24:4001", 0, 0, 0)
 
 # This is for a COM port on Windows
-drvAsynSerialPortConfigure("$(PORT)", "COM2", 0, 0, 0)
+#drvAsynSerialPortConfigure("$(PORT)", "COM2", 0, 0, 0)
 
 # Enable ASYN_TRACEIO_HEX on octet server
 asynSetTraceIOMask("$(PORT)", 0, HEX)
@@ -90,12 +94,12 @@ dbLoadTemplate("$(SYRINGEPUMP)/db/VindumReadContacts.substitutions", "P=$(PREFIX
 drvModbusAsynConfigure("$(PORT)_ReadInputRegs", "$(PORT)", 1, 4, 0, 42, UINT16, $(POLL_MS), "Vindum")
 dbLoadTemplate("$(SYRINGEPUMP)/db/VindumReadInputRegisters.substitutions", "P=$(PREFIX), PORT=$(PORT)_ReadInputRegs")
 
-# Read 38 16-bit holding registers starting at 0. Function code=3. Default data type=UINT16
-drvModbusAsynConfigure("$(PORT)_ReadHoldingRegs", "$(PORT)", 1, 3, 0, 38, UINT16, $(POLL_MS), "Vindum")
+# Read 46 16-bit holding registers starting at 0. Function code=3. Default data type=UINT16
+drvModbusAsynConfigure("$(PORT)_ReadHoldingRegs", "$(PORT)", 1, 3, 0, 46, UINT16, $(POLL_MS), "Vindum")
 dbLoadTemplate("$(SYRINGEPUMP)/db/VindumReadHoldingRegisters.substitutions", "P=$(PREFIX), PORT=$(PORT)_ReadHoldingRegs")
 
-# Write 38 16-bit holding registers starting at 0. Function code=16. Default data type=UINT16
-drvModbusAsynConfigure("$(PORT)_WriteHoldingRegs", "$(PORT)", 1, 16, 0, 38, UINT16, $(POLL_MS), "Vindum")
+# Write 46 16-bit holding registers starting at 0. Function code=16. Default data type=UINT16
+drvModbusAsynConfigure("$(PORT)_WriteHoldingRegs", "$(PORT)", 1, 16, 0, 46, UINT16, $(POLL_MS), "Vindum")
 dbLoadTemplate("$(SYRINGEPUMP)/db/VindumWriteHoldingRegisters.substitutions", "P=$(PREFIX), PORT=$(PORT)_WriteHoldingRegs")
 
 dbLoadRecords("$(SYRINGEPUMP)/db/VindumController.template", "P=$(PREFIX), PORT=$(PORT)")
