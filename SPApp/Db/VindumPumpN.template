@@ -49,6 +49,8 @@ record(mbbo, "$(P)$(PUMP)PumpMode") {
     field(THVL, "4")
     field(FRST, "Cycled Rate Receive")
     field(FRVL, "5")
+    field(FVST, "Cycled Press Receive")
+    field(FVVL, "7")
     field(FLNK, "$(P)PumpMode")
 }
 
@@ -64,8 +66,8 @@ record(mbbi, "$(P)$(PUMP)PumpMode_RBV") {
     field(THVL, "4")
     field(FRST, "Cycled Rate Receive")
     field(FRVL, "5")
-    field(FVST, "(Paired)")
-    field(FVVL, "0")
+    field(FVST, "Cycled Press Receive")
+    field(FVVL, "7")
 }
 
 record(bo, "$(P)$(PUMP)AutofillMode") {
