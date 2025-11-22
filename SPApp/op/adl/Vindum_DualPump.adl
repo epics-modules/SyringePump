@@ -1,12 +1,12 @@
 
 file {
-	name="/home/epics/support/SyringePump/SPApp/op/adl/Vindum_DualPump.adl"
+	name="/home/epics/support/SyringePump-0-1/SPApp/op/adl/Vindum_DualPump.adl"
 	version=030117
 }
 display {
 	object {
-		x=538
-		y=85
+		x=1340
+		y=338
 		width=975
 		height=725
 	}
@@ -138,7 +138,7 @@ rectangle {
 		x=5
 		y=65
 		width=325
-		height=160
+		height=185
 	}
 	"basic attribute" {
 		clr=14
@@ -256,149 +256,32 @@ composite {
 		}
 	}
 }
-composite {
-	object {
-		x=20
-		y=260
-		width=290
-		height=20
-	}
-	"composite name"=""
-	children {
-		text {
-			object {
-				x=20
-				y=260
-				width=140
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Pressure units"
-			align="horiz. right"
-		}
-		menu {
-			object {
-				x=165
-				y=260
-				width=70
-				height=20
-			}
-			control {
-				chan="$(P)PressureUnits"
-				clr=14
-				bclr=4
-			}
-		}
-		"text update" {
-			object {
-				x=240
-				y=260
-				width=70
-				height=20
-			}
-			monitor {
-				chan="$(P)PressureUnits_RBV"
-				clr=53
-				bclr=4
-			}
-			format="string"
-			limits {
-			}
-		}
-	}
-}
-composite {
-	object {
-		x=30
-		y=310
-		width=290
-		height=20
-	}
-	"composite name"=""
-	children {
-		text {
-			object {
-				x=30
-				y=310
-				width=130
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Max. pressure"
-		}
-		"text entry" {
-			object {
-				x=165
-				y=310
-				width=70
-				height=20
-			}
-			control {
-				chan="$(P)SetMaxPressure"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		"text update" {
-			object {
-				x=240
-				y=310
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)SetMaxPressure_RBV"
-				clr=53
-				bclr=4
-			}
-			limits {
-			}
-		}
-	}
-}
-composite {
+text {
 	object {
 		x=50
 		y=175
-		width=195
+		width=110
 		height=20
 	}
-	"composite name"=""
-	children {
-		text {
-			object {
-				x=50
-				y=175
-				width=110
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Paired Rate"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=165
-				y=175
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)PairedRate"
-				clr=53
-				bclr=4
-			}
-			limits {
-			}
-		}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Paired Rate"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=165
+		y=175
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)PairedRate"
+		clr=53
+		bclr=4
+	}
+	limits {
 	}
 }
 composite {
@@ -457,112 +340,6 @@ composite {
 }
 composite {
 	object {
-		x=60
-		y=285
-		width=260
-		height=20
-	}
-	"composite name"=""
-	children {
-		text {
-			object {
-				x=60
-				y=285
-				width=100
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Rate units"
-			align="horiz. right"
-		}
-		menu {
-			object {
-				x=165
-				y=285
-				width=70
-				height=20
-			}
-			control {
-				chan="$(P)RateUnits"
-				clr=14
-				bclr=4
-			}
-		}
-		"text update" {
-			object {
-				x=240
-				y=285
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)RateUnits_RBV"
-				clr=53
-				bclr=4
-			}
-			format="string"
-			limits {
-			}
-		}
-	}
-}
-composite {
-	object {
-		x=70
-		y=335
-		width=250
-		height=20
-	}
-	"composite name"=""
-	children {
-		text {
-			object {
-				x=70
-				y=335
-				width=90
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Max. rate"
-		}
-		"text entry" {
-			object {
-				x=165
-				y=335
-				width=70
-				height=20
-			}
-			control {
-				chan="$(P)SetMaxRate"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		"text update" {
-			object {
-				x=240
-				y=335
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)SetMaxRate_RBV"
-				clr=53
-				bclr=4
-			}
-			limits {
-			}
-		}
-	}
-}
-composite {
-	object {
 		x=10
 		y=125
 		width=265
@@ -600,215 +377,482 @@ composite {
 }
 composite {
 	object {
-		x=30
-		y=395
-		width=215
-		height=20
+		x=5
+		y=255
+		width=325
+		height=265
 	}
 	"composite name"=""
 	children {
-		"text update" {
-			object {
-				x=165
-				y=395
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)ComResponse"
-				clr=53
-				bclr=4
-			}
-			limits {
-			}
-		}
-		text {
+		composite {
 			object {
 				x=30
-				y=395
-				width=130
+				y=420
+				width=215
 				height=20
 			}
-			"basic attribute" {
-				clr=14
+			"composite name"=""
+			children {
+				"text update" {
+					object {
+						x=165
+						y=420
+						width=80
+						height=20
+					}
+					monitor {
+						chan="$(P)ComResponse"
+						clr=53
+						bclr=4
+					}
+					limits {
+					}
+				}
+				text {
+					object {
+						x=30
+						y=420
+						width=130
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="Command error"
+					align="horiz. right"
+				}
 			}
-			textix="Command error"
-			align="horiz. right"
 		}
-	}
-}
-composite {
-	object {
-		x=45
-		y=470
-		width=265
-		height=20
-	}
-	"composite name"=""
-	children {
-		text {
+		composite {
 			object {
 				x=45
-				y=470
-				width=200
+				y=495
+				width=265
 				height=20
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=45
+						y=495
+						width=200
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="Clear latched errors"
+					align="horiz. right"
+				}
+				"message button" {
+					object {
+						x=250
+						y=495
+						width=60
+						height=20
+					}
+					control {
+						chan="$(P)ClearLatchedErrors.PROC"
+						clr=14
+						bclr=51
+					}
+					label="Clear"
+					press_msg="1"
+				}
+			}
+		}
+		composite {
+			object {
+				x=50
+				y=445
+				width=195
+				height=20
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=50
+						y=445
+						width=110
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="Error state"
+					align="horiz. right"
+				}
+				"text update" {
+					object {
+						x=165
+						y=445
+						width=80
+						height=20
+					}
+					monitor {
+						chan="$(P)CommonErrorState"
+						clr=53
+						bclr=4
+					}
+					format="hexadecimal"
+					limits {
+					}
+				}
+			}
+		}
+		composite {
+			object {
+				x=30
+				y=470
+				width=215
+				height=20
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=30
+						y=470
+						width=130
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="Latched state"
+					align="horiz. right"
+				}
+				"text update" {
+					object {
+						x=165
+						y=470
+						width=80
+						height=20
+					}
+					monitor {
+						chan="$(P)LatchedCommonErrorState"
+						clr=53
+						bclr=4
+					}
+					format="hexadecimal"
+					limits {
+					}
+				}
+			}
+		}
+		rectangle {
+			object {
+				x=5
+				y=390
+				width=325
+				height=130
 			}
 			"basic attribute" {
 				clr=14
+				fill="outline"
 			}
-			textix="Clear latched errors"
-			align="horiz. right"
+			"dynamic attribute" {
+				chan="\"
+			}
 		}
-		"message button" {
+		text {
 			object {
-				x=250
-				y=470
+				x=137
+				y=395
 				width=60
 				height=20
 			}
-			control {
-				chan="$(P)ClearLatchedErrors.PROC"
-				clr=14
-				bclr=51
-			}
-			label="Clear"
-			press_msg="1"
-		}
-	}
-}
-composite {
-	object {
-		x=50
-		y=420
-		width=195
-		height=20
-	}
-	"composite name"=""
-	children {
-		text {
-			object {
-				x=50
-				y=420
-				width=110
-				height=20
-			}
 			"basic attribute" {
 				clr=14
 			}
-			textix="Error state"
+			textix="Status"
 			align="horiz. right"
 		}
-		"text update" {
+		composite {
 			object {
-				x=165
-				y=420
-				width=80
-				height=20
+				x=5
+				y=255
+				width=325
+				height=130
 			}
-			monitor {
-				chan="$(P)CommonErrorState"
-				clr=53
-				bclr=4
-			}
-			format="hexadecimal"
-			limits {
-			}
-		}
-	}
-}
-composite {
-	object {
-		x=30
-		y=445
-		width=215
-		height=20
-	}
-	"composite name"=""
-	children {
-		text {
-			object {
-				x=30
-				y=445
-				width=130
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Latched state"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=165
-				y=445
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)LatchedCommonErrorState"
-				clr=53
-				bclr=4
-			}
-			format="hexadecimal"
-			limits {
+			"composite name"=""
+			children {
+				composite {
+					object {
+						x=20
+						y=285
+						width=290
+						height=20
+					}
+					"composite name"=""
+					children {
+						text {
+							object {
+								x=20
+								y=285
+								width=140
+								height=20
+							}
+							"basic attribute" {
+								clr=14
+							}
+							textix="Pressure units"
+							align="horiz. right"
+						}
+						menu {
+							object {
+								x=165
+								y=285
+								width=70
+								height=20
+							}
+							control {
+								chan="$(P)PressureUnits"
+								clr=14
+								bclr=4
+							}
+						}
+						"text update" {
+							object {
+								x=240
+								y=285
+								width=70
+								height=20
+							}
+							monitor {
+								chan="$(P)PressureUnits_RBV"
+								clr=53
+								bclr=4
+							}
+							format="string"
+							limits {
+							}
+						}
+					}
+				}
+				composite {
+					object {
+						x=30
+						y=335
+						width=290
+						height=20
+					}
+					"composite name"=""
+					children {
+						text {
+							object {
+								x=30
+								y=335
+								width=130
+								height=20
+							}
+							"basic attribute" {
+								clr=14
+							}
+							textix="Max. pressure"
+						}
+						"text entry" {
+							object {
+								x=165
+								y=335
+								width=70
+								height=20
+							}
+							control {
+								chan="$(P)SetMaxPressure"
+								clr=14
+								bclr=51
+							}
+							limits {
+							}
+						}
+						"text update" {
+							object {
+								x=240
+								y=335
+								width=80
+								height=20
+							}
+							monitor {
+								chan="$(P)SetMaxPressure_RBV"
+								clr=53
+								bclr=4
+							}
+							limits {
+							}
+						}
+					}
+				}
+				composite {
+					object {
+						x=60
+						y=310
+						width=260
+						height=20
+					}
+					"composite name"=""
+					children {
+						text {
+							object {
+								x=60
+								y=310
+								width=100
+								height=20
+							}
+							"basic attribute" {
+								clr=14
+							}
+							textix="Rate units"
+							align="horiz. right"
+						}
+						menu {
+							object {
+								x=165
+								y=310
+								width=70
+								height=20
+							}
+							control {
+								chan="$(P)RateUnits"
+								clr=14
+								bclr=4
+							}
+						}
+						"text update" {
+							object {
+								x=240
+								y=310
+								width=80
+								height=20
+							}
+							monitor {
+								chan="$(P)RateUnits_RBV"
+								clr=53
+								bclr=4
+							}
+							format="string"
+							limits {
+							}
+						}
+					}
+				}
+				composite {
+					object {
+						x=70
+						y=360
+						width=250
+						height=20
+					}
+					"composite name"=""
+					children {
+						text {
+							object {
+								x=70
+								y=360
+								width=90
+								height=20
+							}
+							"basic attribute" {
+								clr=14
+							}
+							textix="Max. rate"
+						}
+						"text entry" {
+							object {
+								x=165
+								y=360
+								width=70
+								height=20
+							}
+							control {
+								chan="$(P)SetMaxRate"
+								clr=14
+								bclr=51
+							}
+							limits {
+							}
+						}
+						"text update" {
+							object {
+								x=240
+								y=360
+								width=80
+								height=20
+							}
+							monitor {
+								chan="$(P)SetMaxRate_RBV"
+								clr=53
+								bclr=4
+							}
+							limits {
+							}
+						}
+					}
+				}
+				text {
+					object {
+						x=142
+						y=260
+						width=50
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="Setup"
+					align="horiz. right"
+				}
+				rectangle {
+					object {
+						x=5
+						y=255
+						width=325
+						height=130
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+					}
+					"dynamic attribute" {
+						chan="\"
+					}
+				}
 			}
 		}
 	}
 }
 text {
 	object {
-		x=142
-		y=235
-		width=50
+		x=70
+		y=225
+		width=90
 		height=20
 	}
 	"basic attribute" {
 		clr=14
 	}
-	textix="Setup"
-	align="horiz. right"
+	textix="PID Gains"
 }
-rectangle {
+"related display" {
 	object {
-		x=5
-		y=230
-		width=325
-		height=130
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	"dynamic attribute" {
-		chan="\"
-	}
-}
-rectangle {
-	object {
-		x=5
-		y=365
-		width=325
-		height=130
-	}
-	"basic attribute" {
-		clr=14
-		fill="outline"
-	}
-	"dynamic attribute" {
-		chan="\"
-	}
-}
-text {
-	object {
-		x=137
-		y=370
-		width=60
+		x=165
+		y=225
+		width=70
 		height=20
 	}
-	"basic attribute" {
-		clr=14
+	display[0] {
+		label="PID Gains Pump A"
+		name="Vindum_PID.adl"
+		args="P=$(P),N=A:"
 	}
-	textix="Status"
-	align="horiz. right"
+	display[1] {
+		label="PID Gains Pump B"
+		name="Vindum_PID.adl"
+		args="P=$(P),N=B:"
+	}
+	clr=14
+	bclr=4
+	label="-PID"
 }
