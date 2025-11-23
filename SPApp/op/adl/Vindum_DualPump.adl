@@ -853,6 +853,6 @@ text {
 		args="P=$(P),N=B:"
 	}
 	clr=14
-	bclr=4
+	bclr=51
 	label="PID Gains"
 }
