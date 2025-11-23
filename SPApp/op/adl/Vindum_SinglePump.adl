@@ -604,7 +604,7 @@ text {
 	object {
 		x=165
 		y=195
-		width=70
+		width=100
 		height=20
 	}
 	display[0] {
@@ -613,6 +613,6 @@ text {
 		args="P=$(P),N=A:"
 	}
 	clr=14
-	bclr=4
-	label="-PID"
+	bclr=51
+	label="-PID Gains"
 }

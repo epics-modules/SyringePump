@@ -1,6 +1,6 @@
 
 file {
-	name="/home/epics/support/SyringePump/SPApp/op/adl/VindumPumpN.adl"
+	name="/home/epics/support/SyringePump-0-1/SPApp/op/adl/VindumPumpN.adl"
 	version=030117
 }
 display {
@@ -855,8 +855,8 @@ menu {
 	}
 	control {
 		chan="$(P)$(N)AutofillMode"
-		clr=53
-		bclr=4
+		clr=14
+		bclr=51
 	}
 	clrmod="alarm"
 }
@@ -869,8 +869,8 @@ menu {
 	}
 	control {
 		chan="$(P)$(N)VolumeMode"
-		clr=53
-		bclr=4
+		clr=14
+		bclr=51
 	}
 	clrmod="alarm"
 }
