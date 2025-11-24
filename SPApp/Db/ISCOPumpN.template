@@ -75,3 +75,7 @@ record(calcout,"$(P)$(PUMP)CopyMaxVolume") {
     field(OUT, "$(P)$(PUMP)VolumeRemaining_RBV.HOPR PP NMS")
 }
 
+# This record is the pump description, used to label displays
+record(stringin, "$(P)$(PUMP)Description") {
+    field(VAL, "Pump $(PUMP)")
+}

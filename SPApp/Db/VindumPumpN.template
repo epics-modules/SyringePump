@@ -129,3 +129,8 @@ record(calcout, "$(P)$(PUMP)VolRemaining") {
     field(HOPR, "100.")
     field(PREC, "1")
 }
+
+# This record is the pump description, used to label displays
+record(stringin, "$(P)$(PUMP)Description") {
+    field(VAL, "Pump $(PUMP)")
+}

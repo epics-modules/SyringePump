@@ -10,3 +10,4 @@ $(P)$(PUMP)VolumeMode
 $(P)$(PUMP)Direction
 $(P)$(PUMP)DeliverValve
 $(P)$(PUMP)FillValve
+$(P)$(PUMP)Description
