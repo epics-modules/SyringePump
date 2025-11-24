@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-11-22 16:21:34 by epics-->
+<!--Saved on 2025-11-24 14:21:07 by epics-->
 <display version="2.0.0">
   <name>Vindum_DualPump</name>
-  <x>1340</x>
-  <y>338</y>
+  <x>391</x>
+  <y>217</y>
   <width>975</width>
-  <height>725</height>
+  <height>750</height>
   <background_color>
     <color red="187" green="187" blue="187">
     </color>
@@ -50,7 +50,7 @@
     <x>656</x>
     <y>65</y>
     <width>316</width>
-    <height>655</height>
+    <height>680</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>composite #14</name>
@@ -61,7 +61,7 @@
     <x>335</x>
     <y>65</y>
     <width>316</width>
-    <height>655</height>
+    <height>680</height>
   </widget>
   <widget type="rectangle" version="2.0.0">
     <name>rectangle #16</name>
@@ -796,13 +796,12 @@
         <description>PID Gains Pump B</description>
       </action>
     </actions>
-    <text>PID</text>
+    <text>PID Gains</text>
     <x>165</x>
     <y>225</y>
-    <width>70</width>
     <height>20</height>
     <background_color>
-      <color red="187" green="187" blue="187">
+      <color red="115" green="223" blue="255">
       </color>
     </background_color>
   </widget>

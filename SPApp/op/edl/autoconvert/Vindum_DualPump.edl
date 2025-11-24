@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1340
-y 338
+x 391
+y 217
 w 975
-h 725
+h 750
 font "helvetica-medium-r-18.0"
 ctlFont "helvetica-bold-r-10.0"
 btnFont "helvetica-medium-r-18.0"
@@ -73,7 +73,7 @@ release 0
 x 656
 y 65
 w 316
-h 655
+h 680
 
 beginGroup
 
@@ -86,7 +86,7 @@ release 0
 x 656
 y 65
 w 316
-h 655
+h 680
 fgColor rgb 0 0 0
 bgColor rgb 65280 65280 65280
 topShadowColor rgb 65280 65280 65280
@@ -116,7 +116,7 @@ release 0
 x 335
 y 65
 w 316
-h 655
+h 680
 
 beginGroup
 
@@ -129,7 +129,7 @@ release 0
 x 335
 y 65
 w 316
-h 655
+h 680
 fgColor rgb 0 0 0
 bgColor rgb 65280 65280 65280
 topShadowColor rgb 65280 65280 65280
@@ -1481,14 +1481,15 @@ minor 0
 release 0
 x 165
 y 225
-w 70
+w 100
 h 20
 fgColor rgb 0 0 0
-bgColor rgb 47872 47872 47872
+bgColor rgb 29440 57088 65280
 topShadowColor rgb 55808 55808 55808
 botShadowColor rgb 17920 17920 17920
 font "helvetica-medium-r-12.0"
-buttonLabel "PID"
+icon
+buttonLabel "PID Gains"
 numPvs 4
 numDsps 2
 displayFileName {

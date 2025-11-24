@@ -182,16 +182,16 @@ border-radius: 2px;
                 <enum>Menu</enum>
             </property>
             <property name="labels">
-                <string>Pump A;Pump B;Pump C;Pump D;Dual AB;Dual CD;Vindum Dual Pump</string>
+                <string>ISCO Pump A;ISCO Pump B;ISCO Pump C;ISCO Pump D;ISCO Dual AB;ISCO Dual CD;Vindum Single Pump;Vindum Dual Pump</string>
             </property>
             <property name="files">
-                <string>ISCO_SinglePump.ui ;ISCO_SinglePump.ui ;ISCO_SinglePump.ui ;ISCO_SinglePump.ui ;ISCO_DualPump.ui ;ISCO_DualPump.ui ;Vindum_DualPump.ui </string>
+                <string>ISCO_SinglePump.ui ;ISCO_SinglePump.ui ;ISCO_SinglePump.ui ;ISCO_SinglePump.ui ;ISCO_DualPump.ui ;ISCO_DualPump.ui ;Vindum_SinglePump.ui ;Vindum_DualPump.ui </string>
             </property>
             <property name="args">
-                <string>P=ISCO1:,PUMP=A:;P=ISCO1:,PUMP=B:;P=ISCO1:,PUMP=C:;P=ISCO1:,PUMP=D:;P=ISCO1:,P1=A:,P2=B:,DP=AB:;P=ISCO1:,P1=C:,P2=D:,DP=CD:;P=VINDUM1:P1:</string>
+                <string>P=ISCO1:,PUMP=A:;P=ISCO1:,PUMP=B:;P=ISCO1:,PUMP=C:;P=ISCO1:,PUMP=D:;P=ISCO1:,P1=A:,P2=B:,DP=AB:;P=ISCO1:,P1=C:,P2=D:,DP=CD:;P=VINDUM1:P1:;P=VINDUM1:P1:</string>
             </property>
             <property name="removeParent">
-                <string>false;false;false;false;false;false;false</string>
+                <string>false;false;false;false;false;false;false;false</string>
             </property>
         </widget>
         <widget class="caRelatedDisplay" name="caRelatedDisplay_1">

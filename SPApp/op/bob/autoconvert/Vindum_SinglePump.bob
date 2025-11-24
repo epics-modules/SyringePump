@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-11-22 16:21:34 by epics-->
+<!--Saved on 2025-11-24 14:21:07 by epics-->
 <display version="2.0.0">
   <name>Vindum_SinglePump</name>
   <x>32</x>
   <y>67</y>
   <width>655</width>
-  <height>725</height>
+  <height>750</height>
   <background_color>
     <color red="187" green="187" blue="187">
     </color>
@@ -50,7 +50,7 @@
     <x>335</x>
     <y>65</y>
     <width>316</width>
-    <height>655</height>
+    <height>680</height>
   </widget>
   <widget type="group" version="2.0.0">
     <name>composite #14</name>
@@ -549,13 +549,12 @@
         <description>PID Gains</description>
       </action>
     </actions>
-    <text>PID</text>
+    <text>PID Gains</text>
     <x>165</x>
     <y>195</y>
-    <width>70</width>
     <height>20</height>
     <background_color>
-      <color red="187" green="187" blue="187">
+      <color red="115" green="223" blue="255">
       </color>
     </background_color>
   </widget>

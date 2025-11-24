@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1573
-y 184
+x 1239
+y 174
 w 316
-h 660
+h 685
 font "helvetica-medium-r-18.0"
 ctlFont "helvetica-bold-r-10.0"
 btnFont "helvetica-medium-r-18.0"
@@ -985,66 +985,6 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 70
-y 580
-w 100
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "right"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Position %"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 60
-y 605
-w 110
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "right"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Error state"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 40
-y 630
-w 130
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "right"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Latched state"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
 x 10
 y 555
 w 160
@@ -1088,24 +1028,91 @@ release 0
 x 1
 y 500
 w 315
-h 155
+h 180
 lineColor rgb 0 0 0
 fillColor rgb 0 0 0
 lineWidth 0
 endObjectProperties
 
-# (Group)
-object activeGroupClass
+# (Static Text)
+object activeXTextClass
 beginObjectProperties
 major 4
-minor 0
-release 0
-x 180
-y 530
-w 70
-h 120
+minor 1
+release 1
+x 70
+y 605
+w 100
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Position %"
+}
+endObjectProperties
 
-beginGroup
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 60
+y 630
+w 110
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Error state"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 40
+y 655
+w 130
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Latched state"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 580
+w 160
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "right"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Vol. remaining %"
+}
+endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
@@ -1115,7 +1122,7 @@ minor 7
 release 0
 x 180
 y 530
-w 70
+w 60
 h 20
 controlPv "$(P)$(N)Volume"
 format "decimal"
@@ -1138,8 +1145,32 @@ major 4
 minor 7
 release 0
 x 180
-y 580
-w 70
+y 555
+w 60
+h 20
+controlPv "$(P)$(N)TotalVolume"
+format "decimal"
+font "helvetica-medium-r-14.0"
+fontAlign "left"
+fgColor rgb 10752 25344 58368
+bgColor rgb 47872 47872 47872
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 180
+y 605
+w 60
 h 20
 controlPv "$(P)$(N)Position"
 format "decimal"
@@ -1162,8 +1193,8 @@ major 4
 minor 7
 release 0
 x 180
-y 605
-w 70
+y 630
+w 60
 h 20
 controlPv "$(P)$(N)ErrorState"
 format "hex"
@@ -1186,8 +1217,8 @@ major 4
 minor 7
 release 0
 x 180
-y 630
-w 70
+y 655
+w 60
 h 20
 controlPv "$(P)$(N)LatchedErrorState"
 format "hex"
@@ -1210,10 +1241,10 @@ major 4
 minor 7
 release 0
 x 180
-y 555
-w 70
+y 580
+w 60
 h 20
-controlPv "$(P)$(N)TotalVolume"
+controlPv "$(P)$(N)VolRemaining"
 format "decimal"
 font "helvetica-medium-r-14.0"
 fontAlign "left"
@@ -1225,6 +1256,41 @@ smartRefresh
 fastUpdate
 newPos
 objType "controls"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 250
+y 530
+w 60
+h 70
+
+beginGroup
+# (Bar)
+object activeBarClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 250
+y 580
+w 60
+h 20
+indicatorColor rgb 10752 25344 58368
+fgColor rgb 0 0 0
+bgColor rgb 47872 47872 47872
+indicatorPv "$(P)$(N)VolRemaining"
+font "helvetica-bold-r-10.0"
+labelTicks 1
+majorTicks 10
+minorTicks 0
+border
+scaleFormat "FFloat"
+orientation "horizontal"
 endObjectProperties
 
 endGroup
@@ -1508,8 +1574,8 @@ x 175
 y 420
 w 80
 h 20
-fgColor rgb 10752 25344 58368
-bgColor rgb 47872 47872 47872
+fgColor rgb 0 0 0
+bgColor rgb 29440 57088 65280
 inconsistentColor rgb 17920 17920 17920
 topShadowColor rgb 55808 55808 55808
 botShadowColor rgb 17920 17920 17920
@@ -1528,8 +1594,8 @@ x 175
 y 445
 w 80
 h 20
-fgColor rgb 10752 25344 58368
-bgColor rgb 47872 47872 47872
+fgColor rgb 0 0 0
+bgColor rgb 29440 57088 65280
 inconsistentColor rgb 17920 17920 17920
 topShadowColor rgb 55808 55808 55808
 botShadowColor rgb 17920 17920 17920
@@ -1538,15 +1604,60 @@ indicatorPv "$(P)$(N)VolumeMode"
 font "helvetica-medium-r-12.0"
 endObjectProperties
 
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 233
+y 10
+w 70
+h 20
+fgColor rgb 0 0 0
+bgColor rgb 29440 57088 65280
+topShadowColor rgb 55808 55808 55808
+botShadowColor rgb 17920 17920 17920
+font "helvetica-medium-r-12.0"
+icon
+buttonLabel "Plot"
+numPvs 2
+numDsps 1
+displayFileName {
+  0 "plot_2pvs.edl"
+}
+menuLabel {
+  0 "Plot"
+}
+symbols {
+  0 "PV1=$(P)$(N)SetPressure_RBV,PV2=$(P)$(N)Pressure"
+}
+replaceSymbols {
+  0 1
+}
+endObjectProperties
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 250
+y 530
+w 60
+h 70
+
+beginGroup
+
 # (Message Button)
 object activeMessageButtonClass
 beginObjectProperties
 major 4
 minor 0
 release 0
-x 260
+x 250
 y 530
-w 50
+w 60
 h 20
 fgColor rgb 0 0 0
 onColor rgb 29440 57088 65280
@@ -1569,9 +1680,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 260
+x 250
 y 555
-w 50
+w 60
 h 20
 fgColor rgb 0 0 0
 onColor rgb 29440 57088 65280
@@ -1587,18 +1698,6 @@ offLabel "Reset"
 useEnumNumeric
 font "helvetica-medium-r-12.0"
 endObjectProperties
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 180
-y 530
-w 70
-h 120
-
-beginGroup
 
 endGroup
 

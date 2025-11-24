@@ -60,8 +60,8 @@ botShadowColor rgb 17920 17920 17920
 font "helvetica-medium-r-12.0"
 icon
 buttonLabel "Pumps"
-numPvs 14
-numDsps 7
+numPvs 16
+numDsps 8
 displayFileName {
   0 "ISCO_SinglePump.edl"
   1 "ISCO_SinglePump.edl"
@@ -69,16 +69,18 @@ displayFileName {
   3 "ISCO_SinglePump.edl"
   4 "ISCO_DualPump.edl"
   5 "ISCO_DualPump.edl"
-  6 "Vindum_DualPump.edl"
+  6 "Vindum_SinglePump.edl"
+  7 "Vindum_DualPump.edl"
 }
 menuLabel {
-  0 "Pump A"
-  1 "Pump B"
-  2 "Pump C"
-  3 "Pump D"
-  4 "Dual AB"
-  5 "Dual CD"
-  6 "Vindum Dual Pump"
+  0 "ISCO Pump A"
+  1 "ISCO Pump B"
+  2 "ISCO Pump C"
+  3 "ISCO Pump D"
+  4 "ISCO Dual AB"
+  5 "ISCO Dual CD"
+  6 "Vindum Single Pump"
+  7 "Vindum Dual Pump"
 }
 symbols {
   0 "P=ISCO1:,PUMP=A:"
@@ -88,6 +90,7 @@ symbols {
   4 "P=ISCO1:,P1=A:,P2=B:,DP=AB:"
   5 "P=ISCO1:,P1=C:,P2=D:,DP=CD:"
   6 "P=VINDUM1:P1:"
+  7 "P=VINDUM1:P1:"
 }
 replaceSymbols {
   0 1
@@ -97,6 +100,7 @@ replaceSymbols {
   4 1
   5 1
   6 1
+  7 1
 }
 endObjectProperties
 

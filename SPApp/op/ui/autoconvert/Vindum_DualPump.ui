@@ -4,10 +4,10 @@
 <widget class="QMainWindow" name="MainWindow">
     <property name="geometry">
         <rect>
-            <x>1340</x>
-            <y>338</y>
+            <x>391</x>
+            <y>217</y>
             <width>975</width>
-            <height>725</height>
+            <height>750</height>
         </rect>
     </property>
     <property name="styleSheet">
@@ -194,7 +194,7 @@ border-radius: 2px;
                     <x>656</x>
                     <y>65</y>
                     <width>318</width>
-                    <height>662</height>
+                    <height>687</height>
                 </rect>
             </property>
             <property name="geometry">
@@ -202,7 +202,7 @@ border-radius: 2px;
                     <x>656</x>
                     <y>65</y>
                     <width>316</width>
-                    <height>660</height>
+                    <height>685</height>
                 </rect>
             </property>
             <property name="filename">
@@ -218,7 +218,7 @@ border-radius: 2px;
                     <x>335</x>
                     <y>65</y>
                     <width>318</width>
-                    <height>662</height>
+                    <height>687</height>
                 </rect>
             </property>
             <property name="geometry">
@@ -226,7 +226,7 @@ border-radius: 2px;
                     <x>335</x>
                     <y>65</y>
                     <width>316</width>
-                    <height>660</height>
+                    <height>685</height>
                 </rect>
             </property>
             <property name="filename">
@@ -2016,7 +2016,7 @@ border-radius: 2px;
                 <rect>
                     <x>165</x>
                     <y>225</y>
-                    <width>70</width>
+                    <width>100</width>
                     <height>20</height>
                 </rect>
             </property>
@@ -2029,13 +2029,13 @@ border-radius: 2px;
             </property>
             <property name="background">
                 <color alpha="255">
-                    <red>187</red>
-                    <green>187</green>
-                    <blue>187</blue>
+                    <red>115</red>
+                    <green>223</green>
+                    <blue>255</blue>
                 </color>
             </property>
             <property name="label">
-                <string>-PID</string>
+                <string>PID Gains</string>
             </property>
             <property name="stackingMode">
                 <enum>Menu</enum>

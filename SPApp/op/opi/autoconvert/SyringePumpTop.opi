@@ -80,7 +80,7 @@
           <PUMP>A:</PUMP>
         </macros>
         <mode>1</mode>
-        <description>Pump A</description>
+        <description>ISCO Pump A</description>
       </action>
       <action type="OPEN_DISPLAY">
         <path>ISCO_SinglePump.opi</path>
@@ -90,7 +90,7 @@
           <PUMP>B:</PUMP>
         </macros>
         <mode>1</mode>
-        <description>Pump B</description>
+        <description>ISCO Pump B</description>
       </action>
       <action type="OPEN_DISPLAY">
         <path>ISCO_SinglePump.opi</path>
@@ -100,7 +100,7 @@
           <PUMP>C:</PUMP>
         </macros>
         <mode>1</mode>
-        <description>Pump C</description>
+        <description>ISCO Pump C</description>
       </action>
       <action type="OPEN_DISPLAY">
         <path>ISCO_SinglePump.opi</path>
@@ -110,7 +110,7 @@
           <PUMP>D:</PUMP>
         </macros>
         <mode>1</mode>
-        <description>Pump D</description>
+        <description>ISCO Pump D</description>
       </action>
       <action type="OPEN_DISPLAY">
         <path>ISCO_DualPump.opi</path>
@@ -122,7 +122,7 @@
           <DP>AB:</DP>
         </macros>
         <mode>1</mode>
-        <description>Dual AB</description>
+        <description>ISCO Dual AB</description>
       </action>
       <action type="OPEN_DISPLAY">
         <path>ISCO_DualPump.opi</path>
@@ -134,7 +134,16 @@
           <DP>CD:</DP>
         </macros>
         <mode>1</mode>
-        <description>Dual CD</description>
+        <description>ISCO Dual CD</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>Vindum_SinglePump.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <P>VINDUM1:P1:</P>
+        </macros>
+        <mode>1</mode>
+        <description>Vindum Single Pump</description>
       </action>
       <action type="OPEN_DISPLAY">
         <path>Vindum_DualPump.opi</path>
