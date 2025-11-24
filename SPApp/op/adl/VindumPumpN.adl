@@ -5,8 +5,8 @@ file {
 }
 display {
 	object {
-		x=1239
-		y=174
+		x=2018
+		y=121
 		width=316
 		height=685
 	}
@@ -400,19 +400,6 @@ text {
 	}
 	textix="Setpoint"
 	align="horiz. right"
-}
-text {
-	object {
-		x=0
-		y=5
-		width=315
-		height=25
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Pump $(N)"
-	align="horiz. centered"
 }
 text {
 	object {
@@ -915,7 +902,7 @@ text {
 }
 rectangle {
 	object {
-		x=1
+		x=0
 		y=500
 		width=315
 		height=180
@@ -927,14 +914,14 @@ rectangle {
 }
 "related display" {
 	object {
-		x=233
-		y=10
+		x=5
+		y=58
 		width=70
 		height=20
 	}
 	display[0] {
 		label="Plot"
-		name="plot_2pvs.adl"
+		name="plot_pvs.adl"
 		args="PV1=$(P)$(N)SetPressure_RBV,PV2=$(P)$(N)Pressure"
 	}
 	clr=14
@@ -1139,5 +1126,22 @@ composite {
 			limits {
 			}
 		}
+	}
+}
+"text update" {
+	object {
+		x=1
+		y=5
+		width=314
+		height=25
+	}
+	monitor {
+		chan="$(P)$(N)Description"
+		clr=14
+		bclr=4
+	}
+	align="horiz. centered"
+	format="string"
+	limits {
 	}
 }

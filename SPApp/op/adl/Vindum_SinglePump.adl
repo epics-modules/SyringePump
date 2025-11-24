@@ -117,7 +117,7 @@ composite {
 	object {
 		x=335
 		y=65
-		width=316
+		width=315
 		height=680
 	}
 	"composite name"=""
@@ -381,7 +381,7 @@ rectangle {
 		x=5
 		y=65
 		width=325
-		height=155
+		height=180
 	}
 	"basic attribute" {
 		clr=14
@@ -394,7 +394,7 @@ rectangle {
 composite {
 	object {
 		x=5
-		y=225
+		y=250
 		width=325
 		height=130
 	}
@@ -403,7 +403,7 @@ composite {
 		composite {
 			object {
 				x=30
-				y=255
+				y=280
 				width=215
 				height=20
 			}
@@ -412,7 +412,7 @@ composite {
 				"text update" {
 					object {
 						x=165
-						y=255
+						y=280
 						width=80
 						height=20
 					}
@@ -427,7 +427,7 @@ composite {
 				text {
 					object {
 						x=30
-						y=255
+						y=280
 						width=130
 						height=20
 					}
@@ -442,7 +442,7 @@ composite {
 		composite {
 			object {
 				x=45
-				y=330
+				y=355
 				width=265
 				height=20
 			}
@@ -451,7 +451,7 @@ composite {
 				text {
 					object {
 						x=45
-						y=330
+						y=355
 						width=200
 						height=20
 					}
@@ -464,7 +464,7 @@ composite {
 				"message button" {
 					object {
 						x=250
-						y=330
+						y=355
 						width=60
 						height=20
 					}
@@ -481,7 +481,7 @@ composite {
 		composite {
 			object {
 				x=50
-				y=280
+				y=305
 				width=195
 				height=20
 			}
@@ -490,7 +490,7 @@ composite {
 				text {
 					object {
 						x=50
-						y=280
+						y=305
 						width=110
 						height=20
 					}
@@ -503,7 +503,7 @@ composite {
 				"text update" {
 					object {
 						x=165
-						y=280
+						y=305
 						width=80
 						height=20
 					}
@@ -521,7 +521,7 @@ composite {
 		composite {
 			object {
 				x=30
-				y=305
+				y=330
 				width=215
 				height=20
 			}
@@ -530,7 +530,7 @@ composite {
 				text {
 					object {
 						x=30
-						y=305
+						y=330
 						width=130
 						height=20
 					}
@@ -543,7 +543,7 @@ composite {
 				"text update" {
 					object {
 						x=165
-						y=305
+						y=330
 						width=80
 						height=20
 					}
@@ -561,7 +561,7 @@ composite {
 		rectangle {
 			object {
 				x=5
-				y=225
+				y=250
 				width=325
 				height=130
 			}
@@ -576,7 +576,7 @@ composite {
 		text {
 			object {
 				x=137
-				y=230
+				y=255
 				width=60
 				height=20
 			}
@@ -615,4 +615,31 @@ text {
 	clr=14
 	bclr=51
 	label="-PID Gains"
+}
+text {
+	object {
+		x=30
+		y=220
+		width=130
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Pump descrip."
+}
+"text entry" {
+	object {
+		x=165
+		y=220
+		width=160
+		height=20
+	}
+	control {
+		chan="$(P)A:Description"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
 }
