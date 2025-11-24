@@ -64,28 +64,15 @@ value {
 }
 endObjectProperties
 
-# (Group)
-object activeGroupClass
+# (Embedded Window)
+object activePipClass
 beginObjectProperties
 major 4
 minor 0
 release 0
 x 335
 y 65
-w 316
-h 680
-
-beginGroup
-
-# (Embedded Window)
-object activePipClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 335
-y 65
-w 316
+w 315
 h 680
 fgColor rgb 0 0 0
 bgColor rgb 65280 65280 65280
@@ -99,12 +86,6 @@ displayFileName {
   0 "VindumPumpN.edl;P=$(P),N=A:"
 }
 noScroll
-endObjectProperties
-
-endGroup
-
-visMin "A"
-visMax "1"
 endObjectProperties
 
 # (Group)
@@ -454,7 +435,7 @@ release 0
 x 5
 y 65
 w 325
-h 155
+h 180
 lineColor rgb 0 0 0
 fillColor rgb 0 0 0
 lineWidth 0
@@ -467,7 +448,7 @@ major 4
 minor 0
 release 0
 x 5
-y 225
+y 250
 w 325
 h 130
 
@@ -480,7 +461,7 @@ major 4
 minor 0
 release 0
 x 30
-y 255
+y 280
 w 215
 h 20
 
@@ -493,7 +474,7 @@ major 4
 minor 7
 release 0
 x 165
-y 255
+y 280
 w 80
 h 20
 controlPv "$(P)ComResponse"
@@ -517,7 +498,7 @@ major 4
 minor 1
 release 1
 x 30
-y 255
+y 280
 w 130
 h 20
 font "helvetica-medium-r-14.0"
@@ -542,7 +523,7 @@ major 4
 minor 0
 release 0
 x 45
-y 330
+y 355
 w 265
 h 20
 
@@ -555,7 +536,7 @@ major 4
 minor 1
 release 1
 x 45
-y 330
+y 355
 w 200
 h 20
 font "helvetica-medium-r-14.0"
@@ -580,7 +561,7 @@ major 4
 minor 0
 release 0
 x 50
-y 280
+y 305
 w 195
 h 20
 
@@ -593,7 +574,7 @@ major 4
 minor 1
 release 1
 x 50
-y 280
+y 305
 w 110
 h 20
 font "helvetica-medium-r-14.0"
@@ -613,7 +594,7 @@ major 4
 minor 7
 release 0
 x 165
-y 280
+y 305
 w 80
 h 20
 controlPv "$(P)CommonErrorState"
@@ -642,7 +623,7 @@ major 4
 minor 0
 release 0
 x 30
-y 305
+y 330
 w 215
 h 20
 
@@ -655,7 +636,7 @@ major 4
 minor 1
 release 1
 x 30
-y 305
+y 330
 w 130
 h 20
 font "helvetica-medium-r-14.0"
@@ -675,7 +656,7 @@ major 4
 minor 7
 release 0
 x 165
-y 305
+y 330
 w 80
 h 20
 controlPv "$(P)LatchedCommonErrorState"
@@ -704,7 +685,7 @@ major 4
 minor 0
 release 0
 x 5
-y 225
+y 250
 w 325
 h 130
 lineColor rgb 0 0 0
@@ -719,7 +700,7 @@ major 4
 minor 1
 release 1
 x 137
-y 230
+y 255
 w 60
 h 20
 font "helvetica-medium-r-14.0"
@@ -754,6 +735,51 @@ useDisplayBg
 value {
   "PID Gains"
 }
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 30
+y 220
+w 130
+h 20
+font "helvetica-medium-r-14.0"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Pump descrip."
+}
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 165
+y 220
+w 160
+h 20
+controlPv "$(P)A:Description"
+format "decimal"
+font "helvetica-medium-r-12.0"
+fontAlign "left"
+fgColor rgb 0 0 0
+bgColor rgb 29440 57088 65280
+editable
+motifWidget
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
 endObjectProperties
 # (Group)
 object activeGroupClass
@@ -895,7 +921,7 @@ major 4
 minor 0
 release 0
 x 5
-y 225
+y 250
 w 325
 h 130
 
@@ -907,7 +933,7 @@ major 4
 minor 0
 release 0
 x 30
-y 255
+y 280
 w 215
 h 20
 
@@ -924,7 +950,7 @@ major 4
 minor 0
 release 0
 x 45
-y 330
+y 355
 w 265
 h 20
 
@@ -937,7 +963,7 @@ major 4
 minor 0
 release 0
 x 250
-y 330
+y 355
 w 60
 h 20
 fgColor rgb 0 0 0
@@ -966,7 +992,7 @@ major 4
 minor 0
 release 0
 x 50
-y 280
+y 305
 w 195
 h 20
 
@@ -983,7 +1009,7 @@ major 4
 minor 0
 release 0
 x 30
-y 305
+y 330
 w 215
 h 20
 

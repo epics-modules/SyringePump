@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1239
-y 174
+x 2018
+y 121
 w 316
 h 685
 font "helvetica-medium-r-18.0"
@@ -414,26 +414,6 @@ bgColor index 3
 useDisplayBg
 value {
   "Setpoint"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 0
-y 5
-w 315
-h 25
-font "helvetica-medium-r-18.0"
-fontAlign "center"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Pump $(N)"
 }
 endObjectProperties
 
@@ -1025,7 +1005,7 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 1
+x 0
 y 500
 w 315
 h 180
@@ -1297,6 +1277,30 @@ endGroup
 
 endObjectProperties
 
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 1
+y 5
+w 314
+h 25
+controlPv "$(P)$(N)Description"
+format "string"
+font "helvetica-medium-r-18.0"
+fontAlign "center"
+fgColor rgb 0 0 0
+bgColor rgb 47872 47872 47872
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
 
 # (Message Button)
 object activeMessageButtonClass
@@ -1610,8 +1614,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 233
-y 10
+x 5
+y 58
 w 70
 h 20
 fgColor rgb 0 0 0
@@ -1624,7 +1628,7 @@ buttonLabel "Plot"
 numPvs 2
 numDsps 1
 displayFileName {
-  0 "plot_2pvs.edl"
+  0 "plot_pvs.edl"
 }
 menuLabel {
   0 "Plot"

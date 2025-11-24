@@ -894,7 +894,7 @@ border-radius: 2px;
                     <x>5</x>
                     <y>65</y>
                     <width>325</width>
-                    <height>155</height>
+                    <height>180</height>
                 </rect>
             </property>
             <property name="foreground">
@@ -929,7 +929,7 @@ border-radius: 2px;
             <property name="geometry">
                 <rect>
                     <x>5</x>
-                    <y>225</y>
+                    <y>250</y>
                     <width>327</width>
                     <height>132</height>
                 </rect>
@@ -1474,6 +1474,93 @@ border-radius: 2px;
                 <string>false</string>
             </property>
         </widget>
+        <widget class="caLabel" name="caLabel_14">
+            <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="foreground">
+                <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="background">
+                <color alpha="0">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="text">
+                <string>Pump descrip.</string>
+            </property>
+            <property name="fontScaleMode">
+                <enum>ESimpleLabel::WidthAndHeight</enum>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>30</x>
+                    <y>220</y>
+                    <width>130</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="alignment">
+                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+        </widget>
+        <widget class="caTextEntry" name="caTextEntry_2">
+            <property name="geometry">
+                <rect>
+                    <x>165</x>
+                    <y>220</y>
+                    <width>160</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="fontScaleMode">
+                <enum>caLineEdit::WidthAndHeight</enum>
+            </property>
+            <property name="channel">
+                <string>$(P)A:Description</string>
+            </property>
+            <property name="foreground">
+                <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="background">
+                <color alpha="255">
+                    <red>115</red>
+                    <green>223</green>
+                    <blue>255</blue>
+                </color>
+            </property>
+            <property name="limitsMode">
+                <enum>caLineEdit::Channel</enum>
+            </property>
+            <property name="limitsMode">
+                <enum>caLineEdit::Channel</enum>
+            </property>
+            <property name="precisionMode">
+                <enum>caLineEdit::Channel</enum>
+            </property>
+            <property name="minValue">
+                <double>0.0</double>
+            </property>
+            <property name="maxValue">
+                <double>1.0</double>
+            </property>
+            <property name="colorMode">
+                <enum>caLineEdit::Static</enum>
+            </property>
+            <property name="formatType">
+                <enum>decimal</enum>
+            </property>
+        </widget>
         <zorder>caLabel_0</zorder>
         <zorder>caLabel_1</zorder>
         <zorder>caInclude_0</zorder>
@@ -1500,6 +1587,7 @@ border-radius: 2px;
         <zorder>caLabel_12</zorder>
         <zorder>caFrame_5</zorder>
         <zorder>caLabel_13</zorder>
+        <zorder>caLabel_14</zorder>
         <zorder>caMessageButton_0</zorder>
         <zorder>caMenu_0</zorder>
         <zorder>caLineEdit_0</zorder>
@@ -1514,6 +1602,7 @@ border-radius: 2px;
         <zorder>caLineEdit_5</zorder>
         <zorder>caLineEdit_6</zorder>
         <zorder>caRelatedDisplay_0</zorder>
+        <zorder>caTextEntry_2</zorder>
     </widget>
 </widget>
 </ui>

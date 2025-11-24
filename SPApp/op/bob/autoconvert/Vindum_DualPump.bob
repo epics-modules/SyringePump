@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-11-24 14:21:07 by epics-->
+<!--Saved on 2025-11-24 15:27:47 by epics-->
 <display version="2.0.0">
   <name>Vindum_DualPump</name>
   <x>391</x>
@@ -159,7 +159,7 @@
   <widget type="group" version="2.0.0">
     <name>composite #37</name>
     <x>55</x>
-    <y>538</y>
+    <y>590</y>
     <width>225</width>
     <height>20</height>
     <style>3</style>
@@ -320,452 +320,252 @@
   </widget>
   <widget type="group" version="2.0.0">
     <name>composite #75</name>
-    <x>5</x>
-    <y>255</y>
-    <width>325</width>
-    <height>265</height>
+    <x>20</x>
+    <y>285</y>
+    <width>290</width>
+    <height>20</height>
     <style>3</style>
     <transparent>true</transparent>
-    <widget type="group" version="2.0.0">
-      <name>composite #78</name>
-      <x>25</x>
-      <y>165</y>
-      <width>215</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>text update #81</name>
-        <pv_name>$(P)ComResponse</pv_name>
-        <x>135</x>
-        <width>80</width>
-        <font>
-          <font family="Liberation Sans" style="REGULAR" size="16.0">
-          </font>
-        </font>
-        <foreground_color>
-          <color red="42" green="99" blue="228">
-          </color>
-        </foreground_color>
-        <background_color>
-          <color red="187" green="187" blue="187">
-          </color>
-        </background_color>
-        <format>1</format>
-        <show_units>false</show_units>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>text #85</name>
-        <text>Command error</text>
-        <width>130</width>
-        <font>
-          <font family="Liberation Sans" style="REGULAR" size="16.0">
-          </font>
-        </font>
-        <horizontal_alignment>2</horizontal_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>composite #88</name>
-      <x>40</x>
-      <y>240</y>
-      <width>265</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="label" version="2.0.0">
-        <name>text #91</name>
-        <text>Clear latched errors</text>
-        <width>200</width>
-        <font>
-          <font family="Liberation Sans" style="REGULAR" size="16.0">
-          </font>
-        </font>
-        <horizontal_alignment>2</horizontal_alignment>
-      </widget>
-      <widget type="action_button" version="3.0.0">
-        <name>message button #94</name>
-        <actions>
-          <action type="write_pv">
-            <pv_name>$(P)ClearLatchedErrors.PROC</pv_name>
-            <value>1</value>
-            <description>Write</description>
-          </action>
-        </actions>
-        <pv_name>$(P)ClearLatchedErrors.PROC</pv_name>
-        <text>Clear</text>
-        <x>205</x>
-        <width>60</width>
-        <height>20</height>
-        <background_color>
-          <color red="115" green="223" blue="255">
-          </color>
-        </background_color>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>composite #97</name>
-      <x>45</x>
-      <y>190</y>
-      <width>195</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="label" version="2.0.0">
-        <name>text #100</name>
-        <text>Error state</text>
-        <width>110</width>
-        <font>
-          <font family="Liberation Sans" style="REGULAR" size="16.0">
-          </font>
-        </font>
-        <horizontal_alignment>2</horizontal_alignment>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>text update #103</name>
-        <pv_name>$(P)CommonErrorState</pv_name>
-        <x>115</x>
-        <width>80</width>
-        <font>
-          <font family="Liberation Sans" style="REGULAR" size="16.0">
-          </font>
-        </font>
-        <foreground_color>
-          <color red="42" green="99" blue="228">
-          </color>
-        </foreground_color>
-        <background_color>
-          <color red="187" green="187" blue="187">
-          </color>
-        </background_color>
-        <format>4</format>
-        <show_units>false</show_units>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>composite #107</name>
-      <x>25</x>
-      <y>215</y>
-      <width>215</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="label" version="2.0.0">
-        <name>text #110</name>
-        <text>Latched state</text>
-        <width>130</width>
-        <font>
-          <font family="Liberation Sans" style="REGULAR" size="16.0">
-          </font>
-        </font>
-        <horizontal_alignment>2</horizontal_alignment>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>text update #113</name>
-        <pv_name>$(P)LatchedCommonErrorState</pv_name>
-        <x>135</x>
-        <width>80</width>
-        <font>
-          <font family="Liberation Sans" style="REGULAR" size="16.0">
-          </font>
-        </font>
-        <foreground_color>
-          <color red="42" green="99" blue="228">
-          </color>
-        </foreground_color>
-        <background_color>
-          <color red="187" green="187" blue="187">
-          </color>
-        </background_color>
-        <format>4</format>
-        <show_units>false</show_units>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-    </widget>
-    <widget type="rectangle" version="2.0.0">
-      <name>rectangle #117</name>
-      <y>135</y>
-      <width>325</width>
-      <height>130</height>
-      <line_width>1</line_width>
-      <line_color>
-        <color red="0" green="0" blue="0">
-        </color>
-      </line_color>
-      <background_color>
-        <color red="0" green="0" blue="0">
-        </color>
-      </background_color>
-      <transparent>true</transparent>
-    </widget>
     <widget type="label" version="2.0.0">
-      <name>text #121</name>
-      <text>Status</text>
-      <x>132</x>
-      <y>140</y>
-      <width>60</width>
+      <name>text #78</name>
+      <text>Pressure units</text>
+      <width>140</width>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="16.0">
         </font>
       </font>
       <horizontal_alignment>2</horizontal_alignment>
     </widget>
-    <widget type="group" version="2.0.0">
-      <name>composite #124</name>
-      <width>325</width>
-      <height>130</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="group" version="2.0.0">
-        <name>composite #127</name>
-        <x>15</x>
-        <y>30</y>
-        <width>290</width>
-        <height>20</height>
-        <style>3</style>
-        <transparent>true</transparent>
-        <widget type="label" version="2.0.0">
-          <name>text #130</name>
-          <text>Pressure units</text>
-          <width>140</width>
-          <font>
-            <font family="Liberation Sans" style="REGULAR" size="16.0">
-            </font>
-          </font>
-          <horizontal_alignment>2</horizontal_alignment>
-        </widget>
-        <widget type="combo" version="2.0.0">
-          <name>menu #133</name>
-          <pv_name>$(P)PressureUnits</pv_name>
-          <x>145</x>
-          <width>70</width>
-          <height>20</height>
-          <background_color>
-            <color red="187" green="187" blue="187">
-            </color>
-          </background_color>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-        <widget type="textupdate" version="2.0.0">
-          <name>text update #136</name>
-          <pv_name>$(P)PressureUnits_RBV</pv_name>
-          <x>220</x>
-          <width>70</width>
-          <font>
-            <font family="Liberation Sans" style="REGULAR" size="16.0">
-            </font>
-          </font>
-          <foreground_color>
-            <color red="42" green="99" blue="228">
-            </color>
-          </foreground_color>
-          <background_color>
-            <color red="187" green="187" blue="187">
-            </color>
-          </background_color>
-          <format>6</format>
-          <show_units>false</show_units>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-      </widget>
-      <widget type="group" version="2.0.0">
-        <name>composite #140</name>
-        <x>25</x>
-        <y>80</y>
-        <width>290</width>
-        <height>20</height>
-        <style>3</style>
-        <transparent>true</transparent>
-        <widget type="label" version="2.0.0">
-          <name>text #143</name>
-          <text>Max. pressure</text>
-          <width>130</width>
-          <font>
-            <font family="Liberation Sans" style="REGULAR" size="16.0">
-            </font>
-          </font>
-          <auto_size>true</auto_size>
-        </widget>
-        <widget type="textentry" version="3.0.0">
-          <name>text entry #146</name>
-          <pv_name>$(P)SetMaxPressure</pv_name>
-          <x>135</x>
-          <width>70</width>
-          <font>
-            <font family="Liberation Sans" style="REGULAR" size="16.0">
-            </font>
-          </font>
-          <background_color>
-            <color red="115" green="223" blue="255">
-            </color>
-          </background_color>
-          <format>1</format>
-          <show_units>false</show_units>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-        <widget type="textupdate" version="2.0.0">
-          <name>text update #150</name>
-          <pv_name>$(P)SetMaxPressure_RBV</pv_name>
-          <x>210</x>
-          <width>80</width>
-          <font>
-            <font family="Liberation Sans" style="REGULAR" size="16.0">
-            </font>
-          </font>
-          <foreground_color>
-            <color red="42" green="99" blue="228">
-            </color>
-          </foreground_color>
-          <background_color>
-            <color red="187" green="187" blue="187">
-            </color>
-          </background_color>
-          <format>1</format>
-          <show_units>false</show_units>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-      </widget>
-      <widget type="group" version="2.0.0">
-        <name>composite #154</name>
-        <x>55</x>
-        <y>55</y>
-        <width>260</width>
-        <height>20</height>
-        <style>3</style>
-        <transparent>true</transparent>
-        <widget type="label" version="2.0.0">
-          <name>text #157</name>
-          <text>Rate units</text>
-          <font>
-            <font family="Liberation Sans" style="REGULAR" size="16.0">
-            </font>
-          </font>
-          <horizontal_alignment>2</horizontal_alignment>
-        </widget>
-        <widget type="combo" version="2.0.0">
-          <name>menu #160</name>
-          <pv_name>$(P)RateUnits</pv_name>
-          <x>105</x>
-          <width>70</width>
-          <height>20</height>
-          <background_color>
-            <color red="187" green="187" blue="187">
-            </color>
-          </background_color>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-        <widget type="textupdate" version="2.0.0">
-          <name>text update #163</name>
-          <pv_name>$(P)RateUnits_RBV</pv_name>
-          <x>180</x>
-          <width>80</width>
-          <font>
-            <font family="Liberation Sans" style="REGULAR" size="16.0">
-            </font>
-          </font>
-          <foreground_color>
-            <color red="42" green="99" blue="228">
-            </color>
-          </foreground_color>
-          <background_color>
-            <color red="187" green="187" blue="187">
-            </color>
-          </background_color>
-          <format>6</format>
-          <show_units>false</show_units>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-      </widget>
-      <widget type="group" version="2.0.0">
-        <name>composite #167</name>
-        <x>65</x>
-        <y>105</y>
-        <width>250</width>
-        <height>20</height>
-        <style>3</style>
-        <transparent>true</transparent>
-        <widget type="label" version="2.0.0">
-          <name>text #170</name>
-          <text>Max. rate</text>
-          <width>90</width>
-          <font>
-            <font family="Liberation Sans" style="REGULAR" size="16.0">
-            </font>
-          </font>
-          <auto_size>true</auto_size>
-        </widget>
-        <widget type="textentry" version="3.0.0">
-          <name>text entry #173</name>
-          <pv_name>$(P)SetMaxRate</pv_name>
-          <x>95</x>
-          <width>70</width>
-          <font>
-            <font family="Liberation Sans" style="REGULAR" size="16.0">
-            </font>
-          </font>
-          <background_color>
-            <color red="115" green="223" blue="255">
-            </color>
-          </background_color>
-          <format>1</format>
-          <show_units>false</show_units>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-        <widget type="textupdate" version="2.0.0">
-          <name>text update #177</name>
-          <pv_name>$(P)SetMaxRate_RBV</pv_name>
-          <x>170</x>
-          <width>80</width>
-          <font>
-            <font family="Liberation Sans" style="REGULAR" size="16.0">
-            </font>
-          </font>
-          <foreground_color>
-            <color red="42" green="99" blue="228">
-            </color>
-          </foreground_color>
-          <background_color>
-            <color red="187" green="187" blue="187">
-            </color>
-          </background_color>
-          <format>1</format>
-          <show_units>false</show_units>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>text #181</name>
-        <text>Setup</text>
-        <x>137</x>
-        <y>5</y>
-        <width>50</width>
-        <font>
-          <font family="Liberation Sans" style="REGULAR" size="16.0">
-          </font>
+    <widget type="combo" version="2.0.0">
+      <name>menu #81</name>
+      <pv_name>$(P)PressureUnits</pv_name>
+      <x>145</x>
+      <width>70</width>
+      <height>20</height>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #84</name>
+      <pv_name>$(P)PressureUnits_RBV</pv_name>
+      <x>220</x>
+      <width>70</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
         </font>
-        <horizontal_alignment>2</horizontal_alignment>
-      </widget>
-      <widget type="rectangle" version="2.0.0">
-        <name>rectangle #184</name>
-        <width>325</width>
-        <height>130</height>
-        <line_width>1</line_width>
-        <line_color>
-          <color red="0" green="0" blue="0">
-          </color>
-        </line_color>
-        <background_color>
-          <color red="0" green="0" blue="0">
-          </color>
-        </background_color>
-        <transparent>true</transparent>
-      </widget>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>6</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #88</name>
+    <x>30</x>
+    <y>335</y>
+    <width>290</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>text #91</name>
+      <text>Max. pressure</text>
+      <width>130</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #94</name>
+      <pv_name>$(P)SetMaxPressure</pv_name>
+      <x>135</x>
+      <width>70</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #98</name>
+      <pv_name>$(P)SetMaxPressure_RBV</pv_name>
+      <x>210</x>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #102</name>
+    <x>60</x>
+    <y>310</y>
+    <width>260</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>text #105</name>
+      <text>Rate units</text>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>menu #108</name>
+      <pv_name>$(P)RateUnits</pv_name>
+      <x>105</x>
+      <width>70</width>
+      <height>20</height>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #111</name>
+      <pv_name>$(P)RateUnits_RBV</pv_name>
+      <x>180</x>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>6</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #115</name>
+    <x>70</x>
+    <y>360</y>
+    <width>250</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>text #118</name>
+      <text>Max. rate</text>
+      <width>90</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #121</name>
+      <pv_name>$(P)SetMaxRate</pv_name>
+      <x>95</x>
+      <width>70</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #125</name>
+      <pv_name>$(P)SetMaxRate_RBV</pv_name>
+      <x>170</x>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="42" green="99" blue="228">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #188</name>
+    <name>text #129</name>
+    <text>Setup</text>
+    <x>142</x>
+    <y>260</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #132</name>
+    <x>5</x>
+    <y>255</y>
+    <width>325</width>
+    <height>180</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #136</name>
     <text>PID Gains</text>
     <x>70</x>
     <y>225</y>
@@ -777,7 +577,7 @@
     <auto_size>true</auto_size>
   </widget>
   <widget type="action_button" version="3.0.0">
-    <name>related display #191</name>
+    <name>related display #139</name>
     <actions>
       <action type="open_display">
         <file>Vindum_PID.opi</file>
@@ -804,5 +604,265 @@
       <color red="115" green="223" blue="255">
       </color>
     </background_color>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #143</name>
+    <x>5</x>
+    <y>440</y>
+    <width>325</width>
+    <height>130</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>composite #146</name>
+      <x>25</x>
+      <y>30</y>
+      <width>215</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>text update #149</name>
+        <pv_name>$(P)ComResponse</pv_name>
+        <x>135</x>
+        <width>80</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <foreground_color>
+          <color red="42" green="99" blue="228">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>text #153</name>
+        <text>Command error</text>
+        <width>130</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>composite #156</name>
+      <x>40</x>
+      <y>105</y>
+      <width>265</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>text #159</name>
+        <text>Clear latched errors</text>
+        <width>200</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>message button #162</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(P)ClearLatchedErrors.PROC</pv_name>
+            <value>1</value>
+            <description>Write</description>
+          </action>
+        </actions>
+        <pv_name>$(P)ClearLatchedErrors.PROC</pv_name>
+        <text>Clear</text>
+        <x>205</x>
+        <width>60</width>
+        <height>20</height>
+        <background_color>
+          <color red="115" green="223" blue="255">
+          </color>
+        </background_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>composite #165</name>
+      <x>45</x>
+      <y>55</y>
+      <width>195</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>text #168</name>
+        <text>Error state</text>
+        <width>110</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>text update #171</name>
+        <pv_name>$(P)CommonErrorState</pv_name>
+        <x>115</x>
+        <width>80</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <foreground_color>
+          <color red="42" green="99" blue="228">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>4</format>
+        <show_units>false</show_units>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>composite #175</name>
+      <x>25</x>
+      <y>80</y>
+      <width>215</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>text #178</name>
+        <text>Latched state</text>
+        <width>130</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>text update #181</name>
+        <pv_name>$(P)LatchedCommonErrorState</pv_name>
+        <x>135</x>
+        <width>80</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <foreground_color>
+          <color red="42" green="99" blue="228">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>4</format>
+        <show_units>false</show_units>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>rectangle #185</name>
+      <width>325</width>
+      <height>130</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+      <background_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #189</name>
+      <text>Status</text>
+      <x>132</x>
+      <y>5</y>
+      <width>60</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #192</name>
+    <x>10</x>
+    <y>385</y>
+    <width>315</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>text #195</name>
+      <text>Pump A descrip.</text>
+      <width>150</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #198</name>
+      <pv_name>$(P)A:Description</pv_name>
+      <x>155</x>
+      <width>160</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #202</name>
+    <text>Pump B descrip.</text>
+    <x>10</x>
+    <y>410</y>
+    <width>150</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #205</name>
+    <pv_name>$(P)B:Description</pv_name>
+    <x>165</x>
+    <y>410</y>
+    <width>160</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
 </display>

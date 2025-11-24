@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-11-24 14:21:07 by epics-->
+<!--Saved on 2025-11-24 15:27:48 by epics-->
 <display version="2.0.0">
   <name>VindumPumpN</name>
-  <x>1239</x>
-  <y>174</y>
+  <x>2018</x>
+  <y>121</y>
   <width>316</width>
   <height>685</height>
   <background_color>
@@ -401,18 +401,6 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>text #83</name>
-    <text>Pump $(N)</text>
-    <y>5</y>
-    <width>315</width>
-    <height>25</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <horizontal_alignment>1</horizontal_alignment>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>text #86</name>
     <text>Control</text>
     <x>122</x>
     <y>220</y>
@@ -424,7 +412,7 @@
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #89</name>
+    <name>text #86</name>
     <text>Volume mode</text>
     <x>60</x>
     <y>445</y>
@@ -436,7 +424,7 @@
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #92</name>
+    <name>text #89</name>
     <text>Autofill</text>
     <x>90</x>
     <y>420</y>
@@ -448,7 +436,7 @@
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #95</name>
+    <name>text #92</name>
     <text>Direction</text>
     <x>17</x>
     <y>345</y>
@@ -460,7 +448,7 @@
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="combo" version="2.0.0">
-    <name>menu #98</name>
+    <name>menu #95</name>
     <pv_name>$(P)$(N)Direction</pv_name>
     <x>112</x>
     <y>345</y>
@@ -472,7 +460,7 @@
     <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>text update #101</name>
+    <name>text update #98</name>
     <pv_name>$(P)$(N)Direction_RBV</pv_name>
     <x>217</x>
     <y>345</y>
@@ -494,7 +482,7 @@
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="action_button" version="3.0.0">
-    <name>message button #105</name>
+    <name>message button #102</name>
     <actions>
       <action type="write_pv">
         <pv_name>$(P)$(N)Stop.PROC</pv_name>
@@ -514,7 +502,7 @@
     </background_color>
   </widget>
   <widget type="action_button" version="3.0.0">
-    <name>message button #108</name>
+    <name>message button #105</name>
     <actions>
       <action type="write_pv">
         <pv_name>$(P)$(N)Run.PROC</pv_name>
@@ -534,7 +522,7 @@
     </background_color>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>text update #111</name>
+    <name>text update #108</name>
     <pv_name>$(P)$(N)Running</pv_name>
     <x>55</x>
     <y>295</y>
@@ -555,7 +543,7 @@
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>text update #115</name>
+    <name>text update #112</name>
     <pv_name>$(P)$(N)Active</pv_name>
     <x>160</x>
     <y>295</y>
@@ -576,7 +564,7 @@
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="combo" version="2.0.0">
-    <name>menu #119</name>
+    <name>menu #116</name>
     <pv_name>$(P)$(N)PumpMode</pv_name>
     <x>130</x>
     <y>270</y>
@@ -589,7 +577,7 @@
     <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #122</name>
+    <name>text #119</name>
     <text>Pump mode</text>
     <x>35</x>
     <y>270</y>
@@ -601,7 +589,7 @@
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>text update #125</name>
+    <name>text update #122</name>
     <pv_name>$(P)$(N)PumpMode_RBV</pv_name>
     <x>110</x>
     <y>245</y>
@@ -624,7 +612,7 @@
     <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #129</name>
+    <name>text #126</name>
     <text>Fill valve</text>
     <x>35</x>
     <y>395</y>
@@ -635,7 +623,7 @@
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #132</name>
+    <name>text #129</name>
     <text>Deliver valve</text>
     <x>5</x>
     <y>370</y>
@@ -647,7 +635,7 @@
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>text update #135</name>
+    <name>text update #132</name>
     <pv_name>$(P)$(N)DeliverValve_RBV</pv_name>
     <x>245</x>
     <y>370</y>
@@ -669,7 +657,7 @@
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>text update #139</name>
+    <name>text update #136</name>
     <pv_name>$(P)$(N)FillValve_RBV</pv_name>
     <x>245</x>
     <y>395</y>
@@ -691,7 +679,7 @@
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="choice" version="2.0.0">
-    <name>choice button #143</name>
+    <name>choice button #140</name>
     <pv_name>$(P)$(N)DeliverValve</pv_name>
     <x>140</x>
     <y>370</y>
@@ -707,7 +695,7 @@
     </items>
   </widget>
   <widget type="choice" version="2.0.0">
-    <name>choice button #146</name>
+    <name>choice button #143</name>
     <pv_name>$(P)$(N)FillValve</pv_name>
     <x>140</x>
     <y>395</y>
@@ -723,7 +711,7 @@
     </items>
   </widget>
   <widget type="group" version="2.0.0">
-    <name>composite #149</name>
+    <name>composite #146</name>
     <x>15</x>
     <y>140</y>
     <width>190</width>
@@ -731,7 +719,7 @@
     <style>3</style>
     <transparent>true</transparent>
     <widget type="label" version="2.0.0">
-      <name>text #152</name>
+      <name>text #149</name>
       <text>Flow rate (</text>
       <width>110</width>
       <font>
@@ -741,7 +729,7 @@
       <horizontal_alignment>2</horizontal_alignment>
     </widget>
     <widget type="textupdate" version="2.0.0">
-      <name>text update #155</name>
+      <name>text update #152</name>
       <pv_name>$(P)RateUnits_RBV</pv_name>
       <x>110</x>
       <width>70</width>
@@ -759,7 +747,7 @@
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
-      <name>text #159</name>
+      <name>text #156</name>
       <text>)</text>
       <x>180</x>
       <width>10</width>
@@ -771,7 +759,7 @@
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
-    <name>composite #162</name>
+    <name>composite #159</name>
     <x>35</x>
     <y>35</y>
     <width>140</width>
@@ -779,7 +767,7 @@
     <style>3</style>
     <transparent>true</transparent>
     <widget type="label" version="2.0.0">
-      <name>text #165</name>
+      <name>text #162</name>
       <text>Pressure (</text>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="16.0">
@@ -788,7 +776,7 @@
       <horizontal_alignment>2</horizontal_alignment>
     </widget>
     <widget type="textupdate" version="2.0.0">
-      <name>text update #168</name>
+      <name>text update #165</name>
       <pv_name>$(P)PressureUnits_RBV</pv_name>
       <x>100</x>
       <width>30</width>
@@ -806,7 +794,7 @@
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
-      <name>text #172</name>
+      <name>text #169</name>
       <text>)</text>
       <x>130</x>
       <width>10</width>
@@ -818,7 +806,7 @@
     </widget>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #175</name>
+    <name>text #172</name>
     <text>Vol. requested</text>
     <x>30</x>
     <y>470</y>
@@ -830,7 +818,7 @@
     <auto_size>true</auto_size>
   </widget>
   <widget type="textentry" version="3.0.0">
-    <name>text entry #178</name>
+    <name>text entry #175</name>
     <pv_name>$(P)$(N)SetVolume</pv_name>
     <x>175</x>
     <y>470</y>
@@ -848,7 +836,7 @@
     <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>text update #182</name>
+    <name>text update #179</name>
     <pv_name>$(P)$(N)SetVolume_RBV</pv_name>
     <x>240</x>
     <y>470</y>
@@ -870,7 +858,7 @@
     <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
   <widget type="combo" version="2.0.0">
-    <name>menu #186</name>
+    <name>menu #183</name>
     <pv_name>$(P)$(N)AutofillMode</pv_name>
     <x>175</x>
     <y>420</y>
@@ -882,7 +870,7 @@
     </background_color>
   </widget>
   <widget type="combo" version="2.0.0">
-    <name>menu #189</name>
+    <name>menu #186</name>
     <pv_name>$(P)$(N)VolumeMode</pv_name>
     <x>175</x>
     <y>445</y>
@@ -894,7 +882,7 @@
     </background_color>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #192</name>
+    <name>text #189</name>
     <text>Incremental vol.</text>
     <x>10</x>
     <y>530</y>
@@ -906,7 +894,7 @@
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #195</name>
+    <name>text #192</name>
     <text>Cummulative vol.</text>
     <x>10</x>
     <y>555</y>
@@ -918,7 +906,7 @@
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #198</name>
+    <name>text #195</name>
     <text>Status</text>
     <x>128</x>
     <y>505</y>
@@ -930,8 +918,7 @@
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="rectangle" version="2.0.0">
-    <name>rectangle #201</name>
-    <x>1</x>
+    <name>rectangle #198</name>
     <y>500</y>
     <width>315</width>
     <height>180</height>
@@ -947,10 +934,10 @@
     <transparent>true</transparent>
   </widget>
   <widget type="action_button" version="3.0.0">
-    <name>related display #204</name>
+    <name>related display #201</name>
     <actions>
       <action type="open_display">
-        <file>plot_2pvs.opi</file>
+        <file>plot_pvs.opi</file>
         <macros>
           <PV1>$(P)$(N)SetPressure_RBV</PV1>
           <PV2>$(P)$(N)Pressure</PV2>
@@ -960,8 +947,8 @@
       </action>
     </actions>
     <text>Plot</text>
-    <x>233</x>
-    <y>10</y>
+    <x>5</x>
+    <y>58</y>
     <width>70</width>
     <height>20</height>
     <background_color>
@@ -970,7 +957,7 @@
     </background_color>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #207</name>
+    <name>text #204</name>
     <text>Position %</text>
     <x>70</x>
     <y>605</y>
@@ -981,7 +968,7 @@
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #210</name>
+    <name>text #207</name>
     <text>Error state</text>
     <x>60</x>
     <y>630</y>
@@ -993,7 +980,7 @@
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #213</name>
+    <name>text #210</name>
     <text>Latched state</text>
     <x>40</x>
     <y>655</y>
@@ -1005,7 +992,7 @@
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>text #216</name>
+    <name>text #213</name>
     <text>Vol. remaining %</text>
     <x>10</x>
     <y>580</y>
@@ -1017,7 +1004,7 @@
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>text update #219</name>
+    <name>text update #216</name>
     <pv_name>$(P)$(N)Volume</pv_name>
     <x>180</x>
     <y>530</y>
@@ -1039,7 +1026,7 @@
     <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>text update #223</name>
+    <name>text update #220</name>
     <pv_name>$(P)$(N)TotalVolume</pv_name>
     <x>180</x>
     <y>555</y>
@@ -1061,7 +1048,7 @@
     <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>text update #227</name>
+    <name>text update #224</name>
     <pv_name>$(P)$(N)Position</pv_name>
     <x>180</x>
     <y>605</y>
@@ -1083,7 +1070,7 @@
     <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>text update #231</name>
+    <name>text update #228</name>
     <pv_name>$(P)$(N)ErrorState</pv_name>
     <x>180</x>
     <y>630</y>
@@ -1105,7 +1092,7 @@
     <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>text update #235</name>
+    <name>text update #232</name>
     <pv_name>$(P)$(N)LatchedErrorState</pv_name>
     <x>180</x>
     <y>655</y>
@@ -1127,7 +1114,7 @@
     <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>text update #239</name>
+    <name>text update #236</name>
     <pv_name>$(P)$(N)VolRemaining</pv_name>
     <x>180</x>
     <y>580</y>
@@ -1149,7 +1136,7 @@
     <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
   <widget type="group" version="2.0.0">
-    <name>composite #243</name>
+    <name>composite #240</name>
     <x>250</x>
     <y>530</y>
     <width>60</width>
@@ -1157,7 +1144,7 @@
     <style>3</style>
     <transparent>true</transparent>
     <widget type="action_button" version="3.0.0">
-      <name>message button #246</name>
+      <name>message button #243</name>
       <actions>
         <action type="write_pv">
           <pv_name>$(P)$(N)ResetVolume</pv_name>
@@ -1175,7 +1162,7 @@
       </background_color>
     </widget>
     <widget type="action_button" version="3.0.0">
-      <name>message button #249</name>
+      <name>message button #246</name>
       <actions>
         <action type="write_pv">
           <pv_name>$(P)$(N)ResetCumulVol</pv_name>
@@ -1194,7 +1181,7 @@
       </background_color>
     </widget>
     <widget type="progressbar" version="2.0.0">
-      <name>bar #252</name>
+      <name>bar #249</name>
       <pv_name>$(P)$(N)VolRemaining</pv_name>
       <y>50</y>
       <width>60</width>
@@ -1203,5 +1190,25 @@
         </color>
       </background_color>
     </widget>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #253</name>
+    <pv_name>$(P)$(N)Description</pv_name>
+    <x>1</x>
+    <y>5</y>
+    <width>314</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
 </display>
