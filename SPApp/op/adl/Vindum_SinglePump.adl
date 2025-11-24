@@ -1,6 +1,6 @@
 
 file {
-	name="/home/epics/support/SyringePump-0-1/SPApp/op/adl/Vindum_SinglePump.adl"
+	name="/home/epics/support/SyringePump/SPApp/op/adl/Vindum_SinglePump.adl"
 	version=030117
 }
 display {
@@ -8,7 +8,7 @@ display {
 		x=32
 		y=67
 		width=655
-		height=725
+		height=750
 	}
 	clr=14
 	bclr=4
@@ -118,7 +118,7 @@ composite {
 		x=335
 		y=65
 		width=316
-		height=655
+		height=680
 	}
 	"composite name"=""
 	"composite file"="VindumPumpN.adl;P=$(P),N=A:"
