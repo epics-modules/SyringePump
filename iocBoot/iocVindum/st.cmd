@@ -30,7 +30,7 @@ epicsEnvSet("TIMEOUT_MS", "2000")
 # Change IP address for your device.  This is for a Digi One SP in TCP sockets mode.
 #drvAsynIPPortConfigure("$(PORT)", "gsets12:2001", 0, 0, 0)
 # Change IP address for your device.  This is for a Digi One SP in TCP sockets mode.
-drvAsynIPPortConfigure("$(PORT)", "gsets24:4001", 0, 0, 0)
+drvAsynIPPortConfigure("$(PORT)", "gsets22:4002", 0, 0, 0)
 
 # This is for a COM port on Windows
 #drvAsynSerialPortConfigure("$(PORT)", "COM2", 0, 0, 0)
