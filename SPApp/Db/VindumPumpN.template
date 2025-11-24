@@ -120,3 +120,12 @@ record(calcout, "$(P)$(PUMP)StartAutoVolumeCalc") {
     field(OOPT, "When Non-zero")
     field(OUT,  "$(P)$(PUMP)StartAutoVolume.PROC PP")
 }
+
+# This record converts the pump position in % to volume remaining in %
+record(calcout, "$(P)$(PUMP)VolRemaining") {
+    field(INPA, "$(P)$(PUMP)Position CP")
+    field(CALC, "100.-A")
+    field(LOPR, "0.")
+    field(HOPR, "100.")
+    field(PREC, "1")
+}
