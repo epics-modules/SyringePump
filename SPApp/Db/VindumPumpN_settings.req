@@ -1,4 +1,6 @@
 $(P)$(PUMP)SetPressure
+$(P)$(PUMP)PressureHOPR
+$(P)$(PUMP)PressureLOPR
 $(P)$(PUMP)PressureTweak
 $(P)$(PUMP)SafetyPressure
 $(P)$(PUMP)SetFlowRate

@@ -132,5 +132,17 @@ record(calcout, "$(P)$(PUMP)VolRemaining") {
 
 # This record is the pump description, used to label displays
 record(stringin, "$(P)$(PUMP)Description") {
-    field(VAL, "Pump $(PUMP)")
+    field(VAL,  "Pump $(PUMP)")
+}
+
+# These records set the HOPR and LOPR to the same values for Pressure and SetPressure_RBV
+# This simplifies the plot configuration
+record(dfanout, "$(P)$(PUMP)PressureLOPR") {
+    field(OUTA, "$(P)$(PUMP)SetPressure_RBV.LOPR")
+    field(OUTB, "$(P)$(PUMP)Pressure.LOPR")
+}
+
+record(dfanout, "$(P)$(PUMP)PressureHOPR") {
+    field(OUTA, "$(P)$(PUMP)SetPressure_RBV.HOPR")
+    field(OUTB, "$(P)$(PUMP)Pressure.HOPR")
 }
