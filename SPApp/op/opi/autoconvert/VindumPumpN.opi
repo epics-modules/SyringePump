@@ -3048,11 +3048,13 @@ $(pv_value)</tooltip>
   <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
     <actions hook="false" hook_all="false">
       <action type="OPEN_DISPLAY">
-        <path>plot_pvs.opi</path>
+        <path>plot_2pvs.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
           <PV1>$(P)$(N)SetPressure_RBV</PV1>
           <PV2>$(P)$(N)Pressure</PV2>
+          <LOPR>$(P)$(N)PressureLOPR</LOPR>
+          <HOPR>$(P)$(N)PressureHOPR</HOPR>
         </macros>
         <mode>1</mode>
         <description>Plot</description>

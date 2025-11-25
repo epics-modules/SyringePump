@@ -1628,13 +1628,13 @@ buttonLabel "Plot"
 numPvs 2
 numDsps 1
 displayFileName {
-  0 "plot_pvs.edl"
+  0 "plot_2pvs.edl"
 }
 menuLabel {
   0 "Plot"
 }
 symbols {
-  0 "PV1=$(P)$(N)SetPressure_RBV,PV2=$(P)$(N)Pressure"
+  0 "PV1=$(P)$(N)SetPressure_RBV,PV2=$(P)$(N)Pressure,LOPR=$(P)$(N)PressureLOPR,HOPR=$(P)$(N)PressureHOPR"
 }
 replaceSymbols {
   0 1

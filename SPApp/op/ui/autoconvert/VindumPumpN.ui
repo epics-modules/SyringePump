@@ -2522,10 +2522,10 @@ border-radius: 2px;
                 <string>Plot</string>
             </property>
             <property name="files">
-                <string>plot_pvs.ui </string>
+                <string>plot_2pvs.ui </string>
             </property>
             <property name="args">
-                <string>PV1=$(P)$(N)SetPressure_RBV,PV2=$(P)$(N)Pressure</string>
+                <string>PV1=$(P)$(N)SetPressure_RBV,PV2=$(P)$(N)Pressure,LOPR=$(P)$(N)PressureLOPR,HOPR=$(P)$(N)PressureHOPR</string>
             </property>
             <property name="removeParent">
                 <string>false</string>

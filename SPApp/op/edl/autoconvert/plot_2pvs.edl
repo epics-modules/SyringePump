@@ -6,7 +6,7 @@ release 1
 x 476
 y 530
 w 600
-h 480
+h 460
 font "helvetica-medium-r-18.0"
 ctlFont "helvetica-bold-r-10.0"
 btnFont "helvetica-medium-r-18.0"
@@ -87,9 +87,9 @@ major 4
 minor 0
 release 0
 x 20
-y 405
+y 430
 w 265
-h 68
+h 20
 
 beginGroup
 
@@ -100,36 +100,10 @@ major 4
 minor 7
 release 0
 x 185
-y 428
+y 430
 w 100
 h 20
-controlPv "$(PV1).HOPR"
-format "decimal"
-font "helvetica-medium-r-12.0"
-fontAlign "left"
-fgColor rgb 0 0 0
-bgColor rgb 29440 57088 65280
-editable
-motifWidget
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 185
-y 453
-w 100
-h 20
-controlPv "$(PV1).LOPR"
+controlPv "$(LOPR)"
 format "decimal"
 font "helvetica-medium-r-12.0"
 fontAlign "left"
@@ -152,7 +126,7 @@ major 4
 minor 1
 release 1
 x 20
-y 453
+y 430
 w 160
 h 20
 font "helvetica-medium-r-14.0"
@@ -161,45 +135,6 @@ bgColor index 3
 useDisplayBg
 value {
   "Display miniumum"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 20
-y 428
-w 160
-h 20
-font "helvetica-medium-r-14.0"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Display maxiumum"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 20
-y 405
-w 265
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "center"
-fgColor rgb 10752 25344 58368
-bgColor index 3
-useDisplayBg
-value {
-  "$(PV1)"
 }
 endObjectProperties
 
@@ -208,115 +143,6 @@ endGroup
 endObjectProperties
 
 
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 470
-y 428
-w 100
-h 20
-controlPv "$(PV2).HOPR"
-format "decimal"
-font "helvetica-medium-r-12.0"
-fontAlign "left"
-fgColor rgb 0 0 0
-bgColor rgb 29440 57088 65280
-editable
-motifWidget
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 470
-y 453
-w 100
-h 20
-controlPv "$(PV2).LOPR"
-format "decimal"
-font "helvetica-medium-r-12.0"
-fontAlign "left"
-fgColor rgb 0 0 0
-bgColor rgb 29440 57088 65280
-editable
-motifWidget
-limitsFromDb
-nullColor rgb 60928 46592 11008
-smartRefresh
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 305
-y 453
-w 160
-h 20
-font "helvetica-medium-r-14.0"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Display miniumum"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 305
-y 428
-w 160
-h 20
-font "helvetica-medium-r-14.0"
-fgColor rgb 0 0 0
-bgColor index 3
-useDisplayBg
-value {
-  "Display maxiumum"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 305
-y 405
-w 265
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "center"
-fgColor rgb 10752 25344 58368
-bgColor index 3
-useDisplayBg
-value {
-  "$(PV2)"
-}
-endObjectProperties
 # (Group)
 object activeGroupClass
 beginObjectProperties
@@ -326,7 +152,86 @@ release 0
 x 20
 y 405
 w 265
-h 68
+h 20
+
+beginGroup
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 185
+y 405
+w 100
+h 20
+controlPv "$(HOPR)"
+format "decimal"
+font "helvetica-medium-r-12.0"
+fontAlign "left"
+fgColor rgb 0 0 0
+bgColor rgb 29440 57088 65280
+editable
+motifWidget
+limitsFromDb
+nullColor rgb 60928 46592 11008
+smartRefresh
+fastUpdate
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 20
+y 405
+w 160
+h 20
+font "helvetica-medium-r-14.0"
+fgColor rgb 0 0 0
+bgColor index 3
+useDisplayBg
+value {
+  "Display maxiumum"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 430
+w 265
+h 20
+
+beginGroup
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 405
+w 265
+h 20
 
 beginGroup
 
