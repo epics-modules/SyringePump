@@ -921,8 +921,8 @@ rectangle {
 	}
 	display[0] {
 		label="Plot"
-		name="plot_pvs.adl"
-		args="PV1=$(P)$(N)SetPressure_RBV,PV2=$(P)$(N)Pressure"
+		name="plot_2pvs.adl"
+		args="PV1=$(P)$(N)SetPressure_RBV,PV2=$(P)$(N)Pressure,LOPR=$(P)$(N)PressureLOPR,HOPR=$(P)$(N)PressureHOPR"
 	}
 	clr=14
 	bclr=51

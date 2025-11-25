@@ -1,6 +1,6 @@
 
 file {
-	name="/home/epics/support/SyringePump-0-1/SPApp/op/adl/plot_pvs.adl"
+	name="/home/epics/support/SyringePump/SPApp/op/adl/plot_2pvs.adl"
 	version=030117
 }
 display {
@@ -8,7 +8,7 @@ display {
 		x=476
 		y=530
 		width=600
-		height=480
+		height=460
 	}
 	clr=14
 	bclr=4
@@ -118,36 +118,21 @@ display {
 composite {
 	object {
 		x=20
-		y=405
+		y=430
 		width=265
-		height=68
+		height=20
 	}
 	"composite name"=""
 	children {
 		"text entry" {
 			object {
 				x=185
-				y=428
+				y=430
 				width=100
 				height=20
 			}
 			control {
-				chan="$(PV1).HOPR"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		"text entry" {
-			object {
-				x=185
-				y=453
-				width=100
-				height=20
-			}
-			control {
-				chan="$(PV1).LOPR"
+				chan="$(LOPR)"
 				clr=14
 				bclr=51
 			}
@@ -157,7 +142,7 @@ composite {
 		text {
 			object {
 				x=20
-				y=453
+				y=430
 				width=160
 				height=20
 			}
@@ -166,10 +151,36 @@ composite {
 			}
 			textix="Display miniumum"
 		}
+	}
+}
+composite {
+	object {
+		x=20
+		y=405
+		width=265
+		height=20
+	}
+	"composite name"=""
+	children {
+		"text entry" {
+			object {
+				x=185
+				y=405
+				width=100
+				height=20
+			}
+			control {
+				chan="$(HOPR)"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
 		text {
 			object {
 				x=20
-				y=428
+				y=405
 				width=160
 				height=20
 			}
@@ -178,85 +189,5 @@ composite {
 			}
 			textix="Display maxiumum"
 		}
-		text {
-			object {
-				x=20
-				y=405
-				width=265
-				height=20
-			}
-			"basic attribute" {
-				clr=53
-			}
-			textix="$(PV1)"
-			align="horiz. centered"
-		}
 	}
-}
-"text entry" {
-	object {
-		x=470
-		y=428
-		width=100
-		height=20
-	}
-	control {
-		chan="$(PV2).HOPR"
-		clr=14
-		bclr=51
-	}
-	limits {
-	}
-}
-"text entry" {
-	object {
-		x=470
-		y=453
-		width=100
-		height=20
-	}
-	control {
-		chan="$(PV2).LOPR"
-		clr=14
-		bclr=51
-	}
-	limits {
-	}
-}
-text {
-	object {
-		x=305
-		y=453
-		width=160
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Display miniumum"
-}
-text {
-	object {
-		x=305
-		y=428
-		width=160
-		height=20
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Display maxiumum"
-}
-text {
-	object {
-		x=305
-		y=405
-		width=265
-		height=20
-	}
-	"basic attribute" {
-		clr=53
-	}
-	textix="$(PV2)"
-	align="horiz. centered"
 }
