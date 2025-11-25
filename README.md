@@ -52,6 +52,12 @@ This is the medm screen for setting the PID gains on Vindum pumps.
 
 ![Vindum_PID.adl](Vindum_PID.png)
 
+This is the medm screen for plotting the pressure setpoint and readback on Vindum pumps.
+The setpoint was changed from 300 kPa to 1500 kPa.  The horizontal time scale covers 45 seconds.
+This screen is useful when tuning the PID parameters.
+
+![plot_2pvs.adl](Vindum_PID_plot.png)
+
 This is the medm screen for a Vindum VIPR singe-cyclinder pump.
 This screen is in medm "edit" mode because the pump is not currently connected.
 
